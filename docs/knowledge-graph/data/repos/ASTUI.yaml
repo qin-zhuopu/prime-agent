@@ -6,5 +6,8 @@ stack: React (TS lib)
 license: open
 transport:
 - SSE
+integration:
+- in-process-sdk
+browser_native: true
 protocols:
 - structured-render

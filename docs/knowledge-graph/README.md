@@ -44,9 +44,22 @@ python3 build_graph.py
 
 边：
 - `entity --has_op--> operation`（如 Session 的 create/list/get/update/delete/fork/interrupt/search 各是一个操作节点）
-- `repo --exposes--> operation`，边属性 `name`（该 repo 的真实 URL 或 RPC 方法）、`http`（REST 才有）、`style`（REST / RPC / WS-RPC）
+- `repo --exposes--> operation`，边属性 `name`（该 repo 的真实 URL 或 RPC 方法）、`http`（REST 才有）、`style`（REST / RPC / WS-RPC / stdio-rpc / sdk-call）
 
 即：同一个 canonical 操作（如 `Session.create`）下挂三条 `exposes` 边——CP=`POST /chat/sessions`、DH=`session.create`、HM=`session.create`。实体在各 repo 的名字见 `api_metrics.md` 的映射表。
+
+**新增 `component` 节点 + `calls` 边（从代码构建）**：`scan_frontend_calls.py` 扫描前端源码里对端点的调用（CP 的 `fetch("/api/...")`、DH/HM 的 RPC 方法字符串），建立"页面/组件 → 操作"的引用边：
+- `component --calls--> operation`，边属性 `endpoint`（被调的真实 URL/方法）、`kind`（REST/RPC）
+- 排除测试/fixture 文件，只保留生产代码引用
+- 能反查"谁调用了某端点"（如 `Session.create` 的调用方是哪些组件），也揭示架构差异（CP 组件散调 vs DH 收敛到连接层 vs HM 走终端少 RPC）
+
+### 接入面 integration surface（repo 维度）
+
+`repo.yaml` 新增：
+- `integration`：接入方式数组 —— `REST+SSE` / `WebSocket` / `stdio-rpc` / `in-process-sdk`
+- `browser_native`：能否纯浏览器直连（无需 Node/Tauri/Electron 宿主 spawn 子进程）
+
+关键：**很多 agent 只给 SDK 或 RPC，不给 HTTP API**。ACP 生态的 CLI agent（Claude Code/Codex 等）只说 stdio JSON-RPC → `browser_native=false`，需网关 spawn 子进程再桥接成 WS/SSE（这就是 acp-web-gateway / agents-chat 存在的原因）。SDK 型（assistant-ui/CopilotKit/acp-components）是前端库，无网络端点。
 
 ## 产物
 
@@ -96,6 +109,7 @@ schemas/
 |---|---|
 | `scan_api.py` | **纯脚本**抓后端 API（正则，无 LLM）→ `data/api_raw/<repo>.json`（CP 250 / DH 53 / HM 299） |
 | `map_api.py` | **规则映射**（显式表，无 LLM）：raw 端点 → canonical 实体/操作 → 重写 `data/entities`、`data/operations`；未匹配的记入 `data/api_raw/unmapped.json` |
+| `scan_frontend_calls.py` | **纯脚本**扫前端源码里对端点的调用 → `data/frontend_calls/<repo>.json`；构建时连成 `component --calls--> operation` 引用边（排除测试） |
 | `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（UI 部分用） |
 | `validate.py` | **全量质量检查**：schema + 引用完整性 + 语义规则；exit 1 表示有问题 |
 | `build_from_yaml.py` | **规范构建路径**：先跑 validate（fail-closed），通过才从 YAML 构图并出图 |

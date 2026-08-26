@@ -6,6 +6,9 @@ stack: Next.js+React
 license: open
 transport:
 - stdio
+integration:
+- stdio-rpc
+browser_native: false
 protocols:
 - ACP
 - structured-render

@@ -6,6 +6,9 @@ stack: Vite+React+xterm
 license: open
 transport:
 - WebSocket
+integration:
+- WebSocket
+browser_native: true
 protocols:
 - WS-JSONRPC
 - pty-terminal

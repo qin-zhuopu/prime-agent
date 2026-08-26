@@ -6,6 +6,9 @@ stack: React+Next.js
 license: open
 transport:
 - SSE
+integration:
+- in-process-sdk
+browser_native: true
 protocols:
 - AG-UI
 - structured-render

@@ -432,6 +432,307 @@
       "label": "rename",
       "entity": "Workspace",
       "id": "O:Workspace.rename"
+    },
+    {
+      "ntype": "component",
+      "label": "BridgeSection.tsx",
+      "file": "CodePilot/src/components/bridge/BridgeSection.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/bridge/BridgeSection.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "ChatPermissionSelector.tsx",
+      "file": "CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "ChatView.tsx",
+      "file": "CodePilot/src/components/chat/ChatView.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/ChatView.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "FolderPicker.tsx",
+      "file": "CodePilot/src/components/chat/FolderPicker.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/FolderPicker.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "ImageGenConfirmation.tsx",
+      "file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/ImageGenConfirmation.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "MessageInput.tsx",
+      "file": "CodePilot/src/components/chat/MessageInput.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/MessageInput.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "MessageInputParts.tsx",
+      "file": "CodePilot/src/components/chat/MessageInputParts.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/MessageInputParts.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "MessageList.tsx",
+      "file": "CodePilot/src/components/chat/MessageList.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/MessageList.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "RuntimeSelector.tsx",
+      "file": "CodePilot/src/components/chat/RuntimeSelector.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/RuntimeSelector.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "SubagentCard.tsx",
+      "file": "CodePilot/src/components/chat/SubagentCard.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/SubagentCard.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "TaskRunMarker.tsx",
+      "file": "CodePilot/src/components/chat/TaskRunMarker.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/chat/TaskRunMarker.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "markdown-live-preview.ts",
+      "file": "CodePilot/src/components/editor/markdown-live-preview.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/editor/markdown-live-preview.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "GitWorktreeSection.tsx",
+      "file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "ChatListPanel.tsx",
+      "file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/layout/ChatListPanel.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "SplitColumn.tsx",
+      "file": "CodePilot/src/components/layout/SplitColumn.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/layout/SplitColumn.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "UnifiedTopBar.tsx",
+      "file": "CodePilot/src/components/layout/UnifiedTopBar.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/layout/UnifiedTopBar.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "FileTreePanel.tsx",
+      "file": "CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "PreviewPanel.tsx",
+      "file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "McpManager.tsx",
+      "file": "CodePilot/src/components/plugins/McpManager.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/plugins/McpManager.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "CodexAccountModelsBlock.tsx",
+      "file": "CodePilot/src/components/settings/CodexAccountModelsBlock.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/settings/CodexAccountModelsBlock.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "RuntimePanel.tsx",
+      "file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/components/settings/RuntimePanel.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "useBatchImageGen.ts",
+      "file": "CodePilot/src/hooks/useBatchImageGen.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useBatchImageGen.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "useBridgeAdapter.ts",
+      "file": "CodePilot/src/hooks/useBridgeAdapter.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useBridgeAdapter.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "useChatCommands.ts",
+      "file": "CodePilot/src/hooks/useChatCommands.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useChatCommands.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "useMentionTokenEstimate.ts",
+      "file": "CodePilot/src/hooks/useMentionTokenEstimate.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useMentionTokenEstimate.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "useProviderModels.ts",
+      "file": "CodePilot/src/hooks/useProviderModels.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useProviderModels.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "useStreamSubscription.ts",
+      "file": "CodePilot/src/hooks/useStreamSubscription.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/hooks/useStreamSubscription.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "archive-html-asset-client.ts",
+      "file": "CodePilot/src/lib/archive-html-asset-client.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/archive-html-asset-client.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "db.ts",
+      "file": "CodePilot/src/lib/db.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/db.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "file-mutation.ts",
+      "file": "CodePilot/src/lib/file-mutation.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/file-mutation.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "permission-approval-token.ts",
+      "file": "CodePilot/src/lib/permission-approval-token.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/permission-approval-token.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "session-title-events.ts",
+      "file": "CodePilot/src/lib/session-title-events.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/session-title-events.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "stream-session-manager.ts",
+      "file": "CodePilot/src/lib/stream-session-manager.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/stream-session-manager.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "approval-bridge.ts",
+      "file": "CodePilot/src/lib/codex/approval-bridge.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/codex/approval-bridge.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "model-catalog-warmup.ts",
+      "file": "CodePilot/src/lib/codex/model-catalog-warmup.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/codex/model-catalog-warmup.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "runtime.ts",
+      "file": "CodePilot/src/lib/codex/runtime.ts",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/lib/codex/runtime.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "page.tsx",
+      "file": "CodePilot/src/app/chat/page.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/app/chat/page.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "page.tsx",
+      "file": "CodePilot/src/app/chat/[id]/page.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/app/chat/[id]/page.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "page.tsx",
+      "file": "CodePilot/src/app/plugins/page.tsx",
+      "repo": "CP",
+      "id": "C:CP:CodePilot/src/app/plugins/page.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "index.ts",
+      "file": "deepseek-harness/packages/client/connection/src/index.ts",
+      "repo": "DH",
+      "id": "C:DH:deepseek-harness/packages/client/connection/src/index.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "api.ts",
+      "file": "deepseek-harness/packages/client/connection/src/client/api.ts",
+      "repo": "DH",
+      "id": "C:DH:deepseek-harness/packages/client/connection/src/client/api.ts"
+    },
+    {
+      "ntype": "component",
+      "label": "ChatSidebar.tsx",
+      "file": "hermes-agent/web/src/components/ChatSidebar.tsx",
+      "repo": "HM",
+      "id": "C:HM:hermes-agent/web/src/components/ChatSidebar.tsx"
+    },
+    {
+      "ntype": "component",
+      "label": "gatewayClient.ts",
+      "file": "hermes-agent/web/src/lib/gatewayClient.ts",
+      "repo": "HM",
+      "id": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts"
     }
   ],
   "links": [
@@ -1440,6 +1741,518 @@
       "etype": "has_op",
       "source": "E:Workspace",
       "target": "O:Workspace.rename"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/bridge/BridgeSection.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/permission-capability",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+      "target": "O:Permission.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/ChatView.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/messages",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/ChatView.tsx",
+      "target": "O:Message.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/browse",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/FolderPicker.tsx",
+      "target": "O:Workspace.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/messages",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+      "target": "O:Message.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/raw",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/MessageInput.tsx",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/raw",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/MessageInputParts.tsx",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/rewind",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/MessageList.tsx",
+      "target": "O:Session.fork"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions/[id]/messages",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/MessageList.tsx",
+      "target": "O:Message.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/RuntimeSelector.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/SubagentCard.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions/[id]/messages",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/chat/TaskRunMarker.tsx",
+      "target": "O:Message.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/raw",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/editor/markdown-live-preview.ts",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions/by-cwd",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx",
+      "target": "O:Session.search"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/ChatListPanel.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/browse",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/ChatListPanel.tsx",
+      "target": "O:Workspace.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/SplitColumn.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/UnifiedTopBar.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/mkdir",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+      "target": "O:Workspace.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/write",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+      "target": "O:File.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/write",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+      "target": "O:File.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/raw",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/plugins/McpManager.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/codex/models",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/settings/CodexAccountModelsBlock.tsx",
+      "target": "O:Model.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/settings",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/components/settings/RuntimePanel.tsx",
+      "target": "O:Settings.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/media/jobs",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useBatchImageGen.ts",
+      "target": "O:Job.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/settings",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useBridgeAdapter.ts",
+      "target": "O:Settings.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useChatCommands.ts",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/raw",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useMentionTokenEstimate.ts",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/codex/models",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useProviderModels.ts",
+      "target": "O:Model.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/hooks/useStreamSubscription.ts",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/assets/html-bundles",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/archive-html-asset-client.ts",
+      "target": "O:Attachment.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions/[id]/messages",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/db.ts",
+      "target": "O:Message.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/rename",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/file-mutation.ts",
+      "target": "O:File.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/delete",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/file-mutation.ts",
+      "target": "O:File.delete"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/permission",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/permission-approval-token.ts",
+      "target": "O:Permission.respond"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/session-title-events.ts",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/stream-session-manager.ts",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/interrupt",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/stream-session-manager.ts",
+      "target": "O:Session.interrupt"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/permission",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/stream-session-manager.ts",
+      "target": "O:Permission.respond"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/permission",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/codex/approval-bridge.ts",
+      "target": "O:Permission.respond"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/codex/models",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/codex/model-catalog-warmup.ts",
+      "target": "O:Model.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/interrupt",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/lib/codex/runtime.ts",
+      "target": "O:Session.interrupt"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/files/browse",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/chat/page.tsx",
+      "target": "O:Workspace.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/interrupt",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/chat/page.tsx",
+      "target": "O:Session.interrupt"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/permission",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/chat/page.tsx",
+      "target": "O:Permission.respond"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/chat/page.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/chat/[id]/page.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "CP",
+      "endpoint": "/chat/sessions",
+      "kind": "REST",
+      "source": "C:CP:CodePilot/src/app/plugins/page.tsx",
+      "target": "O:Session.list"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "agentPreset.read",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:AgentPreset.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "agentPreset.remove",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:AgentPreset.delete"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "settings.describe",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:Settings.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "settings.update",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:Settings.update"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "credentials.describe",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:Credential.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "credentials.unset",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/index.ts",
+      "target": "O:Credential.delete"
+    },
+    {
+      "etype": "calls",
+      "repo": "DH",
+      "endpoint": "host.describe",
+      "kind": "RPC",
+      "source": "C:DH:deepseek-harness/packages/client/connection/src/client/api.ts",
+      "target": "O:File.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "endpoint": "session.info",
+      "kind": "RPC",
+      "source": "C:HM:hermes-agent/web/src/components/ChatSidebar.tsx",
+      "target": "O:Session.get"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "endpoint": "session.create",
+      "kind": "RPC",
+      "source": "C:HM:hermes-agent/web/src/components/ChatSidebar.tsx",
+      "target": "O:Session.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "endpoint": "session.create",
+      "kind": "RPC",
+      "source": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts",
+      "target": "O:Session.create"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "endpoint": "message.delta",
+      "kind": "RPC",
+      "source": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts",
+      "target": "O:Message.stream"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "endpoint": "prompt.submit",
+      "kind": "RPC",
+      "source": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts",
+      "target": "O:Message.send"
     }
   ]
 }

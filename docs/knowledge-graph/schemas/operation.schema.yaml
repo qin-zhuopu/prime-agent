@@ -35,6 +35,10 @@ properties:
           description: HTTP verb, REST only
           enum: ["GET", "POST", "PUT", "DELETE", "PATCH", ""]
         style:
-          enum: [REST, RPC, WS-RPC]
+          description: >-
+            REST = url+verb; RPC/WS-RPC = named method over HTTP/WebSocket;
+            stdio-rpc = named method over spawned child stdio;
+            sdk-call = in-process library function (no wire endpoint)
+          enum: [REST, RPC, WS-RPC, stdio-rpc, sdk-call]
         transport:
-          enum: [SSE, WebSocket, stdio, "n/a"]
+          enum: [SSE, WebSocket, stdio, "in-process", "n/a"]

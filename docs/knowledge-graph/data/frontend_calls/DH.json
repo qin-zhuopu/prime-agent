@@ -1,0 +1,44 @@
+[
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.read",
+    "operation": "O:AgentPreset.get",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.remove",
+    "operation": "O:AgentPreset.delete",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.describe",
+    "operation": "O:Settings.get",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.update",
+    "operation": "O:Settings.update",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "credentials.describe",
+    "operation": "O:Credential.get",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "credentials.unset",
+    "operation": "O:Credential.delete",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/client/api.ts",
+    "endpoint": "host.describe",
+    "operation": "O:File.get",
+    "kind": "RPC"
+  }
+]

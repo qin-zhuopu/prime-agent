@@ -1,0 +1,314 @@
+[
+  {
+    "caller_file": "CodePilot/src/components/bridge/BridgeSection.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+    "endpoint": "/chat/permission-capability",
+    "operation": "O:Permission.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/messages",
+    "operation": "O:Message.update",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/FolderPicker.tsx",
+    "endpoint": "/files/browse",
+    "operation": "O:Workspace.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+    "endpoint": "/chat/messages",
+    "operation": "O:Message.update",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInput.tsx",
+    "endpoint": "/files/raw",
+    "operation": "O:File.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInputParts.tsx",
+    "endpoint": "/files/raw",
+    "operation": "O:File.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageList.tsx",
+    "endpoint": "/chat/rewind",
+    "operation": "O:Session.fork",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageList.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "operation": "O:Message.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/RuntimeSelector.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/SubagentCard.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskRunMarker.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "operation": "O:Message.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/editor/markdown-live-preview.ts",
+    "endpoint": "/files/raw",
+    "operation": "O:File.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+    "endpoint": "/chat/sessions/by-cwd",
+    "operation": "O:Session.search",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/files/browse",
+    "operation": "O:Workspace.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/SplitColumn.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/UnifiedTopBar.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+    "endpoint": "/files/mkdir",
+    "operation": "O:Workspace.create",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+    "endpoint": "/files/write",
+    "operation": "O:File.create",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/write",
+    "operation": "O:File.create",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/raw",
+    "operation": "O:File.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpManager.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/CodexAccountModelsBlock.tsx",
+    "endpoint": "/codex/models",
+    "operation": "O:Model.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/settings",
+    "operation": "O:Settings.update",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs",
+    "operation": "O:Job.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBridgeAdapter.ts",
+    "endpoint": "/settings",
+    "operation": "O:Settings.update",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useChatCommands.ts",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useMentionTokenEstimate.ts",
+    "endpoint": "/files/raw",
+    "operation": "O:File.get",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useProviderModels.ts",
+    "endpoint": "/codex/models",
+    "operation": "O:Model.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useStreamSubscription.ts",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/archive-html-asset-client.ts",
+    "endpoint": "/assets/html-bundles",
+    "operation": "O:Attachment.create",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/db.ts",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "operation": "O:Message.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/file-mutation.ts",
+    "endpoint": "/files/rename",
+    "operation": "O:File.update",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/file-mutation.ts",
+    "endpoint": "/files/delete",
+    "operation": "O:File.delete",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/permission-approval-token.ts",
+    "endpoint": "/chat/permission",
+    "operation": "O:Permission.respond",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/session-title-events.ts",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/interrupt",
+    "operation": "O:Session.interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/permission",
+    "operation": "O:Permission.respond",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/approval-bridge.ts",
+    "endpoint": "/chat/permission",
+    "operation": "O:Permission.respond",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/model-catalog-warmup.ts",
+    "endpoint": "/codex/models",
+    "operation": "O:Model.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/runtime.ts",
+    "endpoint": "/chat/interrupt",
+    "operation": "O:Session.interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/files/browse",
+    "operation": "O:Workspace.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/interrupt",
+    "operation": "O:Session.interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/permission",
+    "operation": "O:Permission.respond",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/[id]/page.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/plugins/page.tsx",
+    "endpoint": "/chat/sessions",
+    "operation": "O:Session.list",
+    "kind": "REST"
+  }
+]

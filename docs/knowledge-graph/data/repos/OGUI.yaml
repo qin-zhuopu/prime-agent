@@ -6,5 +6,9 @@ stack: React+Vite+Electron
 license: open
 transport:
 - SSE
+integration:
+- REST+SSE
+- in-process-sdk
+browser_native: true
 protocols:
 - structured-render

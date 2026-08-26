@@ -1,0 +1,32 @@
+[
+  {
+    "caller_file": "hermes-agent/web/src/components/ChatSidebar.tsx",
+    "endpoint": "session.info",
+    "operation": "O:Session.get",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/components/ChatSidebar.tsx",
+    "endpoint": "session.create",
+    "operation": "O:Session.create",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "session.create",
+    "operation": "O:Session.create",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "message.delta",
+    "operation": "O:Message.stream",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "prompt.submit",
+    "operation": "O:Message.send",
+    "kind": "RPC"
+  }
+]

@@ -1,10 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d11" for="edge" attr.name="style" attr.type="string" />
-  <key id="d10" for="edge" attr.name="http" attr.type="string" />
-  <key id="d9" for="edge" attr.name="name" attr.type="string" />
-  <key id="d8" for="edge" attr.name="repo" attr.type="string" />
-  <key id="d7" for="edge" attr.name="etype" attr.type="string" />
+  <key id="d15" for="edge" attr.name="kind" attr.type="string" />
+  <key id="d14" for="edge" attr.name="endpoint" attr.type="string" />
+  <key id="d13" for="edge" attr.name="style" attr.type="string" />
+  <key id="d12" for="edge" attr.name="http" attr.type="string" />
+  <key id="d11" for="edge" attr.name="name" attr.type="string" />
+  <key id="d10" for="edge" attr.name="repo" attr.type="string" />
+  <key id="d9" for="edge" attr.name="etype" attr.type="string" />
+  <key id="d8" for="node" attr.name="repo" attr.type="string" />
+  <key id="d7" for="node" attr.name="file" attr.type="string" />
   <key id="d6" for="node" attr.name="entity" attr.type="string" />
   <key id="d5" for="node" attr.name="name_HM" attr.type="string" />
   <key id="d4" for="node" attr.name="name_DH" attr.type="string" />
@@ -376,743 +380,1385 @@
       <data key="d1">rename</data>
       <data key="d6">Workspace</data>
     </node>
-    <edge source="CP" target="O:Attachment.create">
-      <data key="d7">exposes</data>
+    <node id="C:CP:CodePilot/src/components/bridge/BridgeSection.tsx">
+      <data key="d0">component</data>
+      <data key="d1">BridgeSection.tsx</data>
+      <data key="d7">CodePilot/src/components/bridge/BridgeSection.tsx</data>
       <data key="d8">CP</data>
-      <data key="d9">/assets/html-bundles</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx">
+      <data key="d0">component</data>
+      <data key="d1">ChatPermissionSelector.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/ChatPermissionSelector.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/ChatView.tsx">
+      <data key="d0">component</data>
+      <data key="d1">ChatView.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/ChatView.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/FolderPicker.tsx">
+      <data key="d0">component</data>
+      <data key="d1">FolderPicker.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/FolderPicker.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/ImageGenConfirmation.tsx">
+      <data key="d0">component</data>
+      <data key="d1">ImageGenConfirmation.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/ImageGenConfirmation.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/MessageInput.tsx">
+      <data key="d0">component</data>
+      <data key="d1">MessageInput.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/MessageInput.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/MessageInputParts.tsx">
+      <data key="d0">component</data>
+      <data key="d1">MessageInputParts.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/MessageInputParts.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/MessageList.tsx">
+      <data key="d0">component</data>
+      <data key="d1">MessageList.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/MessageList.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/RuntimeSelector.tsx">
+      <data key="d0">component</data>
+      <data key="d1">RuntimeSelector.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/RuntimeSelector.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/SubagentCard.tsx">
+      <data key="d0">component</data>
+      <data key="d1">SubagentCard.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/SubagentCard.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/chat/TaskRunMarker.tsx">
+      <data key="d0">component</data>
+      <data key="d1">TaskRunMarker.tsx</data>
+      <data key="d7">CodePilot/src/components/chat/TaskRunMarker.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/editor/markdown-live-preview.ts">
+      <data key="d0">component</data>
+      <data key="d1">markdown-live-preview.ts</data>
+      <data key="d7">CodePilot/src/components/editor/markdown-live-preview.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx">
+      <data key="d0">component</data>
+      <data key="d1">GitWorktreeSection.tsx</data>
+      <data key="d7">CodePilot/src/components/git/GitWorktreeSection.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/layout/ChatListPanel.tsx">
+      <data key="d0">component</data>
+      <data key="d1">ChatListPanel.tsx</data>
+      <data key="d7">CodePilot/src/components/layout/ChatListPanel.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/layout/SplitColumn.tsx">
+      <data key="d0">component</data>
+      <data key="d1">SplitColumn.tsx</data>
+      <data key="d7">CodePilot/src/components/layout/SplitColumn.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/layout/UnifiedTopBar.tsx">
+      <data key="d0">component</data>
+      <data key="d1">UnifiedTopBar.tsx</data>
+      <data key="d7">CodePilot/src/components/layout/UnifiedTopBar.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx">
+      <data key="d0">component</data>
+      <data key="d1">FileTreePanel.tsx</data>
+      <data key="d7">CodePilot/src/components/layout/panels/FileTreePanel.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx">
+      <data key="d0">component</data>
+      <data key="d1">PreviewPanel.tsx</data>
+      <data key="d7">CodePilot/src/components/layout/panels/PreviewPanel.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/plugins/McpManager.tsx">
+      <data key="d0">component</data>
+      <data key="d1">McpManager.tsx</data>
+      <data key="d7">CodePilot/src/components/plugins/McpManager.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/settings/CodexAccountModelsBlock.tsx">
+      <data key="d0">component</data>
+      <data key="d1">CodexAccountModelsBlock.tsx</data>
+      <data key="d7">CodePilot/src/components/settings/CodexAccountModelsBlock.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/components/settings/RuntimePanel.tsx">
+      <data key="d0">component</data>
+      <data key="d1">RuntimePanel.tsx</data>
+      <data key="d7">CodePilot/src/components/settings/RuntimePanel.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useBatchImageGen.ts">
+      <data key="d0">component</data>
+      <data key="d1">useBatchImageGen.ts</data>
+      <data key="d7">CodePilot/src/hooks/useBatchImageGen.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useBridgeAdapter.ts">
+      <data key="d0">component</data>
+      <data key="d1">useBridgeAdapter.ts</data>
+      <data key="d7">CodePilot/src/hooks/useBridgeAdapter.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useChatCommands.ts">
+      <data key="d0">component</data>
+      <data key="d1">useChatCommands.ts</data>
+      <data key="d7">CodePilot/src/hooks/useChatCommands.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useMentionTokenEstimate.ts">
+      <data key="d0">component</data>
+      <data key="d1">useMentionTokenEstimate.ts</data>
+      <data key="d7">CodePilot/src/hooks/useMentionTokenEstimate.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useProviderModels.ts">
+      <data key="d0">component</data>
+      <data key="d1">useProviderModels.ts</data>
+      <data key="d7">CodePilot/src/hooks/useProviderModels.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/hooks/useStreamSubscription.ts">
+      <data key="d0">component</data>
+      <data key="d1">useStreamSubscription.ts</data>
+      <data key="d7">CodePilot/src/hooks/useStreamSubscription.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/archive-html-asset-client.ts">
+      <data key="d0">component</data>
+      <data key="d1">archive-html-asset-client.ts</data>
+      <data key="d7">CodePilot/src/lib/archive-html-asset-client.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/db.ts">
+      <data key="d0">component</data>
+      <data key="d1">db.ts</data>
+      <data key="d7">CodePilot/src/lib/db.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/file-mutation.ts">
+      <data key="d0">component</data>
+      <data key="d1">file-mutation.ts</data>
+      <data key="d7">CodePilot/src/lib/file-mutation.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/permission-approval-token.ts">
+      <data key="d0">component</data>
+      <data key="d1">permission-approval-token.ts</data>
+      <data key="d7">CodePilot/src/lib/permission-approval-token.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/session-title-events.ts">
+      <data key="d0">component</data>
+      <data key="d1">session-title-events.ts</data>
+      <data key="d7">CodePilot/src/lib/session-title-events.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/stream-session-manager.ts">
+      <data key="d0">component</data>
+      <data key="d1">stream-session-manager.ts</data>
+      <data key="d7">CodePilot/src/lib/stream-session-manager.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/codex/approval-bridge.ts">
+      <data key="d0">component</data>
+      <data key="d1">approval-bridge.ts</data>
+      <data key="d7">CodePilot/src/lib/codex/approval-bridge.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/codex/model-catalog-warmup.ts">
+      <data key="d0">component</data>
+      <data key="d1">model-catalog-warmup.ts</data>
+      <data key="d7">CodePilot/src/lib/codex/model-catalog-warmup.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/lib/codex/runtime.ts">
+      <data key="d0">component</data>
+      <data key="d1">runtime.ts</data>
+      <data key="d7">CodePilot/src/lib/codex/runtime.ts</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/app/chat/page.tsx">
+      <data key="d0">component</data>
+      <data key="d1">page.tsx</data>
+      <data key="d7">CodePilot/src/app/chat/page.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/app/chat/[id]/page.tsx">
+      <data key="d0">component</data>
+      <data key="d1">page.tsx</data>
+      <data key="d7">CodePilot/src/app/chat/[id]/page.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:CP:CodePilot/src/app/plugins/page.tsx">
+      <data key="d0">component</data>
+      <data key="d1">page.tsx</data>
+      <data key="d7">CodePilot/src/app/plugins/page.tsx</data>
+      <data key="d8">CP</data>
+    </node>
+    <node id="C:DH:deepseek-harness/packages/client/connection/src/index.ts">
+      <data key="d0">component</data>
+      <data key="d1">index.ts</data>
+      <data key="d7">deepseek-harness/packages/client/connection/src/index.ts</data>
+      <data key="d8">DH</data>
+    </node>
+    <node id="C:DH:deepseek-harness/packages/client/connection/src/client/api.ts">
+      <data key="d0">component</data>
+      <data key="d1">api.ts</data>
+      <data key="d7">deepseek-harness/packages/client/connection/src/client/api.ts</data>
+      <data key="d8">DH</data>
+    </node>
+    <node id="C:HM:hermes-agent/web/src/components/ChatSidebar.tsx">
+      <data key="d0">component</data>
+      <data key="d1">ChatSidebar.tsx</data>
+      <data key="d7">hermes-agent/web/src/components/ChatSidebar.tsx</data>
+      <data key="d8">HM</data>
+    </node>
+    <node id="C:HM:hermes-agent/web/src/lib/gatewayClient.ts">
+      <data key="d0">component</data>
+      <data key="d1">gatewayClient.ts</data>
+      <data key="d7">hermes-agent/web/src/lib/gatewayClient.ts</data>
+      <data key="d8">HM</data>
+    </node>
+    <edge source="CP" target="O:Attachment.create">
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/assets/html-bundles</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Attachment.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/assets/[id]</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/assets/[id]</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Credential.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/claude-auth</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/claude-auth</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:File.create">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/write</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/write</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:File.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/delete</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/delete</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:File.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/raw</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/raw</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:File.update">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/rename</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/rename</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Job.create">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/media/jobs</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/media/jobs</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Job.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/media/jobs</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/media/jobs</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Message.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/[id]/messages</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/[id]/messages</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Message.send">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/messages</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/messages</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Message.stream">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/structured</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/structured</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Message.update">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/messages</data>
-      <data key="d10">PUT</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/messages</data>
+      <data key="d12">PUT</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Model.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/codex/models</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/codex/models</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Model.select">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/model</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/model</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Permission.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/permission-capability</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/permission-capability</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Permission.respond">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/permission</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/permission</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.create">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/[id]</data>
-      <data key="d10">DELETE</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/[id]</data>
+      <data key="d12">DELETE</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.fork">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/rewind</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/rewind</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/[id]</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/[id]</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.interrupt">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/interrupt</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/interrupt</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.search">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/by-cwd</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/by-cwd</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Session.update">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/[id]</data>
-      <data key="d10">PATCH</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/[id]</data>
+      <data key="d12">PATCH</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Settings.get">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/settings</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/settings</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Settings.update">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/settings</data>
-      <data key="d10">PUT</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/settings</data>
+      <data key="d12">PUT</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Subagent.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/chat/sessions/[id]/subagent-runs</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/chat/sessions/[id]/subagent-runs</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Workspace.create">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/mkdir</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/mkdir</data>
+      <data key="d12">POST</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="CP" target="O:Workspace.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/browse</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
+      <data key="d9">exposes</data>
+      <data key="d10">CP</data>
+      <data key="d11">/files/browse</data>
+      <data key="d12">GET</data>
+      <data key="d13">REST</data>
     </edge>
     <edge source="DH" target="O:AgentPreset.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">agentPreset.remove</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">agentPreset.remove</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:AgentPreset.get">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">agentPreset.read</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">agentPreset.read</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:AgentPreset.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">agentPreset.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">agentPreset.list</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:AgentPreset.select">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">agentPreset.select</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">agentPreset.select</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Attachment.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.attachment</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.attachment</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Credential.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">credentials.unset</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">credentials.unset</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Credential.get">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">credentials.describe</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">credentials.describe</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:File.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">host.createDirectory</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">host.createDirectory</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:File.get">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">host.describe</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">host.describe</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:File.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">host.listDirectory</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">host.listDirectory</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.clear">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.clear</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.clear</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.complete">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.complete</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.complete</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.create</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.create</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.pause">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.pause</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.pause</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.resume">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.resume</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.resume</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Goal.update">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">goal.edit</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">goal.edit</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Message.send">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.prompt</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.prompt</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Message.update">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.updateQueue</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.updateQueue</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Model.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.models</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.models</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Model.select">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.selectModel</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.selectModel</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.create</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.create</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">workspace.archiveSession</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">workspace.archiveSession</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.fork">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.fork</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.fork</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.history">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.history</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.history</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.interrupt">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.cancel</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.cancel</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.list</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Session.search">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.search</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.search</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Settings.get">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">settings.describe</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">settings.describe</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Settings.update">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">settings.update</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">settings.update</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Skill.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">skill.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">skill.list</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Subagent.history">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">subagent.history</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">subagent.history</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Subagent.interrupt">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">subagent.interrupt</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">subagent.interrupt</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Subagent.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">subagent.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">subagent.list</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Subagent.send">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">subagent.prompt</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">subagent.prompt</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Workspace.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">workspace.create</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">workspace.create</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Workspace.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">workspace.delete</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">workspace.delete</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Workspace.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">workspace.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">workspace.list</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="DH" target="O:Workspace.rename">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">workspace.rename</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">workspace.rename</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
     </edge>
     <edge source="HM" target="O:AgentPreset.create">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">profiles.create</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">profiles.create</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:AgentPreset.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">profiles.describe</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">profiles.describe</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:AgentPreset.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">profiles.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">profiles.list</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Message.send">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">prompt.submit</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">prompt.submit</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Message.stream">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">message.delta</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">message.delta</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Permission.respond">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">approval.received</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">approval.received</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.create">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.create</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.create</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.close</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.close</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.fork">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.branch</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.branch</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.info</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.info</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.history">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.history</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.history</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.interrupt">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.interrupt</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.interrupt</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Session.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.active_list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.active_list</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Settings.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">config.get</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">config.get</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Subagent.interrupt">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">subagent.interrupt</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">subagent.interrupt</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:Subagent.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">agents.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">agents.list</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.delete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.select">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Attachment" target="O:Attachment.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Attachment" target="O:Attachment.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Credential" target="O:Credential.delete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Credential" target="O:Credential.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.delete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.update">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.clear">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.complete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.pause">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.resume">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Goal" target="O:Goal.update">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Job" target="O:Job.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Job" target="O:Job.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Message" target="O:Message.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Message" target="O:Message.send">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Message" target="O:Message.stream">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Message" target="O:Message.update">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Model" target="O:Model.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Model" target="O:Model.select">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Permission" target="O:Permission.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Permission" target="O:Permission.respond">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.delete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.fork">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.history">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.interrupt">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.search">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Session" target="O:Session.update">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Settings" target="O:Settings.get">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Settings" target="O:Settings.update">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Skill" target="O:Skill.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Subagent" target="O:Subagent.history">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Subagent" target="O:Subagent.interrupt">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Subagent" target="O:Subagent.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Subagent" target="O:Subagent.send">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Workspace" target="O:Workspace.create">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Workspace" target="O:Workspace.delete">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Workspace" target="O:Workspace.list">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
     </edge>
     <edge source="E:Workspace" target="O:Workspace.rename">
-      <data key="d7">has_op</data>
+      <data key="d9">has_op</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/bridge/BridgeSection.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx" target="O:Permission.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/permission-capability</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/ChatPermissionSelector.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/ChatView.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/ChatView.tsx" target="O:Message.update">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/messages</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/FolderPicker.tsx" target="O:Workspace.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/browse</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/ImageGenConfirmation.tsx" target="O:Message.update">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/messages</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/MessageInput.tsx" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/raw</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/MessageInputParts.tsx" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/raw</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/MessageList.tsx" target="O:Session.fork">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/rewind</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/MessageList.tsx" target="O:Message.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions/[id]/messages</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/RuntimeSelector.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/SubagentCard.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/chat/TaskRunMarker.tsx" target="O:Message.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions/[id]/messages</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/editor/markdown-live-preview.ts" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/raw</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx" target="O:Session.search">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions/by-cwd</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/git/GitWorktreeSection.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/ChatListPanel.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/ChatListPanel.tsx" target="O:Workspace.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/browse</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/SplitColumn.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/UnifiedTopBar.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx" target="O:Workspace.create">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/mkdir</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/panels/FileTreePanel.tsx" target="O:File.create">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/write</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx" target="O:File.create">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/write</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/layout/panels/PreviewPanel.tsx" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/raw</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/plugins/McpManager.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/settings/CodexAccountModelsBlock.tsx" target="O:Model.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/codex/models</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/components/settings/RuntimePanel.tsx" target="O:Settings.update">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/settings</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useBatchImageGen.ts" target="O:Job.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/media/jobs</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useBridgeAdapter.ts" target="O:Settings.update">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/settings</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useChatCommands.ts" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useMentionTokenEstimate.ts" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/raw</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useProviderModels.ts" target="O:Model.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/codex/models</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/hooks/useStreamSubscription.ts" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/archive-html-asset-client.ts" target="O:Attachment.create">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/assets/html-bundles</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/db.ts" target="O:Message.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions/[id]/messages</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/file-mutation.ts" target="O:File.update">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/rename</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/file-mutation.ts" target="O:File.delete">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/delete</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/permission-approval-token.ts" target="O:Permission.respond">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/permission</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/session-title-events.ts" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/stream-session-manager.ts" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/stream-session-manager.ts" target="O:Session.interrupt">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/interrupt</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/stream-session-manager.ts" target="O:Permission.respond">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/permission</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/codex/approval-bridge.ts" target="O:Permission.respond">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/permission</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/codex/model-catalog-warmup.ts" target="O:Model.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/codex/models</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/lib/codex/runtime.ts" target="O:Session.interrupt">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/interrupt</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/chat/page.tsx" target="O:Workspace.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/files/browse</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/chat/page.tsx" target="O:Session.interrupt">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/interrupt</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/chat/page.tsx" target="O:Permission.respond">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/permission</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/chat/page.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/chat/[id]/page.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:CP:CodePilot/src/app/plugins/page.tsx" target="O:Session.list">
+      <data key="d9">calls</data>
+      <data key="d10">CP</data>
+      <data key="d14">/chat/sessions</data>
+      <data key="d15">REST</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:AgentPreset.get">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">agentPreset.read</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:AgentPreset.delete">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">agentPreset.remove</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:Settings.get">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">settings.describe</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:Settings.update">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">settings.update</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:Credential.get">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">credentials.describe</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/index.ts" target="O:Credential.delete">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">credentials.unset</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:DH:deepseek-harness/packages/client/connection/src/client/api.ts" target="O:File.get">
+      <data key="d9">calls</data>
+      <data key="d10">DH</data>
+      <data key="d14">host.describe</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:HM:hermes-agent/web/src/components/ChatSidebar.tsx" target="O:Session.get">
+      <data key="d9">calls</data>
+      <data key="d10">HM</data>
+      <data key="d14">session.info</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:HM:hermes-agent/web/src/components/ChatSidebar.tsx" target="O:Session.create">
+      <data key="d9">calls</data>
+      <data key="d10">HM</data>
+      <data key="d14">session.create</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:HM:hermes-agent/web/src/lib/gatewayClient.ts" target="O:Session.create">
+      <data key="d9">calls</data>
+      <data key="d10">HM</data>
+      <data key="d14">session.create</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:HM:hermes-agent/web/src/lib/gatewayClient.ts" target="O:Message.stream">
+      <data key="d9">calls</data>
+      <data key="d10">HM</data>
+      <data key="d14">message.delta</data>
+      <data key="d15">RPC</data>
+    </edge>
+    <edge source="C:HM:hermes-agent/web/src/lib/gatewayClient.ts" target="O:Message.send">
+      <data key="d9">calls</data>
+      <data key="d10">HM</data>
+      <data key="d14">prompt.submit</data>
+      <data key="d15">RPC</data>
     </edge>
   </graph>
 </graphml>

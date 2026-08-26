@@ -6,6 +6,9 @@ stack: Cordis+React
 license: open
 transport:
 - SSE
+integration:
+- REST+SSE
+browser_native: true
 protocols:
 - SSE
 - node-render

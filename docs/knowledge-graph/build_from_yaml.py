@@ -32,7 +32,10 @@ def build_ui_graph() -> nx.DiGraph:
     g = nx.DiGraph()
     for d in _load("repos"):
         g.add_node(d["id"], ntype="repo", label=d["label"], stack=d.get("stack", ""),
-                   license=d.get("license", ""), tier=d["tier"])
+                   license=d.get("license", ""), tier=d["tier"],
+                   integration=",".join(d.get("integration", [])),
+                   browser_native=bool(d.get("browser_native", False)),
+                   transport=",".join(d.get("transport", [])))
         for proto in d.get("protocols", []):
             g.add_edge(d["id"], proto, etype="uses")
     for d in _load("protocols"):
@@ -65,6 +68,20 @@ def build_api_graph() -> nx.DiGraph:
         for rid, ep in d.get("endpoints", {}).items():
             g.add_edge(rid, oid, etype="exposes", repo=rid, name=ep["name"],
                        http=ep.get("http", ""), style=ep["style"])
+
+    # frontend component/page -> operation call references (built from code scan)
+    fc_dir = DATA / "frontend_calls"
+    if fc_dir.is_dir():
+        for fj in sorted(fc_dir.glob("*.json")):
+            repo = fj.stem
+            for c in json.loads(fj.read_text()):
+                cid = f"C:{repo}:{c['caller_file']}"
+                if cid not in g:
+                    g.add_node(cid, ntype="component", label=c["caller_file"].split("/")[-1],
+                               file=c["caller_file"], repo=repo)
+                if c["operation"] in g:
+                    g.add_edge(cid, c["operation"], etype="calls",
+                               repo=repo, endpoint=c["endpoint"], kind=c["kind"])
     return g
 
 

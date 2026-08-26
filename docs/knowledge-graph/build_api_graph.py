@@ -202,6 +202,35 @@ def analyze(g: nx.DiGraph) -> str:
     lines.append("Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming "
                  "(no URL/HTTP verb). All are normalized to canonical (entity, operation) nodes so the "
                  "three shapes become comparable. Entity/op absence in a repo = no `exposes` edge.")
+
+    # frontend component -> operation call references (built from code scan)
+    comps = [n for n, d in g.nodes(data=True) if d["ntype"] == "component"]
+    calls = [(u, v) for u, v, d in g.edges(data=True) if d["etype"] == "calls"]
+    if comps:
+        lines.append("\n## Frontend call references (component/page -> operation)\n")
+        lines.append("Built by scanning frontend source for endpoint calls (scan_frontend_calls.py); "
+                     "tests/fixtures excluded.\n")
+        lines.append("| repo | caller files | call edges |")
+        lines.append("|---|---|---|")
+        for rid in REPOS:
+            rc = [c for c in comps if g.nodes[c].get("repo") == rid]
+            re_ = [e for e in calls if g.nodes[e[0]].get("repo") == rid]
+            lines.append(f"| {REPOS[rid]['label']} | {len(rc)} | {len(re_)} |")
+        lines.append("")
+        # most-called operations
+        from collections import Counter
+        called = Counter(g.nodes[v]["label"] and v for _, v in calls)
+        top = Counter(v for _, v in calls).most_common(8)
+        lines.append("Most-referenced operations (by #calling files across repos):\n")
+        lines.append("| operation | #call edges |")
+        lines.append("|---|---|")
+        for oid, n in top:
+            lines.append(f"| {oid.replace('O:','')} | {n} |")
+        lines.append("")
+        lines.append("Architectural signal: CP components fetch endpoints directly (calls spread across "
+                     "many component files); DH concentrates RPC in its runtime/connection layer (few files, "
+                     "Cordis contract-driven); HM routes most interaction through the PTY terminal, so few "
+                     "structured RPC call sites appear.")
     return "\n".join(lines) + "\n"
 
 

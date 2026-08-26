@@ -9,6 +9,9 @@
       "stack": "Next.js+React",
       "license": "open",
       "tier": "survey",
+      "integration": "stdio-rpc",
+      "browser_native": false,
+      "transport": "stdio",
       "id": "ACHAT"
     },
     {
@@ -31,6 +34,9 @@
       "stack": "React (core+react pkgs)",
       "license": "open",
       "tier": "survey",
+      "integration": "stdio-rpc,in-process-sdk",
+      "browser_native": false,
+      "transport": "stdio",
       "id": "ACPC"
     },
     {
@@ -39,6 +45,9 @@
       "stack": "Vue3+Tauri",
       "license": "open",
       "tier": "survey",
+      "integration": "stdio-rpc",
+      "browser_native": false,
+      "transport": "stdio",
       "id": "ACPUI"
     },
     {
@@ -47,6 +56,9 @@
       "stack": "Kotlin server + web",
       "license": "open",
       "tier": "survey",
+      "integration": "WebSocket,stdio-rpc",
+      "browser_native": false,
+      "transport": "WebSocket",
       "id": "ACPWG"
     },
     {
@@ -55,6 +67,9 @@
       "stack": "React (TS lib)",
       "license": "open",
       "tier": "survey",
+      "integration": "in-process-sdk",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "ASTUI"
     },
     {
@@ -63,6 +78,9 @@
       "stack": "React+Next.js",
       "license": "open",
       "tier": "survey",
+      "integration": "in-process-sdk",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "CKIT"
     },
     {
@@ -78,6 +96,9 @@
       "stack": "Electron+Next.js",
       "license": "BUSL-1.1",
       "tier": "primary",
+      "integration": "REST+SSE",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "CP"
     },
     {
@@ -93,6 +114,9 @@
       "stack": "Cordis+React",
       "license": "open",
       "tier": "primary",
+      "integration": "REST+SSE",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "DH"
     },
     {
@@ -108,6 +132,9 @@
       "stack": "Vite+React+xterm",
       "license": "open",
       "tier": "primary",
+      "integration": "WebSocket",
+      "browser_native": true,
+      "transport": "WebSocket",
       "id": "HM"
     },
     {
@@ -130,6 +157,9 @@
       "stack": "React+Vite+tRPC",
       "license": "open",
       "tier": "survey",
+      "integration": "REST+SSE",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "OCUI"
     },
     {
@@ -138,6 +168,9 @@
       "stack": "React+Vite+Electron",
       "license": "open",
       "tier": "survey",
+      "integration": "REST+SSE,in-process-sdk",
+      "browser_native": true,
+      "transport": "SSE",
       "id": "OGUI"
     },
     {

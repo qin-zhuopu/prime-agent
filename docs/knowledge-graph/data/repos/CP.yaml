@@ -6,6 +6,9 @@ stack: Electron+Next.js
 license: BUSL-1.1
 transport:
 - SSE
+integration:
+- REST+SSE
+browser_native: true
 protocols:
 - SSE
 - structured-render

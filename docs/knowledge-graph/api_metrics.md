@@ -1,7 +1,7 @@
 # Backend API Knowledge Graph -- Metrics
 
-- Nodes: 67 (repos=3, entities=14, operations=50)
-- Edges: 134
+- Nodes: 110 (repos=3, entities=14, operations=50)
+- Edges: 198
 
 ## Entity naming across repos
 
@@ -153,3 +153,28 @@
 | hermes-agent | WS-RPC | 16 |
 
 Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming (no URL/HTTP verb). All are normalized to canonical (entity, operation) nodes so the three shapes become comparable. Entity/op absence in a repo = no `exposes` edge.
+
+## Frontend call references (component/page -> operation)
+
+Built by scanning frontend source for endpoint calls (scan_frontend_calls.py); tests/fixtures excluded.
+
+| repo | caller files | call edges |
+|---|---|---|
+| CodePilot | 39 | 52 |
+| deepseek-harness | 2 | 7 |
+| hermes-agent | 2 | 5 |
+
+Most-referenced operations (by #calling files across repos):
+
+| operation | #call edges |
+|---|---|
+| Session.list | 17 |
+| File.get | 6 |
+| Permission.respond | 4 |
+| Workspace.list | 3 |
+| Message.list | 3 |
+| Model.list | 3 |
+| Settings.update | 3 |
+| Session.interrupt | 3 |
+
+Architectural signal: CP components fetch endpoints directly (calls spread across many component files); DH concentrates RPC in its runtime/connection layer (few files, Cordis contract-driven); HM routes most interaction through the PTY terminal, so few structured RPC call sites appear.
