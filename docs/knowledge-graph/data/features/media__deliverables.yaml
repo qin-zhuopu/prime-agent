@@ -1,0 +1,12 @@
+id: media:deliverables
+ntype: feature
+label: deliverables
+category: media
+priority: P4
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

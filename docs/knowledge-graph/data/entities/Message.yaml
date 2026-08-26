@@ -1,0 +1,7 @@
+id: E:Message
+ntype: entity
+label: Message
+names:
+  CP: chat/messages
+  DH: session.prompt
+  HM: prompt

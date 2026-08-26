@@ -1,0 +1,11 @@
+id: O:Skill.list
+ntype: operation
+label: list
+entity: Skill
+endpoints:
+  DH:
+    name: skill.list
+    style: RPC
+  HM:
+    name: skills.list
+    style: WS-RPC

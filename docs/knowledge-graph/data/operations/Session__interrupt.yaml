@@ -1,0 +1,15 @@
+id: O:Session.interrupt
+ntype: operation
+label: interrupt
+entity: Session
+endpoints:
+  CP:
+    name: /chat/interrupt
+    style: REST
+    http: POST
+  DH:
+    name: session.cancel
+    style: RPC
+  HM:
+    name: session.interrupt
+    style: WS-RPC

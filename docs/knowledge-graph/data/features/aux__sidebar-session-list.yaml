@@ -1,0 +1,33 @@
+id: aux:sidebar-session-list
+ntype: feature
+label: sidebar-session-list
+category: aux
+priority: P0
+implementations:
+  ACHAT:
+    kind: structured
+    source: declared
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  ACPWG:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared
+  OGUI:
+    kind: structured
+    source: declared

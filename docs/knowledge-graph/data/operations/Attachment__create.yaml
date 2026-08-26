@@ -1,0 +1,15 @@
+id: O:Attachment.create
+ntype: operation
+label: create
+entity: Attachment
+endpoints:
+  CP:
+    name: /assets/html-bundles
+    style: REST
+    http: POST
+  DH:
+    name: session.attachment
+    style: RPC
+  HM:
+    name: clipboard.paste
+    style: WS-RPC

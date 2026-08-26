@@ -1,0 +1,21 @@
+id: messaging:message-actions
+ntype: feature
+label: message-actions
+category: messaging
+priority: P0
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

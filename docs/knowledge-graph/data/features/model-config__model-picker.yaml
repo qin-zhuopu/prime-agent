@@ -1,0 +1,27 @@
+id: model-config:model-picker
+ntype: feature
+label: model-picker
+category: model-config
+priority: P3
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared
+  OGUI:
+    kind: structured
+    source: declared

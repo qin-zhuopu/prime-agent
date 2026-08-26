@@ -1,0 +1,20 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: entity node (backend business entity)
+type: object
+required: [id, ntype, label, names]
+additionalProperties: false
+properties:
+  id:
+    description: canonical id "E:EntityName"
+    type: string
+    pattern: "^E:[A-Za-z][A-Za-z0-9]*$"
+  ntype:
+    const: entity
+  label:
+    type: string
+    pattern: "^[A-Za-z][A-Za-z0-9]*$"
+  names:
+    description: what this entity is called in each repo's API (repo id -> name)
+    type: object
+    additionalProperties:
+      type: string

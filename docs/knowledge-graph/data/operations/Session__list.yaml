@@ -1,0 +1,15 @@
+id: O:Session.list
+ntype: operation
+label: list
+entity: Session
+endpoints:
+  CP:
+    name: /chat/sessions
+    style: REST
+    http: GET
+  DH:
+    name: session.list
+    style: RPC
+  HM:
+    name: sessions.list
+    style: WS-RPC

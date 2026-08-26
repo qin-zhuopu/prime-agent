@@ -1,0 +1,11 @@
+id: O:AgentPreset.select
+ntype: operation
+label: select
+entity: AgentPreset
+endpoints:
+  DH:
+    name: agentPreset.select
+    style: RPC
+  HM:
+    name: profile.select
+    style: WS-RPC

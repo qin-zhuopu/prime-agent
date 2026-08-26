@@ -1,0 +1,30 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: repo node
+type: object
+required: [id, ntype, label, tier]
+additionalProperties: false
+properties:
+  id:
+    type: string
+    pattern: "^[A-Z][A-Z0-9]*$"
+  ntype:
+    const: repo
+  label:
+    type: string
+    minLength: 1
+  tier:
+    enum: [primary, survey]
+  stack:
+    type: string
+  license:
+    type: string
+  transport:
+    description: backend transport(s) for agent<->frontend streaming
+    type: array
+    items:
+      enum: [SSE, WebSocket, stdio, "none/unknown"]
+  protocols:
+    description: protocol node ids this repo uses
+    type: array
+    items:
+      type: string

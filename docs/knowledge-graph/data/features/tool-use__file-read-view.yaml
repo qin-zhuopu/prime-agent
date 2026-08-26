@@ -1,0 +1,21 @@
+id: tool-use:file-read-view
+ntype: feature
+label: file-read-view
+category: tool-use
+priority: P1
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared

@@ -1,0 +1,12 @@
+id: multi-agent:workflow-run
+ntype: feature
+label: workflow-run
+category: multi-agent
+priority: P3
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

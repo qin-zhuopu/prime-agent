@@ -1,0 +1,33 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: feature node
+type: object
+required: [id, ntype, label, category, priority, implementations]
+additionalProperties: false
+properties:
+  id:
+    description: canonical id "category:name"
+    type: string
+    pattern: "^[a-z-]+:[a-z0-9-]+$"
+  ntype:
+    const: feature
+  label:
+    type: string
+    minLength: 1
+  category:
+    enum: [messaging, reasoning, tool-use, permission, composer,
+           stream-control, multi-agent, model-config, media, aux]
+  priority:
+    enum: [P0, P1, P2, P3, P4]
+  implementations:
+    description: map of repo id -> how that repo implements this feature
+    type: object
+    minProperties: 0
+    additionalProperties:
+      type: object
+      required: [kind, source]
+      additionalProperties: false
+      properties:
+        kind:
+          enum: [structured, terminal]
+        source:
+          enum: [verified, declared]

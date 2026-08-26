@@ -1,0 +1,12 @@
+id: stream-control:message-queue
+ntype: feature
+label: message-queue
+category: stream-control
+priority: P2
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

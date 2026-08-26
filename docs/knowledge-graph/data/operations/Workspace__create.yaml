@@ -1,0 +1,12 @@
+id: O:Workspace.create
+ntype: operation
+label: create
+entity: Workspace
+endpoints:
+  CP:
+    name: /files/mkdir
+    style: REST
+    http: POST
+  DH:
+    name: workspace.create
+    style: RPC

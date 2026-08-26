@@ -1,0 +1,7 @@
+id: E:Attachment
+ntype: entity
+label: Attachment
+names:
+  CP: assets
+  DH: session.attachment
+  HM: clipboard.paste

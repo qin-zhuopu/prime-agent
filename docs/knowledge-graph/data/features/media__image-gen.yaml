@@ -1,0 +1,9 @@
+id: media:image-gen
+ntype: feature
+label: image-gen
+category: media
+priority: P4
+implementations:
+  CP:
+    kind: structured
+    source: verified

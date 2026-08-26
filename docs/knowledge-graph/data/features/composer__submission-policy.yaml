@@ -1,0 +1,21 @@
+id: composer:submission-policy
+ntype: feature
+label: submission-policy
+category: composer
+priority: P0
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

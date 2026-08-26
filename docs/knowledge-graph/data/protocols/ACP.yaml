@@ -1,0 +1,5 @@
+id: ACP
+ntype: protocol
+label: Agent Client Protocol (JSON-RPC/stdio)
+kind: protocol
+transport: stdio

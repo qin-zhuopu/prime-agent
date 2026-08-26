@@ -1,0 +1,18 @@
+id: aux:i18n
+ntype: feature
+label: i18n
+category: aux
+priority: P0
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

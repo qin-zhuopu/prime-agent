@@ -1,0 +1,11 @@
+id: CP
+ntype: repo
+label: CodePilot
+tier: primary
+stack: Electron+Next.js
+license: BUSL-1.1
+transport:
+- SSE
+protocols:
+- SSE
+- structured-render

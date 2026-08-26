@@ -1,0 +1,15 @@
+id: O:Subagent.list
+ntype: operation
+label: list
+entity: Subagent
+endpoints:
+  CP:
+    name: /chat/sessions/[id]/subagent-runs
+    style: REST
+    http: GET
+  DH:
+    name: subagent.list
+    style: RPC
+  HM:
+    name: agents.list
+    style: WS-RPC

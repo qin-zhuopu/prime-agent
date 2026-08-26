@@ -1,0 +1,7 @@
+id: E:Workspace
+ntype: entity
+label: Workspace
+names:
+  CP: files/browse
+  DH: workspace
+  HM: workspace

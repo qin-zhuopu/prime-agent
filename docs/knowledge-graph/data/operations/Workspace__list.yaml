@@ -1,0 +1,15 @@
+id: O:Workspace.list
+ntype: operation
+label: list
+entity: Workspace
+endpoints:
+  CP:
+    name: /files/browse
+    style: REST
+    http: GET
+  DH:
+    name: host.listDirectory
+    style: RPC
+  HM:
+    name: complete.path
+    style: WS-RPC

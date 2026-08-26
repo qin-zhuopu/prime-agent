@@ -1,0 +1,15 @@
+id: O:Session.create
+ntype: operation
+label: create
+entity: Session
+endpoints:
+  CP:
+    name: /chat/sessions
+    style: REST
+    http: POST
+  DH:
+    name: session.create
+    style: RPC
+  HM:
+    name: session.create
+    style: WS-RPC

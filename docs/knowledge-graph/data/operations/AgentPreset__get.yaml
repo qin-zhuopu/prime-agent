@@ -1,0 +1,8 @@
+id: O:AgentPreset.get
+ntype: operation
+label: get
+entity: AgentPreset
+endpoints:
+  DH:
+    name: agentPreset.read
+    style: RPC

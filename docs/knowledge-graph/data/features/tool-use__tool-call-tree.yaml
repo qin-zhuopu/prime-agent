@@ -1,0 +1,15 @@
+id: tool-use:tool-call-tree
+ntype: feature
+label: tool-call-tree
+category: tool-use
+priority: P1
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

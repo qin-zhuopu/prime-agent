@@ -1,0 +1,12 @@
+id: messaging:math-katex
+ntype: feature
+label: math-katex
+category: messaging
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

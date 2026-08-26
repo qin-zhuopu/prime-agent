@@ -1,0 +1,39 @@
+id: composer:message-input
+ntype: feature
+label: message-input
+category: composer
+priority: P0
+implementations:
+  ACHAT:
+    kind: structured
+    source: declared
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  ACPWG:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CKIT:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared
+  OGUI:
+    kind: structured
+    source: declared

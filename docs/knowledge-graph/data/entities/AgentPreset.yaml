@@ -1,0 +1,6 @@
+id: E:AgentPreset
+ntype: entity
+label: AgentPreset
+names:
+  DH: agentPreset
+  HM: profile

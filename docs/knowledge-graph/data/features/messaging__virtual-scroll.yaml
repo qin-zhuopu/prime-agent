@@ -1,0 +1,12 @@
+id: messaging:virtual-scroll
+ntype: feature
+label: virtual-scroll
+category: messaging
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

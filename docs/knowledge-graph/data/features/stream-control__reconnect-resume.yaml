@@ -1,0 +1,21 @@
+id: stream-control:reconnect-resume
+ntype: feature
+label: reconnect-resume
+category: stream-control
+priority: P2
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OGUI:
+    kind: structured
+    source: declared

@@ -1,0 +1,12 @@
+id: composer:mentions
+ntype: feature
+label: mentions
+category: composer
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

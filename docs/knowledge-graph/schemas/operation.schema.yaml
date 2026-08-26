@@ -1,0 +1,40 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: operation node (an operation on a backend entity)
+type: object
+required: [id, ntype, label, entity, endpoints]
+additionalProperties: false
+properties:
+  id:
+    description: canonical id "O:EntityName.operation"
+    type: string
+    pattern: "^O:[A-Za-z][A-Za-z0-9]*\\.[a-z][a-zA-Z]*$"
+  ntype:
+    const: operation
+  label:
+    description: canonical operation verb
+    enum: [create, list, get, update, delete, send, interrupt,
+           stream, fork, rename, search, select, respond,
+           pause, resume, complete, clear, history]
+  entity:
+    description: owning entity label (must match an entity node)
+    type: string
+    pattern: "^[A-Za-z][A-Za-z0-9]*$"
+  endpoints:
+    description: per-repo concrete endpoint exposing this operation (repo id -> endpoint)
+    type: object
+    additionalProperties:
+      type: object
+      required: [name, style]
+      additionalProperties: false
+      properties:
+        name:
+          description: real URL path (REST) or rpc method name (RPC/WS-RPC)
+          type: string
+          minLength: 1
+        http:
+          description: HTTP verb, REST only
+          enum: ["GET", "POST", "PUT", "DELETE", "PATCH", ""]
+        style:
+          enum: [REST, RPC, WS-RPC]
+        transport:
+          enum: [SSE, WebSocket, stdio, "n/a"]

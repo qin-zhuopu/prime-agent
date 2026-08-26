@@ -1,0 +1,12 @@
+id: O:Workspace.delete
+ntype: operation
+label: delete
+entity: Workspace
+endpoints:
+  CP:
+    name: /files/delete
+    style: REST
+    http: POST
+  DH:
+    name: workspace.delete
+    style: RPC

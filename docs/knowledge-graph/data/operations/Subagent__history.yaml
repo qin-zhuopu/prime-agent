@@ -1,0 +1,8 @@
+id: O:Subagent.history
+ntype: operation
+label: history
+entity: Subagent
+endpoints:
+  DH:
+    name: subagent.history
+    style: RPC

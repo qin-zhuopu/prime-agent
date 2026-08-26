@@ -1,0 +1,6 @@
+id: E:Goal
+ntype: entity
+label: Goal
+names:
+  DH: goal
+  HM: goal

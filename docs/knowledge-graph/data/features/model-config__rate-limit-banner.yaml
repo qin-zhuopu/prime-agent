@@ -1,0 +1,9 @@
+id: model-config:rate-limit-banner
+ntype: feature
+label: rate-limit-banner
+category: model-config
+priority: P3
+implementations:
+  CP:
+    kind: structured
+    source: verified

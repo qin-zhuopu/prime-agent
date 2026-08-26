@@ -1,0 +1,8 @@
+id: O:Goal.update
+ntype: operation
+label: update
+entity: Goal
+endpoints:
+  DH:
+    name: goal.edit
+    style: RPC

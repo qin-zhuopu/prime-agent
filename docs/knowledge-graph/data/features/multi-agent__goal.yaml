@@ -1,0 +1,9 @@
+id: multi-agent:goal
+ntype: feature
+label: goal
+category: multi-agent
+priority: P3
+implementations:
+  DH:
+    kind: structured
+    source: verified

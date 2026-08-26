@@ -1,0 +1,11 @@
+id: CKIT
+ntype: repo
+label: CopilotKit
+tier: survey
+stack: React+Next.js
+license: open
+transport:
+- SSE
+protocols:
+- AG-UI
+- structured-render

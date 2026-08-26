@@ -46,26 +46,26 @@ Top features by #repos implementing (demand / table-stakes signal):
 
 | feature | category | #repos |
 |---|---|---|
+| message-input | composer | 11 |
+| assistant-markdown | messaging | 11 |
 | conversation-view | messaging | 11 |
 | message-list | messaging | 11 |
 | streaming-typing | messaging | 11 |
-| assistant-markdown | messaging | 11 |
-| tool-card | tool-use | 11 |
-| message-input | composer | 11 |
 | stream-subscribe | stream-control | 11 |
+| tool-card | tool-use | 11 |
 | theme | aux | 10 |
-| session-connect | stream-control | 9 |
-| sidebar-session-list | aux | 9 |
 | primitives | aux | 9 |
+| sidebar-session-list | aux | 9 |
+| session-connect | stream-control | 9 |
 | stop-interrupt | stream-control | 8 |
 | code-highlight | messaging | 7 |
-| diff-view | tool-use | 7 |
-| permission-panel | permission | 7 |
 | model-picker | model-config | 7 |
+| permission-panel | permission | 7 |
+| diff-view | tool-use | 7 |
 | empty-welcome | aux | 6 |
+| attachments | composer | 5 |
+| submission-policy | composer | 5 |
 | message-actions | messaging | 5 |
-| reasoning-display | reasoning | 5 |
-| file-read-view | tool-use | 5 |
 
 ## Features absent from ALL survey repos
 

@@ -1,0 +1,15 @@
+id: tool-use:web-card
+ntype: feature
+label: web-card
+category: tool-use
+priority: P1
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

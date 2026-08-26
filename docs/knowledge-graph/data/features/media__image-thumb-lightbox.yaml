@@ -1,0 +1,12 @@
+id: media:image-thumb-lightbox
+ntype: feature
+label: image-thumb-lightbox
+category: media
+priority: P4
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

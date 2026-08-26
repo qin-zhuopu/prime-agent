@@ -1,0 +1,5 @@
+id: WS-JSONRPC
+ntype: protocol
+label: WebSocket JSON-RPC (tui_gateway)
+kind: protocol
+transport: WebSocket

@@ -1,0 +1,8 @@
+id: O:Goal.resume
+ntype: operation
+label: resume
+entity: Goal
+endpoints:
+  DH:
+    name: goal.resume
+    style: RPC

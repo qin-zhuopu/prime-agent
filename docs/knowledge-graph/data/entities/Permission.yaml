@@ -1,0 +1,7 @@
+id: E:Permission
+ntype: entity
+label: Permission
+names:
+  CP: chat/permission
+  DH: approvals
+  HM: approval

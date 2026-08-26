@@ -1,0 +1,6 @@
+id: E:Skill
+ntype: entity
+label: Skill
+names:
+  DH: skill
+  HM: skills

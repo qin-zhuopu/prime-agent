@@ -1,0 +1,9 @@
+id: O:Attachment.delete
+ntype: operation
+label: delete
+entity: Attachment
+endpoints:
+  CP:
+    name: /assets/[id]
+    style: REST
+    http: DELETE

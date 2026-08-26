@@ -1,0 +1,9 @@
+id: aux:message-feedback
+ntype: feature
+label: message-feedback
+category: aux
+priority: P0
+implementations:
+  DH:
+    kind: structured
+    source: verified

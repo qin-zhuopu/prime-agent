@@ -1,0 +1,27 @@
+id: messaging:code-highlight
+ntype: feature
+label: code-highlight
+category: messaging
+priority: P0
+implementations:
+  ACPUI:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared
+  OGUI:
+    kind: structured
+    source: declared

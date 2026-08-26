@@ -1,0 +1,5 @@
+id: node-render
+ntype: protocol
+label: Node-ized registrable components
+kind: rendering
+transport: n/a

@@ -1,0 +1,7 @@
+id: E:Settings
+ntype: entity
+label: Settings
+names:
+  CP: settings
+  DH: settings
+  HM: config

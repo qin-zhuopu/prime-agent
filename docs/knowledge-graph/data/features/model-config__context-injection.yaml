@@ -1,0 +1,12 @@
+id: model-config:context-injection
+ntype: feature
+label: context-injection
+category: model-config
+priority: P3
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified

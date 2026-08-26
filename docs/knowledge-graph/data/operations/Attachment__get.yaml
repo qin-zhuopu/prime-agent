@@ -1,0 +1,9 @@
+id: O:Attachment.get
+ntype: operation
+label: get
+entity: Attachment
+endpoints:
+  CP:
+    name: /assets/[id]
+    style: REST
+    http: GET

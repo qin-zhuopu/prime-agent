@@ -1,0 +1,15 @@
+id: O:File.list
+ntype: operation
+label: list
+entity: File
+endpoints:
+  CP:
+    name: /files/browse
+    style: REST
+    http: GET
+  DH:
+    name: host.listDirectory
+    style: RPC
+  HM:
+    name: files.list
+    style: WS-RPC

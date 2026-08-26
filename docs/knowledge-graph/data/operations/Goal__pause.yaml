@@ -1,0 +1,8 @@
+id: O:Goal.pause
+ntype: operation
+label: pause
+entity: Goal
+endpoints:
+  DH:
+    name: goal.pause
+    style: RPC

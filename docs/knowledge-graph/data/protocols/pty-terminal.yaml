@@ -1,0 +1,5 @@
+id: pty-terminal
+ntype: protocol
+label: PTY -> xterm terminal mirror
+kind: rendering
+transport: n/a

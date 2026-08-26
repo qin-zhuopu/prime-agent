@@ -1,0 +1,5 @@
+id: AG-UI
+ntype: protocol
+label: AG-UI agent<->frontend event protocol
+kind: protocol
+transport: SSE

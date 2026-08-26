@@ -1,0 +1,15 @@
+id: O:Message.stream
+ntype: operation
+label: stream
+entity: Message
+endpoints:
+  CP:
+    name: /chat/structured
+    style: REST
+    http: POST
+  DH:
+    name: session.prompt(stream)
+    style: RPC
+  HM:
+    name: message.delta
+    style: WS-RPC

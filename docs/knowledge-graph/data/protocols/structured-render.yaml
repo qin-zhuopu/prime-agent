@@ -1,0 +1,5 @@
+id: structured-render
+ntype: protocol
+label: Structured React components
+kind: rendering
+transport: n/a

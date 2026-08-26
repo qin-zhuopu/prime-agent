@@ -1,0 +1,12 @@
+id: O:Session.fork
+ntype: operation
+label: fork
+entity: Session
+endpoints:
+  CP:
+    name: /chat/rewind
+    style: REST
+    http: POST
+  DH:
+    name: session.fork
+    style: RPC

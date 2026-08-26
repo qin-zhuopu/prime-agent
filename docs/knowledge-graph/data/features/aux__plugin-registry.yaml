@@ -1,0 +1,15 @@
+id: aux:plugin-registry
+ntype: feature
+label: plugin-registry
+category: aux
+priority: P0
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

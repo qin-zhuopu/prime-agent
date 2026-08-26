@@ -1,0 +1,7 @@
+id: E:Model
+ntype: entity
+label: Model
+names:
+  CP: codex/models
+  DH: llm/session.models
+  HM: model

@@ -1,0 +1,5 @@
+id: SSE
+ntype: protocol
+label: Server-Sent Events
+kind: transport
+transport: SSE

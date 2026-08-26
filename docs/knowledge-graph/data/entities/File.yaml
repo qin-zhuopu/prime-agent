@@ -1,0 +1,7 @@
+id: E:File
+ntype: entity
+label: File
+names:
+  CP: files
+  DH: host(fs)
+  HM: files

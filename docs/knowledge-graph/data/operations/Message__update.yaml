@@ -1,0 +1,12 @@
+id: O:Message.update
+ntype: operation
+label: update
+entity: Message
+endpoints:
+  CP:
+    name: /chat/messages
+    style: REST
+    http: PUT
+  DH:
+    name: session.updateQueue
+    style: RPC

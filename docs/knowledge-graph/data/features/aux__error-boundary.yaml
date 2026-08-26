@@ -1,0 +1,15 @@
+id: aux:error-boundary
+ntype: feature
+label: error-boundary
+category: aux
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

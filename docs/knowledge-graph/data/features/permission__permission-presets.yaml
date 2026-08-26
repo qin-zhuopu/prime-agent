@@ -1,0 +1,12 @@
+id: permission:permission-presets
+ntype: feature
+label: permission-presets
+category: permission
+priority: P1
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

@@ -1,0 +1,15 @@
+id: reasoning:thinking-anim
+ntype: feature
+label: thinking-anim
+category: reasoning
+priority: P1
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

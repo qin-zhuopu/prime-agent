@@ -1,0 +1,12 @@
+id: aux:auth-pairing
+ntype: feature
+label: auth-pairing
+category: aux
+priority: P0
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

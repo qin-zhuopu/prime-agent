@@ -1,0 +1,15 @@
+id: media:media-preview
+ntype: feature
+label: media-preview
+category: media
+priority: P4
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

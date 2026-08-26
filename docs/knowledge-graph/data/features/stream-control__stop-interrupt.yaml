@@ -1,0 +1,30 @@
+id: stream-control:stop-interrupt
+ntype: feature
+label: stop-interrupt
+category: stream-control
+priority: P2
+implementations:
+  ACHAT:
+    kind: structured
+    source: declared
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OGUI:
+    kind: structured
+    source: declared

@@ -1,0 +1,15 @@
+id: O:Settings.get
+ntype: operation
+label: get
+entity: Settings
+endpoints:
+  CP:
+    name: /settings
+    style: REST
+    http: GET
+  DH:
+    name: settings.describe
+    style: RPC
+  HM:
+    name: config.get
+    style: WS-RPC

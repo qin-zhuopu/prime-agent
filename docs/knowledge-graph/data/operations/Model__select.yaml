@@ -1,0 +1,15 @@
+id: O:Model.select
+ntype: operation
+label: select
+entity: Model
+endpoints:
+  CP:
+    name: /chat/model
+    style: REST
+    http: POST
+  DH:
+    name: session.selectModel
+    style: RPC
+  HM:
+    name: agent.reasoning_effort
+    style: WS-RPC

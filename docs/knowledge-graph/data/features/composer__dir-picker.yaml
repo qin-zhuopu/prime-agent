@@ -1,0 +1,18 @@
+id: composer:dir-picker
+ntype: feature
+label: dir-picker
+category: composer
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
+  OGUI:
+    kind: structured
+    source: declared

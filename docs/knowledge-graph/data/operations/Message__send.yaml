@@ -1,0 +1,15 @@
+id: O:Message.send
+ntype: operation
+label: send
+entity: Message
+endpoints:
+  CP:
+    name: /chat/messages
+    style: REST
+    http: POST
+  DH:
+    name: session.prompt
+    style: RPC
+  HM:
+    name: prompt.submit
+    style: WS-RPC

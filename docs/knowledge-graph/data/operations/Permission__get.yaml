@@ -1,0 +1,15 @@
+id: O:Permission.get
+ntype: operation
+label: get
+entity: Permission
+endpoints:
+  CP:
+    name: /chat/permission-capability
+    style: REST
+    http: GET
+  DH:
+    name: approvals.describe
+    style: RPC
+  HM:
+    name: approval.pending
+    style: WS-RPC

@@ -1,0 +1,15 @@
+id: stream-control:terminal-reason
+ntype: feature
+label: terminal-reason
+category: stream-control
+priority: P2
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

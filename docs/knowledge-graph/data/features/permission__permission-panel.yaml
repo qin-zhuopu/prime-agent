@@ -1,0 +1,27 @@
+id: permission:permission-panel
+ntype: feature
+label: permission-panel
+category: permission
+priority: P1
+implementations:
+  ACHAT:
+    kind: structured
+    source: declared
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  ACPWG:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

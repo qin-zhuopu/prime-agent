@@ -1,0 +1,12 @@
+id: multi-agent:plan-review
+ntype: feature
+label: plan-review
+category: multi-agent
+priority: P3
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

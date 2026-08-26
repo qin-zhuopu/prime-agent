@@ -1,0 +1,10 @@
+id: OGUI
+ntype: repo
+label: OpenGUI
+tier: survey
+stack: React+Vite+Electron
+license: open
+transport:
+- SSE
+protocols:
+- structured-render

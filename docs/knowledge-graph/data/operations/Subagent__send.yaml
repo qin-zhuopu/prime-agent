@@ -1,0 +1,8 @@
+id: O:Subagent.send
+ntype: operation
+label: send
+entity: Subagent
+endpoints:
+  DH:
+    name: subagent.prompt
+    style: RPC

@@ -1,0 +1,12 @@
+id: DH
+ntype: repo
+label: deepseek-harness
+tier: primary
+stack: Cordis+React
+license: open
+transport:
+- SSE
+protocols:
+- SSE
+- node-render
+- structured-render

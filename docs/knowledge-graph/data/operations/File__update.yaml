@@ -1,0 +1,9 @@
+id: O:File.update
+ntype: operation
+label: update
+entity: File
+endpoints:
+  CP:
+    name: /files/rename
+    style: REST
+    http: POST

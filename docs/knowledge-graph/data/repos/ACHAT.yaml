@@ -1,0 +1,11 @@
+id: ACHAT
+ntype: repo
+label: agents-chat
+tier: survey
+stack: Next.js+React
+license: open
+transport:
+- stdio
+protocols:
+- ACP
+- structured-render

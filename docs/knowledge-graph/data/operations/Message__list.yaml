@@ -1,0 +1,12 @@
+id: O:Message.list
+ntype: operation
+label: list
+entity: Message
+endpoints:
+  CP:
+    name: /chat/sessions/[id]/messages
+    style: REST
+    http: GET
+  DH:
+    name: session.history
+    style: RPC

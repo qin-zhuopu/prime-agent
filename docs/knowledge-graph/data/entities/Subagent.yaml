@@ -1,0 +1,7 @@
+id: E:Subagent
+ntype: entity
+label: Subagent
+names:
+  CP: chat/sessions/[id]/subagent-runs
+  DH: subagent
+  HM: agents

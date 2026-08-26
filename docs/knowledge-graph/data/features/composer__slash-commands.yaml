@@ -1,0 +1,18 @@
+id: composer:slash-commands
+ntype: feature
+label: slash-commands
+category: composer
+priority: P0
+implementations:
+  ACHAT:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

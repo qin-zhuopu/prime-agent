@@ -1,0 +1,7 @@
+id: E:Job
+ntype: entity
+label: Job
+names:
+  CP: media/jobs
+  DH: jobs
+  HM: background

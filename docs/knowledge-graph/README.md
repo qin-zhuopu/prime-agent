@@ -69,3 +69,66 @@ python3 build_graph.py
 ## 数据来源与准确性
 
 功能矩阵与 `kind` 标注来自对三个仓库前端源码的实际浏览（见 `chat-ui-features.md` 的代码路径列）。`kind=terminal` 特指 hermes-agent 把该交互放在 PTY→xterm 终端流里，而非结构化 React 组件。
+
+
+---
+
+## 数据即 YAML + Schema 校验（可复现管线）
+
+图数据已从"硬编码 Python 字典"重构为**每个节点一个 YAML 文件**，可审查、可 diff、可增量、可校验。
+
+### 目录
+
+```
+data/
+  repos/       *.yaml   (11)   每个 repo 一份
+  protocols/   *.yaml   (7)
+  features/    *.yaml   (73)   文件名 = category__name
+  entities/    *.yaml   (14)
+  operations/  *.yaml   (49)   文件名 = Entity__op
+schemas/
+  {repo,protocol,feature,entity,operation}.schema.yaml   (每种节点类型一个 JSON Schema)
+```
+
+### 脚本
+
+| 脚本 | 作用 |
+|---|---|
+| `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（已跑过） |
+| `validate.py` | **全量质量检查**：schema + 引用完整性 + 语义规则；exit 1 表示有问题 |
+| `build_from_yaml.py` | **规范构建路径**：先跑 validate（fail-closed），通过才从 YAML 构图并出图 |
+| `build_graph.py` / `build_api_graph.py` | 原始种子来源 + 复用其 `analyze()` 写度量 |
+
+### validate.py 的三层检查
+
+1. **schema**：每个 YAML 对应 `schemas/<ntype>.schema.yaml`（枚举、pattern、必填字段、`additionalProperties:false`）。
+2. **referential**：引用必须解析——operation.entity → entity 节点；feature 的实现 repo / entity.names 的 repo / repo.protocols → 对应节点存在。
+3. **semantic**：质量规则——id 唯一；operation id 必须等于 `O:{entity}.{label}`；REST 端点必须带 http verb，RPC/WS-RPC 不能带；无孤儿操作；feature.category 必须与 id 前缀一致；每个 entity 至少被一个 operation 引用；repo 必须声明合法 transport。
+
+已实测：故意注入坏枚举/悬空引用/REST 缺 verb，三类都被抓出；`build_from_yaml.py` 在坏数据时拒绝出图。
+
+### 用法
+
+```bash
+python3 validate.py          # 只校验
+python3 build_from_yaml.py   # 校验通过后重建全部图与度量
+```
+
+改数据 = 直接编辑 `data/**/*.yaml`，跑 `build_from_yaml.py` 即可（自带校验闸门）。
+
+---
+
+## 后端传输：SSE vs WebSocket（已纳入图谱）
+
+三 repo 的关键架构分歧就是传输层，已建模为一等维度：
+
+- **CP / DH → SSE**：REST/RPC 请求发起 + SSE 单向流回推。
+- **HM → WebSocket**：全双工 JSON-RPC（`tui_gateway`），请求与事件同一条连接。
+- **survey 集**：assistant-ui / opencode-chatui / OpenGUI / CopilotKit 偏 SSE；acp-components / acp-ui / agents-chat 走 ACP（原生 stdio，浏览器侧经 gateway）；acp-web-gateway 用 WebSocket 承载 ACP。
+
+建模位置：
+- `repo.yaml` 的 `transport` 字段（`[SSE] / [WebSocket] / [stdio]`）——该 repo 实际用的传输，权威值。
+- `protocol.yaml` 的 `transport` + `kind`（transport / protocol / rendering）——协议的原生传输。
+- 二者刻意解耦：同一协议在不同 repo 可走不同传输（如 ACP 原生 stdio，但 acp-web-gateway 用 WebSocket 承载），所以 `validate.py` 不强制 repo.transport 等于其 protocol 的 transport，只校验 transport 合法且非空。
+
+**对自研的意义**：我们已定 SSE（对齐 CP/DH）。若未来要支持 WebSocket（如 HM 式全双工、或双向 steering），传输是可替换的一层——operation 节点不变，只换 `endpoints[*].transport` 与承载协议。

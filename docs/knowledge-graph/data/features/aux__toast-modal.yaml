@@ -1,0 +1,15 @@
+id: aux:toast-modal
+ntype: feature
+label: toast-modal
+category: aux
+priority: P0
+implementations:
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

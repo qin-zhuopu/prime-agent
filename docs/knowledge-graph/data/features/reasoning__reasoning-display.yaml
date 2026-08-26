@@ -1,0 +1,21 @@
+id: reasoning:reasoning-display
+ntype: feature
+label: reasoning-display
+category: reasoning
+priority: P1
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  ASTUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified

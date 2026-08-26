@@ -1,0 +1,27 @@
+id: tool-use:diff-view
+ntype: feature
+label: diff-view
+category: tool-use
+priority: P1
+implementations:
+  ACPC:
+    kind: structured
+    source: declared
+  ACPUI:
+    kind: structured
+    source: declared
+  CP:
+    kind: structured
+    source: verified
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: terminal
+    source: verified
+  OCUI:
+    kind: structured
+    source: declared
+  OGUI:
+    kind: structured
+    source: declared

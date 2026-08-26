@@ -1,0 +1,7 @@
+id: E:Session
+ntype: entity
+label: Session
+names:
+  CP: chat/sessions
+  DH: session
+  HM: session

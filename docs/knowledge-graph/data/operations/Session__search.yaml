@@ -1,0 +1,12 @@
+id: O:Session.search
+ntype: operation
+label: search
+entity: Session
+endpoints:
+  CP:
+    name: /chat/sessions/by-cwd
+    style: REST
+    http: GET
+  DH:
+    name: session.search
+    style: RPC

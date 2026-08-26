@@ -1,0 +1,15 @@
+id: O:Session.get
+ntype: operation
+label: get
+entity: Session
+endpoints:
+  CP:
+    name: /chat/sessions/[id]
+    style: REST
+    http: GET
+  DH:
+    name: session.history
+    style: RPC
+  HM:
+    name: session.info
+    style: WS-RPC

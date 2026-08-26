@@ -1,0 +1,12 @@
+id: O:Job.create
+ntype: operation
+label: create
+entity: Job
+endpoints:
+  CP:
+    name: /media/jobs
+    style: REST
+    http: POST
+  DH:
+    name: jobs.create
+    style: RPC

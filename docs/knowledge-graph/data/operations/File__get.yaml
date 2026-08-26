@@ -1,0 +1,15 @@
+id: O:File.get
+ntype: operation
+label: get
+entity: File
+endpoints:
+  CP:
+    name: /files/raw
+    style: REST
+    http: GET
+  DH:
+    name: host.openPath
+    style: RPC
+  HM:
+    name: files.read
+    style: WS-RPC

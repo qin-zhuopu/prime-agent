@@ -1,0 +1,8 @@
+id: O:Subagent.interrupt
+ntype: operation
+label: interrupt
+entity: Subagent
+endpoints:
+  DH:
+    name: subagent.interrupt
+    style: RPC

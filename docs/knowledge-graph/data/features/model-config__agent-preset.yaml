@@ -1,0 +1,12 @@
+id: model-config:agent-preset
+ntype: feature
+label: agent-preset
+category: model-config
+priority: P3
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified

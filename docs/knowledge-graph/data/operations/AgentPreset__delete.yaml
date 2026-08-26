@@ -1,0 +1,8 @@
+id: O:AgentPreset.delete
+ntype: operation
+label: delete
+entity: AgentPreset
+endpoints:
+  DH:
+    name: agentPreset.remove
+    style: RPC

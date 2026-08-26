@@ -1,0 +1,11 @@
+id: O:Goal.create
+ntype: operation
+label: create
+entity: Goal
+endpoints:
+  DH:
+    name: goal.create
+    style: RPC
+  HM:
+    name: goal.set
+    style: WS-RPC

@@ -1,0 +1,9 @@
+id: O:File.create
+ntype: operation
+label: create
+entity: File
+endpoints:
+  CP:
+    name: /files/write
+    style: REST
+    http: POST

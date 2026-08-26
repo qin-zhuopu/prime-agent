@@ -1,0 +1,8 @@
+id: O:Goal.complete
+ntype: operation
+label: complete
+entity: Goal
+endpoints:
+  DH:
+    name: goal.complete
+    style: RPC

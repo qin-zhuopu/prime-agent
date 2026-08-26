@@ -1,0 +1,15 @@
+id: O:Permission.respond
+ntype: operation
+label: respond
+entity: Permission
+endpoints:
+  CP:
+    name: /chat/permission
+    style: REST
+    http: POST
+  DH:
+    name: approvals.respond
+    style: RPC
+  HM:
+    name: approval.respond
+    style: WS-RPC

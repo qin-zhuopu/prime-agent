@@ -1,0 +1,15 @@
+id: O:Model.list
+ntype: operation
+label: list
+entity: Model
+endpoints:
+  CP:
+    name: /codex/models
+    style: REST
+    http: GET
+  DH:
+    name: llm.models
+    style: RPC
+  HM:
+    name: models.list
+    style: WS-RPC

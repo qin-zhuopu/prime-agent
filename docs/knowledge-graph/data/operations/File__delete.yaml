@@ -1,0 +1,9 @@
+id: O:File.delete
+ntype: operation
+label: delete
+entity: File
+endpoints:
+  CP:
+    name: /files/delete
+    style: REST
+    http: POST

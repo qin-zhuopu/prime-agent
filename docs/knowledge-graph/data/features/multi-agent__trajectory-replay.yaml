@@ -1,0 +1,12 @@
+id: multi-agent:trajectory-replay
+ntype: feature
+label: trajectory-replay
+category: multi-agent
+priority: P3
+implementations:
+  DH:
+    kind: structured
+    source: verified
+  HM:
+    kind: structured
+    source: verified
