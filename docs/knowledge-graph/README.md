@@ -32,14 +32,31 @@ python3 build_graph.py
 
 > 数据可信度分层：primary 三 repo 的边来自实际读源码（`verified`）；survey 八 repo 的边来自 README 声明 + 目录/组件/hook 名扫描（`declared`，较粗）。跨 repo 核心结论只用 primary 集，survey 集用于"需求/成熟度"信号。
 
+## 两张图
+
+### A. UI 功能图（`build_graph.py`）
+节点：`repo` / `protocol` / `category` / `feature`。见上方图模型。
+
+### B. 后端 API 实体-操作图（`build_api_graph.py`）
+新增两类节点，粒度下探到"实体上的操作"：
+- `entity` — 后端业务实体（Session / Message / Permission / Goal / Subagent / Model / Skill / AgentPreset / Workspace / File / Attachment / Settings / Credential / Job，共 14）
+- `operation` — 实体上的 canonical 操作（create / list / get / update / delete / send / interrupt / fork / select / respond / pause / resume / complete / clear / history / stream / search）
+
+边：
+- `entity --has_op--> operation`（如 Session 的 create/list/get/update/delete/fork/interrupt/search 各是一个操作节点）
+- `repo --exposes--> operation`，边属性 `name`（该 repo 的真实 URL 或 RPC 方法）、`http`（REST 才有）、`style`（REST / RPC / WS-RPC）
+
+即：同一个 canonical 操作（如 `Session.create`）下挂三条 `exposes` 边——CP=`POST /chat/sessions`、DH=`session.create`、HM=`session.create`。实体在各 repo 的名字见 `api_metrics.md` 的映射表。
+
 ## 产物
 
 | 文件 | 用途 |
 |---|---|
-| `chat_ui_graph.graphml` | 通用图格式，用 Gephi / yEd / Cytoscape 打开可视化 |
-| `chat_ui_graph.json` | node-link JSON，喂给 D3 / 前端可视化 |
-| `chat_ui_graph.dot` | Graphviz，`dot -Tsvg chat_ui_graph.dot -o graph.svg` |
-| `metrics.md` | 度量分析（覆盖率 / 通用功能 / 独有功能 / 成熟度） |
+| `chat_ui_graph.{graphml,json,dot}` | UI 功能图（Gephi/yEd/Cytoscape / D3 / Graphviz） |
+| `metrics.md` | UI 图度量（覆盖率 / 通用功能 / 独有功能 / 成熟度） |
+| `api_graph.{graphml,json,dot}` | 后端 API 实体-操作图 |
+| `api_metrics.md` | 实体命名对照表 + 每实体操作的三 repo 端点映射 |
+| `EXTRACTION-METHOD.md` | **数据是怎么提取的**（人工语义 vs 脚本）+ 自动化建议 |
 
 ## 关键结论（见 metrics.md）
 
