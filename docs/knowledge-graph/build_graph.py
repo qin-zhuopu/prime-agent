@@ -31,14 +31,26 @@ HERE = Path(__file__).parent
 
 # --- repos + protocols -------------------------------------------------------
 REPOS = {
-    "CP": {"label": "CodePilot", "stack": "Electron+Next.js", "license": "BUSL-1.1"},
-    "DH": {"label": "deepseek-harness", "stack": "Cordis+React", "license": "open"},
-    "HM": {"label": "hermes-agent", "stack": "Vite+React+xterm", "license": "open"},
+    # --- primary set: verified by reading the source ---
+    "CP": {"label": "CodePilot", "stack": "Electron+Next.js", "license": "BUSL-1.1", "tier": "primary"},
+    "DH": {"label": "deepseek-harness", "stack": "Cordis+React", "license": "open", "tier": "primary"},
+    "HM": {"label": "hermes-agent", "stack": "Vite+React+xterm", "license": "open", "tier": "primary"},
+    # --- survey set: capabilities from README/structure scan (source=declared) ---
+    "ACPC": {"label": "acp-components", "stack": "React (core+react pkgs)", "license": "open", "tier": "survey"},
+    "ACPUI": {"label": "acp-ui", "stack": "Vue3+Tauri", "license": "open", "tier": "survey"},
+    "ASTUI": {"label": "assistant-ui", "stack": "React (TS lib)", "license": "open", "tier": "survey"},
+    "OCUI": {"label": "opencode-chatui", "stack": "React+Vite+tRPC", "license": "open", "tier": "survey"},
+    "OGUI": {"label": "OpenGUI", "stack": "React+Vite+Electron", "license": "open", "tier": "survey"},
+    "CKIT": {"label": "CopilotKit", "stack": "React+Next.js", "license": "open", "tier": "survey"},
+    "ACHAT": {"label": "agents-chat", "stack": "Next.js+React", "license": "open", "tier": "survey"},
+    "ACPWG": {"label": "acp-web-gateway", "stack": "Kotlin server + web", "license": "open", "tier": "survey"},
 }
 
 PROTOCOLS = {
     "SSE": "Server-Sent Events",
     "WS-JSONRPC": "WebSocket JSON-RPC (tui_gateway)",
+    "ACP": "Agent Client Protocol (JSON-RPC/stdio)",
+    "AG-UI": "AG-UI agent<->frontend event protocol",
     "structured-render": "Structured React components",
     "node-render": "Node-ized registrable components",
     "pty-terminal": "PTY -> xterm terminal mirror",
@@ -48,7 +60,112 @@ REPO_PROTOCOL = [
     ("CP", "SSE"), ("CP", "structured-render"),
     ("DH", "SSE"), ("DH", "node-render"), ("DH", "structured-render"),
     ("HM", "WS-JSONRPC"), ("HM", "pty-terminal"),
+    # survey set
+    ("ACPC", "ACP"), ("ACPC", "structured-render"),
+    ("ACPUI", "ACP"), ("ACPUI", "structured-render"),
+    ("ASTUI", "structured-render"),
+    ("OCUI", "structured-render"),
+    ("OGUI", "structured-render"),
+    ("CKIT", "AG-UI"), ("CKIT", "structured-render"),
+    ("ACHAT", "ACP"), ("ACHAT", "structured-render"),
+    ("ACPWG", "ACP"),
 ]
+
+# Survey repos: coarse capability tags from README + structure scan (source="declared").
+# Only capabilities we could confirm from the repo (deps, dir/component/hook names, README claims).
+# feature ids must match "{category}:{name}" used in FEATURES below.
+SURVEY_IMPLEMENTS: dict[str, list[str]] = {
+    # acp-components: full ACP workbench; react pkg exposes hooks for prompt/permission/toolcalls/skills/session/filetree
+    "ACPC": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown", "messaging:message-actions",
+        "reasoning:reasoning-display",
+        "tool-use:tool-card", "tool-use:tool-call-tree", "tool-use:diff-view",
+        "tool-use:file-read-view", "tool-use:search-sources",
+        "permission:permission-panel", "permission:permission-mode",
+        "composer:message-input", "composer:submission-policy",
+        "stream-control:stream-subscribe", "stream-control:session-connect",
+        "stream-control:stop-interrupt", "stream-control:reconnect-resume",
+        "multi-agent:plan-mode", "multi-agent:subagent-card",
+        "model-config:model-picker", "model-config:skills", "model-config:context-usage",
+        "aux:sidebar-session-list", "aux:details-panel", "aux:theme", "aux:i18n",
+        "aux:primitives", "aux:plugin-registry", "aux:empty-welcome",
+    ],
+    # acp-ui: cross-platform ACP client; chat/sessions/permissions/traffic-monitor
+    "ACPUI": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown", "messaging:code-highlight",
+        "tool-use:tool-card", "tool-use:diff-view",
+        "permission:permission-panel", "permission:permission-mode",
+        "composer:message-input", "composer:attachments",
+        "stream-control:stream-subscribe", "stream-control:session-connect", "stream-control:stop-interrupt",
+        "model-config:model-picker",
+        "aux:sidebar-session-list", "aux:theme", "aux:empty-welcome", "aux:primitives",
+    ],
+    # assistant-ui: production React chat lib; streaming, tool calls, markdown, attachments, branching
+    "ASTUI": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown", "messaging:code-highlight",
+        "messaging:message-actions", "messaging:message-branching",
+        "reasoning:reasoning-display",
+        "tool-use:tool-card",
+        "composer:message-input", "composer:submission-policy", "composer:attachments",
+        "stream-control:stream-subscribe", "stream-control:stop-interrupt",
+        "aux:primitives", "aux:theme", "aux:empty-welcome",
+    ],
+    # opencode-chatui: rich rendering of tool calls, file diffs, search results
+    "OCUI": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown", "messaging:code-highlight",
+        "tool-use:tool-card", "tool-use:diff-view", "tool-use:file-read-view", "tool-use:search-sources",
+        "composer:message-input",
+        "stream-control:stream-subscribe", "stream-control:session-connect",
+        "model-config:model-picker",
+        "aux:sidebar-session-list", "aux:theme", "aux:primitives",
+    ],
+    # OpenGUI: host+harness, durable sessions, model connections, streaming chat, workspace tools
+    "OGUI": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown", "messaging:code-highlight",
+        "tool-use:tool-card", "tool-use:diff-view",
+        "composer:message-input", "composer:dir-picker",
+        "stream-control:stream-subscribe", "stream-control:session-connect",
+        "stream-control:stop-interrupt", "stream-control:reconnect-resume",
+        "model-config:model-picker", "model-config:runtime-switch",
+        "aux:sidebar-session-list", "aux:theme", "aux:primitives",
+    ],
+    # CopilotKit: generative UI stack, AG-UI author; streaming, generative UI, MCP
+    "CKIT": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown",
+        "tool-use:tool-card",
+        "composer:message-input",
+        "stream-control:stream-subscribe",
+        "model-config:mcp-config",
+        "aux:primitives", "aux:theme",
+    ],
+    # agents-chat: multi-agent ACP chat UI
+    "ACHAT": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown",
+        "tool-use:tool-card",
+        "permission:permission-panel",
+        "composer:message-input", "composer:slash-commands",
+        "stream-control:stream-subscribe", "stream-control:session-connect", "stream-control:stop-interrupt",
+        "multi-agent:subagent-card",
+        "aux:sidebar-session-list", "aux:theme",
+    ],
+    # acp-web-gateway: web interface to ACP agents (Kotlin server + web front)
+    "ACPWG": [
+        "messaging:conversation-view", "messaging:message-list", "messaging:streaming-typing",
+        "messaging:assistant-markdown",
+        "tool-use:tool-card",
+        "permission:permission-panel",
+        "composer:message-input",
+        "stream-control:stream-subscribe", "stream-control:session-connect",
+        "aux:sidebar-session-list",
+    ],
+}
 
 # --- feature matrix ----------------------------------------------------------
 # category -> priority -> [ (feature, {repo: kind}) ]
@@ -186,36 +303,61 @@ def build_graph() -> nx.DiGraph:
             for rid, k in repo_kinds.items():
                 if k == "N":
                     continue  # absent: no implements edge
-                g.add_edge(rid, fid, etype="implements", kind=KIND_MAP[k])
+                # primary repos: verified from source
+                g.add_edge(rid, fid, etype="implements", kind=KIND_MAP[k], source="verified")
+
+    # survey repos: declared capabilities (coarse, from README + structure scan)
+    known_features = {f"{cid}:{name}" for cid, feats in FEATURES.items() for name, _ in feats}
+    for rid, fids in SURVEY_IMPLEMENTS.items():
+        for fid in fids:
+            if fid not in known_features:
+                raise ValueError(f"survey feature id not in matrix: {fid}")
+            g.add_edge(rid, fid, etype="implements", kind="structured", source="declared")
     return g
 
 
 def analyze(g: nx.DiGraph) -> str:
     features = [n for n, d in g.nodes(data=True) if d["ntype"] == "feature"]
+    primary = [r for r in REPOS if REPOS[r]["tier"] == "primary"]
+    survey = [r for r in REPOS if REPOS[r]["tier"] == "survey"]
     lines: list[str] = []
-    lines.append("# Chat/Agent UI Knowledge Graph — Metrics\n")
+    lines.append("# Chat/Agent UI Knowledge Graph -- Metrics\n")
     lines.append(f"- Nodes: {g.number_of_nodes()}  (repos={len(REPOS)}, protocols={len(PROTOCOLS)}, categories={len(CATEGORIES)}, features={len(features)})")
-    lines.append(f"- Edges: {g.number_of_edges()}\n")
+    lines.append(f"- Edges: {g.number_of_edges()}")
+    lines.append(f"- Repos: {len(primary)} primary (source-verified) + {len(survey)} survey (README/structure-declared)\n")
 
-    # coverage per repo
+    def names(fs):
+        return ", ".join(sorted(g.nodes[x]["label"] for x in fs)) or "(none)"
+
+    # coverage per repo (verified set)
     lines.append("## Per-repo feature coverage\n")
-    lines.append("| repo | structured | terminal | total impl | absent |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| repo | tier | source | structured | terminal | total impl |")
+    lines.append("|---|---|---|---|---|---|")
     for rid in REPOS:
-        impl = [(v, g.edges[rid, v]["kind"]) for v in g.successors(rid)
+        impl = [(v, g.edges[rid, v]) for v in g.successors(rid)
                 if g.nodes[v]["ntype"] == "feature"]
-        s = sum(1 for _, k in impl if k == "structured")
-        t = sum(1 for _, k in impl if k == "terminal")
-        absent = len(features) - len(impl)
-        lines.append(f"| {REPOS[rid]['label']} | {s} | {t} | {len(impl)} | {absent} |")
+        s = sum(1 for _, e in impl if e["kind"] == "structured")
+        t = sum(1 for _, e in impl if e["kind"] == "terminal")
+        src = "verified" if REPOS[rid]["tier"] == "primary" else "declared"
+        lines.append(f"| {REPOS[rid]['label']} | {REPOS[rid]['tier']} | {src} | {s} | {t} | {len(impl)} |")
     lines.append("")
 
-    # universal features (implemented, any kind, by all 3)
+    # protocol adoption
+    lines.append("## Protocol adoption (repos per protocol)\n")
+    lines.append("| protocol | #repos | repos |")
+    lines.append("|---|---|---|")
+    for pid in PROTOCOLS:
+        users = [REPOS[u]["label"] for u, _ in g.in_edges(pid) if g.nodes[u]["ntype"] == "repo"]
+        if users:
+            lines.append(f"| {pid} | {len(users)} | {', '.join(sorted(users))} |")
+    lines.append("")
+
+    # cross-repo signals -- PRIMARY set only (verified), to keep conclusions clean
     universal, dh_only, cp_only, hm_only, structured_all = [], [], [], [], []
     for f in features:
-        impls = {r: g.edges[r, f]["kind"] for r in REPOS if g.has_edge(r, f)}
+        impls = {r: g.edges[r, f]["kind"] for r in primary if g.has_edge(r, f)}
         present = set(impls)
-        if present == {"CP", "DH", "HM"}:
+        if present == set(primary):
             universal.append(f)
             if all(v == "structured" for v in impls.values()):
                 structured_all.append(f)
@@ -226,27 +368,39 @@ def analyze(g: nx.DiGraph) -> str:
         if present == {"HM"}:
             hm_only.append(f)
 
-    def names(fs):
-        return ", ".join(sorted(g.nodes[x]["label"] for x in fs)) or "(none)"
-
-    lines.append("## Cross-repo signals\n")
+    lines.append("## Cross-repo signals (primary 3, source-verified)\n")
     lines.append(f"- Universal (all 3 implement, any form): {len(universal)}")
     lines.append(f"  - Structured in all 3 (safest to build first): {names(structured_all)}")
-    lines.append(f"- DH-only (unique to deepseek-harness): {names(dh_only)}")
-    lines.append(f"- CP-only (unique to CodePilot): {names(cp_only)}")
-    lines.append(f"- HM-only (unique to hermes-agent): {names(hm_only)}")
+    lines.append(f"- DH-only: {names(dh_only)}")
+    lines.append(f"- CP-only: {names(cp_only)}")
+    lines.append(f"- HM-only: {names(hm_only)}")
     lines.append("")
 
-    # degree centrality on features (how many repos implement -> maturity signal)
-    lines.append("## Feature maturity (by #repos implementing)\n")
-    counts: dict[int, list[str]] = {3: [], 2: [], 1: []}
-    for f in features:
+    # feature maturity across ALL repos (primary + survey) -> demand signal
+    lines.append("## Feature maturity across ALL repos (primary + survey)\n")
+    ranked = sorted(
+        features,
+        key=lambda f: sum(1 for r in REPOS if g.has_edge(r, f)),
+        reverse=True,
+    )
+    lines.append("Top features by #repos implementing (demand / table-stakes signal):\n")
+    lines.append("| feature | category | #repos |")
+    lines.append("|---|---|---|")
+    for f in ranked[:20]:
         c = sum(1 for r in REPOS if g.has_edge(r, f))
-        counts.setdefault(c, []).append(g.nodes[f]["label"])
-    for c in (3, 2, 1):
-        lines.append(f"- {c} repo(s): {len(counts[c])} features")
+        lines.append(f"| {g.nodes[f]['label']} | {g.nodes[f]['category']} | {c} |")
     lines.append("")
-    lines.append("Interpretation: 3-repo features are proven table-stakes; 1-repo features are differentiators to adopt selectively.")
+
+    # features NOT implemented by any survey repo (either niche or hard)
+    survey_covered = {f for f in features if any(g.has_edge(r, f) for r in survey)}
+    survey_gap = [f for f in features if f not in survey_covered]
+    lines.append("## Features absent from ALL survey repos\n")
+    lines.append("(present only in the primary trio; either niche or high-effort differentiators)\n")
+    lines.append(names(survey_gap))
+    lines.append("")
+    lines.append("Interpretation: features implemented by many repos are proven table-stakes; "
+                 "features absent from the whole survey set are differentiators to adopt selectively. "
+                 "Survey-repo edges are `source=declared` (README/structure scan), primary edges are `source=verified` (source read).")
     return "\n".join(lines) + "\n"
 
 

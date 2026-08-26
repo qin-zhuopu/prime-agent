@@ -25,6 +25,62 @@
       "id": "HM"
     },
     {
+      "ntype": "repo",
+      "label": "acp-components",
+      "stack": "React (core+react pkgs)",
+      "license": "open",
+      "id": "ACPC"
+    },
+    {
+      "ntype": "repo",
+      "label": "acp-ui",
+      "stack": "Vue3+Tauri",
+      "license": "open",
+      "id": "ACPUI"
+    },
+    {
+      "ntype": "repo",
+      "label": "assistant-ui",
+      "stack": "React (TS lib)",
+      "license": "open",
+      "id": "ASTUI"
+    },
+    {
+      "ntype": "repo",
+      "label": "opencode-chatui",
+      "stack": "React+Vite+tRPC",
+      "license": "open",
+      "id": "OCUI"
+    },
+    {
+      "ntype": "repo",
+      "label": "OpenGUI",
+      "stack": "React+Vite+Electron",
+      "license": "open",
+      "id": "OGUI"
+    },
+    {
+      "ntype": "repo",
+      "label": "CopilotKit",
+      "stack": "React+Next.js",
+      "license": "open",
+      "id": "CKIT"
+    },
+    {
+      "ntype": "repo",
+      "label": "agents-chat",
+      "stack": "Next.js+React",
+      "license": "open",
+      "id": "ACHAT"
+    },
+    {
+      "ntype": "repo",
+      "label": "acp-web-gateway",
+      "stack": "Kotlin server + web",
+      "license": "open",
+      "id": "ACPWG"
+    },
+    {
       "ntype": "protocol",
       "label": "Server-Sent Events",
       "id": "SSE"
@@ -33,6 +89,16 @@
       "ntype": "protocol",
       "label": "WebSocket JSON-RPC (tui_gateway)",
       "id": "WS-JSONRPC"
+    },
+    {
+      "ntype": "protocol",
+      "label": "Agent Client Protocol (JSON-RPC/stdio)",
+      "id": "ACP"
+    },
+    {
+      "ntype": "protocol",
+      "label": "AG-UI agent<->frontend event protocol",
+      "id": "AG-UI"
     },
     {
       "ntype": "protocol",
@@ -1808,6 +1874,876 @@
       "kind": "structured",
       "source": "HM",
       "target": "aux:plugin-registry"
+    },
+    {
+      "etype": "uses",
+      "source": "ACPC",
+      "target": "ACP"
+    },
+    {
+      "etype": "uses",
+      "source": "ACPC",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "tool-use:tool-call-tree"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "multi-agent:plan-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "model-config:skills"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "model-config:context-usage"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:details-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:i18n"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:plugin-registry"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPC",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "uses",
+      "source": "ACPUI",
+      "target": "ACP"
+    },
+    {
+      "etype": "uses",
+      "source": "ACPUI",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPUI",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "uses",
+      "source": "ASTUI",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "messaging:message-branching"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ASTUI",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "uses",
+      "source": "OCUI",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OCUI",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "uses",
+      "source": "OGUI",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "composer:dir-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "model-config:runtime-switch"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "OGUI",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "uses",
+      "source": "CKIT",
+      "target": "AG-UI"
+    },
+    {
+      "etype": "uses",
+      "source": "CKIT",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "model-config:mcp-config"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CKIT",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "uses",
+      "source": "ACHAT",
+      "target": "ACP"
+    },
+    {
+      "etype": "uses",
+      "source": "ACHAT",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "composer:slash-commands"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACHAT",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "uses",
+      "source": "ACPWG",
+      "target": "ACP"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "ACPWG",
+      "target": "aux:sidebar-session-list"
     },
     {
       "etype": "contains",

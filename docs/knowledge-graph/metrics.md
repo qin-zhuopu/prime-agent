@@ -1,28 +1,76 @@
-# Chat/Agent UI Knowledge Graph — Metrics
+# Chat/Agent UI Knowledge Graph -- Metrics
 
-- Nodes: 91  (repos=3, protocols=5, categories=10, features=73)
-- Edges: 272
+- Nodes: 101  (repos=11, protocols=7, categories=10, features=73)
+- Edges: 419
+- Repos: 3 primary (source-verified) + 8 survey (README/structure-declared)
 
 ## Per-repo feature coverage
 
-| repo | structured | terminal | total impl | absent |
-|---|---|---|---|---|
-| CodePilot | 60 | 0 | 60 | 13 |
-| deepseek-harness | 71 | 0 | 71 | 2 |
-| hermes-agent | 41 | 20 | 61 | 12 |
+| repo | tier | source | structured | terminal | total impl |
+|---|---|---|---|---|---|
+| CodePilot | primary | verified | 60 | 0 | 60 |
+| deepseek-harness | primary | verified | 71 | 0 | 71 |
+| hermes-agent | primary | verified | 41 | 20 | 61 |
+| acp-components | survey | declared | 31 | 0 | 31 |
+| acp-ui | survey | declared | 19 | 0 | 19 |
+| assistant-ui | survey | declared | 17 | 0 | 17 |
+| opencode-chatui | survey | declared | 16 | 0 | 16 |
+| OpenGUI | survey | declared | 18 | 0 | 18 |
+| CopilotKit | survey | declared | 10 | 0 | 10 |
+| agents-chat | survey | declared | 14 | 0 | 14 |
+| acp-web-gateway | survey | declared | 10 | 0 | 10 |
 
-## Cross-repo signals
+## Protocol adoption (repos per protocol)
+
+| protocol | #repos | repos |
+|---|---|---|
+| SSE | 2 | CodePilot, deepseek-harness |
+| WS-JSONRPC | 1 | hermes-agent |
+| ACP | 4 | acp-components, acp-ui, acp-web-gateway, agents-chat |
+| AG-UI | 1 | CopilotKit |
+| structured-render | 9 | CodePilot, CopilotKit, OpenGUI, acp-components, acp-ui, agents-chat, assistant-ui, deepseek-harness, opencode-chatui |
+| node-render | 1 | deepseek-harness |
+| pty-terminal | 1 | hermes-agent |
+
+## Cross-repo signals (primary 3, source-verified)
 
 - Universal (all 3 implement, any form): 50
   - Structured in all 3 (safest to build first): assistant-markdown, attachments, background-jobs, context-usage, conversation-view, details-panel, dir-picker, effort-setting, empty-welcome, error-boundary, file-read-view, i18n, mcp-config, media-preview, message-actions, message-input, model-picker, primitives, reconnect-resume, rewind-retry, risk-confirm, run-status, runtime-switch, session-connect, sidebar-session-list, skills, slash-commands, stop-interrupt, stream-subscribe, submission-policy, terminal-output, theme, thinking-anim, toast-modal
-- DH-only (unique to deepseek-harness): goal, message-feedback
-- CP-only (unique to CodePilot): image-gen, rate-limit-banner
-- HM-only (unique to hermes-agent): (none)
+- DH-only: goal, message-feedback
+- CP-only: image-gen, rate-limit-banner
+- HM-only: (none)
 
-## Feature maturity (by #repos implementing)
+## Feature maturity across ALL repos (primary + survey)
 
-- 3 repo(s): 50 features
-- 2 repo(s): 19 features
-- 1 repo(s): 4 features
+Top features by #repos implementing (demand / table-stakes signal):
 
-Interpretation: 3-repo features are proven table-stakes; 1-repo features are differentiators to adopt selectively.
+| feature | category | #repos |
+|---|---|---|
+| conversation-view | messaging | 11 |
+| message-list | messaging | 11 |
+| streaming-typing | messaging | 11 |
+| assistant-markdown | messaging | 11 |
+| tool-card | tool-use | 11 |
+| message-input | composer | 11 |
+| stream-subscribe | stream-control | 11 |
+| theme | aux | 10 |
+| session-connect | stream-control | 9 |
+| sidebar-session-list | aux | 9 |
+| primitives | aux | 9 |
+| stop-interrupt | stream-control | 8 |
+| code-highlight | messaging | 7 |
+| diff-view | tool-use | 7 |
+| permission-panel | permission | 7 |
+| model-picker | model-config | 7 |
+| empty-welcome | aux | 6 |
+| message-actions | messaging | 5 |
+| reasoning-display | reasoning | 5 |
+| file-read-view | tool-use | 5 |
+
+## Features absent from ALL survey repos
+
+(present only in the primary trio; either niche or high-effort differentiators)
+
+agent-asks-user, agent-preset, auth-pairing, auto-review-notice, background-jobs, batch-image-gen, chain-of-thought, compaction-view, context-injection, deliverables, effort-setting, error-boundary, goal, image-gen, image-thumb-lightbox, math-katex, media-preview, mentions, message-feedback, message-queue, permission-presets, plan-review, rate-limit-banner, rewind-retry, risk-confirm, run-status, terminal-output, terminal-reason, thinking-anim, toast-modal, todo-list, trajectory-replay, virtual-scroll, web-card, workflow-run
+
+Interpretation: features implemented by many repos are proven table-stakes; features absent from the whole survey set are differentiators to adopt selectively. Survey-repo edges are `source=declared` (README/structure scan), primary edges are `source=verified` (source read).

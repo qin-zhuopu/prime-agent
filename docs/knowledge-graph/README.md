@@ -18,15 +18,19 @@ python3 build_graph.py
 ## 图模型
 
 节点类型（`ntype`）：
-- `repo` — 三个参考实现（CP / DH / HM），带 stack / license 属性
-- `protocol` — 传输/渲染范式（SSE、WS-JSONRPC、structured-render、node-render、pty-terminal）
+- `repo` — **11 个** agent web UI 实现：3 个 primary（源码核对：CP / DH / HM）+ 8 个 survey（README/结构扫描：acp-components / acp-ui / assistant-ui / opencode-chatui / OpenGUI / CopilotKit / agents-chat / acp-web-gateway）
+- `protocol` — 7 种传输/渲染范式（SSE、WS-JSONRPC、ACP、AG-UI、structured-render、node-render、pty-terminal）
 - `category` — 10 个功能分类，带 priority（P0..P4）
-- `feature` — 73 个具体功能项
+- `feature` — 73 个具体功能项（**功能点是独立节点类型**）
 
 边类型（`etype`）：
 - `repo --uses--> protocol`
 - `category --contains--> feature`
-- `repo --implements--> feature`，边属性 `kind ∈ {structured, terminal}`（缺失则无边）
+- `repo --implements--> feature`，边属性：
+  - `kind ∈ {structured, terminal}`（结构化组件 vs HM 的终端语义）
+  - `source ∈ {verified, declared}`（primary 源码核对 vs survey README/结构声明）
+
+> 数据可信度分层：primary 三 repo 的边来自实际读源码（`verified`）；survey 八 repo 的边来自 README 声明 + 目录/组件/hook 名扫描（`declared`，较粗）。跨 repo 核心结论只用 primary 集，survey 集用于"需求/成熟度"信号。
 
 ## 产物
 
@@ -39,13 +43,11 @@ python3 build_graph.py
 
 ## 关键结论（见 metrics.md）
 
-- **规模**：91 节点，272 边，73 个功能项。
-- **覆盖率**：DH 最全（71 结构化实现，仅缺 2），CP 60，HM 61（其中 20 项是终端语义 `terminal` 而非结构化组件）。
-- **50 个功能三 repo 都实现**（table-stakes），其中 34 项在三家都是结构化组件——**这批最该先做**（会话视图、Markdown、代码高亮、输入框、斜杠命令、模型选择、上下文用量、停止/中断、断线重连、风险确认等）。
-- **DH 独有**：`goal`、`message-feedback`。
-- **CP 独有**：`image-gen`、`rate-limit-banner`。
-- **HM 独有**：无（HM 的差异化在"实现形式"= 终端语义，而非独有功能）。
-- **成熟度**：50 功能三家都有 / 19 功能两家有 / 4 功能仅一家有（差异化候选）。
+- **规模**：101 节点，419 边，11 repos，73 个功能项。
+- **协议格局**：`structured-render` 9/11 repo（主流）；`ACP` 4 repo（acp-components / acp-ui / acp-web-gateway / agents-chat，生态标准）；`AG-UI` 1（CopilotKit）；`SSE` 2；HM 的 `pty-terminal` 与 DH 的 `node-render` 各 1（独特）。
+- **跨全部 11 repo 的 table-stakes**（demand 信号最强，7–11 repo 实现）：会话视图、消息列表、流式打字、助手 Markdown、工具卡片、输入框、流订阅（均 11/11）；主题、会话侧栏、基础原语、停止中断、代码高亮、diff、权限面板、模型选择（7–10）。**这批是 P0/P1 必做**。
+- **primary 三 repo 独有**（survey 集里没人做的差异化/高成本项）：goal、trajectory-replay、plan-review、agent-asks-user、message-queue、rewind-retry、compaction-view、image-gen、rate-limit-banner、message-feedback 等——选择性采纳。
+- **可信度分层**：primary 结论 `verified`，survey 覆盖 `declared`。
 
 ## 数据来源与准确性
 
