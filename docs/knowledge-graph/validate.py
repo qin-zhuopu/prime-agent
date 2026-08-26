@@ -122,6 +122,28 @@ def check_all() -> list[str]:
         if bad:
             problems.append(f"[semantic] repo {d['id']}: unknown transport(s) {sorted(bad)}")
 
+    # 4. frontend call references (data/frontend_calls/<repo>.json) — code-derived layer
+    fc_dir = DATA / "frontend_calls"
+    op_ids = {d["id"] for _, d in nodes["operation"]}
+    if fc_dir.is_dir():
+        import json
+        comp_v = Draft7Validator(_load_yaml(SCHEMAS / "component.schema.yaml"))
+        for fj in sorted(fc_dir.glob("*.json")):
+            try:
+                records = json.loads(fj.read_text())
+            except Exception as e:
+                problems.append(f"[schema] {fj.name}: not valid JSON ({e})")
+                continue
+            if not isinstance(records, list):
+                problems.append(f"[schema] {fj.name}: expected a JSON list")
+                continue
+            for i, rec in enumerate(records):
+                for err in comp_v.iter_errors(rec):
+                    loc = "/".join(str(x) for x in err.path) or "(root)"
+                    problems.append(f"[schema] {fj.name}[{i}]: {loc}: {err.message}")
+                if isinstance(rec, dict) and rec.get("operation") not in op_ids:
+                    problems.append(f"[ref] {fj.name}[{i}]: calls unknown operation '{rec.get('operation')}'")
+
     return problems
 
 

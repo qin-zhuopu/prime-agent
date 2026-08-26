@@ -340,6 +340,11 @@
       <data key="d1">list</data>
       <data key="d6">Skill</data>
     </node>
+    <node id="O:Skill.update">
+      <data key="d0">operation</data>
+      <data key="d1">update</data>
+      <data key="d6">Skill</data>
+    </node>
     <node id="O:Subagent.history">
       <data key="d0">operation</data>
       <data key="d1">history</data>
@@ -1205,10 +1210,24 @@
       <data key="d12" />
       <data key="d13">WS-RPC</data>
     </edge>
+    <edge source="HM" target="O:Session.update">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.save</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
     <edge source="HM" target="O:Settings.get">
       <data key="d9">exposes</data>
       <data key="d10">HM</data>
       <data key="d11">config.get</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Skill.update">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">skills.manage</data>
       <data key="d12" />
       <data key="d13">WS-RPC</data>
     </edge>
@@ -1350,6 +1369,9 @@
       <data key="d9">has_op</data>
     </edge>
     <edge source="E:Skill" target="O:Skill.list">
+      <data key="d9">has_op</data>
+    </edge>
+    <edge source="E:Skill" target="O:Skill.update">
       <data key="d9">has_op</data>
     </edge>
     <edge source="E:Subagent" target="O:Subagent.history">

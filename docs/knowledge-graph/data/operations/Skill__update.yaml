@@ -1,0 +1,8 @@
+id: O:Skill.update
+ntype: operation
+label: update
+entity: Skill
+endpoints:
+  HM:
+    name: skills.manage
+    style: WS-RPC

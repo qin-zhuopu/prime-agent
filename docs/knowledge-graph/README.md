@@ -100,7 +100,7 @@ data/
   entities/    *.yaml   (14)
   operations/  *.yaml   (49)   文件名 = Entity__op
 schemas/
-  {repo,protocol,feature,entity,operation}.schema.yaml   (每种节点类型一个 JSON Schema)
+  {repo,protocol,feature,entity,operation,component,category}.schema.yaml   (7 种节点类型各一个 JSON Schema)
 ```
 
 ### 脚本
@@ -111,7 +111,8 @@ schemas/
 | `map_api.py` | **规则映射**（显式表，无 LLM）：raw 端点 → canonical 实体/操作 → 重写 `data/entities`、`data/operations`；未匹配的记入 `data/api_raw/unmapped.json` |
 | `scan_frontend_calls.py` | **纯脚本**扫前端源码里对端点的调用 → `data/frontend_calls/<repo>.json`；构建时连成 `component --calls--> operation` 引用边（排除测试） |
 | `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（UI 部分用） |
-| `validate.py` | **全量质量检查**：schema + 引用完整性 + 语义规则；exit 1 表示有问题 |
+| `validate.py` | **正确性校验**（pass/fail）：schema + 引用完整性 + 语义规则（含 frontend_calls）；exit 1 表示有问题 |
+| `quality_check.py` | **完整性/缺口报告**（分级 ERROR/WARN/INFO）：schema 覆盖、repo 覆盖、实体操作薄弱、孤儿节点、字段缺失；输出存档为 `quality-report.md` |
 | `build_from_yaml.py` | **规范构建路径**：先跑 validate（fail-closed），通过才从 YAML 构图并出图 |
 | `build_graph.py` / `build_api_graph.py` | 原始种子来源 + 复用其 `analyze()` 写度量 |
 

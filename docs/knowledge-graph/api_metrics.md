@@ -1,7 +1,7 @@
 # Backend API Knowledge Graph -- Metrics
 
-- Nodes: 110 (repos=3, entities=14, operations=50)
-- Edges: 198
+- Nodes: 111 (repos=3, entities=14, operations=51)
+- Edges: 201
 
 ## Entity naming across repos
 
@@ -111,7 +111,7 @@
 | interrupt | /chat/interrupt [POST] | session.cancel | session.interrupt |
 | list | /chat/sessions [GET] | session.list | session.active_list |
 | search | /chat/sessions/by-cwd [GET] | session.search | - |
-| update | /chat/sessions/[id] [PATCH] | - | - |
+| update | /chat/sessions/[id] [PATCH] | - | session.save |
 
 ### Settings
 
@@ -125,6 +125,7 @@
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | list | - | skill.list | - |
+| update | - | - | skills.manage |
 
 ### Subagent
 
@@ -150,7 +151,7 @@
 |---|---|---|
 | CodePilot | REST | 30 |
 | deepseek-harness | RPC | 38 |
-| hermes-agent | WS-RPC | 16 |
+| hermes-agent | WS-RPC | 18 |
 
 Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming (no URL/HTTP verb). All are normalized to canonical (entity, operation) nodes so the three shapes become comparable. Entity/op absence in a repo = no `exposes` edge.
 

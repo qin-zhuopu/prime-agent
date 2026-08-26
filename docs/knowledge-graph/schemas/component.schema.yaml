@@ -1,0 +1,24 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: frontend call reference (component/page -> operation)
+description: >-
+  One record per (caller_file, operation) edge produced by scan_frontend_calls.py.
+  Stored as data/frontend_calls/<repo>.json (a list of these). This schema validates
+  each element so the code-derived call layer is quality-checked like the rest.
+type: object
+required: [caller_file, endpoint, operation, kind]
+additionalProperties: false
+properties:
+  caller_file:
+    description: repo-relative path of the frontend file making the call
+    type: string
+    minLength: 1
+  endpoint:
+    description: the concrete endpoint called (URL for REST, method name for RPC)
+    type: string
+    minLength: 1
+  operation:
+    description: canonical operation id it resolves to ("O:Entity.op")
+    type: string
+    pattern: "^O:[A-Za-z][A-Za-z0-9]*\\.[a-z][a-zA-Z]*$"
+  kind:
+    enum: [REST, RPC]

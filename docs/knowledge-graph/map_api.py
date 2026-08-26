@@ -70,6 +70,7 @@ ACTION_ALIAS = {
     "pause": "pause", "resume": "resume", "complete": "complete", "clear": "clear",
     "listDirectory": "list", "openPath": "get", "attachment": "create",
     "createDirectory": "create",
+    "manage": "update", "reload": "update", "save": "update",
 }
 
 # CP REST (url, verb) -> (Entity, operation). Explicit because REST has no entity.action.
@@ -137,7 +138,7 @@ ENTITY_OPS = {
     "Model": {"list", "select"},
     "Subagent": {"list", "send", "interrupt", "history"},
     "Goal": {"create", "update", "pause", "resume", "complete", "clear"},
-    "Skill": {"list"},
+    "Skill": {"list", "update"},
     "AgentPreset": {"list", "get", "select", "delete", "create"},
     "Workspace": {"create", "list", "delete", "rename"},
     "File": {"get", "list", "create", "update", "delete"},

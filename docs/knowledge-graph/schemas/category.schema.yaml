@@ -1,0 +1,21 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: category node (feature group)
+description: >-
+  Category nodes are DERIVED at build time from each feature's `category`+`priority`
+  fields (build_graph groups features under their category). There are no standalone
+  category YAML files; this schema documents the node shape for completeness and lets
+  tooling validate derived category nodes if materialized.
+type: object
+required: [id, ntype, label, priority]
+additionalProperties: false
+properties:
+  id:
+    enum: [messaging, reasoning, tool-use, permission, composer,
+           stream-control, multi-agent, model-config, media, aux]
+  ntype:
+    const: category
+  label:
+    type: string
+    minLength: 1
+  priority:
+    enum: [P0, P1, P2, P3, P4]

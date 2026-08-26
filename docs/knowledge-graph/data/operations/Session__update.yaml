@@ -7,3 +7,6 @@ endpoints:
     name: /chat/sessions/[id]
     http: PATCH
     style: REST
+  HM:
+    name: session.save
+    style: WS-RPC

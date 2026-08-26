@@ -387,6 +387,12 @@
     },
     {
       "ntype": "operation",
+      "label": "update",
+      "entity": "Skill",
+      "id": "O:Skill.update"
+    },
+    {
+      "ntype": "operation",
       "label": "history",
       "entity": "Subagent",
       "id": "O:Subagent.history"
@@ -1468,11 +1474,29 @@
     {
       "etype": "exposes",
       "repo": "HM",
+      "name": "session.save",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.update"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
       "name": "config.get",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
       "target": "O:Settings.get"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "skills.manage",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Skill.update"
     },
     {
       "etype": "exposes",
@@ -1701,6 +1725,11 @@
       "etype": "has_op",
       "source": "E:Skill",
       "target": "O:Skill.list"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Skill",
+      "target": "O:Skill.update"
     },
     {
       "etype": "has_op",
