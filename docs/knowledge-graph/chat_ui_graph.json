@@ -1,0 +1,2178 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "ntype": "repo",
+      "label": "CodePilot",
+      "stack": "Electron+Next.js",
+      "license": "BUSL-1.1",
+      "id": "CP"
+    },
+    {
+      "ntype": "repo",
+      "label": "deepseek-harness",
+      "stack": "Cordis+React",
+      "license": "open",
+      "id": "DH"
+    },
+    {
+      "ntype": "repo",
+      "label": "hermes-agent",
+      "stack": "Vite+React+xterm",
+      "license": "open",
+      "id": "HM"
+    },
+    {
+      "ntype": "protocol",
+      "label": "Server-Sent Events",
+      "id": "SSE"
+    },
+    {
+      "ntype": "protocol",
+      "label": "WebSocket JSON-RPC (tui_gateway)",
+      "id": "WS-JSONRPC"
+    },
+    {
+      "ntype": "protocol",
+      "label": "Structured React components",
+      "id": "structured-render"
+    },
+    {
+      "ntype": "protocol",
+      "label": "Node-ized registrable components",
+      "id": "node-render"
+    },
+    {
+      "ntype": "protocol",
+      "label": "PTY -> xterm terminal mirror",
+      "id": "pty-terminal"
+    },
+    {
+      "ntype": "category",
+      "label": "Messaging & streaming render",
+      "priority": "P0",
+      "id": "messaging"
+    },
+    {
+      "ntype": "category",
+      "label": "Thinking / reasoning display",
+      "priority": "P1",
+      "id": "reasoning"
+    },
+    {
+      "ntype": "category",
+      "label": "Tool call display",
+      "priority": "P1",
+      "id": "tool-use"
+    },
+    {
+      "ntype": "category",
+      "label": "Permission / human-in-loop",
+      "priority": "P1",
+      "id": "permission"
+    },
+    {
+      "ntype": "category",
+      "label": "Input composer",
+      "priority": "P0",
+      "id": "composer"
+    },
+    {
+      "ntype": "category",
+      "label": "Stream control & run state",
+      "priority": "P2",
+      "id": "stream-control"
+    },
+    {
+      "ntype": "category",
+      "label": "Task / subagent / plan",
+      "priority": "P3",
+      "id": "multi-agent"
+    },
+    {
+      "ntype": "category",
+      "label": "Model / runtime / context config",
+      "priority": "P3",
+      "id": "model-config"
+    },
+    {
+      "ntype": "category",
+      "label": "Media / deliverables",
+      "priority": "P4",
+      "id": "media"
+    },
+    {
+      "ntype": "category",
+      "label": "Layout / robustness / aux",
+      "priority": "P0",
+      "id": "aux"
+    },
+    {
+      "ntype": "feature",
+      "label": "conversation-view",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:conversation-view"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-list",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:message-list"
+    },
+    {
+      "ntype": "feature",
+      "label": "virtual-scroll",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:virtual-scroll"
+    },
+    {
+      "ntype": "feature",
+      "label": "streaming-typing",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:streaming-typing"
+    },
+    {
+      "ntype": "feature",
+      "label": "assistant-markdown",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:assistant-markdown"
+    },
+    {
+      "ntype": "feature",
+      "label": "code-highlight",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:code-highlight"
+    },
+    {
+      "ntype": "feature",
+      "label": "math-katex",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:math-katex"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-actions",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:message-actions"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-branching",
+      "category": "messaging",
+      "priority": "P0",
+      "id": "messaging:message-branching"
+    },
+    {
+      "ntype": "feature",
+      "label": "reasoning-display",
+      "category": "reasoning",
+      "priority": "P1",
+      "id": "reasoning:reasoning-display"
+    },
+    {
+      "ntype": "feature",
+      "label": "chain-of-thought",
+      "category": "reasoning",
+      "priority": "P1",
+      "id": "reasoning:chain-of-thought"
+    },
+    {
+      "ntype": "feature",
+      "label": "thinking-anim",
+      "category": "reasoning",
+      "priority": "P1",
+      "id": "reasoning:thinking-anim"
+    },
+    {
+      "ntype": "feature",
+      "label": "effort-setting",
+      "category": "reasoning",
+      "priority": "P1",
+      "id": "reasoning:effort-setting"
+    },
+    {
+      "ntype": "feature",
+      "label": "tool-card",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:tool-card"
+    },
+    {
+      "ntype": "feature",
+      "label": "tool-call-tree",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:tool-call-tree"
+    },
+    {
+      "ntype": "feature",
+      "label": "terminal-output",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:terminal-output"
+    },
+    {
+      "ntype": "feature",
+      "label": "diff-view",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:diff-view"
+    },
+    {
+      "ntype": "feature",
+      "label": "file-read-view",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:file-read-view"
+    },
+    {
+      "ntype": "feature",
+      "label": "search-sources",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:search-sources"
+    },
+    {
+      "ntype": "feature",
+      "label": "web-card",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:web-card"
+    },
+    {
+      "ntype": "feature",
+      "label": "risk-confirm",
+      "category": "tool-use",
+      "priority": "P1",
+      "id": "tool-use:risk-confirm"
+    },
+    {
+      "ntype": "feature",
+      "label": "permission-panel",
+      "category": "permission",
+      "priority": "P1",
+      "id": "permission:permission-panel"
+    },
+    {
+      "ntype": "feature",
+      "label": "permission-mode",
+      "category": "permission",
+      "priority": "P1",
+      "id": "permission:permission-mode"
+    },
+    {
+      "ntype": "feature",
+      "label": "permission-presets",
+      "category": "permission",
+      "priority": "P1",
+      "id": "permission:permission-presets"
+    },
+    {
+      "ntype": "feature",
+      "label": "auto-review-notice",
+      "category": "permission",
+      "priority": "P1",
+      "id": "permission:auto-review-notice"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-input",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:message-input"
+    },
+    {
+      "ntype": "feature",
+      "label": "submission-policy",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:submission-policy"
+    },
+    {
+      "ntype": "feature",
+      "label": "slash-commands",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:slash-commands"
+    },
+    {
+      "ntype": "feature",
+      "label": "mentions",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:mentions"
+    },
+    {
+      "ntype": "feature",
+      "label": "attachments",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:attachments"
+    },
+    {
+      "ntype": "feature",
+      "label": "dir-picker",
+      "category": "composer",
+      "priority": "P0",
+      "id": "composer:dir-picker"
+    },
+    {
+      "ntype": "feature",
+      "label": "stream-subscribe",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:stream-subscribe"
+    },
+    {
+      "ntype": "feature",
+      "label": "session-connect",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:session-connect"
+    },
+    {
+      "ntype": "feature",
+      "label": "stop-interrupt",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:stop-interrupt"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-queue",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:message-queue"
+    },
+    {
+      "ntype": "feature",
+      "label": "rewind-retry",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:rewind-retry"
+    },
+    {
+      "ntype": "feature",
+      "label": "reconnect-resume",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:reconnect-resume"
+    },
+    {
+      "ntype": "feature",
+      "label": "run-status",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:run-status"
+    },
+    {
+      "ntype": "feature",
+      "label": "terminal-reason",
+      "category": "stream-control",
+      "priority": "P2",
+      "id": "stream-control:terminal-reason"
+    },
+    {
+      "ntype": "feature",
+      "label": "todo-list",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:todo-list"
+    },
+    {
+      "ntype": "feature",
+      "label": "subagent-card",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:subagent-card"
+    },
+    {
+      "ntype": "feature",
+      "label": "plan-mode",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:plan-mode"
+    },
+    {
+      "ntype": "feature",
+      "label": "plan-review",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:plan-review"
+    },
+    {
+      "ntype": "feature",
+      "label": "agent-asks-user",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:agent-asks-user"
+    },
+    {
+      "ntype": "feature",
+      "label": "goal",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:goal"
+    },
+    {
+      "ntype": "feature",
+      "label": "background-jobs",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:background-jobs"
+    },
+    {
+      "ntype": "feature",
+      "label": "workflow-run",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:workflow-run"
+    },
+    {
+      "ntype": "feature",
+      "label": "trajectory-replay",
+      "category": "multi-agent",
+      "priority": "P3",
+      "id": "multi-agent:trajectory-replay"
+    },
+    {
+      "ntype": "feature",
+      "label": "model-picker",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:model-picker"
+    },
+    {
+      "ntype": "feature",
+      "label": "runtime-switch",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:runtime-switch"
+    },
+    {
+      "ntype": "feature",
+      "label": "context-usage",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:context-usage"
+    },
+    {
+      "ntype": "feature",
+      "label": "context-injection",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:context-injection"
+    },
+    {
+      "ntype": "feature",
+      "label": "compaction-view",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:compaction-view"
+    },
+    {
+      "ntype": "feature",
+      "label": "rate-limit-banner",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:rate-limit-banner"
+    },
+    {
+      "ntype": "feature",
+      "label": "agent-preset",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:agent-preset"
+    },
+    {
+      "ntype": "feature",
+      "label": "skills",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:skills"
+    },
+    {
+      "ntype": "feature",
+      "label": "mcp-config",
+      "category": "model-config",
+      "priority": "P3",
+      "id": "model-config:mcp-config"
+    },
+    {
+      "ntype": "feature",
+      "label": "image-thumb-lightbox",
+      "category": "media",
+      "priority": "P4",
+      "id": "media:image-thumb-lightbox"
+    },
+    {
+      "ntype": "feature",
+      "label": "image-gen",
+      "category": "media",
+      "priority": "P4",
+      "id": "media:image-gen"
+    },
+    {
+      "ntype": "feature",
+      "label": "media-preview",
+      "category": "media",
+      "priority": "P4",
+      "id": "media:media-preview"
+    },
+    {
+      "ntype": "feature",
+      "label": "batch-image-gen",
+      "category": "media",
+      "priority": "P4",
+      "id": "media:batch-image-gen"
+    },
+    {
+      "ntype": "feature",
+      "label": "deliverables",
+      "category": "media",
+      "priority": "P4",
+      "id": "media:deliverables"
+    },
+    {
+      "ntype": "feature",
+      "label": "empty-welcome",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:empty-welcome"
+    },
+    {
+      "ntype": "feature",
+      "label": "sidebar-session-list",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:sidebar-session-list"
+    },
+    {
+      "ntype": "feature",
+      "label": "details-panel",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:details-panel"
+    },
+    {
+      "ntype": "feature",
+      "label": "error-boundary",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:error-boundary"
+    },
+    {
+      "ntype": "feature",
+      "label": "message-feedback",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:message-feedback"
+    },
+    {
+      "ntype": "feature",
+      "label": "theme",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:theme"
+    },
+    {
+      "ntype": "feature",
+      "label": "toast-modal",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:toast-modal"
+    },
+    {
+      "ntype": "feature",
+      "label": "primitives",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:primitives"
+    },
+    {
+      "ntype": "feature",
+      "label": "i18n",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:i18n"
+    },
+    {
+      "ntype": "feature",
+      "label": "auth-pairing",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:auth-pairing"
+    },
+    {
+      "ntype": "feature",
+      "label": "plugin-registry",
+      "category": "aux",
+      "priority": "P0",
+      "id": "aux:plugin-registry"
+    }
+  ],
+  "links": [
+    {
+      "etype": "uses",
+      "source": "CP",
+      "target": "SSE"
+    },
+    {
+      "etype": "uses",
+      "source": "CP",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:virtual-scroll"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:math-katex"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "messaging:message-branching"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "reasoning:chain-of-thought"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "reasoning:thinking-anim"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "reasoning:effort-setting"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:terminal-output"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:web-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "tool-use:risk-confirm"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "permission:auto-review-notice"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:slash-commands"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:mentions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "composer:dir-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:message-queue"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:rewind-retry"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:run-status"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "stream-control:terminal-reason"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "multi-agent:todo-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "multi-agent:background-jobs"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:runtime-switch"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:context-usage"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:context-injection"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:compaction-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:rate-limit-banner"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:skills"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "model-config:mcp-config"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "media:image-thumb-lightbox"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "media:image-gen"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "media:media-preview"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "media:batch-image-gen"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:details-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:error-boundary"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:toast-modal"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "CP",
+      "target": "aux:i18n"
+    },
+    {
+      "etype": "uses",
+      "source": "DH",
+      "target": "SSE"
+    },
+    {
+      "etype": "uses",
+      "source": "DH",
+      "target": "node-render"
+    },
+    {
+      "etype": "uses",
+      "source": "DH",
+      "target": "structured-render"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:virtual-scroll"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:math-katex"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "messaging:message-branching"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "reasoning:chain-of-thought"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "reasoning:thinking-anim"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "reasoning:effort-setting"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:tool-call-tree"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:terminal-output"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:web-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "tool-use:risk-confirm"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "permission:permission-presets"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "permission:auto-review-notice"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:slash-commands"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:mentions"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "composer:dir-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:message-queue"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:rewind-retry"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:run-status"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "stream-control:terminal-reason"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:todo-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:plan-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:plan-review"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:agent-asks-user"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:goal"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:background-jobs"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:workflow-run"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "multi-agent:trajectory-replay"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:runtime-switch"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:context-usage"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:context-injection"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:compaction-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:agent-preset"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:skills"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "model-config:mcp-config"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "media:image-thumb-lightbox"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "media:media-preview"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "media:batch-image-gen"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "media:deliverables"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:details-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:error-boundary"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:message-feedback"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:toast-modal"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:i18n"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:auth-pairing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "DH",
+      "target": "aux:plugin-registry"
+    },
+    {
+      "etype": "uses",
+      "source": "HM",
+      "target": "WS-JSONRPC"
+    },
+    {
+      "etype": "uses",
+      "source": "HM",
+      "target": "pty-terminal"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "reasoning:chain-of-thought"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "reasoning:thinking-anim"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "reasoning:effort-setting"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "tool-use:tool-call-tree"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "tool-use:terminal-output"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "tool-use:web-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "tool-use:risk-confirm"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "permission:permission-presets"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "permission:auto-review-notice"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "composer:slash-commands"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "composer:dir-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:rewind-retry"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "stream-control:run-status"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "stream-control:terminal-reason"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "multi-agent:todo-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "multi-agent:plan-mode"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "multi-agent:plan-review"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "multi-agent:agent-asks-user"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "multi-agent:background-jobs"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "multi-agent:workflow-run"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "multi-agent:trajectory-replay"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:runtime-switch"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:context-usage"
+    },
+    {
+      "etype": "implements",
+      "kind": "terminal",
+      "source": "HM",
+      "target": "model-config:compaction-view"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:agent-preset"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:skills"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "model-config:mcp-config"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "media:media-preview"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "media:deliverables"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:details-panel"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:error-boundary"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:toast-modal"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:i18n"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:auth-pairing"
+    },
+    {
+      "etype": "implements",
+      "kind": "structured",
+      "source": "HM",
+      "target": "aux:plugin-registry"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:conversation-view"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:message-list"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:virtual-scroll"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:streaming-typing"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:assistant-markdown"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:code-highlight"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:math-katex"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:message-actions"
+    },
+    {
+      "etype": "contains",
+      "source": "messaging",
+      "target": "messaging:message-branching"
+    },
+    {
+      "etype": "contains",
+      "source": "reasoning",
+      "target": "reasoning:reasoning-display"
+    },
+    {
+      "etype": "contains",
+      "source": "reasoning",
+      "target": "reasoning:chain-of-thought"
+    },
+    {
+      "etype": "contains",
+      "source": "reasoning",
+      "target": "reasoning:thinking-anim"
+    },
+    {
+      "etype": "contains",
+      "source": "reasoning",
+      "target": "reasoning:effort-setting"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:tool-call-tree"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:terminal-output"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:diff-view"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:file-read-view"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:search-sources"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:web-card"
+    },
+    {
+      "etype": "contains",
+      "source": "tool-use",
+      "target": "tool-use:risk-confirm"
+    },
+    {
+      "etype": "contains",
+      "source": "permission",
+      "target": "permission:permission-panel"
+    },
+    {
+      "etype": "contains",
+      "source": "permission",
+      "target": "permission:permission-mode"
+    },
+    {
+      "etype": "contains",
+      "source": "permission",
+      "target": "permission:permission-presets"
+    },
+    {
+      "etype": "contains",
+      "source": "permission",
+      "target": "permission:auto-review-notice"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:message-input"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:submission-policy"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:slash-commands"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:mentions"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:attachments"
+    },
+    {
+      "etype": "contains",
+      "source": "composer",
+      "target": "composer:dir-picker"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:stream-subscribe"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:session-connect"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:stop-interrupt"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:message-queue"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:rewind-retry"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:reconnect-resume"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:run-status"
+    },
+    {
+      "etype": "contains",
+      "source": "stream-control",
+      "target": "stream-control:terminal-reason"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:todo-list"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:subagent-card"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:plan-mode"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:plan-review"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:agent-asks-user"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:goal"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:background-jobs"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:workflow-run"
+    },
+    {
+      "etype": "contains",
+      "source": "multi-agent",
+      "target": "multi-agent:trajectory-replay"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:model-picker"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:runtime-switch"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:context-usage"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:context-injection"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:compaction-view"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:rate-limit-banner"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:agent-preset"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:skills"
+    },
+    {
+      "etype": "contains",
+      "source": "model-config",
+      "target": "model-config:mcp-config"
+    },
+    {
+      "etype": "contains",
+      "source": "media",
+      "target": "media:image-thumb-lightbox"
+    },
+    {
+      "etype": "contains",
+      "source": "media",
+      "target": "media:image-gen"
+    },
+    {
+      "etype": "contains",
+      "source": "media",
+      "target": "media:media-preview"
+    },
+    {
+      "etype": "contains",
+      "source": "media",
+      "target": "media:batch-image-gen"
+    },
+    {
+      "etype": "contains",
+      "source": "media",
+      "target": "media:deliverables"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:empty-welcome"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:sidebar-session-list"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:details-panel"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:error-boundary"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:message-feedback"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:theme"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:toast-modal"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:primitives"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:i18n"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:auth-pairing"
+    },
+    {
+      "etype": "contains",
+      "source": "aux",
+      "target": "aux:plugin-registry"
+    }
+  ]
+}
