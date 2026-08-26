@@ -5,11 +5,8 @@ entity: Permission
 endpoints:
   CP:
     name: /chat/permission
-    style: REST
     http: POST
-  DH:
-    name: approvals.respond
-    style: RPC
+    style: REST
   HM:
-    name: approval.respond
+    name: approval.received
     style: WS-RPC

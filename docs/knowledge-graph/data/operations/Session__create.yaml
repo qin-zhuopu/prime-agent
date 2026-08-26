@@ -5,8 +5,8 @@ entity: Session
 endpoints:
   CP:
     name: /chat/sessions
-    style: REST
     http: POST
+    style: REST
   DH:
     name: session.create
     style: RPC

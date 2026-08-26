@@ -5,8 +5,8 @@ entity: Workspace
 endpoints:
   CP:
     name: /files/mkdir
-    style: REST
     http: POST
+    style: REST
   DH:
     name: workspace.create
     style: RPC

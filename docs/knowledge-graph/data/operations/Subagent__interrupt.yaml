@@ -6,3 +6,6 @@ endpoints:
   DH:
     name: subagent.interrupt
     style: RPC
+  HM:
+    name: subagent.interrupt
+    style: WS-RPC

@@ -5,11 +5,11 @@ entity: Session
 endpoints:
   CP:
     name: /chat/sessions/[id]
-    style: REST
     http: DELETE
+    style: REST
   DH:
     name: workspace.archiveSession
     style: RPC
   HM:
-    name: session.delete
+    name: session.close
     style: WS-RPC

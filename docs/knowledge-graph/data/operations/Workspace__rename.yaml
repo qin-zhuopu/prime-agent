@@ -1,8 +1,8 @@
-id: O:Workspace.delete
+id: O:Workspace.rename
 ntype: operation
-label: delete
+label: rename
 entity: Workspace
 endpoints:
   DH:
-    name: workspace.delete
+    name: workspace.rename
     style: RPC

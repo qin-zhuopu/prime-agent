@@ -5,11 +5,11 @@ entity: Session
 endpoints:
   CP:
     name: /chat/sessions
-    style: REST
     http: GET
+    style: REST
   DH:
     name: session.list
     style: RPC
   HM:
-    name: sessions.list
+    name: session.active_list
     style: WS-RPC

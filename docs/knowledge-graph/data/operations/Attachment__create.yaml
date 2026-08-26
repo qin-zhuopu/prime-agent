@@ -5,11 +5,8 @@ entity: Attachment
 endpoints:
   CP:
     name: /assets/html-bundles
-    style: REST
     http: POST
+    style: REST
   DH:
     name: session.attachment
     style: RPC
-  HM:
-    name: clipboard.paste
-    style: WS-RPC

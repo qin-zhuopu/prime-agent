@@ -1,0 +1,11 @@
+id: O:Session.history
+ntype: operation
+label: history
+entity: Session
+endpoints:
+  DH:
+    name: session.history
+    style: RPC
+  HM:
+    name: session.history
+    style: WS-RPC

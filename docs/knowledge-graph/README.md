@@ -94,7 +94,9 @@ schemas/
 
 | 脚本 | 作用 |
 |---|---|
-| `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（已跑过） |
+| `scan_api.py` | **纯脚本**抓后端 API（正则，无 LLM）→ `data/api_raw/<repo>.json`（CP 250 / DH 53 / HM 299） |
+| `map_api.py` | **规则映射**（显式表，无 LLM）：raw 端点 → canonical 实体/操作 → 重写 `data/entities`、`data/operations`；未匹配的记入 `data/api_raw/unmapped.json` |
+| `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（UI 部分用） |
 | `validate.py` | **全量质量检查**：schema + 引用完整性 + 语义规则；exit 1 表示有问题 |
 | `build_from_yaml.py` | **规范构建路径**：先跑 validate（fail-closed），通过才从 YAML 构图并出图 |
 | `build_graph.py` / `build_api_graph.py` | 原始种子来源 + 复用其 `analyze()` 写度量 |

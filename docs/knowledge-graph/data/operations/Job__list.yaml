@@ -5,11 +5,5 @@ entity: Job
 endpoints:
   CP:
     name: /media/jobs
-    style: REST
     http: GET
-  DH:
-    name: jobs.list
-    style: RPC
-  HM:
-    name: background.list
-    style: WS-RPC
+    style: REST

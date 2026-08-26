@@ -5,11 +5,8 @@ entity: Model
 endpoints:
   CP:
     name: /chat/model
-    style: REST
     http: POST
+    style: REST
   DH:
     name: session.selectModel
     style: RPC
-  HM:
-    name: agent.reasoning_effort
-    style: WS-RPC

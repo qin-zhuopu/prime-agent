@@ -135,6 +135,12 @@
     },
     {
       "ntype": "operation",
+      "label": "create",
+      "entity": "AgentPreset",
+      "id": "O:AgentPreset.create"
+    },
+    {
+      "ntype": "operation",
       "label": "delete",
       "entity": "AgentPreset",
       "id": "O:AgentPreset.delete"
@@ -165,12 +171,6 @@
     },
     {
       "ntype": "operation",
-      "label": "delete",
-      "entity": "Attachment",
-      "id": "O:Attachment.delete"
-    },
-    {
-      "ntype": "operation",
       "label": "get",
       "entity": "Attachment",
       "id": "O:Attachment.get"
@@ -186,12 +186,6 @@
       "label": "get",
       "entity": "Credential",
       "id": "O:Credential.get"
-    },
-    {
-      "ntype": "operation",
-      "label": "update",
-      "entity": "Credential",
-      "id": "O:Credential.update"
     },
     {
       "ntype": "operation",
@@ -345,6 +339,12 @@
     },
     {
       "ntype": "operation",
+      "label": "history",
+      "entity": "Session",
+      "id": "O:Session.history"
+    },
+    {
+      "ntype": "operation",
       "label": "interrupt",
       "entity": "Session",
       "id": "O:Session.interrupt"
@@ -426,6 +426,12 @@
       "label": "list",
       "entity": "Workspace",
       "id": "O:Workspace.list"
+    },
+    {
+      "ntype": "operation",
+      "label": "rename",
+      "entity": "Workspace",
+      "id": "O:Workspace.rename"
     }
   ],
   "links": [
@@ -437,15 +443,6 @@
       "style": "REST",
       "source": "CP",
       "target": "O:Attachment.create"
-    },
-    {
-      "etype": "exposes",
-      "repo": "CP",
-      "name": "/assets/[id]",
-      "http": "DELETE",
-      "style": "REST",
-      "source": "CP",
-      "target": "O:Attachment.delete"
     },
     {
       "etype": "exposes",
@@ -464,15 +461,6 @@
       "style": "REST",
       "source": "CP",
       "target": "O:Credential.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "CP",
-      "name": "/claude-auth",
-      "http": "POST",
-      "style": "REST",
-      "source": "CP",
-      "target": "O:Credential.update"
     },
     {
       "etype": "exposes",
@@ -500,15 +488,6 @@
       "style": "REST",
       "source": "CP",
       "target": "O:File.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "CP",
-      "name": "/files/browse",
-      "http": "GET",
-      "style": "REST",
-      "source": "CP",
-      "target": "O:File.list"
     },
     {
       "etype": "exposes",
@@ -720,15 +699,6 @@
     {
       "etype": "exposes",
       "repo": "CP",
-      "name": "/files/delete",
-      "http": "POST",
-      "style": "REST",
-      "source": "CP",
-      "target": "O:Workspace.delete"
-    },
-    {
-      "etype": "exposes",
-      "repo": "CP",
       "name": "/files/browse",
       "http": "GET",
       "style": "REST",
@@ -801,16 +771,16 @@
     {
       "etype": "exposes",
       "repo": "DH",
-      "name": "credentials.set",
+      "name": "host.createDirectory",
       "http": "",
       "style": "RPC",
       "source": "DH",
-      "target": "O:Credential.update"
+      "target": "O:File.create"
     },
     {
       "etype": "exposes",
       "repo": "DH",
-      "name": "host.openPath",
+      "name": "host.describe",
       "http": "",
       "style": "RPC",
       "source": "DH",
@@ -882,47 +852,11 @@
     {
       "etype": "exposes",
       "repo": "DH",
-      "name": "jobs.create",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Job.create"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "jobs.list",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Job.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "session.history",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Message.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
       "name": "session.prompt",
       "http": "",
       "style": "RPC",
       "source": "DH",
       "target": "O:Message.send"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "session.prompt(stream)",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Message.stream"
     },
     {
       "etype": "exposes",
@@ -936,7 +870,7 @@
     {
       "etype": "exposes",
       "repo": "DH",
-      "name": "llm.models",
+      "name": "session.models",
       "http": "",
       "style": "RPC",
       "source": "DH",
@@ -950,24 +884,6 @@
       "style": "RPC",
       "source": "DH",
       "target": "O:Model.select"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "approvals.describe",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Permission.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "approvals.respond",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Permission.respond"
     },
     {
       "etype": "exposes",
@@ -1003,7 +919,7 @@
       "http": "",
       "style": "RPC",
       "source": "DH",
-      "target": "O:Session.get"
+      "target": "O:Session.history"
     },
     {
       "etype": "exposes",
@@ -1031,15 +947,6 @@
       "style": "RPC",
       "source": "DH",
       "target": "O:Session.search"
-    },
-    {
-      "etype": "exposes",
-      "repo": "DH",
-      "name": "session.rename",
-      "http": "",
-      "style": "RPC",
-      "source": "DH",
-      "target": "O:Session.update"
     },
     {
       "etype": "exposes",
@@ -1125,11 +1032,38 @@
     {
       "etype": "exposes",
       "repo": "DH",
-      "name": "host.listDirectory",
+      "name": "workspace.list",
       "http": "",
       "style": "RPC",
       "source": "DH",
       "target": "O:Workspace.list"
+    },
+    {
+      "etype": "exposes",
+      "repo": "DH",
+      "name": "workspace.rename",
+      "http": "",
+      "style": "RPC",
+      "source": "DH",
+      "target": "O:Workspace.rename"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "profiles.create",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:AgentPreset.create"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "profiles.describe",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:AgentPreset.get"
     },
     {
       "etype": "exposes",
@@ -1139,78 +1073,6 @@
       "style": "WS-RPC",
       "source": "HM",
       "target": "O:AgentPreset.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "profile.select",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:AgentPreset.select"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "clipboard.paste",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Attachment.create"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "auth.json",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Credential.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "files.read",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:File.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "files.list",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:File.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "goal.clear",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Goal.clear"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "goal.set",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Goal.create"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "background.list",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Job.list"
     },
     {
       "etype": "exposes",
@@ -1233,34 +1095,7 @@
     {
       "etype": "exposes",
       "repo": "HM",
-      "name": "models.list",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Model.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "agent.reasoning_effort",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Model.select"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "approval.pending",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Permission.get"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "approval.respond",
+      "name": "approval.received",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
@@ -1278,11 +1113,20 @@
     {
       "etype": "exposes",
       "repo": "HM",
-      "name": "session.delete",
+      "name": "session.close",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
       "target": "O:Session.delete"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "session.branch",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.fork"
     },
     {
       "etype": "exposes",
@@ -1296,6 +1140,15 @@
     {
       "etype": "exposes",
       "repo": "HM",
+      "name": "session.history",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.history"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
       "name": "session.interrupt",
       "http": "",
       "style": "WS-RPC",
@@ -1305,20 +1158,11 @@
     {
       "etype": "exposes",
       "repo": "HM",
-      "name": "sessions.list",
+      "name": "session.active_list",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
       "target": "O:Session.list"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "session.rename",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Session.update"
     },
     {
       "etype": "exposes",
@@ -1332,20 +1176,11 @@
     {
       "etype": "exposes",
       "repo": "HM",
-      "name": "config.set",
+      "name": "subagent.interrupt",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
-      "target": "O:Settings.update"
-    },
-    {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "skills.list",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Skill.list"
+      "target": "O:Subagent.interrupt"
     },
     {
       "etype": "exposes",
@@ -1357,13 +1192,9 @@
       "target": "O:Subagent.list"
     },
     {
-      "etype": "exposes",
-      "repo": "HM",
-      "name": "complete.path",
-      "http": "",
-      "style": "WS-RPC",
-      "source": "HM",
-      "target": "O:Workspace.list"
+      "etype": "has_op",
+      "source": "E:AgentPreset",
+      "target": "O:AgentPreset.create"
     },
     {
       "etype": "has_op",
@@ -1393,11 +1224,6 @@
     {
       "etype": "has_op",
       "source": "E:Attachment",
-      "target": "O:Attachment.delete"
-    },
-    {
-      "etype": "has_op",
-      "source": "E:Attachment",
       "target": "O:Attachment.get"
     },
     {
@@ -1409,11 +1235,6 @@
       "etype": "has_op",
       "source": "E:Credential",
       "target": "O:Credential.get"
-    },
-    {
-      "etype": "has_op",
-      "source": "E:Credential",
-      "target": "O:Credential.update"
     },
     {
       "etype": "has_op",
@@ -1543,6 +1364,11 @@
     {
       "etype": "has_op",
       "source": "E:Session",
+      "target": "O:Session.history"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
       "target": "O:Session.interrupt"
     },
     {
@@ -1609,6 +1435,11 @@
       "etype": "has_op",
       "source": "E:Workspace",
       "target": "O:Workspace.list"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Workspace",
+      "target": "O:Workspace.rename"
     }
   ]
 }

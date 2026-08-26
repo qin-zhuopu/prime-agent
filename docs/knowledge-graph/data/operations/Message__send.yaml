@@ -5,8 +5,8 @@ entity: Message
 endpoints:
   CP:
     name: /chat/messages
-    style: REST
     http: POST
+    style: REST
   DH:
     name: session.prompt
     style: RPC

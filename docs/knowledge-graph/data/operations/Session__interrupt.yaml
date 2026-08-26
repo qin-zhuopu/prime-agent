@@ -5,8 +5,8 @@ entity: Session
 endpoints:
   CP:
     name: /chat/interrupt
-    style: REST
     http: POST
+    style: REST
   DH:
     name: session.cancel
     style: RPC

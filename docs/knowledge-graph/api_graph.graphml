@@ -126,6 +126,11 @@
       <data key="d4">workspace</data>
       <data key="d5">workspace</data>
     </node>
+    <node id="O:AgentPreset.create">
+      <data key="d0">operation</data>
+      <data key="d1">create</data>
+      <data key="d6">AgentPreset</data>
+    </node>
     <node id="O:AgentPreset.delete">
       <data key="d0">operation</data>
       <data key="d1">delete</data>
@@ -151,11 +156,6 @@
       <data key="d1">create</data>
       <data key="d6">Attachment</data>
     </node>
-    <node id="O:Attachment.delete">
-      <data key="d0">operation</data>
-      <data key="d1">delete</data>
-      <data key="d6">Attachment</data>
-    </node>
     <node id="O:Attachment.get">
       <data key="d0">operation</data>
       <data key="d1">get</data>
@@ -169,11 +169,6 @@
     <node id="O:Credential.get">
       <data key="d0">operation</data>
       <data key="d1">get</data>
-      <data key="d6">Credential</data>
-    </node>
-    <node id="O:Credential.update">
-      <data key="d0">operation</data>
-      <data key="d1">update</data>
       <data key="d6">Credential</data>
     </node>
     <node id="O:File.create">
@@ -301,6 +296,11 @@
       <data key="d1">get</data>
       <data key="d6">Session</data>
     </node>
+    <node id="O:Session.history">
+      <data key="d0">operation</data>
+      <data key="d1">history</data>
+      <data key="d6">Session</data>
+    </node>
     <node id="O:Session.interrupt">
       <data key="d0">operation</data>
       <data key="d1">interrupt</data>
@@ -371,18 +371,16 @@
       <data key="d1">list</data>
       <data key="d6">Workspace</data>
     </node>
+    <node id="O:Workspace.rename">
+      <data key="d0">operation</data>
+      <data key="d1">rename</data>
+      <data key="d6">Workspace</data>
+    </node>
     <edge source="CP" target="O:Attachment.create">
       <data key="d7">exposes</data>
       <data key="d8">CP</data>
       <data key="d9">/assets/html-bundles</data>
       <data key="d10">POST</data>
-      <data key="d11">REST</data>
-    </edge>
-    <edge source="CP" target="O:Attachment.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/assets/[id]</data>
-      <data key="d10">DELETE</data>
       <data key="d11">REST</data>
     </edge>
     <edge source="CP" target="O:Attachment.get">
@@ -397,13 +395,6 @@
       <data key="d8">CP</data>
       <data key="d9">/claude-auth</data>
       <data key="d10">GET</data>
-      <data key="d11">REST</data>
-    </edge>
-    <edge source="CP" target="O:Credential.update">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/claude-auth</data>
-      <data key="d10">POST</data>
       <data key="d11">REST</data>
     </edge>
     <edge source="CP" target="O:File.create">
@@ -424,13 +415,6 @@
       <data key="d7">exposes</data>
       <data key="d8">CP</data>
       <data key="d9">/files/raw</data>
-      <data key="d10">GET</data>
-      <data key="d11">REST</data>
-    </edge>
-    <edge source="CP" target="O:File.list">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/browse</data>
       <data key="d10">GET</data>
       <data key="d11">REST</data>
     </edge>
@@ -595,13 +579,6 @@
       <data key="d10">POST</data>
       <data key="d11">REST</data>
     </edge>
-    <edge source="CP" target="O:Workspace.delete">
-      <data key="d7">exposes</data>
-      <data key="d8">CP</data>
-      <data key="d9">/files/delete</data>
-      <data key="d10">POST</data>
-      <data key="d11">REST</data>
-    </edge>
     <edge source="CP" target="O:Workspace.list">
       <data key="d7">exposes</data>
       <data key="d8">CP</data>
@@ -658,17 +635,17 @@
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
-    <edge source="DH" target="O:Credential.update">
+    <edge source="DH" target="O:File.create">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
-      <data key="d9">credentials.set</data>
+      <data key="d9">host.createDirectory</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
     <edge source="DH" target="O:File.get">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
-      <data key="d9">host.openPath</data>
+      <data key="d9">host.describe</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
@@ -721,38 +698,10 @@
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
-    <edge source="DH" target="O:Job.create">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">jobs.create</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Job.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">jobs.list</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Message.list">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.history</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
     <edge source="DH" target="O:Message.send">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
       <data key="d9">session.prompt</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Message.stream">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.prompt(stream)</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
@@ -766,7 +715,7 @@
     <edge source="DH" target="O:Model.list">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
-      <data key="d9">llm.models</data>
+      <data key="d9">session.models</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
@@ -774,20 +723,6 @@
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
       <data key="d9">session.selectModel</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Permission.get">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">approvals.describe</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Permission.respond">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">approvals.respond</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
@@ -812,7 +747,7 @@
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
-    <edge source="DH" target="O:Session.get">
+    <edge source="DH" target="O:Session.history">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
       <data key="d9">session.history</data>
@@ -837,13 +772,6 @@
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
       <data key="d9">session.search</data>
-      <data key="d10" />
-      <data key="d11">RPC</data>
-    </edge>
-    <edge source="DH" target="O:Session.update">
-      <data key="d7">exposes</data>
-      <data key="d8">DH</data>
-      <data key="d9">session.rename</data>
       <data key="d10" />
       <data key="d11">RPC</data>
     </edge>
@@ -913,70 +841,35 @@
     <edge source="DH" target="O:Workspace.list">
       <data key="d7">exposes</data>
       <data key="d8">DH</data>
-      <data key="d9">host.listDirectory</data>
+      <data key="d9">workspace.list</data>
       <data key="d10" />
       <data key="d11">RPC</data>
+    </edge>
+    <edge source="DH" target="O:Workspace.rename">
+      <data key="d7">exposes</data>
+      <data key="d8">DH</data>
+      <data key="d9">workspace.rename</data>
+      <data key="d10" />
+      <data key="d11">RPC</data>
+    </edge>
+    <edge source="HM" target="O:AgentPreset.create">
+      <data key="d7">exposes</data>
+      <data key="d8">HM</data>
+      <data key="d9">profiles.create</data>
+      <data key="d10" />
+      <data key="d11">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:AgentPreset.get">
+      <data key="d7">exposes</data>
+      <data key="d8">HM</data>
+      <data key="d9">profiles.describe</data>
+      <data key="d10" />
+      <data key="d11">WS-RPC</data>
     </edge>
     <edge source="HM" target="O:AgentPreset.list">
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
       <data key="d9">profiles.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:AgentPreset.select">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">profile.select</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Attachment.create">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">clipboard.paste</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Credential.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">auth.json</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:File.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">files.read</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:File.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">files.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Goal.clear">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">goal.clear</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Goal.create">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">goal.set</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Job.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">background.list</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -994,31 +887,10 @@
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
-    <edge source="HM" target="O:Model.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">models.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Model.select">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">agent.reasoning_effort</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Permission.get">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">approval.pending</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
     <edge source="HM" target="O:Permission.respond">
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
-      <data key="d9">approval.respond</data>
+      <data key="d9">approval.received</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -1032,7 +904,14 @@
     <edge source="HM" target="O:Session.delete">
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
-      <data key="d9">session.delete</data>
+      <data key="d9">session.close</data>
+      <data key="d10" />
+      <data key="d11">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.fork">
+      <data key="d7">exposes</data>
+      <data key="d8">HM</data>
+      <data key="d9">session.branch</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -1040,6 +919,13 @@
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
       <data key="d9">session.info</data>
+      <data key="d10" />
+      <data key="d11">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.history">
+      <data key="d7">exposes</data>
+      <data key="d8">HM</data>
+      <data key="d9">session.history</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -1053,14 +939,7 @@
     <edge source="HM" target="O:Session.list">
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
-      <data key="d9">sessions.list</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Session.update">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">session.rename</data>
+      <data key="d9">session.active_list</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -1071,17 +950,10 @@
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
-    <edge source="HM" target="O:Settings.update">
+    <edge source="HM" target="O:Subagent.interrupt">
       <data key="d7">exposes</data>
       <data key="d8">HM</data>
-      <data key="d9">config.set</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
-    </edge>
-    <edge source="HM" target="O:Skill.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">skills.list</data>
+      <data key="d9">subagent.interrupt</data>
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
@@ -1092,12 +964,8 @@
       <data key="d10" />
       <data key="d11">WS-RPC</data>
     </edge>
-    <edge source="HM" target="O:Workspace.list">
-      <data key="d7">exposes</data>
-      <data key="d8">HM</data>
-      <data key="d9">complete.path</data>
-      <data key="d10" />
-      <data key="d11">WS-RPC</data>
+    <edge source="E:AgentPreset" target="O:AgentPreset.create">
+      <data key="d7">has_op</data>
     </edge>
     <edge source="E:AgentPreset" target="O:AgentPreset.delete">
       <data key="d7">has_op</data>
@@ -1114,9 +982,6 @@
     <edge source="E:Attachment" target="O:Attachment.create">
       <data key="d7">has_op</data>
     </edge>
-    <edge source="E:Attachment" target="O:Attachment.delete">
-      <data key="d7">has_op</data>
-    </edge>
     <edge source="E:Attachment" target="O:Attachment.get">
       <data key="d7">has_op</data>
     </edge>
@@ -1124,9 +989,6 @@
       <data key="d7">has_op</data>
     </edge>
     <edge source="E:Credential" target="O:Credential.get">
-      <data key="d7">has_op</data>
-    </edge>
-    <edge source="E:Credential" target="O:Credential.update">
       <data key="d7">has_op</data>
     </edge>
     <edge source="E:File" target="O:File.create">
@@ -1204,6 +1066,9 @@
     <edge source="E:Session" target="O:Session.get">
       <data key="d7">has_op</data>
     </edge>
+    <edge source="E:Session" target="O:Session.history">
+      <data key="d7">has_op</data>
+    </edge>
     <edge source="E:Session" target="O:Session.interrupt">
       <data key="d7">has_op</data>
     </edge>
@@ -1244,6 +1109,9 @@
       <data key="d7">has_op</data>
     </edge>
     <edge source="E:Workspace" target="O:Workspace.list">
+      <data key="d7">has_op</data>
+    </edge>
+    <edge source="E:Workspace" target="O:Workspace.rename">
       <data key="d7">has_op</data>
     </edge>
   </graph>

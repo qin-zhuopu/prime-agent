@@ -6,3 +6,6 @@ endpoints:
   DH:
     name: agentPreset.read
     style: RPC
+  HM:
+    name: profiles.describe
+    style: WS-RPC

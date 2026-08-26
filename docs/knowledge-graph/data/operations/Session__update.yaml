@@ -5,11 +5,5 @@ entity: Session
 endpoints:
   CP:
     name: /chat/sessions/[id]
-    style: REST
     http: PATCH
-  DH:
-    name: session.rename
-    style: RPC
-  HM:
-    name: session.rename
-    style: WS-RPC
+    style: REST

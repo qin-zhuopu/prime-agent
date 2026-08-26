@@ -5,11 +5,8 @@ entity: Message
 endpoints:
   CP:
     name: /chat/structured
-    style: REST
     http: POST
-  DH:
-    name: session.prompt(stream)
-    style: RPC
+    style: REST
   HM:
     name: message.delta
     style: WS-RPC

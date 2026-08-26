@@ -1,0 +1,8 @@
+id: O:AgentPreset.create
+ntype: operation
+label: create
+entity: AgentPreset
+endpoints:
+  HM:
+    name: profiles.create
+    style: WS-RPC

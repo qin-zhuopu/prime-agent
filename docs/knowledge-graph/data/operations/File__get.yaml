@@ -5,11 +5,8 @@ entity: File
 endpoints:
   CP:
     name: /files/raw
-    style: REST
     http: GET
+    style: REST
   DH:
-    name: host.openPath
+    name: host.describe
     style: RPC
-  HM:
-    name: files.read
-    style: WS-RPC

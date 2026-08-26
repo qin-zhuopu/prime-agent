@@ -5,8 +5,8 @@ entity: Settings
 endpoints:
   CP:
     name: /settings
-    style: REST
     http: GET
+    style: REST
   DH:
     name: settings.describe
     style: RPC

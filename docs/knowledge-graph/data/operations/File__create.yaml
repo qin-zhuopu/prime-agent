@@ -5,5 +5,8 @@ entity: File
 endpoints:
   CP:
     name: /files/write
-    style: REST
     http: POST
+    style: REST
+  DH:
+    name: host.createDirectory
+    style: RPC

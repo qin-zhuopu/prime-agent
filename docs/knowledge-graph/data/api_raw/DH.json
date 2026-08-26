@@ -1,0 +1,373 @@
+[
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.list",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.search",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.create",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.history",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.models",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.selectModel",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.rename",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.fork",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.prompt",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.attachment",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.updateQueue",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "session.cancel",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "subagent.list",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "subagent.history",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "subagent.prompt",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "subagent.interrupt",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "host.describe",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "host.pickDirectory",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "host.listDirectory",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "host.createDirectory",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "host.openPath",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.list",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.create",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.createFromPrompt",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.rename",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.delete",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.insertBefore",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.insertSessionBefore",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "workspace.archiveSession",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "skill.list",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.list",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.select",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.read",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.copy",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.openDocument",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "agentPreset.remove",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.create",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.edit",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.pause",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.resume",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.complete",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "goal.clear",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "settings.describe",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "settings.openDocument",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "settings.update",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "settings.replace",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "settings.mutate",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "credentials.describe",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "credentials.set",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "credentials.unset",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "llm.providers",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "llm.models",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  },
+  {
+    "repo": "DH",
+    "style": "RPC",
+    "name": "llm.discoverModels",
+    "http": "",
+    "src": "deepseek-harness/packages/host/apiproxy/src/api/rpc-map.ts"
+  }
+]

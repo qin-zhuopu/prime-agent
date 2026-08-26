@@ -1,7 +1,7 @@
 # Backend API Knowledge Graph -- Metrics
 
-- Nodes: 66 (repos=3, entities=14, operations=49)
-- Edges: 153
+- Nodes: 67 (repos=3, entities=14, operations=50)
+- Edges: 134
 
 ## Entity naming across repos
 
@@ -28,17 +28,17 @@
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
+| create | - | - | profiles.create |
 | delete | - | agentPreset.remove | - |
-| get | - | agentPreset.read | - |
+| get | - | agentPreset.read | profiles.describe |
 | list | - | agentPreset.list | profiles.list |
-| select | - | agentPreset.select | profile.select |
+| select | - | agentPreset.select | - |
 
 ### Attachment
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| create | /assets/html-bundles [POST] | session.attachment | clipboard.paste |
-| delete | /assets/[id] [DELETE] | - | - |
+| create | /assets/html-bundles [POST] | session.attachment | - |
 | get | /assets/[id] [GET] | - | - |
 
 ### Credential
@@ -46,26 +46,25 @@
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | delete | - | credentials.unset | - |
-| get | /claude-auth [GET] | credentials.describe | auth.json |
-| update | /claude-auth [POST] | credentials.set | - |
+| get | /claude-auth [GET] | credentials.describe | - |
 
 ### File
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| create | /files/write [POST] | - | - |
+| create | /files/write [POST] | host.createDirectory | - |
 | delete | /files/delete [POST] | - | - |
-| get | /files/raw [GET] | host.openPath | files.read |
-| list | /files/browse [GET] | host.listDirectory | files.list |
+| get | /files/raw [GET] | host.describe | - |
+| list | - | host.listDirectory | - |
 | update | /files/rename [POST] | - | - |
 
 ### Goal
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| clear | - | goal.clear | goal.clear |
+| clear | - | goal.clear | - |
 | complete | - | goal.complete | - |
-| create | - | goal.create | goal.set |
+| create | - | goal.create | - |
 | pause | - | goal.pause | - |
 | resume | - | goal.resume | - |
 | update | - | goal.edit | - |
@@ -74,64 +73,65 @@
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| create | /media/jobs [POST] | jobs.create | - |
-| list | /media/jobs [GET] | jobs.list | background.list |
+| create | /media/jobs [POST] | - | - |
+| list | /media/jobs [GET] | - | - |
 
 ### Message
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| list | /chat/sessions/[id]/messages [GET] | session.history | - |
+| list | /chat/sessions/[id]/messages [GET] | - | - |
 | send | /chat/messages [POST] | session.prompt | prompt.submit |
-| stream | /chat/structured [POST] | session.prompt(stream) | message.delta |
+| stream | /chat/structured [POST] | - | message.delta |
 | update | /chat/messages [PUT] | session.updateQueue | - |
 
 ### Model
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| list | /codex/models [GET] | llm.models | models.list |
-| select | /chat/model [POST] | session.selectModel | agent.reasoning_effort |
+| list | /codex/models [GET] | session.models | - |
+| select | /chat/model [POST] | session.selectModel | - |
 
 ### Permission
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| get | /chat/permission-capability [GET] | approvals.describe | approval.pending |
-| respond | /chat/permission [POST] | approvals.respond | approval.respond |
+| get | /chat/permission-capability [GET] | - | - |
+| respond | /chat/permission [POST] | - | approval.received |
 
 ### Session
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | create | /chat/sessions [POST] | session.create | session.create |
-| delete | /chat/sessions/[id] [DELETE] | workspace.archiveSession | session.delete |
-| fork | /chat/rewind [POST] | session.fork | - |
-| get | /chat/sessions/[id] [GET] | session.history | session.info |
+| delete | /chat/sessions/[id] [DELETE] | workspace.archiveSession | session.close |
+| fork | /chat/rewind [POST] | session.fork | session.branch |
+| get | /chat/sessions/[id] [GET] | - | session.info |
+| history | - | session.history | session.history |
 | interrupt | /chat/interrupt [POST] | session.cancel | session.interrupt |
-| list | /chat/sessions [GET] | session.list | sessions.list |
+| list | /chat/sessions [GET] | session.list | session.active_list |
 | search | /chat/sessions/by-cwd [GET] | session.search | - |
-| update | /chat/sessions/[id] [PATCH] | session.rename | session.rename |
+| update | /chat/sessions/[id] [PATCH] | - | - |
 
 ### Settings
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | get | /settings [GET] | settings.describe | config.get |
-| update | /settings [PUT] | settings.update | config.set |
+| update | /settings [PUT] | settings.update | - |
 
 ### Skill
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
-| list | - | skill.list | skills.list |
+| list | - | skill.list | - |
 
 ### Subagent
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | history | - | subagent.history | - |
-| interrupt | - | subagent.interrupt | - |
+| interrupt | - | subagent.interrupt | subagent.interrupt |
 | list | /chat/sessions/[id]/subagent-runs [GET] | subagent.list | agents.list |
 | send | - | subagent.prompt | - |
 
@@ -140,15 +140,16 @@
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
 | create | /files/mkdir [POST] | workspace.create | - |
-| delete | /files/delete [POST] | workspace.delete | - |
-| list | /files/browse [GET] | host.listDirectory | complete.path |
+| delete | - | workspace.delete | - |
+| list | /files/browse [GET] | workspace.list | - |
+| rename | - | workspace.rename | - |
 
 ## Per-repo API operation coverage
 
 | repo | style | #operations exposed |
 |---|---|---|
-| CodePilot | REST | 34 |
-| deepseek-harness | RPC | 44 |
-| hermes-agent | WS-RPC | 26 |
+| CodePilot | REST | 30 |
+| deepseek-harness | RPC | 38 |
+| hermes-agent | WS-RPC | 16 |
 
 Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming (no URL/HTTP verb). All are normalized to canonical (entity, operation) nodes so the three shapes become comparable. Entity/op absence in a repo = no `exposes` edge.

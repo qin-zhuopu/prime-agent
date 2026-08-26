@@ -6,6 +6,3 @@ endpoints:
   DH:
     name: agentPreset.select
     style: RPC
-  HM:
-    name: profile.select
-    style: WS-RPC

@@ -5,11 +5,8 @@ entity: Model
 endpoints:
   CP:
     name: /codex/models
-    style: REST
     http: GET
+    style: REST
   DH:
-    name: llm.models
+    name: session.models
     style: RPC
-  HM:
-    name: models.list
-    style: WS-RPC

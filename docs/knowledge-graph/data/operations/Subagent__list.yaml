@@ -5,8 +5,8 @@ entity: Subagent
 endpoints:
   CP:
     name: /chat/sessions/[id]/subagent-runs
-    style: REST
     http: GET
+    style: REST
   DH:
     name: subagent.list
     style: RPC

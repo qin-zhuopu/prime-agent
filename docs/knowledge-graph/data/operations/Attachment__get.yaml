@@ -5,5 +5,5 @@ entity: Attachment
 endpoints:
   CP:
     name: /assets/[id]
-    style: REST
     http: GET
+    style: REST

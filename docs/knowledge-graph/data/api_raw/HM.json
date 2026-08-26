@@ -1,0 +1,2095 @@
+[
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "_index.jsonl",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agent.reasoning_effort",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agent.service_tier",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agent.terminal.output",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agent.thinking",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agent.token",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "agents.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approval.pending",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approval.received",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approval.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approval.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approvals.mcp_reload_confirm",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "approvals.mode",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "auth.json",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "background.complete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.auto_reload",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.charge",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.charge_status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.state",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.step_up",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "billing.step_up.verification",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "bot_relay.deliver",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "bot_relay.outbox.drain",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "bot_relay.outbox.pending",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "bot_relay.reply",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "bot_relay.roster.sync",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.controller.command",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.controller.detach",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.controller.heartbeat",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.controller.register",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.controller.result",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.manage",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "browser.progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "clarify.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "clarify.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "cli.exec",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "clipboard.paste",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "command.dispatch",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "command.resolve",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "commands.catalog",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "complete.path",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "complete.slash",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "config.get",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "config.set",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "config.show",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "config.yaml",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "control.ack",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "control.error",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "cron.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "cron.manage",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "delegation.pause",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "delegation.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "diagnostics.share_nous",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.battery",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.busy_input_mode",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.details_mode",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.focus_saved_tool_progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.focus_view",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.mouse_tracking",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.thinking_mode",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.tool_progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.tui_compact",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.tui_status_indicator",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.tui_statusbar",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "display.tui_theme",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "file.attach",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "gateway.ping",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "gateway.ready",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "gateway_state.json",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "handoff.fail",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "handoff.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "handoff.state",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "hermes_cli.main",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "image.attach",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "image.attach_bytes",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "image.detach",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "image.generate",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "input.detect_drop",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "input.pdf",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "input.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "insights.get",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "interrupt.ack",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "interrupted_turns.json",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "jobs.json",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "learning.delete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "learning.detail",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "learning.edit",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "learning.frames",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "llm.oneshot",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.catalog",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.add",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.oauth.poll",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.oauth.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.remove",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.set_api_key",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.servers.test",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.setup.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "mcp.setup.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "message.complete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "message.delta",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "message.interim",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "message.react",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "message.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "moa.aggregating",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "moa.phase",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "moa.progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "moa.reference",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.base_url",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.default",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.disconnect",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.options",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.provider",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "model.save_key",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "notification.clear",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "notification.show",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pairing.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "paste.collapse",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pdf.attach",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.cancel",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.cells",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.disable",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.export",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.gallery",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.generate",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.generate.progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.generate.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.hatch",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.hatch.progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.info",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.info.meta",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.remove",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.rename",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.scale",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.select",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "pet.thumb",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "platforms.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "plugins.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "plugins.manage",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.act.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.act.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.read.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.read.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.restart",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.restart.complete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "preview.restart.progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "process.kill",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "process.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "process.stop",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profile.yaml",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.configure",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.create",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.describe",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.get_asset",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "profiles.set_asset",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "project.facts",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.add_folder",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.archive",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.create",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.delete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.discover_repos",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.for_cwd",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.get",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.project_sessions",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.record_repos",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.remove_folder",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.set_active",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.set_primary",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.tree",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "projects.update",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "prompt.background",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "prompt.submit",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "prompt.submit.truncate",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "reasoning.available",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "reasoning.delta",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "reload.env",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "reload.mcp",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "reload_mcp.ack",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "review.summary",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "rollback.diff",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "rollback.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "rollback.restore",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "secret.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "secret.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.activate",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.active_list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.branch",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.close",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.compress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.context_breakdown",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.create",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.cwd.set",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.delete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.events.since",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.events.stats",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.history",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.history.reload",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.info",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.interrupt",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.most_recent",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.reclaimed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.redirect",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.reset",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.resume",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.resume_progress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.save",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.seed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.seeded",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.set_hidden",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.steer",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.title",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.undo",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.usage",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "session.workspace.move",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "sessions.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "setup.runtime_check",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "setup.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "shell.exec",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "shutdown.ack",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "skills.manage",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "skills.reload",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "skin.changed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.compress",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.exec",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.model",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.personality",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.prompt",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "slash.retry",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "spawn_tree.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "spawn_tree.load",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "spawn_tree.save",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "state.db",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "status.update",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "stt.faster_whisper",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.complete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.interrupt",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.steer",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.text",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.thinking",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subagent.tool",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subscription.change",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subscription.preview",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subscription.resume",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subscription.state",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "subscription.upgrade",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "sudo.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "sudo.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "system.battery",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "terminal.close",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "terminal.cwd",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "terminal.read.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "terminal.read.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "terminal.resize",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "thinking.delta",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tool.complete",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tool.generating",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tool.output_risk",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tool.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tool.started",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tools.configure",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tools.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tools.show",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "toolsets.list",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tour.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tour.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tui_gateway.compute_host",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tui_gateway.slash_worker",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "tui_gateway_crash.log",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "turn.end",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "turn.error",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "turn.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "turn.started",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "uploaded.pdf",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "usage.bars",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "verification.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.interrupted",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.record",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.toggle",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.transcript",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "voice.tts",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.detected",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.feed",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.openwakeword",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.pause",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.resume",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.sherpa",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.start",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.status",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake.stop",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "wake_word.enabled",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "window.read.request",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  },
+  {
+    "repo": "HM",
+    "style": "WS-RPC",
+    "name": "window.read.respond",
+    "http": "",
+    "src": "tui_gateway/*.py"
+  }
+]

@@ -5,8 +5,8 @@ entity: Message
 endpoints:
   CP:
     name: /chat/messages
-    style: REST
     http: PUT
+    style: REST
   DH:
     name: session.updateQueue
     style: RPC

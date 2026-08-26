@@ -5,11 +5,8 @@ entity: Workspace
 endpoints:
   CP:
     name: /files/browse
-    style: REST
     http: GET
+    style: REST
   DH:
-    name: host.listDirectory
+    name: workspace.list
     style: RPC
-  HM:
-    name: complete.path
-    style: WS-RPC

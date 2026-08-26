@@ -6,6 +6,3 @@ endpoints:
   DH:
     name: skill.list
     style: RPC
-  HM:
-    name: skills.list
-    style: WS-RPC

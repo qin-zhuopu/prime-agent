@@ -5,8 +5,8 @@ entity: Session
 endpoints:
   CP:
     name: /chat/sessions/by-cwd
-    style: REST
     http: GET
+    style: REST
   DH:
     name: session.search
     style: RPC

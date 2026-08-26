@@ -5,11 +5,8 @@ entity: Settings
 endpoints:
   CP:
     name: /settings
-    style: REST
     http: PUT
+    style: REST
   DH:
     name: settings.update
     style: RPC
-  HM:
-    name: config.set
-    style: WS-RPC

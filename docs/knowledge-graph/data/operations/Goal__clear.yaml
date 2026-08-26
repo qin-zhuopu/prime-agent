@@ -6,6 +6,3 @@ endpoints:
   DH:
     name: goal.clear
     style: RPC
-  HM:
-    name: goal.clear
-    style: WS-RPC
