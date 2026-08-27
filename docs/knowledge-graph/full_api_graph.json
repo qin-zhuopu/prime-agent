@@ -22,6 +22,30 @@
       "id": "R:HM"
     },
     {
+      "ntype": "api",
+      "label": "CodePilot",
+      "repo": "CP",
+      "path": "src/app/api",
+      "style": "rest",
+      "id": "A:CP/src/app/api"
+    },
+    {
+      "ntype": "api",
+      "label": "deepseek-harness",
+      "repo": "DH",
+      "path": "packages/host/apiproxy",
+      "style": "rpc",
+      "id": "A:DH/packages/host/apiproxy"
+    },
+    {
+      "ntype": "api",
+      "label": "hermes-agent",
+      "repo": "HM",
+      "path": "tui_gateway",
+      "style": "ws-rpc",
+      "id": "A:HM/tui_gateway"
+    },
+    {
       "ntype": "endpoint_group",
       "label": "app",
       "repo": "CP",
@@ -7991,663 +8015,681 @@
   ],
   "links": [
     {
+      "etype": "located_in",
+      "path": "src/app/api",
+      "source": "A:CP/src/app/api",
+      "target": "R:CP"
+    },
+    {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:app"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:assets"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:bridge"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:chat"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:claude-auth"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:claude-sessions"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:claude-status"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:claude-upgrade"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:cli-tools"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:codex"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:dashboard"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:doctor"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:files"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:git"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:harness-home"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:health"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:media"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:models"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:openai-oauth"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:plugins"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:providers"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:sdk"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:search"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:settings"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:setup"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:skills"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:tasks"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:uploads"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:usage"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:workspace"
     },
     {
       "etype": "has_group",
-      "source": "R:CP",
+      "source": "A:CP/src/app/api",
       "target": "G:CP:xai-oauth"
     },
     {
+      "etype": "located_in",
+      "path": "packages/host/apiproxy",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "R:DH"
+    },
+    {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:session"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:subagent"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:host"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:workspace"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:skill"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:agentPreset"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:goal"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:settings"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:credentials"
     },
     {
       "etype": "has_group",
-      "source": "R:DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "G:DH:llm"
     },
     {
+      "etype": "located_in",
+      "path": "tui_gateway",
+      "source": "A:HM/tui_gateway",
+      "target": "R:HM"
+    },
+    {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:_index"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:agent"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:agents"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:approval"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:approvals"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:auth"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:background"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:billing"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:bot_relay"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:browser"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:clarify"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:cli"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:clipboard"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:command"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:commands"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:complete"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:config"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:control"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:cron"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:delegation"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:diagnostics"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:display"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:file"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:gateway"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:gateway_state"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:handoff"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:hermes_cli"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:image"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:input"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:insights"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:interrupt"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:interrupted_turns"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:jobs"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:learning"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:llm"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:mcp"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:message"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:moa"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:model"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:notification"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:pairing"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:paste"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:pdf"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:pet"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:platforms"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:plugins"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:preview"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:process"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:profile"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:profiles"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:project"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:projects"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:prompt"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:reasoning"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:reload"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:reload_mcp"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:review"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:rollback"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:secret"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:session"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:sessions"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:setup"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:shell"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:shutdown"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:skills"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:skin"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:slash"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:spawn_tree"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:state"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:status"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:stt"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:subagent"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:subscription"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:sudo"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:system"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:terminal"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:thinking"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:tool"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:tools"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:toolsets"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:tour"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:tui_gateway"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:tui_gateway_crash"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:turn"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:uploaded"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:usage"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:verification"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:voice"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:wake"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:wake_word"
     },
     {
       "etype": "has_group",
-      "source": "R:HM",
+      "source": "A:HM/tui_gateway",
       "target": "G:HM:window"
     },
     {

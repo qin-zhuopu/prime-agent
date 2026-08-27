@@ -6,20 +6,58 @@
     {
       "ntype": "repo",
       "label": "CodePilot",
-      "style": "REST",
       "id": "CP"
     },
     {
       "ntype": "repo",
       "label": "deepseek-harness",
-      "style": "RPC",
       "id": "DH"
     },
     {
       "ntype": "repo",
       "label": "hermes-agent",
-      "style": "WS-RPC",
       "id": "HM"
+    },
+    {
+      "ntype": "repo",
+      "label": "acp-web-gateway",
+      "id": "ACPWG"
+    },
+    {
+      "ntype": "api",
+      "label": "acp-web-gateway",
+      "repo": "ACPWG",
+      "path": ".",
+      "style": "ws-rpc",
+      "transport": "WebSocket",
+      "id": "A:ACPWG/."
+    },
+    {
+      "ntype": "api",
+      "label": "CodePilot",
+      "repo": "CP",
+      "path": "src/app/api",
+      "style": "rest",
+      "transport": "SSE",
+      "id": "A:CP/src/app/api"
+    },
+    {
+      "ntype": "api",
+      "label": "deepseek-harness",
+      "repo": "DH",
+      "path": "packages/host/apiproxy",
+      "style": "rpc",
+      "transport": "SSE",
+      "id": "A:DH/packages/host/apiproxy"
+    },
+    {
+      "ntype": "api",
+      "label": "hermes-agent",
+      "repo": "HM",
+      "path": "tui_gateway",
+      "style": "ws-rpc",
+      "transport": "WebSocket",
+      "id": "A:HM/tui_gateway"
     },
     {
       "ntype": "entity",
@@ -749,6 +787,13 @@
       "id": "C:CP:CodePilot/src/app/plugins/page.tsx"
     },
     {
+      "ntype": "webui",
+      "label": "CodePilot",
+      "repo": "CP",
+      "path": "src",
+      "id": "W:CP/src"
+    },
+    {
       "ntype": "component",
       "label": "index.ts",
       "file": "deepseek-harness/packages/client/connection/src/index.ts",
@@ -763,6 +808,13 @@
       "id": "C:DH:deepseek-harness/packages/client/connection/src/client/api.ts"
     },
     {
+      "ntype": "webui",
+      "label": "deepseek-harness",
+      "repo": "DH",
+      "path": "packages/client",
+      "id": "W:DH/packages/client"
+    },
+    {
       "ntype": "component",
       "label": "ChatSidebar.tsx",
       "file": "hermes-agent/web/src/components/ChatSidebar.tsx",
@@ -775,16 +827,35 @@
       "file": "hermes-agent/web/src/lib/gatewayClient.ts",
       "repo": "HM",
       "id": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts"
+    },
+    {
+      "ntype": "webui",
+      "label": "hermes-agent",
+      "repo": "HM",
+      "path": "web/src",
+      "id": "W:HM/web/src"
     }
   ],
   "links": [
+    {
+      "etype": "located_in",
+      "path": ".",
+      "source": "A:ACPWG/.",
+      "target": "ACPWG"
+    },
+    {
+      "etype": "located_in",
+      "path": "src/app/api",
+      "source": "A:CP/src/app/api",
+      "target": "CP"
+    },
     {
       "etype": "exposes",
       "repo": "CP",
       "name": "/assets/html-bundles",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Attachment.create"
     },
     {
@@ -793,7 +864,7 @@
       "name": "/assets/[id]",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Attachment.get"
     },
     {
@@ -802,7 +873,7 @@
       "name": "/claude-auth",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Credential.get"
     },
     {
@@ -811,7 +882,7 @@
       "name": "/files/write",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:File.create"
     },
     {
@@ -820,7 +891,7 @@
       "name": "/files/delete",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:File.delete"
     },
     {
@@ -829,7 +900,7 @@
       "name": "/files/raw",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:File.get"
     },
     {
@@ -838,7 +909,7 @@
       "name": "/files/rename",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:File.update"
     },
     {
@@ -847,7 +918,7 @@
       "name": "/media/jobs",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Job.create"
     },
     {
@@ -856,7 +927,7 @@
       "name": "/media/jobs",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Job.list"
     },
     {
@@ -865,7 +936,7 @@
       "name": "/chat/sessions/[id]/messages",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Message.list"
     },
     {
@@ -874,7 +945,7 @@
       "name": "/chat/messages",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Message.send"
     },
     {
@@ -883,7 +954,7 @@
       "name": "/chat/structured",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Message.stream"
     },
     {
@@ -892,7 +963,7 @@
       "name": "/chat/messages",
       "http": "PUT",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Message.update"
     },
     {
@@ -901,7 +972,7 @@
       "name": "/codex/models",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Model.list"
     },
     {
@@ -910,7 +981,7 @@
       "name": "/chat/model",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Model.select"
     },
     {
@@ -919,7 +990,7 @@
       "name": "/chat/permission-capability",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Permission.get"
     },
     {
@@ -928,7 +999,7 @@
       "name": "/chat/permission",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Permission.respond"
     },
     {
@@ -937,7 +1008,7 @@
       "name": "/chat/sessions",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.create"
     },
     {
@@ -946,7 +1017,7 @@
       "name": "/chat/sessions/[id]",
       "http": "DELETE",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.delete"
     },
     {
@@ -955,7 +1026,7 @@
       "name": "/chat/rewind",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.fork"
     },
     {
@@ -964,7 +1035,7 @@
       "name": "/chat/sessions/[id]",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.get"
     },
     {
@@ -973,7 +1044,7 @@
       "name": "/chat/interrupt",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.interrupt"
     },
     {
@@ -982,7 +1053,7 @@
       "name": "/chat/sessions",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.list"
     },
     {
@@ -991,7 +1062,7 @@
       "name": "/chat/sessions/by-cwd",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.search"
     },
     {
@@ -1000,7 +1071,7 @@
       "name": "/chat/sessions/[id]",
       "http": "PATCH",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Session.update"
     },
     {
@@ -1009,7 +1080,7 @@
       "name": "/settings",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Settings.get"
     },
     {
@@ -1018,7 +1089,7 @@
       "name": "/settings",
       "http": "PUT",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Settings.update"
     },
     {
@@ -1027,7 +1098,7 @@
       "name": "/chat/sessions/[id]/subagent-runs",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Subagent.list"
     },
     {
@@ -1036,7 +1107,7 @@
       "name": "/files/mkdir",
       "http": "POST",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Workspace.create"
     },
     {
@@ -1045,8 +1116,14 @@
       "name": "/files/browse",
       "http": "GET",
       "style": "REST",
-      "source": "CP",
+      "source": "A:CP/src/app/api",
       "target": "O:Workspace.list"
+    },
+    {
+      "etype": "located_in",
+      "path": "packages/host/apiproxy",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "DH"
     },
     {
       "etype": "exposes",
@@ -1054,7 +1131,7 @@
       "name": "agentPreset.remove",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:AgentPreset.delete"
     },
     {
@@ -1063,7 +1140,7 @@
       "name": "agentPreset.read",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:AgentPreset.get"
     },
     {
@@ -1072,7 +1149,7 @@
       "name": "agentPreset.list",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:AgentPreset.list"
     },
     {
@@ -1081,7 +1158,7 @@
       "name": "agentPreset.select",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:AgentPreset.select"
     },
     {
@@ -1090,7 +1167,7 @@
       "name": "session.attachment",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Attachment.create"
     },
     {
@@ -1099,7 +1176,7 @@
       "name": "credentials.unset",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Credential.delete"
     },
     {
@@ -1108,7 +1185,7 @@
       "name": "credentials.describe",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Credential.get"
     },
     {
@@ -1117,7 +1194,7 @@
       "name": "host.createDirectory",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:File.create"
     },
     {
@@ -1126,7 +1203,7 @@
       "name": "host.describe",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:File.get"
     },
     {
@@ -1135,7 +1212,7 @@
       "name": "host.listDirectory",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:File.list"
     },
     {
@@ -1144,7 +1221,7 @@
       "name": "goal.clear",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.clear"
     },
     {
@@ -1153,7 +1230,7 @@
       "name": "goal.complete",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.complete"
     },
     {
@@ -1162,7 +1239,7 @@
       "name": "goal.create",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.create"
     },
     {
@@ -1171,7 +1248,7 @@
       "name": "goal.pause",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.pause"
     },
     {
@@ -1180,7 +1257,7 @@
       "name": "goal.resume",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.resume"
     },
     {
@@ -1189,7 +1266,7 @@
       "name": "goal.edit",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Goal.update"
     },
     {
@@ -1198,7 +1275,7 @@
       "name": "session.prompt",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Message.send"
     },
     {
@@ -1207,7 +1284,7 @@
       "name": "session.updateQueue",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Message.update"
     },
     {
@@ -1216,7 +1293,7 @@
       "name": "session.models",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Model.list"
     },
     {
@@ -1225,7 +1302,7 @@
       "name": "session.selectModel",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Model.select"
     },
     {
@@ -1234,7 +1311,7 @@
       "name": "session.create",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.create"
     },
     {
@@ -1243,7 +1320,7 @@
       "name": "workspace.archiveSession",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.delete"
     },
     {
@@ -1252,7 +1329,7 @@
       "name": "session.fork",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.fork"
     },
     {
@@ -1261,7 +1338,7 @@
       "name": "session.history",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.history"
     },
     {
@@ -1270,7 +1347,7 @@
       "name": "session.cancel",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.interrupt"
     },
     {
@@ -1279,7 +1356,7 @@
       "name": "session.list",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.list"
     },
     {
@@ -1288,7 +1365,7 @@
       "name": "session.rename",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.rename"
     },
     {
@@ -1297,7 +1374,7 @@
       "name": "session.search",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Session.search"
     },
     {
@@ -1306,7 +1383,7 @@
       "name": "settings.describe",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Settings.get"
     },
     {
@@ -1315,7 +1392,7 @@
       "name": "settings.update",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Settings.update"
     },
     {
@@ -1324,7 +1401,7 @@
       "name": "skill.list",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Skill.list"
     },
     {
@@ -1333,7 +1410,7 @@
       "name": "subagent.history",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Subagent.history"
     },
     {
@@ -1342,7 +1419,7 @@
       "name": "subagent.interrupt",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Subagent.interrupt"
     },
     {
@@ -1351,7 +1428,7 @@
       "name": "subagent.list",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Subagent.list"
     },
     {
@@ -1360,7 +1437,7 @@
       "name": "subagent.prompt",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Subagent.send"
     },
     {
@@ -1369,7 +1446,7 @@
       "name": "workspace.create",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Workspace.create"
     },
     {
@@ -1378,7 +1455,7 @@
       "name": "workspace.delete",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Workspace.delete"
     },
     {
@@ -1387,7 +1464,7 @@
       "name": "workspace.list",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Workspace.list"
     },
     {
@@ -1396,8 +1473,14 @@
       "name": "workspace.rename",
       "http": "",
       "style": "RPC",
-      "source": "DH",
+      "source": "A:DH/packages/host/apiproxy",
       "target": "O:Workspace.rename"
+    },
+    {
+      "etype": "located_in",
+      "path": "tui_gateway",
+      "source": "A:HM/tui_gateway",
+      "target": "HM"
     },
     {
       "etype": "exposes",
@@ -1405,7 +1488,7 @@
       "name": "profiles.create",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:AgentPreset.create"
     },
     {
@@ -1414,7 +1497,7 @@
       "name": "profiles.describe",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:AgentPreset.get"
     },
     {
@@ -1423,7 +1506,7 @@
       "name": "profiles.list",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:AgentPreset.list"
     },
     {
@@ -1432,7 +1515,7 @@
       "name": "prompt.submit",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Message.send"
     },
     {
@@ -1441,7 +1524,7 @@
       "name": "message.delta",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Message.stream"
     },
     {
@@ -1450,7 +1533,7 @@
       "name": "approval.received",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Permission.respond"
     },
     {
@@ -1459,7 +1542,7 @@
       "name": "session.compress",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.compress"
     },
     {
@@ -1468,7 +1551,7 @@
       "name": "session.create",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.create"
     },
     {
@@ -1477,7 +1560,7 @@
       "name": "session.close",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.delete"
     },
     {
@@ -1486,7 +1569,7 @@
       "name": "session.branch",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.fork"
     },
     {
@@ -1495,7 +1578,7 @@
       "name": "session.info",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.get"
     },
     {
@@ -1504,7 +1587,7 @@
       "name": "session.history",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.history"
     },
     {
@@ -1513,7 +1596,7 @@
       "name": "session.interrupt",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.interrupt"
     },
     {
@@ -1522,7 +1605,7 @@
       "name": "session.active_list",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.list"
     },
     {
@@ -1531,7 +1614,7 @@
       "name": "session.title",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.rename"
     },
     {
@@ -1540,7 +1623,7 @@
       "name": "session.reset",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.reset"
     },
     {
@@ -1549,7 +1632,7 @@
       "name": "session.steer",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.steer"
     },
     {
@@ -1558,7 +1641,7 @@
       "name": "session.undo",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.undo"
     },
     {
@@ -1567,7 +1650,7 @@
       "name": "session.save",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.update"
     },
     {
@@ -1576,7 +1659,7 @@
       "name": "session.usage",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Session.usage"
     },
     {
@@ -1585,7 +1668,7 @@
       "name": "config.get",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Settings.get"
     },
     {
@@ -1594,7 +1677,7 @@
       "name": "skills.manage",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Skill.update"
     },
     {
@@ -1603,7 +1686,7 @@
       "name": "subagent.interrupt",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Subagent.interrupt"
     },
     {
@@ -1612,7 +1695,7 @@
       "name": "agents.list",
       "http": "",
       "style": "WS-RPC",
-      "source": "HM",
+      "source": "A:HM/tui_gateway",
       "target": "O:Subagent.list"
     },
     {
@@ -2318,6 +2401,12 @@
     },
     {
       "etype": "calls",
+      "repo": "CP",
+      "source": "W:CP/src",
+      "target": "A:CP/src/app/api"
+    },
+    {
+      "etype": "calls",
       "repo": "DH",
       "endpoint": "agentPreset.read",
       "kind": "RPC",
@@ -2374,6 +2463,12 @@
     },
     {
       "etype": "calls",
+      "repo": "DH",
+      "source": "W:DH/packages/client",
+      "target": "A:DH/packages/host/apiproxy"
+    },
+    {
+      "etype": "calls",
       "repo": "HM",
       "endpoint": "session.info",
       "kind": "RPC",
@@ -2411,6 +2506,12 @@
       "kind": "RPC",
       "source": "C:HM:hermes-agent/web/src/lib/gatewayClient.ts",
       "target": "O:Message.send"
+    },
+    {
+      "etype": "calls",
+      "repo": "HM",
+      "source": "W:HM/web/src",
+      "target": "A:HM/tui_gateway"
     }
   ]
 }

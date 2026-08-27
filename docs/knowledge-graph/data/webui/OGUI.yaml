@@ -1,0 +1,14 @@
+id: W:OGUI/.
+ntype: webui
+label: OpenGUI
+repo: OGUI
+path: "."
+stack: React+Vite+Electron
+transport:
+- SSE
+integration:
+- REST+SSE
+- in-process-sdk
+browser_native: true
+protocols:
+- structured-render

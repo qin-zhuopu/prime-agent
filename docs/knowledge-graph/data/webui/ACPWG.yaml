@@ -1,0 +1,14 @@
+id: W:ACPWG/.
+ntype: webui
+label: acp-web-gateway
+repo: ACPWG
+path: "."
+stack: Kotlin server + web
+transport:
+- WebSocket
+integration:
+- WebSocket
+- stdio-rpc
+browser_native: false
+protocols:
+- ACP

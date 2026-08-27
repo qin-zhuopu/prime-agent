@@ -1,0 +1,14 @@
+id: W:ACHAT/.
+ntype: webui
+label: agents-chat
+repo: ACHAT
+path: "."
+stack: Next.js+React
+transport:
+- stdio
+integration:
+- stdio-rpc
+browser_native: false
+protocols:
+- ACP
+- structured-render

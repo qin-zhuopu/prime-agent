@@ -12,27 +12,5 @@ properties:
   label:
     type: string
     minLength: 1
-  stack:
-    type: string
   license:
     type: string
-  transport:
-    description: backend transport(s) for agent<->frontend streaming
-    type: array
-    items:
-      enum: [SSE, WebSocket, stdio, "none/unknown"]
-  integration:
-    description: how the agent is integrated / consumed (integration surface)
-    type: array
-    items:
-      enum: ["REST+SSE", "WebSocket", "stdio-rpc", "in-process-sdk"]
-  browser_native:
-    description: >-
-      can a plain browser tab talk to the agent directly, without a host
-      (Node/Tauri/Electron) spawning a child process? stdio-rpc agents are false.
-    type: boolean
-  protocols:
-    description: protocol node ids this repo uses
-    type: array
-    items:
-      type: string

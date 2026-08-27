@@ -1,0 +1,8 @@
+id: A:CP/src/app/api
+ntype: api
+label: CodePilot
+repo: CP
+path: src/app/api
+style: rest
+transport:
+- SSE

@@ -1,7 +1,7 @@
 # Full backend-endpoint + frontend-page graph -- Metrics
 
-- Nodes: 902 (repos=3, groups=132, endpoints=602, pages=165)
-- Edges: 1387
+- Nodes: 905 (repos=3, groups=132, endpoints=602, pages=165)
+- Edges: 1390
 
 ## Per-repo endpoint & page coverage
 

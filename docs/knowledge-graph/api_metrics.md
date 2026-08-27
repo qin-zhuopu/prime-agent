@@ -1,7 +1,7 @@
 # Backend API Knowledge Graph -- Metrics
 
-- Nodes: 117 (repos=3, entities=14, operations=57)
-- Edges: 214
+- Nodes: 125 (repos=3, entities=14, operations=57)
+- Edges: 221
 
 ## Entity naming across repos
 
@@ -167,9 +167,9 @@ Built by scanning frontend source for endpoint calls (scan_frontend_calls.py); t
 
 | repo | caller files | call edges |
 |---|---|---|
-| CodePilot | 39 | 52 |
-| deepseek-harness | 2 | 7 |
-| hermes-agent | 2 | 5 |
+| CodePilot | 39 | 53 |
+| deepseek-harness | 2 | 8 |
+| hermes-agent | 2 | 6 |
 
 Most-referenced operations (by #calling files across repos):
 

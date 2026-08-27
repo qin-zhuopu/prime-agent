@@ -17,18 +17,39 @@ python3 build_graph.py
 
 ## 图模型
 
+> **repo 已拆成三类核心节点**：原来那个"什么都往上挂"的 `repo` 节点，被拆成 git 身份（`repo`）、前端（`webui`）、后端网络接口（`api`）三类。原来挂在 repo 上的运行时属性（stack/transport/integration/browser_native/protocols）迁到 `webui`；后端子类型 `style` 落在 `api`；所有功能边（uses/implements/provides）改从 `webui` 出发，`exposes` 改从 `api` 出发。详见下面各节及 `MIGRATION-DESIGN.md`。
+
 节点类型（`ntype`）：
-- `repo` — **11 个** agent web UI 实现：CP / DH / HM / acp-components / acp-ui / assistant-ui / opencode-chatui / OpenGUI / CopilotKit / agents-chat / acp-web-gateway。**不再有人工的 primary/survey 标签**——深度分层由 `derive_tier.py` 从特征覆盖度自动涌现（见下）。
+- `repo` — **纯 git 身份**：只保留 `id`（大写缩写，如 CP/DH/HM/ACPC）、`ntype`、`label`、可选 `license`。**11 个** repo：CP / DH / HM / acp-components / acp-ui / assistant-ui / opencode-chatui / OpenGUI / CopilotKit / agents-chat / acp-web-gateway。app 层属性已全部迁出（见 `webui`/`api`）。
+- `webui` — **位于某 repo 某路径的前端**（`repo + path`）。id 形如 `W:<repoId>/<path>`，携带 `stack` / `transport` / `integration` / `browser_native` / `protocols`（均从旧 `repo` 迁来）。**11 个**（每个 repo 都是给人用的 web UI，各有一个 webui 节点）。
+- `api` — **位于某 repo 某路径的后端网络接口**（`repo + path`），按风格分子类型 `style ∈ {rest, rpc, ws-rpc, stdio-rpc}`。id 形如 `A:<repoId>/<path>`，可带后端 `transport`。仅**网络可达**的表面才建 `api` 节点（见"SDK 建模"一节）：CP(rest) / DH(rpc) / HM(ws-rpc) / ACPWG(ws-rpc)。
 - `protocol` — 7 种传输/渲染范式（SSE、WS-JSONRPC、ACP、AG-UI、structured-render、node-render、pty-terminal）
 - `category` — 10 个功能分类，带 priority（P0..P4）
 - `feature` — 73 个具体功能项（**功能点是独立节点类型**）
 
 边类型（`etype`）：
-- `repo --uses--> protocol`
+- `webui --located_in--> repo`（边属性 `path`）
+- `api --located_in--> repo`（边属性 `path`）
+- `webui --calls--> api`（前端调用某个后端接口表面）
+- `webui --uses--> protocol`
 - `category --contains--> feature`
-- `repo --implements--> feature`，边属性：
+- `webui --implements--> feature`，边属性：
   - `kind ∈ {structured, terminal}`（结构化组件 vs HM 的终端语义）
   - `source ∈ {verified, declared}`（边级：该功能是读源码确认的 `verified`，还是看 README/结构声明的 `declared`）
+- `api --exposes--> operation`（原来从 repo 出发，现改从 api 出发）
+- `webui --provides--> capability`（原来从 repo 出发，现改从 webui 出发）
+- 未变：`category --contains--> feature`、`entity --has_op--> operation`、全量层的 `has_group` / `has_endpoint`、`page --in_repo--> repo`、`page --calls--> endpoint`。
+
+### 按 path 命名的 id 约定（W: / A:）与 `.` 兜底
+
+`webui` / `api` 的 id **按源码路径命名**，让 id 在重新扫描时也稳定唯一：
+
+- `webui` id = `W:<repoId>/<path>`
+- `api` id = `A:<repoId>/<path>`
+
+其中 `<path>` 是该表面所在的 repo 相对源码目录/文件。
+
+**`.` 兜底**：本沙箱里 11 个源码仓库都不在场、无法重新扫描。只有 CP/DH/HM 的扫描路径已物化在 `data/**`（后端来自 `data/full/endpoints_<repo>.json` 的 `src`，前端来自 `data/frontend_calls/<repo>.json` / `data/full/calls_<repo>.json` 的 `caller_file`），可以给出具体 `<path>`。其余 8 个 repo（ACPC / ACPUI / ASTUI / OCUI / OGUI / CKIT / ACHAT，加上仅有网关证据的 ACPWG）源码树缺席、无具体路径，一律用 `path = "."`（repo 根），得到 `W:<repoId>/.`、`A:<repoId>/.`，仍然每 repo 唯一稳定。将来源码到位后可收紧 path，repo id 不受影响。
 
 > **两个正交概念，别混**：
 > - `source`（verified/declared）是**边级的核对深度**，人工标注，反映"这条实现关系是怎么确认的"。保留。
@@ -38,7 +59,7 @@ python3 build_graph.py
 ## 两张图
 
 ### A. UI 功能图（`build_graph.py`）
-节点：`repo` / `protocol` / `category` / `feature`。见上方图模型。
+节点：`repo` / `webui` / `protocol` / `category` / `feature`。功能边（uses/implements/provides）从 `webui` 出发，`webui --located_in--> repo`。见上方图模型。
 
 ### B. 后端 API 实体-操作图（`build_api_graph.py`）
 新增两类节点，粒度下探到"实体上的操作"：
@@ -47,22 +68,39 @@ python3 build_graph.py
 
 边：
 - `entity --has_op--> operation`（如 Session 的 create/list/get/update/delete/fork/interrupt/search 各是一个操作节点）
-- `repo --exposes--> operation`，边属性 `name`（该 repo 的真实 URL 或 RPC 方法）、`http`（REST 才有）、`style`（REST / RPC / WS-RPC / stdio-rpc / sdk-call）
+- `api --exposes--> operation`，边属性 `name`（该 api 的真实 URL 或 RPC 方法）、`http`（REST 才有）、`style`（REST / RPC / WS-RPC / stdio-rpc）。**该边从 `api` 节点出发**（原来从 `repo` 出发）；每个 `api` 节点 `api --located_in--> repo`。
 
-即：同一个 canonical 操作（如 `Session.create`）下挂三条 `exposes` 边——CP=`POST /chat/sessions`、DH=`session.create`、HM=`session.create`。实体在各 repo 的名字见 `api_metrics.md` 的映射表。
+即：同一个 canonical 操作（如 `Session.create`）下挂三条 `exposes` 边，分别从 CP 的 rest api、DH 的 rpc api、HM 的 ws-rpc api 出发：CP=`POST /chat/sessions`、DH=`session.create`、HM=`session.create`。实体在各 repo 的名字见 `api_metrics.md` 的映射表。
 
 **新增 `component` 节点 + `calls` 边（从代码构建）**：`scan_frontend_calls.py` 扫描前端源码里对端点的调用（CP 的 `fetch("/api/...")`、DH/HM 的 RPC 方法字符串），建立"页面/组件 → 操作"的引用边：
 - `component --calls--> operation`，边属性 `endpoint`（被调的真实 URL/方法）、`kind`（REST/RPC）
 - 排除测试/fixture 文件，只保留生产代码引用
 - 能反查"谁调用了某端点"（如 `Session.create` 的调用方是哪些组件），也揭示架构差异（CP 组件散调 vs DH 收敛到连接层 vs HM 走终端少 RPC）
 
-### 接入面 integration surface（repo 维度）
+### 接入面 integration surface（现落在 webui / api，不再在 repo）
 
-`repo.yaml` 新增：
-- `integration`：接入方式数组 —— `REST+SSE` / `WebSocket` / `stdio-rpc` / `in-process-sdk`
-- `browser_native`：能否纯浏览器直连（无需 Node/Tauri/Electron 宿主 spawn 子进程）
+拆分后，接入面属性从 `repo` 迁到了 `webui`（前端）与 `api`（后端）：
+- `webui.integration`：前端接入方式数组，取值 `REST+SSE` / `WebSocket` / `stdio-rpc` / `in-process-sdk`
+- `webui.browser_native`：能否纯浏览器直连（无需 Node/Tauri/Electron 宿主 spawn 子进程）
+- `webui.transport` / `webui.stack` / `webui.protocols`：也都从 repo 迁到 webui
+- `api.style`（rest/rpc/ws-rpc/stdio-rpc）与 `api.transport`：后端表面的子类型与传输
 
-关键：**很多 agent 只给 SDK 或 RPC，不给 HTTP API**。ACP 生态的 CLI agent（Claude Code/Codex 等）只说 stdio JSON-RPC → `browser_native=false`，需网关 spawn 子进程再桥接成 WS/SSE（这就是 acp-web-gateway / agents-chat 存在的原因）。SDK 型（assistant-ui/CopilotKit/acp-components）是前端库，无网络端点。
+`repo` 节点本身只剩 git 身份（id/ntype/label/license），不再承载任何运行时/接入信息。
+
+关键：**很多 agent 只给 SDK 或 RPC，不给 HTTP API**。ACP 生态的 CLI agent（Claude Code/Codex 等）只说 stdio JSON-RPC → `webui.browser_native=false`，需网关 spawn 子进程再桥接成 WS/SSE（这就是 acp-web-gateway / agents-chat 存在的原因）。SDK 型（assistant-ui/CopilotKit/acp-components）是前端库，没有自己的网络端点，因此**只建 `webui` 节点、不建 `api` 节点**（见下）。
+
+### SDK 建模：只有网络端点才建 api 节点（逐 repo 核过，见 MIGRATION-DESIGN.md 第 6 节）
+
+`api` 节点**只**为网络可达（TCP/网络端点）的表面而建，即 `rest | rpc | ws-rpc | stdio-rpc-over-gateway`。纯进程内 SDK 表面（`sdk-hook` / `component` / `protocol`）**不建** `api` 节点，只贡献一个 `webui` 节点。
+
+审计不预设"SDK 就一定没有 api"，而是逐 repo 看 `map_capabilities.py` 里各 repo 实际用到的 `surface_kind` 以及 `data/repos/<repo>.yaml` 的 integration/transport 证据来判定：
+
+- **11 个 repo 都是给人用的 web UI**（各有 `stack`、都通过组件/hook 实现用户能力），所以 `webui` 全部为 yes（11 个 webui 节点）。
+- **网络 api 节点只归给证据里出现网络 surface 的 4 个 repo**：CP（rest）、DH（rpc）、HM（ws-rpc）、ACPWG（ws-rpc）。
+- 其余 7 个（ACPC / ACPUI / ASTUI / OCUI / OGUI / CKIT / ACHAT）只有 `sdk-hook` / `component` / `protocol` 表面，是 webui-only、不建 api 节点。
+- **ACPWG 是关键的"SDK != 无 api"案例**：它把上游 ACP（stdio-rpc）包成 WebSocket 网关对外暴露，所以尽管底层协议是 stdio，它仍然拥有一个 ws-rpc 的网络 `api` 节点。
+
+> 现有 4 个 `api` 数据节点（`data/api/{CP,DH,HM,ACPWG}.yaml`）。核心"实体-操作图"里当前接线 3 个（CP/DH/HM 有 canonical operation 暴露）；ACPWG 的 api 节点存在并通过校验，其 `exposes` 归一待后续证据补齐。
 
 ## 产物
 
@@ -77,7 +115,7 @@ python3 build_graph.py
 
 ## 关键结论（见 metrics.md）
 
-- **规模**：101 节点，419 边，11 repos，73 个功能项。
+- **规模**：UI 功能图 112 节点 / 430 边（含 11 webui 节点），11 repos，73 个功能项。
 - **协议格局**：`structured-render` 9/11 repo（主流）；`ACP` 4 repo（acp-components / acp-ui / acp-web-gateway / agents-chat，生态标准）；`AG-UI` 1（CopilotKit）；`SSE` 2；HM 的 `pty-terminal` 与 DH 的 `node-render` 各 1（独特）。
 - **跨全部 11 repo 的 table-stakes**（demand 信号最强，7–11 repo 实现）：会话视图、消息列表、流式打字、助手 Markdown、工具卡片、输入框、流订阅（均 11/11）；主题、会话侧栏、基础原语、停止中断、代码高亮、diff、权限面板、模型选择（7–10）。**这批是 P0/P1 必做**。
 - **deep 三 repo 独有**（broad 集里没人做的差异化/高成本项）：goal、trajectory-replay、plan-review、agent-asks-user、message-queue、rewind-retry、compaction-view、image-gen、rate-limit-banner、message-feedback 等——选择性采纳。
@@ -98,13 +136,17 @@ python3 build_graph.py
 
 ```
 data/
-  repos/       *.yaml   (11)   每个 repo 一份
+  repos/       *.yaml   (11)   每个 repo 一份（纯 git 身份）
+  webui/       *.yaml   (11)   每个 repo 的前端节点（W:<repoId>/<path>）
+  api/         *.yaml   (4)    网络后端节点（A:<repoId>/<path>）：CP/DH/HM/ACPWG
   protocols/   *.yaml   (7)
   features/    *.yaml   (73)   文件名 = category__name
   entities/    *.yaml   (14)
-  operations/  *.yaml   (49)   文件名 = Entity__op
+  operations/  *.yaml   (57)   文件名 = Entity__op
+  capabilities/*.yaml   (22)
 schemas/
-  {repo,protocol,feature,entity,operation,component,category}.schema.yaml   (7 种节点类型各一个 JSON Schema)
+  {repo,webui,api,protocol,feature,entity,operation,capability,category,component,full_endpoint,full_call}.schema.yaml
+  (12 个 JSON Schema：新增 webui.schema.yaml + api.schema.yaml；repo.schema.yaml 已精简为 git 身份)
 ```
 
 ### 脚本
@@ -123,9 +165,9 @@ schemas/
 
 ### validate.py 的三层检查
 
-1. **schema**：每个 YAML 对应 `schemas/<ntype>.schema.yaml`（枚举、pattern、必填字段、`additionalProperties:false`）。
-2. **referential**：引用必须解析——operation.entity → entity 节点；feature 的实现 repo / entity.names 的 repo / repo.protocols → 对应节点存在。
-3. **semantic**：质量规则——id 唯一；operation id 必须等于 `O:{entity}.{label}`；REST 端点必须带 http verb，RPC/WS-RPC 不能带；无孤儿操作；feature.category 必须与 id 前缀一致；每个 entity 至少被一个 operation 引用；repo 必须声明合法 transport。
+1. **schema**：每个 YAML 对应 `schemas/<ntype>.schema.yaml`（枚举、pattern、必填字段、`additionalProperties:false`）。校验的 8 类节点：`repo` / `webui` / `api` / `protocol` / `feature` / `entity` / `operation` / `capability`（W:/A: id 的 pattern、api.style 枚举等都在这层）。
+2. **referential**：引用必须解析——`webui.repo` / `api.repo` → repo 节点；`webui.protocols` → protocol 节点（协议引用现在挂在 webui 上，不在 repo）；operation.entity → entity 节点；feature/capability 的实现 repo、entity.names 的 repo → 对应节点存在。
+3. **semantic**：质量规则——id 唯一；operation id 必须等于 `O:{entity}.{label}`；REST 端点必须带 http verb，RPC/WS-RPC 不能带；无孤儿操作；feature.category 必须与 id 前缀一致；每个 entity 至少被一个 operation 引用；**每个 `webui` 必须声明合法且非空的 transport**；**每个 `api` 的 style 必须是 `rest|rpc|ws-rpc|stdio-rpc` 之一**。
 
 已实测：故意注入坏枚举/悬空引用/REST 缺 verb，三类都被抓出；`build_from_yaml.py` 在坏数据时拒绝出图。
 
@@ -149,9 +191,9 @@ python3 build_from_yaml.py   # 校验通过后重建全部图与度量
 - **survey 集**：assistant-ui / opencode-chatui / OpenGUI / CopilotKit 偏 SSE；acp-components / acp-ui / agents-chat 走 ACP（原生 stdio，浏览器侧经 gateway）；acp-web-gateway 用 WebSocket 承载 ACP。
 
 建模位置：
-- `repo.yaml` 的 `transport` 字段（`[SSE] / [WebSocket] / [stdio]`）——该 repo 实际用的传输，权威值。
+- `webui.yaml` 的 `transport` 字段（`[SSE] / [WebSocket] / [stdio]`）：该前端实际用的传输，权威值（从旧 `repo` 迁来）；后端表面的传输可另记在 `api.transport`。
 - `protocol.yaml` 的 `transport` + `kind`（transport / protocol / rendering）——协议的原生传输。
-- 二者刻意解耦：同一协议在不同 repo 可走不同传输（如 ACP 原生 stdio，但 acp-web-gateway 用 WebSocket 承载），所以 `validate.py` 不强制 repo.transport 等于其 protocol 的 transport，只校验 transport 合法且非空。
+- 二者刻意解耦：同一协议在不同 repo 可走不同传输（如 ACP 原生 stdio，但 acp-web-gateway 用 WebSocket 承载），所以 `validate.py` 不强制 `webui.transport` 等于其 protocol 的 transport，只校验 transport 合法且非空。
 
 **对自研的意义**：我们已定 SSE（对齐 CP/DH）。若未来要支持 WebSocket（如 HM 式全双工、或双向 steering），传输是可替换的一层——operation 节点不变，只换 `endpoints[*].transport` 与承载协议。
 
@@ -170,15 +212,15 @@ python3 build_from_yaml.py   # 校验通过后重建全部图与度量
 |---|---|
 | `scan_full.py` | 全量抓后端接口（无裁剪）→ `data/full/endpoints_<repo>.json`。CP 250(187路由×动词)/DH 53/HM 299，按命名空间/路径首段自动分组 |
 | `scan_full_calls.py` | 全量抓前端文件对所有接口的调用 → `data/full/calls_<repo>.json`，含 server-internal 统计 |
-| `build_full_graph.py` | 全量 API 图：`repo / endpoint_group / endpoint / page` + `has_group/has_endpoint/calls/in_repo`。902 节点/1387 边 |
-| `build_unified_graph.py` | **归一化**：在共享 repo 节点上合并 UI 功能图 + 全量 API 图 → **统一图 1000 节点/1806 边**。含 validate 闸门 |
+| `build_full_graph.py` | 全量 API 图：`repo / endpoint_group / endpoint / page` + `has_group/has_endpoint/calls/in_repo`。905 节点/1390 边 |
+| `build_unified_graph.py` | **归一化**：在共享 repo 节点上合并 UI 功能图 + 全量 API 图 + 规范 API 层(entity/operation/exposes) → **统一图 1151 节点/2192 边**。含 validate 闸门 |
 
 ### 统一图节点/边
 
-节点(7 类)：`repo`(11) / `endpoint`(602) / `page`(165) / `endpoint_group`(132) / `feature`(73) / `category`(10) / `protocol`(7)。
-UI 层节点带 `layer=ui`，后端/页面节点带 `layer=api`，repo 节点共享(带 `has_api_layer`)。
+节点(13 类)：`endpoint`(602) / `page`(165) / `endpoint_group`(132) / `feature`(73) / `operation`(57) / `component`(43) / `capability`(22) / `entity`(14) / `repo`(11) / `webui`(11) / `category`(10) / `protocol`(7) / `api`(4)。
+UI 层节点带 `layer=ui`，后端/页面节点带 `layer=api`，repo 节点共享(带 `has_api_layer`)。统一图纳入全部 4 个 `api` 节点（含 ACPWG，即“SDK 经网络端点封装后才成为 api”的样例），与 api 图保持一致。
 
-边(7 类)：`has_endpoint`(602) / `calls`(488) / `implements`(327) / `in_repo`(165) / `has_group`(132) / `contains`(73) / `uses`(19)。
+边(11 类)：`has_endpoint`(602) / `calls`(555) / `implements`(327) / `in_repo`(165) / `provides`(154) / `has_group`(132) / `exposes`(93) / `contains`(73) / `has_op`(57) / `uses`(19) / `located_in`(15)。`implements` / `provides` / `uses` 现从 `webui` 出发，`exposes` 从 `api` 出发，`located_in` 是 `webui`/`api` → repo 的归属边；聚合的 `webui --calls--> api` 边把前端与后端两层在统一图中连通。
 
 **归一化的价值**：一张图里可跨层遍历 `feature → repo → endpoint_group → endpoint ← page`，把"某 repo 实现哪些功能""这些功能对应哪些后端接口""哪些前端页面调用它们"打通。
 
@@ -247,4 +289,4 @@ start-session, list-sessions, send-message, stream-response, stop-generation, vi
 | CopilotKit | 9 | sdk-hook (AG-UI) |
 | acp-web-gateway | 8 | ws-rpc (ACP gateway) |
 
-统一图节点新增 `capability`(22)，边新增 `provides`（repo → capability，带 surface_kind/surface_name）。统一图现 **1022 节点 / 1960 边**，所有 11 repo 通过 capability 层可比。
+统一图节点含 `capability`(22)，边 `provides`（**现从 `webui` 出发** → capability，带 surface_kind/surface_name）。统一图现 **1151 节点 / 2192 边**，所有 11 repo 通过 capability 层可比。

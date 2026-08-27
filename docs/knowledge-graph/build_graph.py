@@ -316,9 +316,38 @@ def build_graph() -> nx.DiGraph:
     return g
 
 
+def _impl_edges_by_repo(g: nx.DiGraph):
+    """Map repo id -> list of (feature_node, edge_data) for its implements edges.
+
+    In the current model `implements` originates from a repo's `webui` node
+    (webui.repo == rid), not from the repo node itself. This helper resolves the
+    owning repo for each implements edge so analyze() works regardless of whether
+    the edge is sourced from a repo (legacy seed graph) or a webui node.
+    """
+    out: dict[str, list] = {}
+    for u, v, d in g.edges(data=True):
+        if d.get("etype") != "implements":
+            continue
+        su = g.nodes[u]
+        rid = su.get("repo") if su.get("ntype") == "webui" else u
+        out.setdefault(rid, []).append((v, d))
+    return out
+
+
 def analyze(g: nx.DiGraph) -> str:
     import derive_tier
     features = [n for n, d in g.nodes(data=True) if d["ntype"] == "feature"]
+    impl_by_repo = _impl_edges_by_repo(g)
+
+    def repo_implements(rid, fid):
+        return any(v == fid for v, _ in impl_by_repo.get(rid, []))
+
+    def repo_impl_kind(rid, fid):
+        for v, d in impl_by_repo.get(rid, []):
+            if v == fid:
+                return d["kind"]
+        return None
+
     tiers = derive_tier.classify()
     # 'deep' cluster emerges from feature-coverage (no manual label). This replaces
     # the former hand-assigned primary/survey. Cross-repo conclusions still focus on
@@ -341,7 +370,7 @@ def analyze(g: nx.DiGraph) -> str:
     lines.append("| repo | tier (emergent) | structured | terminal | total impl |")
     lines.append("|---|---|---|---|---|")
     for rid in REPOS:
-        impl = [(v, g.edges[rid, v]) for v in g.successors(rid)
+        impl = [(v, e) for v, e in impl_by_repo.get(rid, [])
                 if g.nodes[v]["ntype"] == "feature"]
         s = sum(1 for _, e in impl if e["kind"] == "structured")
         t = sum(1 for _, e in impl if e["kind"] == "terminal")
@@ -354,7 +383,15 @@ def analyze(g: nx.DiGraph) -> str:
     lines.append("| protocol | #repos | repos |")
     lines.append("|---|---|---|")
     for pid in PROTOCOLS:
-        users = [REPOS[u]["label"] for u, _ in g.in_edges(pid) if g.nodes[u]["ntype"] == "repo"]
+        # uses now originates from webui nodes; resolve back to the owning repo.
+        proto_repos = set()
+        for u, _ in g.in_edges(pid):
+            su = g.nodes[u]
+            if su.get("ntype") == "webui" and su.get("repo") in REPOS:
+                proto_repos.add(su["repo"])
+            elif su.get("ntype") == "repo" and u in REPOS:
+                proto_repos.add(u)
+        users = [REPOS[r]["label"] for r in proto_repos]
         if users:
             lines.append(f"| {pid} | {len(users)} | {', '.join(sorted(users))} |")
     lines.append("")
@@ -362,7 +399,7 @@ def analyze(g: nx.DiGraph) -> str:
     # cross-repo signals -- PRIMARY set only (verified), to keep conclusions clean
     universal, dh_only, cp_only, hm_only, structured_all = [], [], [], [], []
     for f in features:
-        impls = {r: g.edges[r, f]["kind"] for r in primary if g.has_edge(r, f)}
+        impls = {r: repo_impl_kind(r, f) for r in primary if repo_implements(r, f)}
         present = set(impls)
         if present == set(primary):
             universal.append(f)
@@ -387,19 +424,19 @@ def analyze(g: nx.DiGraph) -> str:
     lines.append("## Feature maturity across ALL repos (primary + survey)\n")
     ranked = sorted(
         features,
-        key=lambda f: sum(1 for r in REPOS if g.has_edge(r, f)),
+        key=lambda f: sum(1 for r in REPOS if repo_implements(r, f)),
         reverse=True,
     )
     lines.append("Top features by #repos implementing (demand / table-stakes signal):\n")
     lines.append("| feature | category | #repos |")
     lines.append("|---|---|---|")
     for f in ranked[:20]:
-        c = sum(1 for r in REPOS if g.has_edge(r, f))
+        c = sum(1 for r in REPOS if repo_implements(r, f))
         lines.append(f"| {g.nodes[f]['label']} | {g.nodes[f]['category']} | {c} |")
     lines.append("")
 
     # features NOT implemented by any survey repo (either niche or hard)
-    survey_covered = {f for f in features if any(g.has_edge(r, f) for r in survey)}
+    survey_covered = {f for f in features if any(repo_implements(r, f) for r in survey)}
     survey_gap = [f for f in features if f not in survey_covered]
     lines.append("## Features absent from ALL survey repos\n")
     lines.append("(present only in the primary trio; either niche or high-effort differentiators)\n")

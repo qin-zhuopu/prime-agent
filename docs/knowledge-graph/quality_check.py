@@ -29,7 +29,8 @@ HERE = Path(__file__).parent
 DATA = HERE / "data"
 SCHEMAS = HERE / "schemas"
 
-NODE_DIRS = {"repo": "repos", "protocol": "protocols", "feature": "features",
+NODE_DIRS = {"repo": "repos", "webui": "webui", "api": "api",
+             "protocol": "protocols", "feature": "features",
              "entity": "entities", "operation": "operations"}
 GRAPH_NODE_TYPES = set(NODE_DIRS) | {"component", "category"}
 
@@ -132,10 +133,18 @@ def main() -> int:
                      f"(may be server-internal, event-only, or scanner gap)")
 
     # --- field coverage (recommended fields) ---
+    # repo is now pure git identity: only `license` remains on it. The frontend
+    # runtime facts (stack/integration/browser_native/transport) moved onto the
+    # webui node, so they are checked there.
     for r in repos:
-        for fld in ("stack", "license", "integration", "browser_native", "transport"):
+        for fld in ("license",):
             if fld not in r or r.get(fld) in (None, "", []):
                 warns.append(f"field: repo {r['id']} missing/empty recommended field '{fld}'")
+    webuis = load("webui")
+    for w in webuis:
+        for fld in ("stack", "integration", "browser_native", "transport"):
+            if fld not in w or w.get(fld) in (None, "", []):
+                warns.append(f"field: webui {w['id']} missing/empty recommended field '{fld}'")
 
     # --- capability layer coverage (all 11 repos, normalized user operations) ---
     caps = load("capabilities")

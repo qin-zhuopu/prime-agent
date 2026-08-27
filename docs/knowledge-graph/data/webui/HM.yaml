@@ -1,0 +1,14 @@
+id: W:HM/web/src
+ntype: webui
+label: hermes-agent
+repo: HM
+path: web/src
+stack: Vite+React+xterm
+transport:
+- WebSocket
+integration:
+- WebSocket
+browser_native: true
+protocols:
+- WS-JSONRPC
+- pty-terminal

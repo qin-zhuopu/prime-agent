@@ -14,7 +14,9 @@
 
 | 节点类型 | 数量 | 维护方 | 说明 |
 |---|---|---|---|
-| `repo` | 11 | 🧠 LLM | 手动选定纳入哪些 repo；`label/stack/license/integration/browser_native` 是人工核对填的 |
+| `repo` | 11 | 🧠 LLM | 手动选定纳入哪些 repo；现在只承载 git 身份（`id/label/license`），app 层属性已迁到 `webui`/`api` |
+| `webui` | 11 | 🧠+🔧 混合 | 每个 repo 的前端节点（`W:<repoId>/<path>`）；`stack/transport/integration/browser_native/protocols` 从旧 repo 迁来（🧠 判断）；`path` 由 🔧 从 `caller_file` 派生（缺席源码则 `.` 兜底） |
+| `api` | 4 | 🧠+🔧 混合 | 网络后端节点（`A:<repoId>/<path>`）：CP/DH/HM/ACPWG；`style`（rest/rpc/ws-rpc）是 🔧 从来源判定、🧠 定子类型；`path` 由 🔧 从 endpoint 的 `src` 派生（缺席源码则 `.` 兜底） |
 | `protocol` | 7 | 🧠 LLM | 传输/渲染范式的抽象分类，人工定义 |
 | `category` | 10 | 🧠 LLM | 功能分类（messaging/tool-use…），人工定义的分类体系 |
 | `feature` | 73 | 🧠 LLM | 功能点由读源码后**语义归纳**，非脚本抽取 |
@@ -29,16 +31,35 @@
 
 ## 二、节点属性（node attributes）
 
-### `repo`
+### `repo`（拆分后只剩 git 身份）
 | 属性 | 维护方 | 说明 |
 |---|---|---|
 | `id` / `label` | 🧠 LLM | 人工命名 |
-| `stack` / `license` | 🔧 CODE 可查，🧠 填 | 从 package.json/LICENSE 可读，但当前是人工填 |
+| `license` | 🔧 CODE 可查，🧠 填 | 从 LICENSE 可读，当前人工填 |
+| tier (deep/broad) | ⚙️ DERIVED | **不存储**；`derive_tier.py` 按特征覆盖度涌现算出 |
+
+> 拆分前挂在 `repo` 上的 `stack/transport/integration/browser_native/protocols` 已全部迁到 `webui`（见下）。
+
+### `webui`（前端节点，app 层属性从旧 repo 迁来）
+| 属性 | 维护方 | 说明 |
+|---|---|---|
+| `id` (`W:<repoId>/<path>`) | 🔧+🧠 | id 由 repoId + path 组合而成，path 是 🔧 派生（见下） |
+| `repo` | 🔧 CODE | 指向所属 repo，机械 |
+| `path` | 🔧 CODE | 从 `data/frontend_calls/<repo>.json` / `data/full/calls_<repo>.json` 的 `caller_file` 派生（去掉源码目录前缀）；源码缺席则 `.` 兜底 |
+| `stack` | 🔧 CODE 可查，🧠 填 | 从 package.json 可读，当前人工填 |
 | `transport` (SSE/WebSocket/stdio) | 🧠 LLM | 人工核对源码判断的传输方式 |
 | `integration` (REST+SSE/stdio-rpc/in-process-sdk) | 🧠 LLM | 人工判断的接入形态 |
 | `browser_native` | 🧠 LLM | 人工判断能否纯浏览器直连 |
-| `protocols` | 🧠 LLM | 人工指定该 repo 用哪些协议 |
-| tier (deep/broad) | ⚙️ DERIVED | **不存储**；`derive_tier.py` 按特征覆盖度涌现算出 |
+| `protocols` | 🧠 LLM | 人工指定该前端用哪些协议 |
+
+### `api`（网络后端节点）
+| 属性 | 维护方 | 说明 |
+|---|---|---|
+| `id` (`A:<repoId>/<path>`) | 🔧+🧠 | id 由 repoId + path 组合而成，path 是 🔧 派生（见下） |
+| `repo` | 🔧 CODE | 指向所属 repo，机械 |
+| `path` | 🔧 CODE | 从 `data/full/endpoints_<repo>.json` 的 `src` 派生（去掉源码目录前缀）；源码缺席则 `.` 兜底 |
+| `style` (rest/rpc/ws-rpc/stdio-rpc) | 🔧+🧠 | 由来源接口形态判定（REST URL vs entity.action RPC vs WS-RPC）；ACPWG 是"stdio SDK 包成网络网关"的语义判断 |
+| `transport` | 🧠 LLM | 后端表面的传输，人工核对 |
 
 ### `feature`
 | 属性 | 维护方 | 说明 |
@@ -75,16 +96,18 @@
 
 | 边 | 连接 | 维护方 | 说明 |
 |---|---|---|---|
-| `uses` | repo → protocol | 🧠 LLM | 人工指定 |
+| `located_in` | webui → repo / api → repo | 🔧 CODE | webui/api 归属到 repo，边属性 `path`，由节点的 repo/path 机械派生 |
+| `calls` (跨层) | webui → api | 🔧 CODE | 前端调用某后端接口表面，由调用证据派生 |
+| `uses` | webui → protocol | 🧠 LLM | 人工指定（原来从 repo 出发，现从 webui 出发） |
 | `contains` | category → feature | 🔧 CODE | 由 feature.category 机械派生 |
-| `implements` | repo → feature | 🧠 LLM | 人工判断该 repo 是否实现该功能 + kind/source |
+| `implements` | webui → feature | 🧠 LLM | 人工判断该前端是否实现该功能 + kind/source（原来从 repo 出发） |
 | `has_op` | entity → operation | 🔧 CODE | 由 operation.entity 机械派生 |
-| `exposes` | repo → operation | 🧠+🔧 | 边存在性=🔧脚本抓到该端点；归到哪个 canonical op=🧠 映射 |
-| `has_group` | repo → endpoint_group | 🔧 CODE | 机械 |
+| `exposes` | api → operation | 🧠+🔧 | 边存在性=🔧脚本抓到该端点；归到哪个 canonical op=🧠 映射（原来从 repo 出发，现从 api 出发） |
+| `has_group` | repo → endpoint_group | 🔧 CODE | 机械（全量层） |
 | `has_endpoint` | endpoint_group → endpoint | 🔧 CODE | 机械 |
-| `calls` | page → endpoint/operation | 🔧 CODE | `scan_*_calls.py` 正则匹配前端调用，机械 |
+| `calls` (全量层) | page → endpoint/operation | 🔧 CODE | `scan_*_calls.py` 正则匹配前端调用，机械 |
 | `in_repo` | page → repo | 🔧 CODE | 机械 |
-| `provides` | repo → capability | 🧠 LLM | 人工判断该 repo 是否提供该能力 + surface |
+| `provides` | webui → capability | 🧠 LLM | 人工判断该前端是否提供该能力 + surface（原来从 repo 出发） |
 
 ---
 
@@ -105,7 +128,8 @@
 | 位置 | 承载的判断 |
 |---|---|
 | `data/features/*.yaml` | 73 功能点的定义、分类、每 repo 的 kind/source |
-| `data/repos/*.yaml` | 每 repo 的 transport/integration/browser_native/protocols |
+| `data/webui/*.yaml` | 每个前端的 transport/integration/browser_native/protocols（从旧 `data/repos/*.yaml` 迁来） |
+| `data/api/*.yaml` | 4 个网络后端节点的 style（rest/rpc/ws-rpc），含 ACPWG 的"stdio 网关暴露成 WebSocket"判断 |
 | `data/entities/*.yaml` + `data/protocols/*.yaml` | 实体/协议的归一命名与分类 |
 | `map_api.py` 的规则表 | `NS_TO_ENTITY` / `ACTION_ALIAS` / `ENTITY_OPS` / `CP_REST_RULES` / `EXACT_OVERRIDE`——把 raw 端点归一到 canonical 实体+操作 |
 | `map_capabilities.py` 的 `M` 表 | 22 能力 × 11 repo 的实现 surface 映射 |
@@ -117,6 +141,6 @@
 ## 五、更新时的操作指引
 
 - **源码变了**（新增 API/组件）→ 重跑 🔧 scan/build，端点/页面/调用自动更新；但新出现的语义归一（新端点归哪个实体、新功能属哪类）需 🧠 补规则表/YAML。
-- **新增 repo** → 🧠 补 `data/repos/*.yaml` + 各 map 表里该 repo 的列；🔧 scan 自动抓它的端点/页面；⚙️ tier 自动重算。
+- **新增 repo** → 🧠 补 `data/repos/*.yaml`（git 身份）+ `data/webui/*.yaml`（前端属性）+（若有网络端点）`data/api/*.yaml` + 各 map 表里该 repo 的列；🔧 scan 自动抓它的端点/页面；⚙️ tier 自动重算。
 - **改分类/能力体系** → 纯 🧠，改 category/capability 定义与映射。
 - **验证** → 🔧 `validate.py`（对错）+ `quality_check.py`（缺口），随时可跑。

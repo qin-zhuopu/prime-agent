@@ -1,0 +1,30 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: api node
+type: object
+required: [id, ntype, label, repo, style]
+additionalProperties: false
+properties:
+  id:
+    description: "A:<repoId>/<path> (path '.' yields A:<repoId>/.)"
+    type: string
+    pattern: "^A:[A-Z][A-Z0-9]*/.+$"
+  ntype:
+    const: api
+  label:
+    type: string
+    minLength: 1
+  repo:
+    description: owning repo node id
+    type: string
+    pattern: "^[A-Z][A-Z0-9]*$"
+  path:
+    description: repo-relative source dir/file the backend surface lives at ('.' fallback)
+    type: string
+  style:
+    description: api subtype, mapped from operation endpoint styles
+    enum: [rest, rpc, ws-rpc, stdio-rpc]
+  transport:
+    description: backend transport for this surface
+    type: array
+    items:
+      enum: [SSE, WebSocket, stdio, "in-process", "n/a"]

@@ -1,0 +1,15 @@
+id: W:DH/packages/client
+ntype: webui
+label: deepseek-harness
+repo: DH
+path: packages/client
+stack: Cordis+React
+transport:
+- SSE
+integration:
+- REST+SSE
+browser_native: true
+protocols:
+- SSE
+- node-render
+- structured-render
