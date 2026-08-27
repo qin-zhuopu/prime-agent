@@ -52,11 +52,33 @@ def build() -> nx.DiGraph:
             # merge into the existing UI repo node; add API-layer marker
             g.nodes[repo_remap[n]]["has_api_layer"] = True
             continue
+        if n in g:
+            # api node (e.g. A:CP/src/app/api) already present from another layer;
+            # keep the existing node, just record that the full layer touches it.
+            continue
         g.add_node(n, layer="api", **d)
     for u, v, d in fg.edges(data=True):
         uu = repo_remap.get(u, u)
         vv = repo_remap.get(v, v)
         g.add_edge(uu, vv, **d)
+
+    # --- canonical API layer (data/api + data/operations + data/entities) ---
+    # This is the layer that carries ALL FOUR api nodes (CP/DH/HM + ACPWG, the
+    # deliberate "SDK != no api" case), the entity/operation vocabulary, the
+    # `exposes` edges, and the aggregated `webui--calls-->api` edges. The full
+    # API layer above only inventories the endpoint-scanned trio (CP/DH/HM), so
+    # without this merge ACPWG's api node and the webui->api edges never reach
+    # the unified graph (decision C: the four graphs must stay consistent).
+    ag = ui.build_api_graph()
+    for n, d in ag.nodes(data=True):
+        if n in g:
+            # repo / webui / api (CP/DH/HM) nodes already exist; do not clobber.
+            continue
+        g.add_node(n, layer="api", **d)
+    for u, v, d in ag.edges(data=True):
+        if g.has_edge(u, v) and g.edges[u, v].get("etype") == d.get("etype"):
+            continue  # e.g. api--located_in-->repo already merged from full layer
+        g.add_edge(u, v, **d)
 
     # --- capability layer (normalizes ALL 11 repos on user-facing operations) ---
     # `provides` now originates from the repo's webui node (decision B), not the

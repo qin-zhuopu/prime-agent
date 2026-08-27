@@ -1,6 +1,6 @@
 # Unified knowledge graph -- Metrics
 
-- Total nodes: 1036, edges: 1974
+- Total nodes: 1151, edges: 2192
 
 ## Node types
 
@@ -10,26 +10,31 @@
 | page | 165 |
 | endpoint_group | 132 |
 | feature | 73 |
+| operation | 57 |
+| component | 43 |
 | capability | 22 |
+| entity | 14 |
 | repo | 11 |
 | webui | 11 |
 | category | 10 |
 | protocol | 7 |
-| api | 3 |
+| api | 4 |
 
 ## Edge types
 
 | etype | count |
 |---|---|
 | has_endpoint | 602 |
-| calls | 488 |
+| calls | 555 |
 | implements | 327 |
 | in_repo | 165 |
 | provides | 154 |
 | has_group | 132 |
+| exposes | 93 |
 | contains | 73 |
+| has_op | 57 |
 | uses | 19 |
-| located_in | 14 |
+| located_in | 15 |
 
 ## Capability coverage across ALL 11 repos (normalized user operations)
 

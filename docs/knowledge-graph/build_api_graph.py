@@ -26,6 +26,7 @@ Outputs (next to this script):
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import networkx as nx
@@ -262,18 +263,21 @@ def analyze(g: nx.DiGraph) -> str:
 
 
 def main() -> None:
-    g = build_graph()
-    nx.write_graphml(g, HERE / "api_graph.graphml")
-    (HERE / "api_graph.json").write_text(json.dumps(nx.node_link_data(g), indent=2, ensure_ascii=False))
-    with open(HERE / "api_graph.dot", "w") as fh:
-        fh.write("digraph api {\n")
-        for u, v, d in g.edges(data=True):
-            fh.write(f'  "{u}" -> "{v}" [label="{d.get("etype","")}"];\n')
-        fh.write("}\n")
-    (HERE / "api_metrics.md").write_text(analyze(g))
-    print("Wrote: api_graph.graphml, api_graph.json, api_graph.dot, api_metrics.md")
-    print(f"API graph: {g.number_of_nodes()} nodes, {g.number_of_edges()} edges")
+    # IMPORTANT: build_from_yaml.py is the single authoritative writer of
+    # api_graph.* (it reads YAML, runs the fail-closed validate gate, and adds
+    # the webui + component `calls` layers). This module's build_graph() only
+    # knows the hardcoded CP/DH/HM seed dicts, so it would emit a structurally
+    # smaller graph (no webui nodes, no ACPWG, no aggregated webui->api edge) and
+    # silently clobber the canonical export if it wrote there directly.
+    #
+    # To keep a single source of truth we delegate the export to build_from_yaml.
+    # build_graph()/analyze() remain importable (build_from_yaml imports this
+    # module as `api` for api.REPOS and api.analyze).
+    import build_from_yaml
+    print("build_api_graph.py is import-only for the api export; delegating to "
+          "build_from_yaml.py (the authoritative writer of api_graph.*).")
+    return build_from_yaml.main()
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)

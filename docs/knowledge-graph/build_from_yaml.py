@@ -66,9 +66,14 @@ def build_ui_graph() -> nx.DiGraph:
         g.add_node(d["id"], ntype="feature", label=d["label"], category=cid, priority=d["priority"])
         g.add_edge(cid, d["id"], etype="contains")
         # implements now originates from the repo's webui node (was repo--implements).
+        # No bare-repo fallback: every repo has a webui (enforced by validate.py);
+        # fail loud rather than silently re-couple the edge onto the repo node.
         for rid, impl in d.get("implementations", {}).items():
-            wid = webui[rid]["id"] if rid in webui else rid
-            g.add_edge(wid, d["id"], etype="implements", kind=impl["kind"], source=impl["source"])
+            if rid not in webui:
+                raise ValueError(f"feature {d['id']}: repo '{rid}' has no webui node "
+                                 f"to home the implements edge on")
+            g.add_edge(webui[rid]["id"], d["id"], etype="implements",
+                       kind=impl["kind"], source=impl["source"])
     return g
 
 
@@ -94,9 +99,14 @@ def build_api_graph() -> nx.DiGraph:
         g.add_node(oid, ntype="operation", label=d["label"], entity=d["entity"])
         g.add_edge(f"E:{d['entity']}", oid, etype="has_op")
         # exposes now originates from the repo's api node (was repo--exposes).
+        # No bare-repo fallback: a repo exposing an operation must have an api
+        # node (enforced by validate.py); fail loud rather than re-couple the
+        # exposes edge onto the bare repo node.
         for rid, ep in d.get("endpoints", {}).items():
-            aid = apis[rid]["id"] if rid in apis else rid
-            g.add_edge(aid, oid, etype="exposes", repo=rid, name=ep["name"],
+            if rid not in apis:
+                raise ValueError(f"operation {oid}: repo '{rid}' has no api node "
+                                 f"to home the exposes edge on")
+            g.add_edge(apis[rid]["id"], oid, etype="exposes", repo=rid, name=ep["name"],
                        http=ep.get("http", ""), style=ep["style"])
 
     # frontend component/page -> operation call references (built from code scan).

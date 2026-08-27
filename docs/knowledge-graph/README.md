@@ -213,14 +213,14 @@ python3 build_from_yaml.py   # 校验通过后重建全部图与度量
 | `scan_full.py` | 全量抓后端接口（无裁剪）→ `data/full/endpoints_<repo>.json`。CP 250(187路由×动词)/DH 53/HM 299，按命名空间/路径首段自动分组 |
 | `scan_full_calls.py` | 全量抓前端文件对所有接口的调用 → `data/full/calls_<repo>.json`，含 server-internal 统计 |
 | `build_full_graph.py` | 全量 API 图：`repo / endpoint_group / endpoint / page` + `has_group/has_endpoint/calls/in_repo`。905 节点/1390 边 |
-| `build_unified_graph.py` | **归一化**：在共享 repo 节点上合并 UI 功能图 + 全量 API 图 → **统一图 1036 节点/1974 边**。含 validate 闸门 |
+| `build_unified_graph.py` | **归一化**：在共享 repo 节点上合并 UI 功能图 + 全量 API 图 + 规范 API 层(entity/operation/exposes) → **统一图 1151 节点/2192 边**。含 validate 闸门 |
 
 ### 统一图节点/边
 
-节点(10 类)：`endpoint`(602) / `page`(165) / `endpoint_group`(132) / `feature`(73) / `capability`(22) / `repo`(11) / `webui`(11) / `category`(10) / `protocol`(7) / `api`(3)。
-UI 层节点带 `layer=ui`，后端/页面节点带 `layer=api`，repo 节点共享(带 `has_api_layer`)。
+节点(13 类)：`endpoint`(602) / `page`(165) / `endpoint_group`(132) / `feature`(73) / `operation`(57) / `component`(43) / `capability`(22) / `entity`(14) / `repo`(11) / `webui`(11) / `category`(10) / `protocol`(7) / `api`(4)。
+UI 层节点带 `layer=ui`，后端/页面节点带 `layer=api`，repo 节点共享(带 `has_api_layer`)。统一图纳入全部 4 个 `api` 节点（含 ACPWG，即“SDK 经网络端点封装后才成为 api”的样例），与 api 图保持一致。
 
-边(9 类)：`has_endpoint`(602) / `calls`(488) / `implements`(327) / `in_repo`(165) / `provides`(154) / `has_group`(132) / `contains`(73) / `uses`(19) / `located_in`(14)。`implements` / `provides` / `uses` 现从 `webui` 出发，`located_in` 是 `webui`/`api` → repo 的归属边。
+边(11 类)：`has_endpoint`(602) / `calls`(555) / `implements`(327) / `in_repo`(165) / `provides`(154) / `has_group`(132) / `exposes`(93) / `contains`(73) / `has_op`(57) / `uses`(19) / `located_in`(15)。`implements` / `provides` / `uses` 现从 `webui` 出发，`exposes` 从 `api` 出发，`located_in` 是 `webui`/`api` → repo 的归属边；聚合的 `webui --calls--> api` 边把前端与后端两层在统一图中连通。
 
 **归一化的价值**：一张图里可跨层遍历 `feature → repo → endpoint_group → endpoint ← page`，把"某 repo 实现哪些功能""这些功能对应哪些后端接口""哪些前端页面调用它们"打通。
 
@@ -289,4 +289,4 @@ start-session, list-sessions, send-message, stream-response, stop-generation, vi
 | CopilotKit | 9 | sdk-hook (AG-UI) |
 | acp-web-gateway | 8 | ws-rpc (ACP gateway) |
 
-统一图节点含 `capability`(22)，边 `provides`（**现从 `webui` 出发** → capability，带 surface_kind/surface_name）。统一图现 **1036 节点 / 1974 边**，所有 11 repo 通过 capability 层可比。
+统一图节点含 `capability`(22)，边 `provides`（**现从 `webui` 出发** → capability，带 surface_kind/surface_name）。统一图现 **1151 节点 / 2192 边**，所有 11 repo 通过 capability 层可比。

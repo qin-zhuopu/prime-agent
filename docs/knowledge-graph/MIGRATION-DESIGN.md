@@ -26,6 +26,17 @@ These four graphs must stay green (build succeeds, validate fail-closed passes) 
 step of the migration. Node/edge totals will legitimately change once the split lands;
 the numbers above are the pre-migration reference point, not a post-migration target.
 
+Post-migration actuals (after the repo/webui/api split and the unified-consistency fix
+that merges the canonical api layer, so all four `api` nodes and the `webui --calls--> api`
+edges reach the unified graph):
+
+| Command | Result (verbatim) |
+| --- | --- |
+| `python3 validate.py` | `OK: 199 YAML nodes valid (schema + referential + semantic).` |
+| `python3 build_from_yaml.py` | `UI graph: 112 nodes/430 edges; API graph: 125 nodes/221 edges` |
+| `python3 build_full_graph.py` | `Full API graph: 905 nodes, 1390 edges` |
+| `python3 build_unified_graph.py` | `Unified graph: 1151 nodes, 2192 edges` |
+
 ## 1. Motivation
 
 The current `repo` node is app-heavy: it carries git identity (id, label, license) but
