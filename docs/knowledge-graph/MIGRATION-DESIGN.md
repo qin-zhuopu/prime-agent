@@ -172,30 +172,76 @@ A pure-SDK repo (its surfaces are only `sdk-hook` / `component` / `protocol`) co
 a `webui` node but NO `api` node. SDKs are modeled as api only once wrapped behind a
 network endpoint (for example the acp-web-gateway exposes ACP over WebSocket).
 
-### SDK repo audit (placeholder, to be filled from FEAT-005 findings)
+### SDK repo audit (confirmed, FEAT-002)
 
-FEAT-005 will audit the pure-SDK / broad repos (ACPC / ASTUI / CKIT and the other
-survey repos) against their materialized surface evidence to decide, per repo, whether a
-web ui and/or a network api node is warranted. The confirmed SDK-vs-api decision table
-goes here once FEAT-005 produces it. Do NOT presume these repos lack a UI or api; decide
-from the evidence in `map_capabilities.py` surface_kind and any `data/full` endpoint data.
+This audit decides, per repo, whether it warrants a `webui` node and/or a network `api`
+node. It does NOT presume "SDK => no api"; every repo is decided from its own evidence.
 
-Provisional expectation (subject to FEAT-005 confirmation), from current
-`map_capabilities.py` evidence:
+Method and its limitation (stated up front so this is not mistaken for a full source
+audit): the 11 source repos are NOT present in this sandbox and their source trees cannot
+be read or re-scanned. The conclusions below are therefore derived from the ALREADY
+MATERIALIZED surface evidence, not from a fresh source-tree read. The evidence used is:
 
-| repo | label | integration | network surfaces in evidence | provisional nodes |
-| --- | --- | --- | --- | --- |
-| CP | CodePilot | REST+SSE | REST endpoints (endpoints_CP.json) | repo + webui + api(rest) |
-| DH | deepseek-harness | REST+SSE | rpc methods | repo + webui + api(rpc) |
-| HM | hermes-agent | WebSocket | ws-rpc methods | repo + webui + api(ws-rpc) |
-| ACPWG | acp-web-gateway | WebSocket, stdio-rpc | ws-rpc methods | repo + webui + api(ws-rpc) |
-| ACPC | acp-components | stdio-rpc, in-process-sdk | sdk-hook only | repo + webui (no api) |
-| ACPUI | acp-ui | stdio-rpc | component only | repo + webui (no api) |
-| ASTUI | assistant-ui | in-process-sdk | sdk-hook / component | repo + webui (no api) |
-| OCUI | opencode-chatui | REST+SSE | component only in caps; check data/full | repo + webui (api TBD by FEAT-005) |
-| OGUI | OpenGUI | REST+SSE, in-process-sdk | sdk-hook / component; check data/full | repo + webui (api TBD by FEAT-005) |
-| CKIT | CopilotKit | in-process-sdk | sdk-hook / protocol | repo + webui (no api) |
-| ACHAT | agents-chat | stdio-rpc | sdk-hook / component | repo + webui (no api) |
+1. `map_capabilities.py` dict `M` - the `surface_kind` values each repo actually uses
+   across the 22 user capabilities. This is the primary discriminator. Classification rule
+   (from section 6): `surface_kind` in `{endpoint, rpc, ws-rpc}` is a NETWORK surface, so
+   the repo earns an `api` node; `surface_kind` in `{sdk-hook, component, protocol}` is
+   in-process / rendering only and backs NO `api` node.
+2. `data/repos/<repo>.yaml` `integration` (`REST+SSE` / `WebSocket` / `stdio-rpc` /
+   `in-process-sdk`), `transport`, `protocols`, and `browser_native`.
+3. `data/full/endpoints_<repo>.json` (only CP / DH / HM have materialized endpoints).
+4. `README.md` and existing docs (`DATA-PROVENANCE.md`, `EXTRACTION-METHOD.md`) notes.
+
+The `surface_kind` sets below are computed directly from `map_capabilities.py` `M`:
+
+- CP: `{endpoint, component}`; DH: `{rpc, component}`; HM: `{ws-rpc, sdk-hook, component}`
+- ACPWG: `{ws-rpc, component}`
+- ACPC: `{sdk-hook}`; ACPUI: `{component}`; ASTUI: `{sdk-hook, component}`;
+  OCUI: `{component}`; OGUI: `{sdk-hook, component}`; CKIT: `{protocol, sdk-hook}`;
+  ACHAT: `{sdk-hook, component}`
+
+Every one of the 11 is a browser-facing chat / agent UI (each `data/repos/*.yaml` carries
+a frontend `stack` and every repo implements user-facing capabilities through
+components/hooks), so web-ui is `yes` for all 11. A network `api` node is earned by exactly
+the four repos whose evidence shows a network `surface_kind`: CP, DH, HM, ACPWG.
+
+| repo | web ui? (yes/no + evidence) | network api? (yes/no + style + evidence) | notes |
+| --- | --- | --- | --- |
+| CP | yes - `stack: Electron+Next.js`, `browser_native: true` (repos/CP.yaml); implements 22 capabilities via components (map_capabilities `M`) | yes, style=rest - `surface_kind=endpoint` across many caps (e.g. `POST /chat/sessions`) in `M`; `integration: REST+SSE` (repos/CP.yaml); materialized `data/full/endpoints_CP.json` | Full REST backend; api path derivable from `endpoints_CP.json` `src`. Evidence is materialized surface data, not a fresh source read. |
+| DH | yes - `stack: Cordis+React`, `browser_native: true` (repos/DH.yaml); component surfaces in `M` | yes, style=rpc - `surface_kind=rpc` across caps (e.g. `session.prompt`) in `M`; `integration: REST+SSE` (repos/DH.yaml); `data/full/endpoints_DH.json` | RPC-style methods over HTTP. Materialized surface data only. |
+| HM | yes - `stack: Vite+React+xterm`, `browser_native: true` (repos/HM.yaml); component/sdk-hook surfaces in `M` | yes, style=ws-rpc - `surface_kind=ws-rpc` across caps (e.g. `prompt.submit`) in `M`; `integration: WebSocket`, `protocols: [WS-JSONRPC]` (repos/HM.yaml); `data/full/endpoints_HM.json` | WebSocket JSON-RPC backend. Materialized surface data only. |
+| ACPWG | yes - `stack: Kotlin server + web` (repos/ACPWG.yaml); `StatusBar` component surface in `M` | yes, style=ws-rpc - `surface_kind=ws-rpc` across caps (e.g. `session.new`, `session.prompt`) in `M`; `integration: [WebSocket, stdio-rpc]`, `transport: WebSocket` (repos/ACPWG.yaml) | Wraps upstream ACP (stdio-rpc) behind a WebSocket gateway, so it DOES expose a network api even though the underlying ACP protocol is stdio. This is the key "SDK != no api" case. Materialized surface data only. |
+| ACPC | yes - `stack: React (core+react pkgs)` (repos/ACPC.yaml); sdk-hook surfaces (e.g. `useSession`, `useToolCalls`) in `M` | no - only `surface_kind=sdk-hook` in `M`; `integration: [stdio-rpc, in-process-sdk]`, `browser_native: false` (repos/ACPC.yaml) | React component/hook workbench library; ACP is spoken by the host over stdio, not exposed as a network endpoint by this repo. Materialized surface data only; no source tree read. |
+| ACPUI | yes - `stack: Vue3+Tauri` (repos/ACPUI.yaml); component surfaces (e.g. `SessionList`, `ChatView`) in `M` | no - only `surface_kind=component` in `M`; `integration: stdio-rpc`, `browser_native: false` (repos/ACPUI.yaml) | Tauri desktop UI talking ACP over stdio; no network api exposed by this repo. Materialized surface data only. |
+| ASTUI | yes - `stack: React (TS lib)`, `browser_native: true` (repos/ASTUI.yaml); sdk-hook + component surfaces (e.g. `useThreadRuntime`, `Reasoning`) in `M` | no - only `surface_kind` in `{sdk-hook, component}` in `M`; `integration: in-process-sdk` (repos/ASTUI.yaml) | React chat UI library consumed in-process; no network surface. Materialized surface data only. |
+| OCUI | yes - `stack: React+Vite+tRPC`, `browser_native: true` (repos/OCUI.yaml); component surfaces (e.g. `MessageDisplay`, `DiffViewer`) in `M` | no - only `surface_kind=component` in `M`; no materialized endpoints (`data/full/endpoints_OCUI.json` absent) | `integration: REST+SSE` in repos/OCUI.yaml describes the client transport it consumes, but this repo contributes only component surfaces in the materialized evidence, so no api node from this repo. Materialized surface data only; if a future source scan reveals its own backend, an api node can be added. |
+| OGUI | yes - `stack: React+Vite+Electron`, `browser_native: true` (repos/OGUI.yaml); sdk-hook + component surfaces (e.g. `use-agent-state`, `diff-view`) in `M` | no - `surface_kind` in `{sdk-hook, component}` only in `M`; no materialized endpoints (`data/full/endpoints_OGUI.json` absent) | `integration: [REST+SSE, in-process-sdk]` describes consumed transport; no network surface contributed by this repo in the evidence. Materialized surface data only; api node addable later if a source scan shows one. |
+| CKIT | yes - `stack: React+Next.js`, `browser_native: true` (repos/CKIT.yaml); sdk-hook surfaces (e.g. `use-agent`, `use-mcp`) in `M` | no - `surface_kind` in `{sdk-hook, protocol}` only in `M`; `integration: in-process-sdk`, `protocols: [AG-UI]` (repos/CKIT.yaml) | AG-UI is a PROTOCOL the host implements, not an endpoint this repo exposes; `stream-response` uses `surface_kind=protocol` (`AG-UI events`), which is in-process, not a network api. Materialized surface data only. |
+| ACHAT | yes - `stack: Next.js+React` (repos/ACHAT.yaml); sdk-hook + component surfaces (e.g. `useChatRuntime`, `PermissionPrompt`) in `M` | no - `surface_kind` in `{sdk-hook, component}` only in `M`; `integration: stdio-rpc`, `browser_native: false` (repos/ACHAT.yaml) | Speaks ACP over stdio via SDK hooks; no network api exposed by this repo. Materialized surface data only. |
+
+### Resulting node inventory (for FEAT-003 to implement)
+
+From the audit, every repo yields a `webui` node; exactly CP, DH, HM, ACPWG additionally
+yield an `api` node with the style shown. No other repo yields an `api` node under the
+current materialized evidence.
+
+| current repo id | repo node | webui node | api node(s) |
+| --- | --- | --- | --- |
+| CP | `CP` | `W:CP/<caller path>` | `A:CP/<src path>` style=rest |
+| DH | `DH` | `W:DH/<caller path>` | `A:DH/<src path>` style=rpc |
+| HM | `HM` | `W:HM/<caller path>` | `A:HM/<src path>` style=ws-rpc |
+| ACPWG | `ACPWG` | `W:ACPWG/.` | `A:ACPWG/.` style=ws-rpc |
+| ACPC | `ACPC` | `W:ACPC/.` | none (sdk-hook only) |
+| ACPUI | `ACPUI` | `W:ACPUI/.` | none (component only) |
+| ASTUI | `ASTUI` | `W:ASTUI/.` | none (sdk-hook / component) |
+| OCUI | `OCUI` | `W:OCUI/.` | none (component only) |
+| OGUI | `OGUI` | `W:OGUI/.` | none (sdk-hook / component) |
+| CKIT | `CKIT` | `W:CKIT/.` | none (sdk-hook / protocol) |
+| ACHAT | `ACHAT` | `W:ACHAT/.` | none (sdk-hook / component) |
+
+Net: 11 `webui` nodes + 4 `api` nodes (CP rest, DH rpc, HM ws-rpc, ACPWG ws-rpc). The
+CP/DH/HM concrete paths come from the section 8 evidence sources; the other eight repos
+use the section 3.1 `.` fallback because their source trees are absent.
 
 ## 7. Per-repo node mapping (all 11 current repo ids)
 
@@ -211,14 +257,14 @@ where scanned `src` / `caller_file` evidence exists; `.` fallback for the other 
 | ACPC | `ACPC` | `W:ACPC/.` | none (SDK-only) |
 | ACPUI | `ACPUI` | `W:ACPUI/.` | none (component-only) |
 | ASTUI | `ASTUI` | `W:ASTUI/.` | none (SDK-only) |
-| OCUI | `OCUI` | `W:OCUI/.` | TBD by FEAT-005 |
-| OGUI | `OGUI` | `W:OGUI/.` | TBD by FEAT-005 |
+| OCUI | `OCUI` | `W:OCUI/.` | none (component-only, confirmed FEAT-002 audit) |
+| OGUI | `OGUI` | `W:OGUI/.` | none (sdk-hook/component-only, confirmed FEAT-002 audit) |
 | CKIT | `CKIT` | `W:CKIT/.` | none (SDK / protocol only) |
 | ACHAT | `ACHAT` | `W:ACHAT/.` | none (SDK-only) |
 | ACPWG | `ACPWG` | `W:ACPWG/.` | `A:ACPWG/.` style=ws-rpc |
 
 Notes:
-- For CP/DH/HM the exact `<path>` per surface is chosen in FEAT-002/003 from the evidence
+- For CP/DH/HM the exact `<path>` per surface is chosen in FEAT-003 from the evidence
   sources in section 8. Where a single repo has many endpoint files, the api node path is
   the common backend source root (for example `src/app/api` for CP) unless the design in a
   later feature justifies finer-grained api nodes per group.
@@ -239,8 +285,8 @@ artifacts. These are authoritative migration input and must not be deleted or re
 - The other 8 repos have only per-repo surface evidence in `map_capabilities.py`
   (`surface_kind` + `surface_name`) and no source tree. Their `webui` path is therefore `.`
   and they receive an `api` node ONLY where `surface_kind` is a network kind
-  (`endpoint` / `rpc` / `ws-rpc`). Under the current evidence that is ACPWG (ws-rpc);
-  FEAT-005 confirms the rest.
+  (`endpoint` / `rpc` / `ws-rpc`). Under the current evidence that is ACPWG (ws-rpc); the
+  FEAT-002 audit in section 6 confirms the other seven earn no api node.
 
 Path normalization guidance for later features: the `src` / `caller_file` values are
 prefixed with the source repo folder name (e.g. `CodePilot/...`, `DeepSeekHarness/...`).
