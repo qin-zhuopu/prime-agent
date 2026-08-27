@@ -1,7 +1,6 @@
 id: ACPUI
 ntype: repo
 label: acp-ui
-tier: survey
 stack: Vue3+Tauri
 license: open
 transport:

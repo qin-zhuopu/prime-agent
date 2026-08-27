@@ -1,7 +1,6 @@
 id: OCUI
 ntype: repo
 label: opencode-chatui
-tier: survey
 stack: React+Vite+tRPC
 license: open
 transport:

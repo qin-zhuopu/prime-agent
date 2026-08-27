@@ -1,7 +1,6 @@
 id: ACPC
 ntype: repo
 label: acp-components
-tier: survey
 stack: React (core+react pkgs)
 license: open
 transport:

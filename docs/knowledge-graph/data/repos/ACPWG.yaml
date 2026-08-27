@@ -1,7 +1,6 @@
 id: ACPWG
 ntype: repo
 label: acp-web-gateway
-tier: survey
 stack: Kotlin server + web
 license: open
 transport:

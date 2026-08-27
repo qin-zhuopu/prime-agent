@@ -18,7 +18,7 @@ python3 build_graph.py
 ## 图模型
 
 节点类型（`ntype`）：
-- `repo` — **11 个** agent web UI 实现：3 个 primary（源码核对：CP / DH / HM）+ 8 个 survey（README/结构扫描：acp-components / acp-ui / assistant-ui / opencode-chatui / OpenGUI / CopilotKit / agents-chat / acp-web-gateway）
+- `repo` — **11 个** agent web UI 实现：CP / DH / HM / acp-components / acp-ui / assistant-ui / opencode-chatui / OpenGUI / CopilotKit / agents-chat / acp-web-gateway。**不再有人工的 primary/survey 标签**——深度分层由 `derive_tier.py` 从特征覆盖度自动涌现（见下）。
 - `protocol` — 7 种传输/渲染范式（SSE、WS-JSONRPC、ACP、AG-UI、structured-render、node-render、pty-terminal）
 - `category` — 10 个功能分类，带 priority（P0..P4）
 - `feature` — 73 个具体功能项（**功能点是独立节点类型**）
@@ -28,9 +28,12 @@ python3 build_graph.py
 - `category --contains--> feature`
 - `repo --implements--> feature`，边属性：
   - `kind ∈ {structured, terminal}`（结构化组件 vs HM 的终端语义）
-  - `source ∈ {verified, declared}`（primary 源码核对 vs survey README/结构声明）
+  - `source ∈ {verified, declared}`（边级：该功能是读源码确认的 `verified`，还是看 README/结构声明的 `declared`）
 
-> 数据可信度分层：primary 三 repo 的边来自实际读源码（`verified`）；survey 八 repo 的边来自 README 声明 + 目录/组件/hook 名扫描（`declared`，较粗）。跨 repo 核心结论只用 primary 集，survey 集用于"需求/成熟度"信号。
+> **两个正交概念，别混**：
+> - `source`（verified/declared）是**边级的核对深度**，人工标注，反映"这条实现关系是怎么确认的"。保留。
+> - **深度分层（deep/broad）已改为涌现**：由 `derive_tier.py` 按每个 repo 的特征覆盖数做一维最大间隔聚类（k=2）自动算出，不再有手写的 primary/survey 字段。新增/删除 repo 会自动重新聚类。
+> - 二者高度相关（核对得深→覆盖数高），但前者是输入标注、后者是数据派生。当前涌现结果：deep=CP/DH/HM（覆盖 60–71），broad=其余 8（10–31），自然断层 gap=29。
 
 ## 两张图
 
@@ -76,8 +79,8 @@ python3 build_graph.py
 - **规模**：101 节点，419 边，11 repos，73 个功能项。
 - **协议格局**：`structured-render` 9/11 repo（主流）；`ACP` 4 repo（acp-components / acp-ui / acp-web-gateway / agents-chat，生态标准）；`AG-UI` 1（CopilotKit）；`SSE` 2；HM 的 `pty-terminal` 与 DH 的 `node-render` 各 1（独特）。
 - **跨全部 11 repo 的 table-stakes**（demand 信号最强，7–11 repo 实现）：会话视图、消息列表、流式打字、助手 Markdown、工具卡片、输入框、流订阅（均 11/11）；主题、会话侧栏、基础原语、停止中断、代码高亮、diff、权限面板、模型选择（7–10）。**这批是 P0/P1 必做**。
-- **primary 三 repo 独有**（survey 集里没人做的差异化/高成本项）：goal、trajectory-replay、plan-review、agent-asks-user、message-queue、rewind-retry、compaction-view、image-gen、rate-limit-banner、message-feedback 等——选择性采纳。
-- **可信度分层**：primary 结论 `verified`，survey 覆盖 `declared`。
+- **deep 三 repo 独有**（broad 集里没人做的差异化/高成本项）：goal、trajectory-replay、plan-review、agent-asks-user、message-queue、rewind-retry、compaction-view、image-gen、rate-limit-banner、message-feedback 等——选择性采纳。
+- **分层是涌现的**：deep/broad 由特征覆盖度自动聚类（`derive_tier.py`），非人工指定。
 
 ## 数据来源与准确性
 
@@ -113,6 +116,7 @@ schemas/
 | `export_to_yaml.py` | 一次性种子：把当前内存图导出成 `data/` 下的 per-node YAML（UI 部分用） |
 | `validate.py` | **正确性校验**（pass/fail）：schema + 引用完整性 + 语义规则（含 frontend_calls）；exit 1 表示有问题 |
 | `quality_check.py` | **完整性/缺口报告**（分级 ERROR/WARN/INFO）：schema 覆盖、repo 覆盖、实体操作薄弱、孤儿节点、字段缺失；输出存档为 `quality-report.md` |
+| `derive_tier.py` | **涌现分层**：按特征覆盖度一维最大间隔聚类（k=2）算出 deep/broad，替代已删除的人工 `tier` 字段；纯计算不写回 YAML |
 | `build_from_yaml.py` | **规范构建路径**：先跑 validate（fail-closed），通过才从 YAML 构图并出图 |
 | `build_graph.py` / `build_api_graph.py` | 原始种子来源 + 复用其 `analyze()` 写度量 |
 

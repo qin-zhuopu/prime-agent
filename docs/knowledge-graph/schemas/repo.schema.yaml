@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-07/schema#"
 title: repo node
 type: object
-required: [id, ntype, label, tier]
+required: [id, ntype, label]
 additionalProperties: false
 properties:
   id:
@@ -12,8 +12,6 @@ properties:
   label:
     type: string
     minLength: 1
-  tier:
-    enum: [primary, survey]
   stack:
     type: string
   license:

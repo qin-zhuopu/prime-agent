@@ -1,7 +1,6 @@
 id: HM
 ntype: repo
 label: hermes-agent
-tier: primary
 stack: Vite+React+xterm
 license: open
 transport:

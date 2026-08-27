@@ -5,8 +5,9 @@
 ## 1. UI 功能点：目前是人工语义分析，非自动脚本
 
 - **提取方式**：由模型（本次会话）用 `ls` / `grep` / 读源码，看组件目录、组件名、hook 名、SSE 回调，然后**人工语义归纳**成 73 个功能点，并判断每个 repo 是 `structured`（结构化组件）还是 `terminal`（HM 的终端语义）。
-- **primary 三 repo**（CP/DH/HM）：读了源码，标 `source=verified`。
-- **survey 八 repo**：只看 README + 目录/组件/hook 名，标 `source=declared`（较粗）。
+- **CP/DH/HM**：读了源码，标 `source=verified`。
+- **其余 8 repo**：只看 README + 目录/组件/hook 名，标 `source=declared`（较粗）。
+- 注：不再有人工 primary/survey 标签；深度分层由 `derive_tier.py` 从特征覆盖度自动涌现（deep/broad）。`source` 是独立的、边级的核对深度标注。
 - **`build_graph.py` 不做提取**：它只是把人工结论（`FEATURES`、`SURVEY_IMPLEMENTS` 字典）组装成 NetworkX 图。
 - **没有固定的提取 prompt 写进项目**——当前不存在 LLM 提取管线。
 

@@ -52,7 +52,10 @@ def main() -> int:
     entities = load("entities")
     operations = load("operations")
     repo_ids = [r["id"] for r in repos]
-    primary = [r["id"] for r in repos if r.get("tier") == "primary"]
+    # emergent tier from data (no manual label); deep cluster = high feature coverage
+    import derive_tier
+    tiers = derive_tier.classify()
+    deep = set(tiers["deep"])
 
     # --- schema coverage ---
     have_schema = {p.stem.replace(".schema", "") for p in SCHEMAS.glob("*.schema.yaml")}
@@ -81,14 +84,15 @@ def main() -> int:
             warns.append(f"coverage: repo {rid} has NO UI feature implementations recorded")
     for rid in repo_ids:
         if rid not in api_repos:
-            tier = next(r["tier"] for r in repos if r["id"] == rid)
-            (infos if tier == "survey" else errors).append(
-                f"coverage: repo {rid} ({tier}) has NO API entity/operation data")
+            t = "deep" if rid in deep else "broad"
+            # broad cluster is intentionally UI-only; missing API there is expected
+            (infos if rid not in deep else errors).append(
+                f"coverage: repo {rid} ({t}) has NO API entity/operation data")
     for rid in repo_ids:
         if rid not in call_repos:
-            tier = next(r["tier"] for r in repos if r["id"] == rid)
-            (infos if tier == "survey" else warns).append(
-                f"coverage: repo {rid} ({tier}) has NO frontend-call data")
+            t = "deep" if rid in deep else "broad"
+            (infos if rid not in deep else warns).append(
+                f"coverage: repo {rid} ({t}) has NO frontend-call data")
 
     # --- feature coverage ---
     for f in features:
@@ -109,11 +113,12 @@ def main() -> int:
         if not o.get("endpoints"):
             errors.append(f"api: operation {o['id']} exposed by 0 repos (orphan)")
 
-    # --- entity name coverage across repos ---
+    # --- entity name coverage across repos (deep cluster only, since only they have API data) ---
+    deep_list = sorted(deep)
     for e in entities:
         named = set(e.get("names", {}))
-        missing = [r for r in primary if r not in named]
-        if len(named) < len(primary) and missing:
+        missing = [r for r in deep_list if r not in named]
+        if len(named) < len(deep_list) and missing:
             infos.append(f"api: entity {e['label']} has no name in {missing} (absent there, or unmapped)")
 
     # --- call coverage: operations nothing calls ---
@@ -139,11 +144,12 @@ def main() -> int:
             print("  -", it)
 
     print("# Knowledge-graph data quality report")
-    print("\n> Scope by design: primary repos (CP/DH/HM) get full depth (UI features + API "
-          "entities/operations + frontend call refs, source-verified). Survey repos get UI-feature "
-          "breadth only (README/structure-declared); their API/call layers are intentionally not "
-          "mined. INFO items below are expected consequences of that scope, not defects.")
-    print(f"\nrepos={len(repos)} (primary={len(primary)}, survey={len(repos)-len(primary)}), "
+    print(f"\n> Tiers are EMERGENT (derive_tier.py), not hand-assigned: repos cluster by "
+          f"feature coverage at the largest natural gap (={tiers['gap']}). The 'deep' cluster "
+          f"({', '.join(sorted(deep))}) also happens to be the set whose source was read in full; "
+          f"'broad' repos ({', '.join(sorted(set(repo_ids)-deep))}) have UI-feature breadth only, so "
+          f"their absent API/call layers below are expected, not defects.")
+    print(f"\nrepos={len(repos)} (deep={len(deep)}, broad={len(repos)-len(deep)}), "
           f"protocols={len(load('protocols'))}, features={len(features)}, "
           f"entities={len(entities)}, operations={len(operations)}, "
           f"schemas={len(have_schema)}")

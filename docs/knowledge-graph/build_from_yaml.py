@@ -32,7 +32,7 @@ def build_ui_graph() -> nx.DiGraph:
     g = nx.DiGraph()
     for d in _load("repos"):
         g.add_node(d["id"], ntype="repo", label=d["label"], stack=d.get("stack", ""),
-                   license=d.get("license", ""), tier=d["tier"],
+                   license=d.get("license", ""),
                    integration=",".join(d.get("integration", [])),
                    browser_native=bool(d.get("browser_native", False)),
                    transport=",".join(d.get("transport", [])))

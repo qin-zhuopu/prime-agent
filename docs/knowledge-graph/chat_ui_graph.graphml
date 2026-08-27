@@ -1,15 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <key id="d13" for="edge" attr.name="source" attr.type="string" />
-  <key id="d12" for="edge" attr.name="kind" attr.type="string" />
-  <key id="d11" for="edge" attr.name="etype" attr.type="string" />
-  <key id="d10" for="node" attr.name="category" attr.type="string" />
-  <key id="d9" for="node" attr.name="priority" attr.type="string" />
-  <key id="d8" for="node" attr.name="kind" attr.type="string" />
-  <key id="d7" for="node" attr.name="transport" attr.type="string" />
-  <key id="d6" for="node" attr.name="browser_native" attr.type="boolean" />
-  <key id="d5" for="node" attr.name="integration" attr.type="string" />
-  <key id="d4" for="node" attr.name="tier" attr.type="string" />
+  <key id="d12" for="edge" attr.name="source" attr.type="string" />
+  <key id="d11" for="edge" attr.name="kind" attr.type="string" />
+  <key id="d10" for="edge" attr.name="etype" attr.type="string" />
+  <key id="d9" for="node" attr.name="category" attr.type="string" />
+  <key id="d8" for="node" attr.name="priority" attr.type="string" />
+  <key id="d7" for="node" attr.name="kind" attr.type="string" />
+  <key id="d6" for="node" attr.name="transport" attr.type="string" />
+  <key id="d5" for="node" attr.name="browser_native" attr.type="boolean" />
+  <key id="d4" for="node" attr.name="integration" attr.type="string" />
   <key id="d3" for="node" attr.name="license" attr.type="string" />
   <key id="d2" for="node" attr.name="stack" attr.type="string" />
   <key id="d1" for="node" attr.name="label" attr.type="string" />
@@ -20,2551 +19,2540 @@
       <data key="d1">agents-chat</data>
       <data key="d2">Next.js+React</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">stdio-rpc</data>
-      <data key="d6">False</data>
-      <data key="d7">stdio</data>
+      <data key="d4">stdio-rpc</data>
+      <data key="d5">False</data>
+      <data key="d6">stdio</data>
     </node>
     <node id="ACP">
       <data key="d0">protocol</data>
       <data key="d1">Agent Client Protocol (JSON-RPC/stdio)</data>
-      <data key="d8">protocol</data>
-      <data key="d7">stdio</data>
+      <data key="d7">protocol</data>
+      <data key="d6">stdio</data>
     </node>
     <node id="structured-render">
       <data key="d0">protocol</data>
       <data key="d1">Structured React components</data>
-      <data key="d8">rendering</data>
-      <data key="d7">n/a</data>
+      <data key="d7">rendering</data>
+      <data key="d6">n/a</data>
     </node>
     <node id="ACPC">
       <data key="d0">repo</data>
       <data key="d1">acp-components</data>
       <data key="d2">React (core+react pkgs)</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">stdio-rpc,in-process-sdk</data>
-      <data key="d6">False</data>
-      <data key="d7">stdio</data>
+      <data key="d4">stdio-rpc,in-process-sdk</data>
+      <data key="d5">False</data>
+      <data key="d6">stdio</data>
     </node>
     <node id="ACPUI">
       <data key="d0">repo</data>
       <data key="d1">acp-ui</data>
       <data key="d2">Vue3+Tauri</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">stdio-rpc</data>
-      <data key="d6">False</data>
-      <data key="d7">stdio</data>
+      <data key="d4">stdio-rpc</data>
+      <data key="d5">False</data>
+      <data key="d6">stdio</data>
     </node>
     <node id="ACPWG">
       <data key="d0">repo</data>
       <data key="d1">acp-web-gateway</data>
       <data key="d2">Kotlin server + web</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">WebSocket,stdio-rpc</data>
-      <data key="d6">False</data>
-      <data key="d7">WebSocket</data>
+      <data key="d4">WebSocket,stdio-rpc</data>
+      <data key="d5">False</data>
+      <data key="d6">WebSocket</data>
     </node>
     <node id="ASTUI">
       <data key="d0">repo</data>
       <data key="d1">assistant-ui</data>
       <data key="d2">React (TS lib)</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">in-process-sdk</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">in-process-sdk</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="CKIT">
       <data key="d0">repo</data>
       <data key="d1">CopilotKit</data>
       <data key="d2">React+Next.js</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">in-process-sdk</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">in-process-sdk</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="AG-UI">
       <data key="d0">protocol</data>
       <data key="d1">AG-UI agent&lt;-&gt;frontend event protocol</data>
-      <data key="d8">protocol</data>
-      <data key="d7">SSE</data>
+      <data key="d7">protocol</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="CP">
       <data key="d0">repo</data>
       <data key="d1">CodePilot</data>
       <data key="d2">Electron+Next.js</data>
       <data key="d3">BUSL-1.1</data>
-      <data key="d4">primary</data>
-      <data key="d5">REST+SSE</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">REST+SSE</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="SSE">
       <data key="d0">protocol</data>
       <data key="d1">Server-Sent Events</data>
-      <data key="d8">transport</data>
-      <data key="d7">SSE</data>
+      <data key="d7">transport</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="DH">
       <data key="d0">repo</data>
       <data key="d1">deepseek-harness</data>
       <data key="d2">Cordis+React</data>
       <data key="d3">open</data>
-      <data key="d4">primary</data>
-      <data key="d5">REST+SSE</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">REST+SSE</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="node-render">
       <data key="d0">protocol</data>
       <data key="d1">Node-ized registrable components</data>
-      <data key="d8">rendering</data>
-      <data key="d7">n/a</data>
+      <data key="d7">rendering</data>
+      <data key="d6">n/a</data>
     </node>
     <node id="HM">
       <data key="d0">repo</data>
       <data key="d1">hermes-agent</data>
       <data key="d2">Vite+React+xterm</data>
       <data key="d3">open</data>
-      <data key="d4">primary</data>
-      <data key="d5">WebSocket</data>
-      <data key="d6">True</data>
-      <data key="d7">WebSocket</data>
+      <data key="d4">WebSocket</data>
+      <data key="d5">True</data>
+      <data key="d6">WebSocket</data>
     </node>
     <node id="WS-JSONRPC">
       <data key="d0">protocol</data>
       <data key="d1">WebSocket JSON-RPC (tui_gateway)</data>
-      <data key="d8">protocol</data>
-      <data key="d7">WebSocket</data>
+      <data key="d7">protocol</data>
+      <data key="d6">WebSocket</data>
     </node>
     <node id="pty-terminal">
       <data key="d0">protocol</data>
       <data key="d1">PTY -&gt; xterm terminal mirror</data>
-      <data key="d8">rendering</data>
-      <data key="d7">n/a</data>
+      <data key="d7">rendering</data>
+      <data key="d6">n/a</data>
     </node>
     <node id="OCUI">
       <data key="d0">repo</data>
       <data key="d1">opencode-chatui</data>
       <data key="d2">React+Vite+tRPC</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">REST+SSE</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">REST+SSE</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="OGUI">
       <data key="d0">repo</data>
       <data key="d1">OpenGUI</data>
       <data key="d2">React+Vite+Electron</data>
       <data key="d3">open</data>
-      <data key="d4">survey</data>
-      <data key="d5">REST+SSE,in-process-sdk</data>
-      <data key="d6">True</data>
-      <data key="d7">SSE</data>
+      <data key="d4">REST+SSE,in-process-sdk</data>
+      <data key="d5">True</data>
+      <data key="d6">SSE</data>
     </node>
     <node id="aux">
       <data key="d0">category</data>
       <data key="d1">aux</data>
-      <data key="d9">P0</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:auth-pairing">
       <data key="d0">feature</data>
       <data key="d1">auth-pairing</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:details-panel">
       <data key="d0">feature</data>
       <data key="d1">details-panel</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:empty-welcome">
       <data key="d0">feature</data>
       <data key="d1">empty-welcome</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:error-boundary">
       <data key="d0">feature</data>
       <data key="d1">error-boundary</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:i18n">
       <data key="d0">feature</data>
       <data key="d1">i18n</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:message-feedback">
       <data key="d0">feature</data>
       <data key="d1">message-feedback</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:plugin-registry">
       <data key="d0">feature</data>
       <data key="d1">plugin-registry</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:primitives">
       <data key="d0">feature</data>
       <data key="d1">primitives</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:sidebar-session-list">
       <data key="d0">feature</data>
       <data key="d1">sidebar-session-list</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:theme">
       <data key="d0">feature</data>
       <data key="d1">theme</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="aux:toast-modal">
       <data key="d0">feature</data>
       <data key="d1">toast-modal</data>
-      <data key="d10">aux</data>
-      <data key="d9">P0</data>
+      <data key="d9">aux</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer">
       <data key="d0">category</data>
       <data key="d1">composer</data>
-      <data key="d9">P0</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:attachments">
       <data key="d0">feature</data>
       <data key="d1">attachments</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:dir-picker">
       <data key="d0">feature</data>
       <data key="d1">dir-picker</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:mentions">
       <data key="d0">feature</data>
       <data key="d1">mentions</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:message-input">
       <data key="d0">feature</data>
       <data key="d1">message-input</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:slash-commands">
       <data key="d0">feature</data>
       <data key="d1">slash-commands</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="composer:submission-policy">
       <data key="d0">feature</data>
       <data key="d1">submission-policy</data>
-      <data key="d10">composer</data>
-      <data key="d9">P0</data>
+      <data key="d9">composer</data>
+      <data key="d8">P0</data>
     </node>
     <node id="media">
       <data key="d0">category</data>
       <data key="d1">media</data>
-      <data key="d9">P4</data>
+      <data key="d8">P4</data>
     </node>
     <node id="media:batch-image-gen">
       <data key="d0">feature</data>
       <data key="d1">batch-image-gen</data>
-      <data key="d10">media</data>
-      <data key="d9">P4</data>
+      <data key="d9">media</data>
+      <data key="d8">P4</data>
     </node>
     <node id="media:deliverables">
       <data key="d0">feature</data>
       <data key="d1">deliverables</data>
-      <data key="d10">media</data>
-      <data key="d9">P4</data>
+      <data key="d9">media</data>
+      <data key="d8">P4</data>
     </node>
     <node id="media:image-gen">
       <data key="d0">feature</data>
       <data key="d1">image-gen</data>
-      <data key="d10">media</data>
-      <data key="d9">P4</data>
+      <data key="d9">media</data>
+      <data key="d8">P4</data>
     </node>
     <node id="media:image-thumb-lightbox">
       <data key="d0">feature</data>
       <data key="d1">image-thumb-lightbox</data>
-      <data key="d10">media</data>
-      <data key="d9">P4</data>
+      <data key="d9">media</data>
+      <data key="d8">P4</data>
     </node>
     <node id="media:media-preview">
       <data key="d0">feature</data>
       <data key="d1">media-preview</data>
-      <data key="d10">media</data>
-      <data key="d9">P4</data>
+      <data key="d9">media</data>
+      <data key="d8">P4</data>
     </node>
     <node id="messaging">
       <data key="d0">category</data>
       <data key="d1">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:assistant-markdown">
       <data key="d0">feature</data>
       <data key="d1">assistant-markdown</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:code-highlight">
       <data key="d0">feature</data>
       <data key="d1">code-highlight</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:conversation-view">
       <data key="d0">feature</data>
       <data key="d1">conversation-view</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:math-katex">
       <data key="d0">feature</data>
       <data key="d1">math-katex</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:message-actions">
       <data key="d0">feature</data>
       <data key="d1">message-actions</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:message-branching">
       <data key="d0">feature</data>
       <data key="d1">message-branching</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:message-list">
       <data key="d0">feature</data>
       <data key="d1">message-list</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:streaming-typing">
       <data key="d0">feature</data>
       <data key="d1">streaming-typing</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="messaging:virtual-scroll">
       <data key="d0">feature</data>
       <data key="d1">virtual-scroll</data>
-      <data key="d10">messaging</data>
-      <data key="d9">P0</data>
+      <data key="d9">messaging</data>
+      <data key="d8">P0</data>
     </node>
     <node id="model-config">
       <data key="d0">category</data>
       <data key="d1">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:agent-preset">
       <data key="d0">feature</data>
       <data key="d1">agent-preset</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:compaction-view">
       <data key="d0">feature</data>
       <data key="d1">compaction-view</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:context-injection">
       <data key="d0">feature</data>
       <data key="d1">context-injection</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:context-usage">
       <data key="d0">feature</data>
       <data key="d1">context-usage</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:mcp-config">
       <data key="d0">feature</data>
       <data key="d1">mcp-config</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:model-picker">
       <data key="d0">feature</data>
       <data key="d1">model-picker</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:rate-limit-banner">
       <data key="d0">feature</data>
       <data key="d1">rate-limit-banner</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:runtime-switch">
       <data key="d0">feature</data>
       <data key="d1">runtime-switch</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="model-config:skills">
       <data key="d0">feature</data>
       <data key="d1">skills</data>
-      <data key="d10">model-config</data>
-      <data key="d9">P3</data>
+      <data key="d9">model-config</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent">
       <data key="d0">category</data>
       <data key="d1">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:agent-asks-user">
       <data key="d0">feature</data>
       <data key="d1">agent-asks-user</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:background-jobs">
       <data key="d0">feature</data>
       <data key="d1">background-jobs</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:goal">
       <data key="d0">feature</data>
       <data key="d1">goal</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:plan-mode">
       <data key="d0">feature</data>
       <data key="d1">plan-mode</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:plan-review">
       <data key="d0">feature</data>
       <data key="d1">plan-review</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:subagent-card">
       <data key="d0">feature</data>
       <data key="d1">subagent-card</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:todo-list">
       <data key="d0">feature</data>
       <data key="d1">todo-list</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:trajectory-replay">
       <data key="d0">feature</data>
       <data key="d1">trajectory-replay</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="multi-agent:workflow-run">
       <data key="d0">feature</data>
       <data key="d1">workflow-run</data>
-      <data key="d10">multi-agent</data>
-      <data key="d9">P3</data>
+      <data key="d9">multi-agent</data>
+      <data key="d8">P3</data>
     </node>
     <node id="permission">
       <data key="d0">category</data>
       <data key="d1">permission</data>
-      <data key="d9">P1</data>
+      <data key="d8">P1</data>
     </node>
     <node id="permission:auto-review-notice">
       <data key="d0">feature</data>
       <data key="d1">auto-review-notice</data>
-      <data key="d10">permission</data>
-      <data key="d9">P1</data>
+      <data key="d9">permission</data>
+      <data key="d8">P1</data>
     </node>
     <node id="permission:permission-mode">
       <data key="d0">feature</data>
       <data key="d1">permission-mode</data>
-      <data key="d10">permission</data>
-      <data key="d9">P1</data>
+      <data key="d9">permission</data>
+      <data key="d8">P1</data>
     </node>
     <node id="permission:permission-panel">
       <data key="d0">feature</data>
       <data key="d1">permission-panel</data>
-      <data key="d10">permission</data>
-      <data key="d9">P1</data>
+      <data key="d9">permission</data>
+      <data key="d8">P1</data>
     </node>
     <node id="permission:permission-presets">
       <data key="d0">feature</data>
       <data key="d1">permission-presets</data>
-      <data key="d10">permission</data>
-      <data key="d9">P1</data>
+      <data key="d9">permission</data>
+      <data key="d8">P1</data>
     </node>
     <node id="reasoning">
       <data key="d0">category</data>
       <data key="d1">reasoning</data>
-      <data key="d9">P1</data>
+      <data key="d8">P1</data>
     </node>
     <node id="reasoning:chain-of-thought">
       <data key="d0">feature</data>
       <data key="d1">chain-of-thought</data>
-      <data key="d10">reasoning</data>
-      <data key="d9">P1</data>
+      <data key="d9">reasoning</data>
+      <data key="d8">P1</data>
     </node>
     <node id="reasoning:effort-setting">
       <data key="d0">feature</data>
       <data key="d1">effort-setting</data>
-      <data key="d10">reasoning</data>
-      <data key="d9">P1</data>
+      <data key="d9">reasoning</data>
+      <data key="d8">P1</data>
     </node>
     <node id="reasoning:reasoning-display">
       <data key="d0">feature</data>
       <data key="d1">reasoning-display</data>
-      <data key="d10">reasoning</data>
-      <data key="d9">P1</data>
+      <data key="d9">reasoning</data>
+      <data key="d8">P1</data>
     </node>
     <node id="reasoning:thinking-anim">
       <data key="d0">feature</data>
       <data key="d1">thinking-anim</data>
-      <data key="d10">reasoning</data>
-      <data key="d9">P1</data>
+      <data key="d9">reasoning</data>
+      <data key="d8">P1</data>
     </node>
     <node id="stream-control">
       <data key="d0">category</data>
       <data key="d1">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:message-queue">
       <data key="d0">feature</data>
       <data key="d1">message-queue</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:reconnect-resume">
       <data key="d0">feature</data>
       <data key="d1">reconnect-resume</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:rewind-retry">
       <data key="d0">feature</data>
       <data key="d1">rewind-retry</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:run-status">
       <data key="d0">feature</data>
       <data key="d1">run-status</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:session-connect">
       <data key="d0">feature</data>
       <data key="d1">session-connect</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:stop-interrupt">
       <data key="d0">feature</data>
       <data key="d1">stop-interrupt</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:stream-subscribe">
       <data key="d0">feature</data>
       <data key="d1">stream-subscribe</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="stream-control:terminal-reason">
       <data key="d0">feature</data>
       <data key="d1">terminal-reason</data>
-      <data key="d10">stream-control</data>
-      <data key="d9">P2</data>
+      <data key="d9">stream-control</data>
+      <data key="d8">P2</data>
     </node>
     <node id="tool-use">
       <data key="d0">category</data>
       <data key="d1">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:diff-view">
       <data key="d0">feature</data>
       <data key="d1">diff-view</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:file-read-view">
       <data key="d0">feature</data>
       <data key="d1">file-read-view</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:risk-confirm">
       <data key="d0">feature</data>
       <data key="d1">risk-confirm</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:search-sources">
       <data key="d0">feature</data>
       <data key="d1">search-sources</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:terminal-output">
       <data key="d0">feature</data>
       <data key="d1">terminal-output</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:tool-call-tree">
       <data key="d0">feature</data>
       <data key="d1">tool-call-tree</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:tool-card">
       <data key="d0">feature</data>
       <data key="d1">tool-card</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <node id="tool-use:web-card">
       <data key="d0">feature</data>
       <data key="d1">web-card</data>
-      <data key="d10">tool-use</data>
-      <data key="d9">P1</data>
+      <data key="d9">tool-use</data>
+      <data key="d8">P1</data>
     </node>
     <edge source="ACHAT" target="ACP">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACHAT" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACHAT" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="composer:slash-commands">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="multi-agent:subagent-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACHAT" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="ACP">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACPC" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACPC" target="aux:details-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:i18n">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:plugin-registry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="composer:submission-policy">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="messaging:message-actions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="model-config:context-usage">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="model-config:skills">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="multi-agent:plan-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="multi-agent:subagent-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="permission:permission-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="reasoning:reasoning-display">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="stream-control:reconnect-resume">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="tool-use:file-read-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="tool-use:search-sources">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="tool-use:tool-call-tree">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPC" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="ACP">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACPUI" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACPUI" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="composer:attachments">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="permission:permission-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPUI" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="ACP">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ACPWG" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ACPWG" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="ASTUI" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="composer:attachments">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="composer:submission-policy">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:message-actions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:message-branching">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="reasoning:reasoning-display">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="ASTUI" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="AG-UI">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="CKIT" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="CKIT" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="model-config:mcp-config">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CKIT" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="CP" target="SSE">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="CP" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="CP" target="aux:details-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:error-boundary">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:i18n">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="aux:toast-modal">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:attachments">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:dir-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:mentions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:slash-commands">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="composer:submission-policy">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="media:batch-image-gen">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="media:image-gen">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="media:image-thumb-lightbox">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="media:media-preview">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:math-katex">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:message-actions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:message-branching">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="messaging:virtual-scroll">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:compaction-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:context-injection">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:context-usage">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:mcp-config">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:rate-limit-banner">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:runtime-switch">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="model-config:skills">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="multi-agent:background-jobs">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="multi-agent:subagent-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="multi-agent:todo-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="permission:auto-review-notice">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="permission:permission-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="reasoning:chain-of-thought">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="reasoning:effort-setting">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="reasoning:reasoning-display">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="reasoning:thinking-anim">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:message-queue">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:reconnect-resume">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:rewind-retry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:run-status">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="stream-control:terminal-reason">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:file-read-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:risk-confirm">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:search-sources">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:terminal-output">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="CP" target="tool-use:web-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="SSE">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="DH" target="node-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="DH" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="DH" target="aux:auth-pairing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:details-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:error-boundary">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:i18n">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:message-feedback">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:plugin-registry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="aux:toast-modal">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:attachments">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:dir-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:mentions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:slash-commands">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="composer:submission-policy">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="media:batch-image-gen">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="media:deliverables">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="media:image-thumb-lightbox">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="media:media-preview">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:math-katex">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:message-actions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:message-branching">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="messaging:virtual-scroll">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:agent-preset">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:compaction-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:context-injection">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:context-usage">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:mcp-config">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:runtime-switch">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="model-config:skills">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:agent-asks-user">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:background-jobs">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:goal">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:plan-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:plan-review">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:subagent-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:todo-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:trajectory-replay">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="multi-agent:workflow-run">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="permission:auto-review-notice">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="permission:permission-mode">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="permission:permission-presets">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="reasoning:chain-of-thought">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="reasoning:effort-setting">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="reasoning:reasoning-display">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="reasoning:thinking-anim">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:message-queue">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:reconnect-resume">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:rewind-retry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:run-status">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="stream-control:terminal-reason">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:file-read-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:risk-confirm">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:search-sources">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:terminal-output">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:tool-call-tree">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="DH" target="tool-use:web-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="WS-JSONRPC">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="HM" target="pty-terminal">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="HM" target="aux:auth-pairing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:details-panel">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:empty-welcome">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:error-boundary">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:i18n">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:plugin-registry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="aux:toast-modal">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="composer:attachments">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="composer:dir-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="composer:slash-commands">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="composer:submission-policy">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="media:deliverables">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="media:media-preview">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:message-actions">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:agent-preset">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:compaction-view">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:context-usage">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:mcp-config">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:runtime-switch">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="model-config:skills">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:agent-asks-user">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:background-jobs">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:plan-mode">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:plan-review">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:subagent-card">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:todo-list">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:trajectory-replay">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="multi-agent:workflow-run">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="permission:auto-review-notice">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="permission:permission-mode">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="permission:permission-panel">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="permission:permission-presets">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="reasoning:chain-of-thought">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="reasoning:effort-setting">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="reasoning:reasoning-display">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="reasoning:thinking-anim">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:reconnect-resume">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:rewind-retry">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:run-status">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="stream-control:terminal-reason">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:file-read-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:risk-confirm">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:search-sources">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:terminal-output">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:tool-call-tree">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="HM" target="tool-use:web-card">
-      <data key="d11">implements</data>
-      <data key="d12">terminal</data>
-      <data key="d13">verified</data>
+      <data key="d10">implements</data>
+      <data key="d11">terminal</data>
+      <data key="d12">verified</data>
     </edge>
     <edge source="OCUI" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="OCUI" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="tool-use:file-read-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="tool-use:search-sources">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OCUI" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="structured-render">
-      <data key="d11">uses</data>
+      <data key="d10">uses</data>
     </edge>
     <edge source="OGUI" target="aux:primitives">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="aux:sidebar-session-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="aux:theme">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="composer:dir-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="composer:message-input">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="messaging:assistant-markdown">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="messaging:code-highlight">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="messaging:conversation-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="messaging:message-list">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="messaging:streaming-typing">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="model-config:model-picker">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="model-config:runtime-switch">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="stream-control:reconnect-resume">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="stream-control:session-connect">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="stream-control:stop-interrupt">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="stream-control:stream-subscribe">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="tool-use:diff-view">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="OGUI" target="tool-use:tool-card">
-      <data key="d11">implements</data>
-      <data key="d12">structured</data>
-      <data key="d13">declared</data>
+      <data key="d10">implements</data>
+      <data key="d11">structured</data>
+      <data key="d12">declared</data>
     </edge>
     <edge source="aux" target="aux:auth-pairing">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:details-panel">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:empty-welcome">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:error-boundary">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:i18n">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:message-feedback">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:plugin-registry">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:primitives">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:sidebar-session-list">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:theme">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="aux" target="aux:toast-modal">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:attachments">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:dir-picker">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:mentions">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:message-input">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:slash-commands">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="composer" target="composer:submission-policy">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="media" target="media:batch-image-gen">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="media" target="media:deliverables">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="media" target="media:image-gen">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="media" target="media:image-thumb-lightbox">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="media" target="media:media-preview">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:assistant-markdown">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:code-highlight">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:conversation-view">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:math-katex">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:message-actions">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:message-branching">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:message-list">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:streaming-typing">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="messaging" target="messaging:virtual-scroll">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:agent-preset">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:compaction-view">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:context-injection">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:context-usage">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:mcp-config">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:model-picker">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:rate-limit-banner">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:runtime-switch">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="model-config" target="model-config:skills">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:agent-asks-user">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:background-jobs">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:goal">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:plan-mode">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:plan-review">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:subagent-card">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:todo-list">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:trajectory-replay">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="multi-agent" target="multi-agent:workflow-run">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="permission" target="permission:auto-review-notice">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="permission" target="permission:permission-mode">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="permission" target="permission:permission-panel">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="permission" target="permission:permission-presets">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="reasoning" target="reasoning:chain-of-thought">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="reasoning" target="reasoning:effort-setting">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="reasoning" target="reasoning:reasoning-display">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="reasoning" target="reasoning:thinking-anim">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:message-queue">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:reconnect-resume">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:rewind-retry">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:run-status">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:session-connect">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:stop-interrupt">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:stream-subscribe">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="stream-control" target="stream-control:terminal-reason">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:diff-view">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:file-read-view">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:risk-confirm">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:search-sources">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:terminal-output">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:tool-call-tree">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:tool-card">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
     <edge source="tool-use" target="tool-use:web-card">
-      <data key="d11">contains</data>
+      <data key="d10">contains</data>
     </edge>
   </graph>
 </graphml>

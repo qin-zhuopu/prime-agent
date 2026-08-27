@@ -2,23 +2,23 @@
 
 - Nodes: 101  (repos=11, protocols=7, categories=10, features=73)
 - Edges: 419
-- Repos: 3 primary (source-verified) + 8 survey (README/structure-declared)
+- Emergent tiers (by feature coverage, natural break gap=29): 3 deep + 8 broad (NOT hand-assigned; see derive_tier.py)
 
 ## Per-repo feature coverage
 
-| repo | tier | source | structured | terminal | total impl |
-|---|---|---|---|---|---|
-| CodePilot | primary | verified | 60 | 0 | 60 |
-| deepseek-harness | primary | verified | 71 | 0 | 71 |
-| hermes-agent | primary | verified | 41 | 20 | 61 |
-| acp-components | survey | declared | 31 | 0 | 31 |
-| acp-ui | survey | declared | 19 | 0 | 19 |
-| assistant-ui | survey | declared | 17 | 0 | 17 |
-| opencode-chatui | survey | declared | 16 | 0 | 16 |
-| OpenGUI | survey | declared | 18 | 0 | 18 |
-| CopilotKit | survey | declared | 10 | 0 | 10 |
-| agents-chat | survey | declared | 14 | 0 | 14 |
-| acp-web-gateway | survey | declared | 10 | 0 | 10 |
+| repo | tier (emergent) | structured | terminal | total impl |
+|---|---|---|---|---|
+| CodePilot | deep | 60 | 0 | 60 |
+| deepseek-harness | deep | 71 | 0 | 71 |
+| hermes-agent | deep | 41 | 20 | 61 |
+| acp-components | broad | 31 | 0 | 31 |
+| acp-ui | broad | 19 | 0 | 19 |
+| assistant-ui | broad | 17 | 0 | 17 |
+| opencode-chatui | broad | 16 | 0 | 16 |
+| OpenGUI | broad | 18 | 0 | 18 |
+| CopilotKit | broad | 10 | 0 | 10 |
+| agents-chat | broad | 14 | 0 | 14 |
+| acp-web-gateway | broad | 10 | 0 | 10 |
 
 ## Protocol adoption (repos per protocol)
 

@@ -53,9 +53,8 @@ def main() -> None:
         if d["ntype"] != "repo":
             continue
         protos = sorted(v for _, v in g.out_edges(rid) if g.nodes[v]["ntype"] == "protocol")
-        tier = ui.REPOS[rid]["tier"]
         dump(DATA / "repos" / f"{rid}.yaml", {
-            "id": rid, "ntype": "repo", "label": d["label"], "tier": tier,
+            "id": rid, "ntype": "repo", "label": d["label"],
             "stack": d.get("stack", ""), "license": d.get("license", ""),
             "transport": REPO_TRANSPORT.get(rid, ["none/unknown"]),
             "protocols": protos,

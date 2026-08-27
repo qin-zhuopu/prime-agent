@@ -1,7 +1,6 @@
 id: ASTUI
 ntype: repo
 label: assistant-ui
-tier: survey
 stack: React (TS lib)
 license: open
 transport:

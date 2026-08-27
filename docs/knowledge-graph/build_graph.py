@@ -32,18 +32,18 @@ HERE = Path(__file__).parent
 # --- repos + protocols -------------------------------------------------------
 REPOS = {
     # --- primary set: verified by reading the source ---
-    "CP": {"label": "CodePilot", "stack": "Electron+Next.js", "license": "BUSL-1.1", "tier": "primary"},
-    "DH": {"label": "deepseek-harness", "stack": "Cordis+React", "license": "open", "tier": "primary"},
-    "HM": {"label": "hermes-agent", "stack": "Vite+React+xterm", "license": "open", "tier": "primary"},
+    "CP": {"label": "CodePilot", "stack": "Electron+Next.js", "license": "BUSL-1.1"},
+    "DH": {"label": "deepseek-harness", "stack": "Cordis+React", "license": "open"},
+    "HM": {"label": "hermes-agent", "stack": "Vite+React+xterm", "license": "open"},
     # --- survey set: capabilities from README/structure scan (source=declared) ---
-    "ACPC": {"label": "acp-components", "stack": "React (core+react pkgs)", "license": "open", "tier": "survey"},
-    "ACPUI": {"label": "acp-ui", "stack": "Vue3+Tauri", "license": "open", "tier": "survey"},
-    "ASTUI": {"label": "assistant-ui", "stack": "React (TS lib)", "license": "open", "tier": "survey"},
-    "OCUI": {"label": "opencode-chatui", "stack": "React+Vite+tRPC", "license": "open", "tier": "survey"},
-    "OGUI": {"label": "OpenGUI", "stack": "React+Vite+Electron", "license": "open", "tier": "survey"},
-    "CKIT": {"label": "CopilotKit", "stack": "React+Next.js", "license": "open", "tier": "survey"},
-    "ACHAT": {"label": "agents-chat", "stack": "Next.js+React", "license": "open", "tier": "survey"},
-    "ACPWG": {"label": "acp-web-gateway", "stack": "Kotlin server + web", "license": "open", "tier": "survey"},
+    "ACPC": {"label": "acp-components", "stack": "React (core+react pkgs)", "license": "open"},
+    "ACPUI": {"label": "acp-ui", "stack": "Vue3+Tauri", "license": "open"},
+    "ASTUI": {"label": "assistant-ui", "stack": "React (TS lib)", "license": "open"},
+    "OCUI": {"label": "opencode-chatui", "stack": "React+Vite+tRPC", "license": "open"},
+    "OGUI": {"label": "OpenGUI", "stack": "React+Vite+Electron", "license": "open"},
+    "CKIT": {"label": "CopilotKit", "stack": "React+Next.js", "license": "open"},
+    "ACHAT": {"label": "agents-chat", "stack": "Next.js+React", "license": "open"},
+    "ACPWG": {"label": "acp-web-gateway", "stack": "Kotlin server + web", "license": "open"},
 }
 
 PROTOCOLS = {
@@ -317,29 +317,36 @@ def build_graph() -> nx.DiGraph:
 
 
 def analyze(g: nx.DiGraph) -> str:
+    import derive_tier
     features = [n for n, d in g.nodes(data=True) if d["ntype"] == "feature"]
-    primary = [r for r in REPOS if REPOS[r]["tier"] == "primary"]
-    survey = [r for r in REPOS if REPOS[r]["tier"] == "survey"]
+    tiers = derive_tier.classify()
+    # 'deep' cluster emerges from feature-coverage (no manual label). This replaces
+    # the former hand-assigned primary/survey. Cross-repo conclusions still focus on
+    # the deep cluster because it is the source-verified, high-coverage set.
+    primary = [r for r in tiers["deep"] if r in REPOS]
+    survey = [r for r in tiers["broad"] if r in REPOS]
     lines: list[str] = []
     lines.append("# Chat/Agent UI Knowledge Graph -- Metrics\n")
     lines.append(f"- Nodes: {g.number_of_nodes()}  (repos={len(REPOS)}, protocols={len(PROTOCOLS)}, categories={len(CATEGORIES)}, features={len(features)})")
     lines.append(f"- Edges: {g.number_of_edges()}")
-    lines.append(f"- Repos: {len(primary)} primary (source-verified) + {len(survey)} survey (README/structure-declared)\n")
+    lines.append(f"- Emergent tiers (by feature coverage, natural break gap={tiers['gap']}): "
+                 f"{len(primary)} deep + {len(survey)} broad (NOT hand-assigned; see derive_tier.py)\n")
 
     def names(fs):
         return ", ".join(sorted(g.nodes[x]["label"] for x in fs)) or "(none)"
 
-    # coverage per repo (verified set)
+    # coverage per repo
+    deep_set = set(primary)
     lines.append("## Per-repo feature coverage\n")
-    lines.append("| repo | tier | source | structured | terminal | total impl |")
-    lines.append("|---|---|---|---|---|---|")
+    lines.append("| repo | tier (emergent) | structured | terminal | total impl |")
+    lines.append("|---|---|---|---|---|")
     for rid in REPOS:
         impl = [(v, g.edges[rid, v]) for v in g.successors(rid)
                 if g.nodes[v]["ntype"] == "feature"]
         s = sum(1 for _, e in impl if e["kind"] == "structured")
         t = sum(1 for _, e in impl if e["kind"] == "terminal")
-        src = "verified" if REPOS[rid]["tier"] == "primary" else "declared"
-        lines.append(f"| {REPOS[rid]['label']} | {REPOS[rid]['tier']} | {src} | {s} | {t} | {len(impl)} |")
+        tier = "deep" if rid in deep_set else "broad"
+        lines.append(f"| {REPOS[rid]['label']} | {tier} | {s} | {t} | {len(impl)} |")
     lines.append("")
 
     # protocol adoption
