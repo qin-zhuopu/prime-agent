@@ -280,6 +280,11 @@
       <data key="d1">respond</data>
       <data key="d6">Permission</data>
     </node>
+    <node id="O:Session.compress">
+      <data key="d0">operation</data>
+      <data key="d1">compress</data>
+      <data key="d6">Session</data>
+    </node>
     <node id="O:Session.create">
       <data key="d0">operation</data>
       <data key="d1">create</data>
@@ -315,14 +320,39 @@
       <data key="d1">list</data>
       <data key="d6">Session</data>
     </node>
+    <node id="O:Session.rename">
+      <data key="d0">operation</data>
+      <data key="d1">rename</data>
+      <data key="d6">Session</data>
+    </node>
+    <node id="O:Session.reset">
+      <data key="d0">operation</data>
+      <data key="d1">reset</data>
+      <data key="d6">Session</data>
+    </node>
     <node id="O:Session.search">
       <data key="d0">operation</data>
       <data key="d1">search</data>
       <data key="d6">Session</data>
     </node>
+    <node id="O:Session.steer">
+      <data key="d0">operation</data>
+      <data key="d1">steer</data>
+      <data key="d6">Session</data>
+    </node>
+    <node id="O:Session.undo">
+      <data key="d0">operation</data>
+      <data key="d1">undo</data>
+      <data key="d6">Session</data>
+    </node>
     <node id="O:Session.update">
       <data key="d0">operation</data>
       <data key="d1">update</data>
+      <data key="d6">Session</data>
+    </node>
+    <node id="O:Session.usage">
+      <data key="d0">operation</data>
+      <data key="d1">usage</data>
       <data key="d6">Session</data>
     </node>
     <node id="O:Settings.get">
@@ -1035,6 +1065,13 @@
       <data key="d12" />
       <data key="d13">RPC</data>
     </edge>
+    <edge source="DH" target="O:Session.rename">
+      <data key="d9">exposes</data>
+      <data key="d10">DH</data>
+      <data key="d11">session.rename</data>
+      <data key="d12" />
+      <data key="d13">RPC</data>
+    </edge>
     <edge source="DH" target="O:Session.search">
       <data key="d9">exposes</data>
       <data key="d10">DH</data>
@@ -1161,6 +1198,13 @@
       <data key="d12" />
       <data key="d13">WS-RPC</data>
     </edge>
+    <edge source="HM" target="O:Session.compress">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.compress</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
     <edge source="HM" target="O:Session.create">
       <data key="d9">exposes</data>
       <data key="d10">HM</data>
@@ -1210,10 +1254,45 @@
       <data key="d12" />
       <data key="d13">WS-RPC</data>
     </edge>
+    <edge source="HM" target="O:Session.rename">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.title</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.reset">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.reset</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.steer">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.steer</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.undo">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.undo</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
     <edge source="HM" target="O:Session.update">
       <data key="d9">exposes</data>
       <data key="d10">HM</data>
       <data key="d11">session.save</data>
+      <data key="d12" />
+      <data key="d13">WS-RPC</data>
+    </edge>
+    <edge source="HM" target="O:Session.usage">
+      <data key="d9">exposes</data>
+      <data key="d10">HM</data>
+      <data key="d11">session.usage</data>
       <data key="d12" />
       <data key="d13">WS-RPC</data>
     </edge>
@@ -1335,6 +1414,9 @@
     <edge source="E:Permission" target="O:Permission.respond">
       <data key="d9">has_op</data>
     </edge>
+    <edge source="E:Session" target="O:Session.compress">
+      <data key="d9">has_op</data>
+    </edge>
     <edge source="E:Session" target="O:Session.create">
       <data key="d9">has_op</data>
     </edge>
@@ -1356,10 +1438,25 @@
     <edge source="E:Session" target="O:Session.list">
       <data key="d9">has_op</data>
     </edge>
+    <edge source="E:Session" target="O:Session.rename">
+      <data key="d9">has_op</data>
+    </edge>
+    <edge source="E:Session" target="O:Session.reset">
+      <data key="d9">has_op</data>
+    </edge>
     <edge source="E:Session" target="O:Session.search">
       <data key="d9">has_op</data>
     </edge>
+    <edge source="E:Session" target="O:Session.steer">
+      <data key="d9">has_op</data>
+    </edge>
+    <edge source="E:Session" target="O:Session.undo">
+      <data key="d9">has_op</data>
+    </edge>
     <edge source="E:Session" target="O:Session.update">
+      <data key="d9">has_op</data>
+    </edge>
+    <edge source="E:Session" target="O:Session.usage">
       <data key="d9">has_op</data>
     </edge>
     <edge source="E:Settings" target="O:Settings.get">

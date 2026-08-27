@@ -1,0 +1,8 @@
+id: O:Session.compress
+ntype: operation
+label: compress
+entity: Session
+endpoints:
+  HM:
+    name: session.compress
+    style: WS-RPC

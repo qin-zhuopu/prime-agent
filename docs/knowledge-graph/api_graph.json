@@ -315,6 +315,12 @@
     },
     {
       "ntype": "operation",
+      "label": "compress",
+      "entity": "Session",
+      "id": "O:Session.compress"
+    },
+    {
+      "ntype": "operation",
       "label": "create",
       "entity": "Session",
       "id": "O:Session.create"
@@ -357,15 +363,45 @@
     },
     {
       "ntype": "operation",
+      "label": "rename",
+      "entity": "Session",
+      "id": "O:Session.rename"
+    },
+    {
+      "ntype": "operation",
+      "label": "reset",
+      "entity": "Session",
+      "id": "O:Session.reset"
+    },
+    {
+      "ntype": "operation",
       "label": "search",
       "entity": "Session",
       "id": "O:Session.search"
     },
     {
       "ntype": "operation",
+      "label": "steer",
+      "entity": "Session",
+      "id": "O:Session.steer"
+    },
+    {
+      "ntype": "operation",
+      "label": "undo",
+      "entity": "Session",
+      "id": "O:Session.undo"
+    },
+    {
+      "ntype": "operation",
       "label": "update",
       "entity": "Session",
       "id": "O:Session.update"
+    },
+    {
+      "ntype": "operation",
+      "label": "usage",
+      "entity": "Session",
+      "id": "O:Session.usage"
     },
     {
       "ntype": "operation",
@@ -1249,6 +1285,15 @@
     {
       "etype": "exposes",
       "repo": "DH",
+      "name": "session.rename",
+      "http": "",
+      "style": "RPC",
+      "source": "DH",
+      "target": "O:Session.rename"
+    },
+    {
+      "etype": "exposes",
+      "repo": "DH",
       "name": "session.search",
       "http": "",
       "style": "RPC",
@@ -1411,6 +1456,15 @@
     {
       "etype": "exposes",
       "repo": "HM",
+      "name": "session.compress",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.compress"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
       "name": "session.create",
       "http": "",
       "style": "WS-RPC",
@@ -1474,11 +1528,56 @@
     {
       "etype": "exposes",
       "repo": "HM",
+      "name": "session.title",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.rename"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "session.reset",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.reset"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "session.steer",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.steer"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "session.undo",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.undo"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
       "name": "session.save",
       "http": "",
       "style": "WS-RPC",
       "source": "HM",
       "target": "O:Session.update"
+    },
+    {
+      "etype": "exposes",
+      "repo": "HM",
+      "name": "session.usage",
+      "http": "",
+      "style": "WS-RPC",
+      "source": "HM",
+      "target": "O:Session.usage"
     },
     {
       "etype": "exposes",
@@ -1669,6 +1768,11 @@
     {
       "etype": "has_op",
       "source": "E:Session",
+      "target": "O:Session.compress"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
       "target": "O:Session.create"
     },
     {
@@ -1704,12 +1808,37 @@
     {
       "etype": "has_op",
       "source": "E:Session",
+      "target": "O:Session.rename"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
+      "target": "O:Session.reset"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
       "target": "O:Session.search"
     },
     {
       "etype": "has_op",
       "source": "E:Session",
+      "target": "O:Session.steer"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
+      "target": "O:Session.undo"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
       "target": "O:Session.update"
+    },
+    {
+      "etype": "has_op",
+      "source": "E:Session",
+      "target": "O:Session.usage"
     },
     {
       "etype": "has_op",

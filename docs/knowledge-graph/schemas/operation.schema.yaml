@@ -14,7 +14,8 @@ properties:
     description: canonical operation verb
     enum: [create, list, get, update, delete, send, interrupt,
            stream, fork, rename, search, select, respond,
-           pause, resume, complete, clear, history]
+           pause, resume, complete, clear, history,
+           steer, compress, undo, reset, usage]
   entity:
     description: owning entity label (must match an entity node)
     type: string

@@ -1,0 +1,8 @@
+id: O:Session.reset
+ntype: operation
+label: reset
+entity: Session
+endpoints:
+  HM:
+    name: session.reset
+    style: WS-RPC

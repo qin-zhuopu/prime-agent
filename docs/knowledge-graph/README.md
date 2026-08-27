@@ -43,7 +43,7 @@ python3 build_graph.py
 ### B. 后端 API 实体-操作图（`build_api_graph.py`）
 新增两类节点，粒度下探到"实体上的操作"：
 - `entity` — 后端业务实体（Session / Message / Permission / Goal / Subagent / Model / Skill / AgentPreset / Workspace / File / Attachment / Settings / Credential / Job，共 14）
-- `operation` — 实体上的 canonical 操作（create / list / get / update / delete / send / interrupt / fork / select / respond / pause / resume / complete / clear / history / stream / search）
+- `operation` — 实体上的 canonical 操作（create / list / get / update / delete / send / interrupt / fork / select / respond / pause / resume / complete / clear / history / stream / search，以及聊天紧密相关的 **steer（实时干预）/ compress（上下文压缩）/ undo（撤销）/ reset / usage / rename**）
 
 边：
 - `entity --has_op--> operation`（如 Session 的 create/list/get/update/delete/fork/interrupt/search 各是一个操作节点）

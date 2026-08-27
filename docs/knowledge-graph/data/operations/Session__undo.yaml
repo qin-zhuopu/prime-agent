@@ -1,0 +1,8 @@
+id: O:Session.undo
+ntype: operation
+label: undo
+entity: Session
+endpoints:
+  HM:
+    name: session.undo
+    style: WS-RPC

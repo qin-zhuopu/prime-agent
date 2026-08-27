@@ -1,7 +1,7 @@
 # Backend API Knowledge Graph -- Metrics
 
-- Nodes: 111 (repos=3, entities=14, operations=51)
-- Edges: 201
+- Nodes: 117 (repos=3, entities=14, operations=57)
+- Edges: 214
 
 ## Entity naming across repos
 
@@ -103,6 +103,7 @@
 
 | operation | CP (url [method]) | DH (rpc) | HM (rpc) |
 |---|---|---|---|
+| compress | - | - | session.compress |
 | create | /chat/sessions [POST] | session.create | session.create |
 | delete | /chat/sessions/[id] [DELETE] | workspace.archiveSession | session.close |
 | fork | /chat/rewind [POST] | session.fork | session.branch |
@@ -110,8 +111,13 @@
 | history | - | session.history | session.history |
 | interrupt | /chat/interrupt [POST] | session.cancel | session.interrupt |
 | list | /chat/sessions [GET] | session.list | session.active_list |
+| rename | - | session.rename | session.title |
+| reset | - | - | session.reset |
 | search | /chat/sessions/by-cwd [GET] | session.search | - |
+| steer | - | - | session.steer |
+| undo | - | - | session.undo |
 | update | /chat/sessions/[id] [PATCH] | - | session.save |
+| usage | - | - | session.usage |
 
 ### Settings
 
@@ -150,8 +156,8 @@
 | repo | style | #operations exposed |
 |---|---|---|
 | CodePilot | REST | 30 |
-| deepseek-harness | RPC | 38 |
-| hermes-agent | WS-RPC | 18 |
+| deepseek-harness | RPC | 39 |
+| hermes-agent | WS-RPC | 24 |
 
 Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming (no URL/HTTP verb). All are normalized to canonical (entity, operation) nodes so the three shapes become comparable. Entity/op absence in a repo = no `exposes` edge.
 

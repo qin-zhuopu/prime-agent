@@ -2,7 +2,7 @@
 
 > Tiers are EMERGENT (derive_tier.py), not hand-assigned: repos cluster by feature coverage at the largest natural gap (=29). The 'deep' cluster (CP, DH, HM) also happens to be the set whose source was read in full; 'broad' repos (ACHAT, ACPC, ACPUI, ACPWG, ASTUI, CKIT, OCUI, OGUI) have UI-feature breadth only, so their absent API/call layers below are expected, not defects.
 
-repos=11 (deep=3, broad=8), protocols=7, features=73, entities=14, operations=51, schemas=7
+repos=11 (deep=3, broad=8), protocols=7, features=73, entities=14, operations=57, schemas=7
 
 ## ERROR (must fix) (0)
 
@@ -29,6 +29,6 @@ repos=11 (deep=3, broad=8), protocols=7, features=73, entities=14, operations=51
   - api: entity AgentPreset has no name in ['CP'] (absent there, or unmapped)
   - api: entity Goal has no name in ['CP'] (absent there, or unmapped)
   - api: entity Skill has no name in ['CP'] (absent there, or unmapped)
-  - calls: 24 operations have no resolved frontend call (may be server-internal, event-only, or scanner gap)
+  - calls: 30 operations have no resolved frontend call (may be server-internal, event-only, or scanner gap)
 
 Summary: 0 errors, 0 warnings, 21 infos

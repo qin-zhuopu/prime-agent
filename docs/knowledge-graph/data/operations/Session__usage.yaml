@@ -1,0 +1,8 @@
+id: O:Session.usage
+ntype: operation
+label: usage
+entity: Session
+endpoints:
+  HM:
+    name: session.usage
+    style: WS-RPC

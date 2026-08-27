@@ -1,0 +1,8 @@
+id: O:Session.steer
+ntype: operation
+label: steer
+entity: Session
+endpoints:
+  HM:
+    name: session.steer
+    style: WS-RPC

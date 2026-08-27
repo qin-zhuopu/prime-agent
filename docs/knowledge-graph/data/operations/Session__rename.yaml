@@ -1,0 +1,11 @@
+id: O:Session.rename
+ntype: operation
+label: rename
+entity: Session
+endpoints:
+  DH:
+    name: session.rename
+    style: RPC
+  HM:
+    name: session.title
+    style: WS-RPC

@@ -30,7 +30,8 @@ OP_DIR = HERE / "data" / "operations"
 # canonical operation vocabulary (must match operation.schema.yaml enum)
 CANON_OPS = {"create", "list", "get", "update", "delete", "send", "interrupt",
              "stream", "fork", "rename", "search", "select", "respond",
-             "pause", "resume", "complete", "clear", "history"}
+             "pause", "resume", "complete", "clear", "history",
+             "steer", "compress", "undo", "reset", "usage"}
 
 # namespace (DH/HM) -> canonical Entity label. Only core interaction entities.
 NS_TO_ENTITY = {
@@ -71,6 +72,9 @@ ACTION_ALIAS = {
     "listDirectory": "list", "openPath": "get", "attachment": "create",
     "createDirectory": "create",
     "manage": "update", "reload": "update", "save": "update",
+    # chat-adjacent session operations
+    "steer": "steer", "compress": "compress", "undo": "undo",
+    "branch": "fork", "title": "rename", "reset": "reset", "usage": "usage",
 }
 
 # CP REST (url, verb) -> (Entity, operation). Explicit because REST has no entity.action.
@@ -132,7 +136,8 @@ ENTITY_DISPLAY = {
 # like Session.send (that is really Message.send). An (entity, op) not listed here
 # is dropped to unmapped, keeping the canonical model clean.
 ENTITY_OPS = {
-    "Session": {"create", "list", "get", "update", "delete", "fork", "interrupt", "search", "history"},
+    "Session": {"create", "list", "get", "update", "delete", "fork", "interrupt", "search",
+                "history", "rename", "steer", "compress", "undo", "reset", "usage"},
     "Message": {"send", "list", "update", "stream"},
     "Permission": {"respond", "get"},
     "Model": {"list", "select"},
