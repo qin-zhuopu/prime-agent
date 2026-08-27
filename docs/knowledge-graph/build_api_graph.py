@@ -130,10 +130,26 @@ MAP: dict[tuple[str, str], dict[str, tuple[str | None, str | None]]] = {
 }
 
 
+# api-node style (lowercase) for each seed repo; the endpoint edge keeps the
+# legacy uppercase `style` for metric rendering.
+API_STYLE = {"CP": "rest", "DH": "rpc", "HM": "ws-rpc"}
+
+
+def api_node_id(rid: str) -> str:
+    """Seed-path api node id. Path is unknown in the seed model, so use the
+    `.` fallback (see MIGRATION-DESIGN section 3.1)."""
+    return f"A:{rid}/."
+
+
 def build_graph() -> nx.DiGraph:
     g = nx.DiGraph()
+    # repo nodes are pure git identity; the api surface is a separate node.
     for rid, m in REPOS.items():
-        g.add_node(rid, ntype="repo", label=m["label"], style=m["style"])
+        g.add_node(rid, ntype="repo", label=m["label"])
+        aid = api_node_id(rid)
+        g.add_node(aid, ntype="api", label=m["label"], repo=rid, path=".",
+                   style=API_STYLE[rid])
+        g.add_edge(aid, rid, etype="located_in", path=".")
     for ent, names in ENTITY_NAMES.items():
         g.add_node(f"E:{ent}", ntype="entity", label=ent,
                    **{f"name_{r}": (names.get(r) or "") for r in REPOS})
@@ -148,7 +164,8 @@ def build_graph() -> nx.DiGraph:
         for rid, (name, http) in repo_map.items():
             if not name:
                 continue  # entity/op absent in this repo
-            g.add_edge(rid, oid, etype="exposes",
+            # exposes now originates from the api node, not the repo node.
+            g.add_edge(api_node_id(rid), oid, etype="exposes",
                        repo=rid, name=name, http=(http or ""),
                        style=REPOS[rid]["style"])
     return g
@@ -181,8 +198,13 @@ def analyze(g: nx.DiGraph) -> str:
         lines.append("|---|---|---|---|")
         for o in sorted(eops, key=lambda x: g.nodes[x]["label"]):
             cells = {"CP": "-", "DH": "-", "HM": "-"}
-            for r, _, d in g.in_edges(o, data=True):
-                if g.nodes[r]["ntype"] != "repo":
+            # `exposes` now originates from an api node; the owning repo is carried
+            # on the edge's `repo` attribute.
+            for src, _, d in g.in_edges(o, data=True):
+                if d.get("etype") != "exposes":
+                    continue
+                r = d.get("repo")
+                if r not in cells:
                     continue
                 if d["style"] == "REST":
                     cells[r] = f"{d['name']} [{d['http']}]"
@@ -195,8 +217,13 @@ def analyze(g: nx.DiGraph) -> str:
     lines.append("## Per-repo API operation coverage\n")
     lines.append("| repo | style | #operations exposed |")
     lines.append("|---|---|---|")
+    # exposes edges originate from api nodes and carry the owning repo id.
+    exposed_by_repo: dict[str, set] = {rid: set() for rid in REPOS}
+    for u, v, d in g.edges(data=True):
+        if d.get("etype") == "exposes" and d.get("repo") in exposed_by_repo:
+            exposed_by_repo[d["repo"]].add(v)
     for rid in REPOS:
-        c = sum(1 for _, v in g.out_edges(rid) if g.nodes[v]["ntype"] == "operation")
+        c = len(exposed_by_repo[rid])
         lines.append(f"| {REPOS[rid]['label']} | {REPOS[rid]['style']} | {c} |")
     lines.append("")
     lines.append("Note: CP uses RESTful URL+HTTP-method; DH and HM use `entity.action` RPC naming "

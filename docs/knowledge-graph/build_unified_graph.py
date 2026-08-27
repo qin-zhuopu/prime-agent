@@ -59,6 +59,10 @@ def build() -> nx.DiGraph:
         g.add_edge(uu, vv, **d)
 
     # --- capability layer (normalizes ALL 11 repos on user-facing operations) ---
+    # `provides` now originates from the repo's webui node (decision B), not the
+    # bare repo node. Map repo id -> webui node id from the UI layer.
+    webui_of_repo = {d.get("repo"): n for n, d in g.nodes(data=True)
+                     if d.get("ntype") == "webui"}
     cap_dir = HERE / "data" / "capabilities"
     for cf in sorted(cap_dir.glob("*.yaml")):
         c = yaml.safe_load(cf.read_text())
@@ -66,8 +70,9 @@ def build() -> nx.DiGraph:
         g.add_node(cid, layer="capability", ntype="capability",
                    label=c["label"], description=c["description"])
         for rid, ev in c.get("implementations", {}).items():
-            if rid in g:  # repo node exists (all 11 do)
-                g.add_edge(rid, cid, etype="provides",
+            wid = webui_of_repo.get(rid)
+            if wid is not None:  # every repo has a webui node
+                g.add_edge(wid, cid, etype="provides",
                            surface_kind=ev["surface_kind"], surface_name=ev["surface_name"])
     return g
 
@@ -89,14 +94,20 @@ def analyze(g: nx.DiGraph) -> str:
     for t, c in etypes.most_common():
         L.append(f"| {t} | {c} |")
 
-    # capability coverage across ALL 11 repos (the true normalization layer)
+    # capability coverage across ALL 11 repos (the true normalization layer).
+    # `provides` originates from the webui node; resolve back to the owning repo.
     all_repos = [n for n, d in g.nodes(data=True) if d.get("ntype") == "repo"]
+    webui_of_repo = {d.get("repo"): n for n, d in g.nodes(data=True)
+                     if d.get("ntype") == "webui"}
     L.append("\n## Capability coverage across ALL 11 repos (normalized user operations)\n")
     L.append("| repo | capabilities provided |")
     L.append("|---|---|")
     cap_cov = []
     for rid in all_repos:
-        c = sum(1 for _, v, d in g.out_edges(rid, data=True) if d.get("etype") == "provides")
+        wid = webui_of_repo.get(rid)
+        c = 0
+        if wid is not None:
+            c = sum(1 for _, v, d in g.out_edges(wid, data=True) if d.get("etype") == "provides")
         cap_cov.append((c, g.nodes[rid]["label"]))
     for c, label in sorted(cap_cov, reverse=True):
         L.append(f"| {label} | {c} |")
@@ -107,8 +118,11 @@ def analyze(g: nx.DiGraph) -> str:
     L.append("| repo | features | endpoints | endpoint groups | pages |")
     L.append("|---|---|---|---|---|")
     for rid, label in full.REPOS.items():
-        feat = sum(1 for _, v, d in g.out_edges(rid, data=True)
-                   if d.get("etype") == "implements")
+        wid = webui_of_repo.get(rid)
+        feat = 0
+        if wid is not None:
+            feat = sum(1 for _, v, d in g.out_edges(wid, data=True)
+                       if d.get("etype") == "implements")
         eps = sum(1 for n, d in g.nodes(data=True)
                   if d.get("ntype") == "endpoint" and d.get("repo") == rid)
         grps = sum(1 for n, d in g.nodes(data=True)

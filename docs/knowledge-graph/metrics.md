@@ -1,7 +1,7 @@
 # Chat/Agent UI Knowledge Graph -- Metrics
 
-- Nodes: 101  (repos=11, protocols=7, categories=10, features=73)
-- Edges: 419
+- Nodes: 112  (repos=11, protocols=7, categories=10, features=73)
+- Edges: 430
 - Emergent tiers (by feature coverage, natural break gap=29): 3 deep + 8 broad (NOT hand-assigned; see derive_tier.py)
 
 ## Per-repo feature coverage

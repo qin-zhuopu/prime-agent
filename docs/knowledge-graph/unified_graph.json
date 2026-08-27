@@ -7,12 +7,94 @@
       "layer": "ui",
       "ntype": "repo",
       "label": "agents-chat",
-      "stack": "Next.js+React",
       "license": "open",
+      "id": "ACHAT"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "acp-components",
+      "license": "open",
+      "id": "ACPC"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "acp-ui",
+      "license": "open",
+      "id": "ACPUI"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "acp-web-gateway",
+      "license": "open",
+      "id": "ACPWG"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "assistant-ui",
+      "license": "open",
+      "id": "ASTUI"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "CopilotKit",
+      "license": "open",
+      "id": "CKIT"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "CodePilot",
+      "license": "BUSL-1.1",
+      "has_api_layer": true,
+      "id": "CP"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "deepseek-harness",
+      "license": "open",
+      "has_api_layer": true,
+      "id": "DH"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "hermes-agent",
+      "license": "open",
+      "has_api_layer": true,
+      "id": "HM"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "opencode-chatui",
+      "license": "open",
+      "id": "OCUI"
+    },
+    {
+      "layer": "ui",
+      "ntype": "repo",
+      "label": "OpenGUI",
+      "license": "open",
+      "id": "OGUI"
+    },
+    {
+      "layer": "ui",
+      "ntype": "webui",
+      "label": "agents-chat",
+      "repo": "ACHAT",
+      "path": ".",
+      "stack": "Next.js+React",
       "integration": "stdio-rpc",
       "browser_native": false,
       "transport": "stdio",
-      "id": "ACHAT"
+      "protocols": "ACP,structured-render",
+      "id": "W:ACHAT/."
     },
     {
       "layer": "ui",
@@ -32,58 +114,68 @@
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "acp-components",
+      "repo": "ACPC",
+      "path": ".",
       "stack": "React (core+react pkgs)",
-      "license": "open",
       "integration": "stdio-rpc,in-process-sdk",
       "browser_native": false,
       "transport": "stdio",
-      "id": "ACPC"
+      "protocols": "ACP,structured-render",
+      "id": "W:ACPC/."
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "acp-ui",
+      "repo": "ACPUI",
+      "path": ".",
       "stack": "Vue3+Tauri",
-      "license": "open",
       "integration": "stdio-rpc",
       "browser_native": false,
       "transport": "stdio",
-      "id": "ACPUI"
+      "protocols": "ACP,structured-render",
+      "id": "W:ACPUI/."
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "acp-web-gateway",
+      "repo": "ACPWG",
+      "path": ".",
       "stack": "Kotlin server + web",
-      "license": "open",
       "integration": "WebSocket,stdio-rpc",
       "browser_native": false,
       "transport": "WebSocket",
-      "id": "ACPWG"
+      "protocols": "ACP",
+      "id": "W:ACPWG/."
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "assistant-ui",
+      "repo": "ASTUI",
+      "path": ".",
       "stack": "React (TS lib)",
-      "license": "open",
       "integration": "in-process-sdk",
       "browser_native": true,
       "transport": "SSE",
-      "id": "ASTUI"
+      "protocols": "structured-render",
+      "id": "W:ASTUI/."
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "CopilotKit",
+      "repo": "CKIT",
+      "path": ".",
       "stack": "React+Next.js",
-      "license": "open",
       "integration": "in-process-sdk",
       "browser_native": true,
       "transport": "SSE",
-      "id": "CKIT"
+      "protocols": "AG-UI,structured-render",
+      "id": "W:CKIT/."
     },
     {
       "layer": "ui",
@@ -95,15 +187,16 @@
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "CodePilot",
+      "repo": "CP",
+      "path": "src",
       "stack": "Electron+Next.js",
-      "license": "BUSL-1.1",
       "integration": "REST+SSE",
       "browser_native": true,
       "transport": "SSE",
-      "has_api_layer": true,
-      "id": "CP"
+      "protocols": "SSE,structured-render",
+      "id": "W:CP/src"
     },
     {
       "layer": "ui",
@@ -115,15 +208,16 @@
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "deepseek-harness",
+      "repo": "DH",
+      "path": "packages/client",
       "stack": "Cordis+React",
-      "license": "open",
       "integration": "REST+SSE",
       "browser_native": true,
       "transport": "SSE",
-      "has_api_layer": true,
-      "id": "DH"
+      "protocols": "SSE,node-render,structured-render",
+      "id": "W:DH/packages/client"
     },
     {
       "layer": "ui",
@@ -135,15 +229,16 @@
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "hermes-agent",
+      "repo": "HM",
+      "path": "web/src",
       "stack": "Vite+React+xterm",
-      "license": "open",
       "integration": "WebSocket",
       "browser_native": true,
       "transport": "WebSocket",
-      "has_api_layer": true,
-      "id": "HM"
+      "protocols": "WS-JSONRPC,pty-terminal",
+      "id": "W:HM/web/src"
     },
     {
       "layer": "ui",
@@ -163,25 +258,29 @@
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "opencode-chatui",
+      "repo": "OCUI",
+      "path": ".",
       "stack": "React+Vite+tRPC",
-      "license": "open",
       "integration": "REST+SSE",
       "browser_native": true,
       "transport": "SSE",
-      "id": "OCUI"
+      "protocols": "structured-render",
+      "id": "W:OCUI/."
     },
     {
       "layer": "ui",
-      "ntype": "repo",
+      "ntype": "webui",
       "label": "OpenGUI",
+      "repo": "OGUI",
+      "path": ".",
       "stack": "React+Vite+Electron",
-      "license": "open",
       "integration": "REST+SSE,in-process-sdk",
       "browser_native": true,
       "transport": "SSE",
-      "id": "OGUI"
+      "protocols": "structured-render",
+      "id": "W:OGUI/."
     },
     {
       "layer": "ui",
@@ -836,6 +935,33 @@
       "category": "tool-use",
       "priority": "P1",
       "id": "tool-use:web-card"
+    },
+    {
+      "layer": "api",
+      "ntype": "api",
+      "label": "CodePilot",
+      "repo": "CP",
+      "path": "src/app/api",
+      "style": "rest",
+      "id": "A:CP/src/app/api"
+    },
+    {
+      "layer": "api",
+      "ntype": "api",
+      "label": "deepseek-harness",
+      "repo": "DH",
+      "path": "packages/host/apiproxy",
+      "style": "rpc",
+      "id": "A:DH/packages/host/apiproxy"
+    },
+    {
+      "layer": "api",
+      "ntype": "api",
+      "label": "hermes-agent",
+      "repo": "HM",
+      "path": "tui_gateway",
+      "style": "ws-rpc",
+      "id": "A:HM/tui_gateway"
     },
     {
       "layer": "api",
@@ -9860,3798 +9986,3204 @@
   ],
   "links": [
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:ACHAT/.",
+      "target": "ACHAT"
+    },
+    {
       "etype": "uses",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "ACP"
     },
     {
       "etype": "uses",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "composer:slash-commands"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "multi-agent:subagent-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "PermissionPrompt",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useFileWorkspaceState",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useChatRuntime",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useAgentRegistry",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useAgentRegistry",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:manage-subagents"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSchedules",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:manage-todos"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "AgentSelector",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useComposerState",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSlashCommands",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:slash-command"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useChatRuntime",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useChatRuntime",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useChatRuntime",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useLiveEditorSelection",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ToolCall",
-      "source": "ACHAT",
+      "source": "W:ACHAT/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:ACPC/.",
+      "target": "ACPC"
+    },
+    {
       "etype": "uses",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "ACP"
     },
     {
       "etype": "uses",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:details-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:i18n"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:plugin-registry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "composer:submission-policy"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "messaging:message-actions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "model-config:context-usage"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "model-config:skills"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "multi-agent:plan-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "multi-agent:subagent-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "permission:permission-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "reasoning:reasoning-display"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "stream-control:reconnect-resume"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "tool-use:file-read-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "tool-use:search-sources"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "tool-use:tool-call-tree"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "usePermission",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useFileTree",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useConnectionStatus",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useCopy",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:edit-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSessions",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSkills",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:manage-skills"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "usePrompt",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSession",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSession",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useToolCalls",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useToolCalls",
-      "source": "ACPC",
+      "source": "W:ACPC/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:ACPUI/.",
+      "target": "ACPUI"
+    },
+    {
       "etype": "uses",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "ACP"
     },
     {
       "etype": "uses",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "composer:attachments"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "permission:permission-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "PermissionDialog",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "StartupProgress",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SessionList",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ModelPicker",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ChatView",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ModePicker",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:set-mode-effort"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "CommandPalette",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:slash-command"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SessionList",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ChatView",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ChatView",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ToolCallCard",
-      "source": "ACPUI",
+      "source": "W:ACPUI/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:ACPWG/.",
+      "target": "ACPWG"
+    },
+    {
       "etype": "uses",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "ACP"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.request_permission",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "StatusBar",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.list",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.prompt",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.new",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.cancel",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.update",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "tool.call",
-      "source": "ACPWG",
+      "source": "W:ACPWG/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:ASTUI/.",
+      "target": "ASTUI"
+    },
+    {
       "etype": "uses",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "composer:attachments"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "composer:submission-policy"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:message-actions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:message-branching"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "reasoning:reasoning-display"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-attachments",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useThreadRuntime",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useActionBarEdit",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:edit-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useThreadListRuntime",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useActionBarFeedback",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:message-feedback"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useModelConfig",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useComposerRuntime",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useThreadRuntime",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useActionBarStop",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useMessageRuntime",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "Reasoning",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ToolFallback",
-      "source": "ASTUI",
+      "source": "W:ASTUI/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:CKIT/.",
+      "target": "CKIT"
+    },
+    {
       "etype": "uses",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "AG-UI"
     },
     {
       "etype": "uses",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "model-config:mcp-config"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-attachments",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-copilot-runtime",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-mcp",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:manage-mcp"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-coagent",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:manage-subagents"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-ask-copilot",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "protocol",
       "surface_name": "AG-UI events",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-render-tool-call",
-      "source": "CKIT",
+      "source": "W:CKIT/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": "src",
+      "source": "W:CP/src",
+      "target": "CP"
+    },
+    {
       "etype": "uses",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "SSE"
     },
     {
       "etype": "uses",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:details-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:error-boundary"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:i18n"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "aux:toast-modal"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:attachments"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:dir-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:mentions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:slash-commands"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "composer:submission-policy"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "media:batch-image-gen"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "media:image-gen"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "media:image-thumb-lightbox"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "media:media-preview"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:math-katex"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:message-actions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:message-branching"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "messaging:virtual-scroll"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:compaction-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:context-injection"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:context-usage"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:mcp-config"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:rate-limit-banner"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:runtime-switch"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "model-config:skills"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "multi-agent:background-jobs"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "multi-agent:subagent-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "multi-agent:todo-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "permission:auto-review-notice"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "permission:permission-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "reasoning:chain-of-thought"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "reasoning:effort-setting"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "reasoning:reasoning-display"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "reasoning:thinking-anim"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:message-queue"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:reconnect-resume"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:rewind-retry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:run-status"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "stream-control:terminal-reason"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:file-read-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:risk-confirm"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:search-sources"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:terminal-output"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "tool-use:web-card"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:app"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:assets"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:bridge"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:chat"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:claude-auth"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:claude-sessions"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:claude-status"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:claude-upgrade"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:cli-tools"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:codex"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:dashboard"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:doctor"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:files"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:git"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:harness-home"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:health"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:media"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:models"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:openai-oauth"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:plugins"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:providers"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:sdk"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:search"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:settings"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:setup"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:skills"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:tasks"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:uploads"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:usage"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:workspace"
-    },
-    {
-      "etype": "has_group",
-      "source": "CP",
-      "target": "G:CP:xai-oauth"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/permission",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /assets/html-bundles",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "GET /files/browse",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ConnectionBanner",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageIconActions",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:edit-message"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "GET /chat/sessions",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "GET /codex/mcp/[server]",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:manage-mcp"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "GET /skills",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:manage-skills"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SubagentCard",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:manage-subagents"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "TaskRunMarker",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:manage-todos"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageInputParts",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:mention-ref"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/model",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/messages",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/mode",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:set-mode-effort"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SlashCommandPopover",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:slash-command"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/sessions",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/interrupt",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "endpoint",
       "surface_name": "POST /chat/structured",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "DiffSummary",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "reasoning.tsx",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "tool.tsx",
-      "source": "CP",
+      "source": "W:CP/src",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": "packages/client",
+      "source": "W:DH/packages/client",
+      "target": "DH"
+    },
+    {
       "etype": "uses",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "SSE"
     },
     {
       "etype": "uses",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "node-render"
     },
     {
       "etype": "uses",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:auth-pairing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:details-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:error-boundary"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:i18n"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:message-feedback"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:plugin-registry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "aux:toast-modal"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:attachments"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:dir-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:mentions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:slash-commands"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "composer:submission-policy"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "media:batch-image-gen"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "media:deliverables"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "media:image-thumb-lightbox"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "media:media-preview"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:math-katex"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:message-actions"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:message-branching"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "messaging:virtual-scroll"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:agent-preset"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:compaction-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:context-injection"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:context-usage"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:mcp-config"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:runtime-switch"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "model-config:skills"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:agent-asks-user"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:background-jobs"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:goal"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:plan-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:plan-review"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:subagent-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:todo-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:trajectory-replay"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "multi-agent:workflow-run"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "permission:auto-review-notice"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "permission:permission-mode"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "permission:permission-presets"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "reasoning:chain-of-thought"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "reasoning:effort-setting"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "reasoning:reasoning-display"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "reasoning:thinking-anim"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:message-queue"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:reconnect-resume"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:rewind-retry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:run-status"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "stream-control:terminal-reason"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:file-read-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:risk-confirm"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:search-sources"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:terminal-output"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:tool-call-tree"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "tool-use:web-card"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:session"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:subagent"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:host"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:workspace"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:skill"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:agentPreset"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:goal"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:settings"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:credentials"
-    },
-    {
-      "etype": "has_group",
-      "source": "DH",
-      "target": "G:DH:llm"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "approvals.respond",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.attachment",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "host.listDirectory",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ConnectionBanner",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageIconActions",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:edit-message"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.list",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "skill.list",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:manage-skills"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "subagent.list",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:manage-subagents"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "TodoPanel",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:manage-todos"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ReferenceIcon",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:mention-ref"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ui-message-feedback",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:message-feedback"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.selectModel",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.prompt",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "submission-settings",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:set-mode-effort"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "commands.catalog",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:slash-command"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.create",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.cancel",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "rpc",
       "surface_name": "session.prompt(stream)",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "DiffBlock",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ReasoningRow",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ToolRow",
-      "source": "DH",
+      "source": "W:DH/packages/client",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": "web/src",
+      "source": "W:HM/web/src",
+      "target": "HM"
+    },
+    {
       "etype": "uses",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "WS-JSONRPC"
     },
     {
       "etype": "uses",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "pty-terminal"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:auth-pairing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:details-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:empty-welcome"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:error-boundary"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:i18n"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:plugin-registry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "aux:toast-modal"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "composer:attachments"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "composer:dir-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "composer:slash-commands"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "composer:submission-policy"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "media:deliverables"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "media:media-preview"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:message-actions"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:agent-preset"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:compaction-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:context-usage"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:mcp-config"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:runtime-switch"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "model-config:skills"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:agent-asks-user"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:background-jobs"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:plan-mode"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:plan-review"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:subagent-card"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:todo-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:trajectory-replay"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "multi-agent:workflow-run"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "permission:auto-review-notice"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "permission:permission-mode"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "permission:permission-panel"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "permission:permission-presets"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "reasoning:chain-of-thought"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "reasoning:effort-setting"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "reasoning:reasoning-display"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "reasoning:thinking-anim"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:reconnect-resume"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:rewind-retry"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:run-status"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "stream-control:terminal-reason"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:file-read-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:risk-confirm"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:search-sources"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:terminal-output"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:tool-call-tree"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "implements",
       "kind": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "tool-use:web-card"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:_index"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:agent"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:agents"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:approval"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:approvals"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:auth"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:background"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:billing"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:bot_relay"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:browser"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:clarify"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:cli"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:clipboard"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:command"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:commands"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:complete"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:config"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:control"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:cron"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:delegation"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:diagnostics"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:display"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:file"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:gateway"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:gateway_state"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:handoff"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:hermes_cli"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:image"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:input"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:insights"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:interrupt"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:interrupted_turns"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:jobs"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:learning"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:llm"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:mcp"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:message"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:moa"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:model"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:notification"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:pairing"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:paste"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:pdf"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:pet"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:platforms"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:plugins"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:preview"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:process"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:profile"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:profiles"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:project"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:projects"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:prompt"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:reasoning"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:reload"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:reload_mcp"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:review"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:rollback"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:secret"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:session"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:sessions"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:setup"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:shell"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:shutdown"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:skills"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:skin"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:slash"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:spawn_tree"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:state"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:status"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:stt"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:subagent"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:subscription"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:sudo"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:system"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:terminal"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:thinking"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:tool"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:tools"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:toolsets"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:tour"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:tui_gateway"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:tui_gateway_crash"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:turn"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:uploaded"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:usage"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:verification"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:voice"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:wake"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:wake_word"
-    },
-    {
-      "etype": "has_group",
-      "source": "HM",
-      "target": "G:HM:window"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "approval.respond",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "clipboard.paste",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "files.list",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useSidebarStatus",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "clipboard",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:edit-message"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "sessions.list",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "mcp.manage",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:manage-mcp"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "skills.list",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:manage-skills"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "agents.list",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:manage-subagents"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:manage-todos"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "model.select",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "prompt.submit",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "agent.reasoning_effort",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:set-mode-effort"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SlashPopover",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:slash-command"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.create",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "session.interrupt",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "ws-rpc",
       "surface_name": "message.delta",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "terminal",
-      "source": "HM",
+      "source": "W:HM/web/src",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:OCUI/.",
+      "target": "OCUI"
+    },
+    {
       "etype": "uses",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "tool-use:file-read-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "tool-use:search-sources"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "PermissionModal",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "DirectoryTree",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ConnectionStatus",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SessionList",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "TodoList",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:manage-todos"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ModelSelector",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageDisplay",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "SessionList",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageDisplay",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "DiffViewer",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageDisplay",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "ToolCall",
-      "source": "OCUI",
+      "source": "W:OCUI/.",
       "target": "CAP:view-tool-call"
     },
     {
+      "etype": "located_in",
+      "path": ".",
+      "source": "W:OGUI/.",
+      "target": "OGUI"
+    },
+    {
       "etype": "uses",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "structured-render"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "aux:primitives"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "aux:sidebar-session-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "aux:theme"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "composer:dir-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "composer:message-input"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "messaging:assistant-markdown"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "messaging:code-highlight"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "messaging:conversation-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "messaging:message-list"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "messaging:streaming-typing"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "model-config:model-picker"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "model-config:runtime-switch"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "stream-control:reconnect-resume"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "stream-control:session-connect"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "stream-control:stop-interrupt"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "stream-control:stream-subscribe"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "tool-use:diff-view"
     },
     {
       "etype": "implements",
       "kind": "structured",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "tool-use:tool-card"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "permission",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:approve-permission"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-prompt-files",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:attach-file"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-file-mention",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:browse-files"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent-backend",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:connect-status"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useActiveSessionQueue",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:list-sessions"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-file-mention",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:mention-ref"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent-variant-core",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:pick-model"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-prompt-draft",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:send-message"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent-variant-core",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:set-mode-effort"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "useChatSessionSurface",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:start-session"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent-state",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:stop-generation"
     },
     {
       "etype": "provides",
       "surface_kind": "sdk-hook",
       "surface_name": "use-agent-state",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:stream-response"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "diff-view",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:view-diff"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "MessageList",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:view-reasoning"
     },
     {
       "etype": "provides",
       "surface_kind": "component",
       "surface_name": "tool-view",
-      "source": "OGUI",
+      "source": "W:OGUI/.",
       "target": "CAP:view-tool-call"
     },
     {
@@ -14018,6 +13550,684 @@
       "etype": "contains",
       "source": "tool-use",
       "target": "tool-use:web-card"
+    },
+    {
+      "etype": "located_in",
+      "path": "src/app/api",
+      "source": "A:CP/src/app/api",
+      "target": "CP"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:app"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:assets"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:bridge"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:chat"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:claude-auth"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:claude-sessions"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:claude-status"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:claude-upgrade"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:cli-tools"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:codex"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:dashboard"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:doctor"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:files"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:git"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:harness-home"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:health"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:media"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:models"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:openai-oauth"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:plugins"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:providers"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:sdk"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:search"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:settings"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:setup"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:skills"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:tasks"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:uploads"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:usage"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:workspace"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:CP/src/app/api",
+      "target": "G:CP:xai-oauth"
+    },
+    {
+      "etype": "located_in",
+      "path": "packages/host/apiproxy",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "DH"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:session"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:subagent"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:host"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:workspace"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:skill"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:agentPreset"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:goal"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:settings"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:credentials"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:DH/packages/host/apiproxy",
+      "target": "G:DH:llm"
+    },
+    {
+      "etype": "located_in",
+      "path": "tui_gateway",
+      "source": "A:HM/tui_gateway",
+      "target": "HM"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:_index"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:agent"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:agents"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:approval"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:approvals"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:auth"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:background"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:billing"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:bot_relay"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:browser"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:clarify"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:cli"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:clipboard"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:command"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:commands"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:complete"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:config"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:control"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:cron"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:delegation"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:diagnostics"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:display"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:file"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:gateway"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:gateway_state"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:handoff"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:hermes_cli"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:image"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:input"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:insights"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:interrupt"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:interrupted_turns"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:jobs"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:learning"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:llm"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:mcp"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:message"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:moa"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:model"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:notification"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:pairing"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:paste"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:pdf"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:pet"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:platforms"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:plugins"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:preview"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:process"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:profile"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:profiles"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:project"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:projects"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:prompt"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:reasoning"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:reload"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:reload_mcp"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:review"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:rollback"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:secret"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:session"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:sessions"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:setup"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:shell"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:shutdown"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:skills"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:skin"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:slash"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:spawn_tree"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:state"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:status"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:stt"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:subagent"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:subscription"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:sudo"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:system"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:terminal"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:thinking"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:tool"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:tools"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:toolsets"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:tour"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:tui_gateway"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:tui_gateway_crash"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:turn"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:uploaded"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:usage"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:verification"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:voice"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:wake"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:wake_word"
+    },
+    {
+      "etype": "has_group",
+      "source": "A:HM/tui_gateway",
+      "target": "G:HM:window"
     },
     {
       "etype": "has_endpoint",

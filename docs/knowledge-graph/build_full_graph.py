@@ -24,25 +24,50 @@ from collections import Counter
 from pathlib import Path
 
 import networkx as nx
+import yaml
 
 HERE = Path(__file__).parent
 FULL = HERE / "data" / "full"
+DATA = HERE / "data"
 REPOS = {"CP": "CodePilot", "DH": "deepseek-harness", "HM": "hermes-agent"}
+
+
+def _api_nodes_by_repo() -> dict[str, dict]:
+    """repo id -> api node dict from data/api/*.yaml (network-surface repos only)."""
+    out: dict[str, dict] = {}
+    api_dir = DATA / "api"
+    if api_dir.is_dir():
+        for p in sorted(api_dir.glob("*.yaml")):
+            d = yaml.safe_load(p.read_text())
+            out[d["repo"]] = d
+    return out
 
 
 def build_graph() -> nx.DiGraph:
     g = nx.DiGraph()
+    # repo nodes stay pure identity; the backend endpoint layer hangs off an api node.
     for rid, label in REPOS.items():
         g.add_node(f"R:{rid}", ntype="repo", label=label, rid=rid)
 
-    # endpoints + groups
+    apis = _api_nodes_by_repo()
+    api_id: dict[str, str] = {}
+    for rid in REPOS:
+        d = apis.get(rid)
+        aid = d["id"] if d else f"A:{rid}/."
+        api_id[rid] = aid
+        g.add_node(aid, ntype="api", label=(d or {}).get("label", REPOS[rid]),
+                   repo=rid, path=(d or {}).get("path", "."),
+                   style=(d or {}).get("style", ""))
+        g.add_edge(aid, f"R:{rid}", etype="located_in", path=(d or {}).get("path", "."))
+
+    # endpoints + groups (groups hang off the api node, not the repo).
     for rid in REPOS:
         eps = json.loads((FULL / f"endpoints_{rid}.json").read_text())
         for e in eps:
             gid = f"G:{rid}:{e['group']}"
             if gid not in g:
                 g.add_node(gid, ntype="endpoint_group", label=e["group"], repo=rid)
-                g.add_edge(f"R:{rid}", gid, etype="has_group")
+                g.add_edge(api_id[rid], gid, etype="has_group")
             eid = f"EP:{rid}:{e['id']}"
             g.add_node(eid, ntype="endpoint", label=e["name"], repo=rid,
                        kind=e["kind"], http=e.get("http", ""), group=e["group"],
