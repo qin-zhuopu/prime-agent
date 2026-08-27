@@ -1,13 +1,4 @@
 id: ACPWG
 ntype: repo
 label: acp-web-gateway
-stack: Kotlin server + web
 license: open
-transport:
-- WebSocket
-integration:
-- WebSocket
-- stdio-rpc
-browser_native: false
-protocols:
-- ACP

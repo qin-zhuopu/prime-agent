@@ -1,0 +1,8 @@
+id: A:DH/packages/host/apiproxy
+ntype: api
+label: deepseek-harness
+repo: DH
+path: packages/host/apiproxy
+style: rpc
+transport:
+- SSE

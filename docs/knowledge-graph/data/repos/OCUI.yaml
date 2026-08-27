@@ -1,12 +1,4 @@
 id: OCUI
 ntype: repo
 label: opencode-chatui
-stack: React+Vite+tRPC
 license: open
-transport:
-- SSE
-integration:
-- REST+SSE
-browser_native: true
-protocols:
-- structured-render

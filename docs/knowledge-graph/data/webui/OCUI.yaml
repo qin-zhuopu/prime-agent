@@ -1,0 +1,13 @@
+id: W:OCUI/.
+ntype: webui
+label: opencode-chatui
+repo: OCUI
+path: "."
+stack: React+Vite+tRPC
+transport:
+- SSE
+integration:
+- REST+SSE
+browser_native: true
+protocols:
+- structured-render

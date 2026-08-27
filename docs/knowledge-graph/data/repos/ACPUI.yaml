@@ -1,13 +1,4 @@
 id: ACPUI
 ntype: repo
 label: acp-ui
-stack: Vue3+Tauri
 license: open
-transport:
-- stdio
-integration:
-- stdio-rpc
-browser_native: false
-protocols:
-- ACP
-- structured-render

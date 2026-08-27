@@ -1,0 +1,8 @@
+id: A:ACPWG/.
+ntype: api
+label: acp-web-gateway
+repo: ACPWG
+path: "."
+style: ws-rpc
+transport:
+- WebSocket

@@ -1,14 +1,4 @@
 id: ACPC
 ntype: repo
 label: acp-components
-stack: React (core+react pkgs)
 license: open
-transport:
-- stdio
-integration:
-- stdio-rpc
-- in-process-sdk
-browser_native: false
-protocols:
-- ACP
-- structured-render

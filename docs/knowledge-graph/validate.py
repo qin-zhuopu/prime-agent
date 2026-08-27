@@ -22,8 +22,9 @@ HERE = Path(__file__).parent
 DATA = HERE / "data"
 SCHEMAS = HERE / "schemas"
 
-NTYPES = ["repo", "protocol", "feature", "entity", "operation", "capability"]
-SUBDIR = {"repo": "repos", "protocol": "protocols", "feature": "features",
+NTYPES = ["repo", "webui", "api", "protocol", "feature", "entity", "operation", "capability"]
+SUBDIR = {"repo": "repos", "webui": "webui", "api": "api",
+          "protocol": "protocols", "feature": "features",
           "capability": "capabilities",
           "entity": "entities", "operation": "operations"}
 
@@ -66,10 +67,17 @@ def check_all() -> list[str]:
                 all_ids[nid] = p
 
     # 2. referential integrity
-    for p, d in nodes["repo"]:
+    # protocols are now referenced from webui (not repo); webui/api must belong
+    # to a known repo.
+    for p, d in nodes["webui"]:
+        if d["repo"] not in repo_ids:
+            problems.append(f"[ref] webui {d['id']}: repo '{d['repo']}' not found")
         for proto in d.get("protocols", []):
             if proto not in protocol_ids:
-                problems.append(f"[ref] repo {d['id']}: protocol '{proto}' not found")
+                problems.append(f"[ref] webui {d['id']}: protocol '{proto}' not found")
+    for p, d in nodes["api"]:
+        if d["repo"] not in repo_ids:
+            problems.append(f"[ref] api {d['id']}: repo '{d['repo']}' not found")
     for p, d in nodes["feature"]:
         for rid in d.get("implementations", {}):
             if rid not in repo_ids:
@@ -108,20 +116,24 @@ def check_all() -> list[str]:
     for p, d in nodes["entity"]:
         if d["label"] not in op_entities:
             problems.append(f"[semantic] entity {d['id']}: no operation node references it")
-    # transport sanity: every repo must declare a transport, and each declared
-    # transport must be a real transport class (not a rendering paradigm).
-    # NOTE: repo.transport is authoritative (what the repo actually uses); a
-    # protocol's transport is only its *native/typical* one (e.g. ACP is natively
-    # stdio, but acp-web-gateway carries it over WebSocket), so we do NOT force
-    # repo.transport to equal its protocols' transports.
+    # transport / style sanity: the frontend runtime facts moved from repo onto
+    # webui, and backend subtype (style) lives on api.
+    # NOTE: a webui's transport is authoritative (what the frontend actually
+    # uses); a protocol's transport is only its *native/typical* one (e.g. ACP is
+    # natively stdio, but acp-web-gateway carries it over WebSocket), so we do NOT
+    # force webui.transport to equal its protocols' transports.
     valid_transports = {"SSE", "WebSocket", "stdio", "none/unknown"}
-    for p, d in nodes["repo"]:
-        rtrans = set(d.get("transport", []))
-        if not rtrans:
-            problems.append(f"[semantic] repo {d['id']}: no transport declared")
-        bad = rtrans - valid_transports
+    for p, d in nodes["webui"]:
+        wtrans = set(d.get("transport", []))
+        if not wtrans:
+            problems.append(f"[semantic] webui {d['id']}: no transport declared")
+        bad = wtrans - valid_transports
         if bad:
-            problems.append(f"[semantic] repo {d['id']}: unknown transport(s) {sorted(bad)}")
+            problems.append(f"[semantic] webui {d['id']}: unknown transport(s) {sorted(bad)}")
+    valid_styles = {"rest", "rpc", "ws-rpc", "stdio-rpc"}
+    for p, d in nodes["api"]:
+        if d.get("style") not in valid_styles:
+            problems.append(f"[semantic] api {d['id']}: invalid style '{d.get('style')}'")
 
     # capability implementations must reference known repos
     for p, d in nodes["capability"]:

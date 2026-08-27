@@ -1,0 +1,45 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: webui node
+type: object
+required: [id, ntype, label, repo]
+additionalProperties: false
+properties:
+  id:
+    description: "W:<repoId>/<path> (path '.' yields W:<repoId>/.)"
+    type: string
+    pattern: "^W:[A-Z][A-Z0-9]*/.+$"
+  ntype:
+    const: webui
+  label:
+    type: string
+    minLength: 1
+  repo:
+    description: owning repo node id
+    type: string
+    pattern: "^[A-Z][A-Z0-9]*$"
+  path:
+    description: repo-relative source dir/file the frontend lives at ('.' fallback)
+    type: string
+  stack:
+    description: frontend stack (relocated from repo)
+    type: string
+  transport:
+    description: frontend transport(s) for agent<->frontend streaming (relocated from repo)
+    type: array
+    items:
+      enum: [SSE, WebSocket, stdio, "none/unknown"]
+  integration:
+    description: how the agent is integrated / consumed (relocated from repo)
+    type: array
+    items:
+      enum: ["REST+SSE", "WebSocket", "stdio-rpc", "in-process-sdk"]
+  browser_native:
+    description: >-
+      can a plain browser tab talk to the agent directly, without a host
+      (Node/Tauri/Electron) spawning a child process? stdio-rpc agents are false.
+    type: boolean
+  protocols:
+    description: protocol node ids this frontend uses (relocated from repo)
+    type: array
+    items:
+      type: string

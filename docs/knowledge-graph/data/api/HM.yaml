@@ -1,0 +1,8 @@
+id: A:HM/tui_gateway
+ntype: api
+label: hermes-agent
+repo: HM
+path: tui_gateway
+style: ws-rpc
+transport:
+- WebSocket

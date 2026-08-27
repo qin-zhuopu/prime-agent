@@ -1,12 +1,4 @@
 id: ASTUI
 ntype: repo
 label: assistant-ui
-stack: React (TS lib)
 license: open
-transport:
-- SSE
-integration:
-- in-process-sdk
-browser_native: true
-protocols:
-- structured-render

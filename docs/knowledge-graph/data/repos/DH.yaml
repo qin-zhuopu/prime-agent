@@ -1,14 +1,4 @@
 id: DH
 ntype: repo
 label: deepseek-harness
-stack: Cordis+React
 license: open
-transport:
-- SSE
-integration:
-- REST+SSE
-browser_native: true
-protocols:
-- SSE
-- node-render
-- structured-render

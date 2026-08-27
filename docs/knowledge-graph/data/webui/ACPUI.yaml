@@ -1,0 +1,14 @@
+id: W:ACPUI/.
+ntype: webui
+label: acp-ui
+repo: ACPUI
+path: "."
+stack: Vue3+Tauri
+transport:
+- stdio
+integration:
+- stdio-rpc
+browser_native: false
+protocols:
+- ACP
+- structured-render

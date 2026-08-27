@@ -1,0 +1,15 @@
+id: W:ACPC/.
+ntype: webui
+label: acp-components
+repo: ACPC
+path: "."
+stack: React (core+react pkgs)
+transport:
+- stdio
+integration:
+- stdio-rpc
+- in-process-sdk
+browser_native: false
+protocols:
+- ACP
+- structured-render

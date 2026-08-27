@@ -1,0 +1,13 @@
+id: W:ASTUI/.
+ntype: webui
+label: assistant-ui
+repo: ASTUI
+path: "."
+stack: React (TS lib)
+transport:
+- SSE
+integration:
+- in-process-sdk
+browser_native: true
+protocols:
+- structured-render

@@ -1,0 +1,14 @@
+id: W:CP/src
+ntype: webui
+label: CodePilot
+repo: CP
+path: src
+stack: Electron+Next.js
+transport:
+- SSE
+integration:
+- REST+SSE
+browser_native: true
+protocols:
+- SSE
+- structured-render
