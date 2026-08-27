@@ -25,6 +25,7 @@ from collections import Counter
 from pathlib import Path
 
 import networkx as nx
+import yaml
 
 import build_from_yaml as ui
 import build_full_graph as full
@@ -57,6 +58,17 @@ def build() -> nx.DiGraph:
         vv = repo_remap.get(v, v)
         g.add_edge(uu, vv, **d)
 
+    # --- capability layer (normalizes ALL 11 repos on user-facing operations) ---
+    cap_dir = HERE / "data" / "capabilities"
+    for cf in sorted(cap_dir.glob("*.yaml")):
+        c = yaml.safe_load(cf.read_text())
+        cid = c["id"]
+        g.add_node(cid, layer="capability", ntype="capability",
+                   label=c["label"], description=c["description"])
+        for rid, ev in c.get("implementations", {}).items():
+            if rid in g:  # repo node exists (all 11 do)
+                g.add_edge(rid, cid, etype="provides",
+                           surface_kind=ev["surface_kind"], surface_name=ev["surface_name"])
     return g
 
 
@@ -77,8 +89,21 @@ def analyze(g: nx.DiGraph) -> str:
     for t, c in etypes.most_common():
         L.append(f"| {t} | {c} |")
 
-    # per-repo: how many of each thing hangs off it (the join payoff)
-    L.append("\n## Per-repo unified footprint\n")
+    # capability coverage across ALL 11 repos (the true normalization layer)
+    all_repos = [n for n, d in g.nodes(data=True) if d.get("ntype") == "repo"]
+    L.append("\n## Capability coverage across ALL 11 repos (normalized user operations)\n")
+    L.append("| repo | capabilities provided |")
+    L.append("|---|---|")
+    cap_cov = []
+    for rid in all_repos:
+        c = sum(1 for _, v, d in g.out_edges(rid, data=True) if d.get("etype") == "provides")
+        cap_cov.append((c, g.nodes[rid]["label"]))
+    for c, label in sorted(cap_cov, reverse=True):
+        L.append(f"| {label} | {c} |")
+    L.append("")
+
+    # per-repo: how many of each thing hangs off it (the join payoff), deep cluster only
+    L.append("## Per-repo backend/frontend footprint (source-verified deep cluster)\n")
     L.append("| repo | features | endpoints | endpoint groups | pages |")
     L.append("|---|---|---|---|---|")
     for rid, label in full.REPOS.items():

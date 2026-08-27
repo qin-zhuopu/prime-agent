@@ -1,0 +1,35 @@
+id: CAP:stop-generation
+ntype: capability
+label: stop-generation
+description: Interrupt / cancel a running turn
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useChatRuntime
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useSession
+  ACPUI:
+    surface_kind: component
+    surface_name: ChatView
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.cancel
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useActionBarStop
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-agent
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/interrupt
+  DH:
+    surface_kind: rpc
+    surface_name: session.cancel
+  HM:
+    surface_kind: ws-rpc
+    surface_name: session.interrupt
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-agent-state

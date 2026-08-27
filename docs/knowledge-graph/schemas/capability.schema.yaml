@@ -1,0 +1,35 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: capability node (a user-facing operation, normalized across ALL repos)
+description: >-
+  A capability is one thing a user can DO in the chat/agent web UI (send a message,
+  approve a permission, pick a model...). It is the normalization layer that unifies
+  all 11 UIs regardless of backend shape. Each repo implements it via some surface
+  (endpoint / rpc / ws-rpc / sdk-hook / component / protocol).
+type: object
+required: [id, ntype, label, description, implementations]
+additionalProperties: false
+properties:
+  id:
+    type: string
+    pattern: "^CAP:[a-z][a-z0-9-]*$"
+  ntype:
+    const: capability
+  label:
+    type: string
+    pattern: "^[a-z][a-z0-9-]*$"
+  description:
+    type: string
+    minLength: 1
+  implementations:
+    description: repo id -> how that repo provides this capability
+    type: object
+    additionalProperties:
+      type: object
+      required: [surface_kind, surface_name]
+      additionalProperties: false
+      properties:
+        surface_kind:
+          enum: [endpoint, rpc, ws-rpc, sdk-hook, component, protocol]
+        surface_name:
+          type: string
+          minLength: 1

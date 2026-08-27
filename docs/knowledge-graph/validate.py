@@ -22,8 +22,9 @@ HERE = Path(__file__).parent
 DATA = HERE / "data"
 SCHEMAS = HERE / "schemas"
 
-NTYPES = ["repo", "protocol", "feature", "entity", "operation"]
+NTYPES = ["repo", "protocol", "feature", "entity", "operation", "capability"]
 SUBDIR = {"repo": "repos", "protocol": "protocols", "feature": "features",
+          "capability": "capabilities",
           "entity": "entities", "operation": "operations"}
 
 
@@ -121,6 +122,12 @@ def check_all() -> list[str]:
         bad = rtrans - valid_transports
         if bad:
             problems.append(f"[semantic] repo {d['id']}: unknown transport(s) {sorted(bad)}")
+
+    # capability implementations must reference known repos
+    for p, d in nodes["capability"]:
+        for rid in d.get("implementations", {}):
+            if rid not in repo_ids:
+                problems.append(f"[ref] capability {d['id']}: impl repo '{rid}' not found")
 
     # 4. frontend call references (data/frontend_calls/<repo>.json) — code-derived layer
     fc_dir = DATA / "frontend_calls"

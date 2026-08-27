@@ -1,0 +1,14 @@
+id: CAP:mention-ref
+ntype: capability
+label: mention-ref
+description: '@-mention files or references'
+implementations:
+  CP:
+    surface_kind: component
+    surface_name: MessageInputParts
+  DH:
+    surface_kind: component
+    surface_name: ReferenceIcon
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-file-mention

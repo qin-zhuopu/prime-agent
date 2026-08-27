@@ -1,0 +1,38 @@
+id: CAP:start-session
+ntype: capability
+label: start-session
+description: Create / start a conversation session
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useChatRuntime
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useSession
+  ACPUI:
+    surface_kind: component
+    surface_name: SessionList
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.new
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useThreadRuntime
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-agent
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/sessions
+  DH:
+    surface_kind: rpc
+    surface_name: session.create
+  HM:
+    surface_kind: ws-rpc
+    surface_name: session.create
+  OCUI:
+    surface_kind: component
+    surface_name: SessionList
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: useChatSessionSurface

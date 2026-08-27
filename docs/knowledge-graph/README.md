@@ -204,3 +204,46 @@ build_unified_graph   (validate 闸门 → unified_graph.* + unified_metrics.md)
 validate.py / quality_check.py (含 full 层 schema 与覆盖统计)
 ```
 全程纯脚本，无 LLM。
+
+
+---
+
+## Capability 层：所有 11 个 web UI 的统一对比
+
+前面的全量后端接口只能覆盖有自己后端的 repo（CP/DH/HM）。但**所有 11 个都是给人用的 web UI，用户能做的操作是一样的**——不管底层是 REST / RPC / WebSocket / SDK-hook / 协议。所以归一到一个 **capability（用户可执行操作）** 层，让全部 11 个 repo 在同一维度对比。
+
+### 为什么 capability 能归一而 endpoint 不能
+
+- SDK/库型（assistant-ui、acp-components、CopilotKit）没有自己的后端 endpoint，但**有用户操作**（发消息、看工具调用），通过 hook/component 提供。
+- capability 比 endpoint 抽象一级：`capability`（用户视角）→ 各 repo 用不同 `surface`（endpoint / rpc / ws-rpc / sdk-hook / component / protocol）实现。
+- 证据来自源码：CP/DH/HM 用真实 endpoint，其余 8 个用真实 hook 名（`usePrompt`/`use-ask-copilot`…）或组件名（`ChatView`/`PermissionDialog`…）。
+
+### 脚本与数据
+
+| 脚本 | 作用 |
+|---|---|
+| `map_capabilities.py` | 定义 22 个 canonical user capability，映射 11 repo 各自的实现 surface → `data/capabilities/*.yaml` |
+
+一个 capability YAML 示例（send-message）下挂 11 个 repo 的实现：CP=`POST /chat/messages`、DH=`session.prompt`、HM=`prompt.submit`、acp-components=`usePrompt`、assistant-ui=`useComposerRuntime`、CopilotKit=`use-ask-copilot`…（同一操作，不同 surface）。
+
+### 22 个 capability
+
+start-session, list-sessions, send-message, stream-response, stop-generation, view-reasoning, view-tool-call, approve-permission, pick-model, set-mode-effort, attach-file, mention-ref, slash-command, view-diff, browse-files, manage-todos, manage-subagents, edit-message, message-feedback, manage-skills, manage-mcp, connect-status
+
+### 11 repo 能力覆盖对比（unified_metrics.md）
+
+| repo | 能力覆盖 (/22) | 实现风格 |
+|---|---|---|
+| CodePilot | 21 | REST endpoint |
+| deepseek-harness | 21 | RPC + component |
+| hermes-agent | 20 | WS-RPC + terminal |
+| OpenGUI | 15 | sdk-hook + endpoint |
+| agents-chat | 14 | sdk-hook (spawn ACP) |
+| assistant-ui | 12 | sdk-hook (runtime adapters) |
+| opencode-chatui | 12 | component (external server) |
+| acp-components | 11 | sdk-hook (ACP protocol) |
+| acp-ui | 11 | component (Tauri + ACP) |
+| CopilotKit | 9 | sdk-hook (AG-UI) |
+| acp-web-gateway | 8 | ws-rpc (ACP gateway) |
+
+统一图节点新增 `capability`(22)，边新增 `provides`（repo → capability，带 surface_kind/surface_name）。统一图现 **1022 节点 / 1960 边**，所有 11 repo 通过 capability 层可比。

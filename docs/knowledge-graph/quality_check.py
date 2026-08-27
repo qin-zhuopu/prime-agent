@@ -137,6 +137,20 @@ def main() -> int:
             if fld not in r or r.get(fld) in (None, "", []):
                 warns.append(f"field: repo {r['id']} missing/empty recommended field '{fld}'")
 
+    # --- capability layer coverage (all 11 repos, normalized user operations) ---
+    caps = load("capabilities")
+    if caps:
+        cov = {rid: 0 for rid in repo_ids}
+        for c in caps:
+            for rid in c.get("implementations", {}):
+                cov[rid] = cov.get(rid, 0) + 1
+        ranked = sorted(cov.items(), key=lambda kv: -kv[1])
+        infos.append(f"capability: {len(caps)} normalized user capabilities across all {len(repo_ids)} repos; "
+                     f"coverage " + ", ".join(f"{r}={n}" for r, n in ranked))
+        for c in caps:
+            if not c.get("implementations"):
+                warns.append(f"capability: {c['id']} implemented by no repo")
+
     # --- full layer (untrimmed endpoints + calls) coverage ---
     full_dir = DATA / "full"
     if full_dir.is_dir():
@@ -166,7 +180,7 @@ def main() -> int:
           f"'broad' repos ({', '.join(sorted(set(repo_ids)-deep))}) have UI-feature breadth only, so "
           f"their absent API/call layers below are expected, not defects.")
     print(f"\nrepos={len(repos)} (deep={len(deep)}, broad={len(repos)-len(deep)}), "
-          f"protocols={len(load('protocols'))}, features={len(features)}, "
+          f"protocols={len(load('protocols'))}, capabilities={len(load('capabilities'))}, features={len(features)}, "
           f"entities={len(entities)}, operations={len(operations)}, "
           f"schemas={len(have_schema)}")
     show("ERROR (must fix)", errors)

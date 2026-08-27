@@ -1,0 +1,38 @@
+id: CAP:send-message
+ntype: capability
+label: send-message
+description: Send a prompt / message to the agent
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useComposerState
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: usePrompt
+  ACPUI:
+    surface_kind: component
+    surface_name: ChatView
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.prompt
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useComposerRuntime
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-ask-copilot
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/messages
+  DH:
+    surface_kind: rpc
+    surface_name: session.prompt
+  HM:
+    surface_kind: ws-rpc
+    surface_name: prompt.submit
+  OCUI:
+    surface_kind: component
+    surface_name: MessageDisplay
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-prompt-draft

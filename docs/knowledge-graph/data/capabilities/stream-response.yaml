@@ -1,0 +1,38 @@
+id: CAP:stream-response
+ntype: capability
+label: stream-response
+description: Receive streaming assistant output
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useChatRuntime
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useToolCalls
+  ACPUI:
+    surface_kind: component
+    surface_name: ChatView
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.update
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useMessageRuntime
+  CKIT:
+    surface_kind: protocol
+    surface_name: AG-UI events
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/structured
+  DH:
+    surface_kind: rpc
+    surface_name: session.prompt(stream)
+  HM:
+    surface_kind: ws-rpc
+    surface_name: message.delta
+  OCUI:
+    surface_kind: component
+    surface_name: MessageDisplay
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-agent-state

@@ -1,0 +1,23 @@
+id: CAP:view-diff
+ntype: capability
+label: view-diff
+description: View file diffs produced by tools
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useLiveEditorSelection
+  CP:
+    surface_kind: component
+    surface_name: DiffSummary
+  DH:
+    surface_kind: component
+    surface_name: DiffBlock
+  HM:
+    surface_kind: component
+    surface_name: terminal
+  OCUI:
+    surface_kind: component
+    surface_name: DiffViewer
+  OGUI:
+    surface_kind: component
+    surface_name: diff-view

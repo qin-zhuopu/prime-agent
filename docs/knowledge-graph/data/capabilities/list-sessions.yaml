@@ -1,0 +1,35 @@
+id: CAP:list-sessions
+ntype: capability
+label: list-sessions
+description: Browse and switch between sessions
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useAgentRegistry
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useSessions
+  ACPUI:
+    surface_kind: component
+    surface_name: SessionList
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.list
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useThreadListRuntime
+  CP:
+    surface_kind: endpoint
+    surface_name: GET /chat/sessions
+  DH:
+    surface_kind: rpc
+    surface_name: session.list
+  HM:
+    surface_kind: ws-rpc
+    surface_name: sessions.list
+  OCUI:
+    surface_kind: component
+    surface_name: SessionList
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: useActiveSessionQueue

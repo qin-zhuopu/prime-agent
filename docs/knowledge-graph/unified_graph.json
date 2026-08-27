@@ -9702,6 +9702,160 @@
       "file": "hermes-agent/web/src/lib/slashExec.ts",
       "repo": "HM",
       "id": "P:HM:hermes-agent/web/src/lib/slashExec.ts"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "approve-permission",
+      "description": "Approve / deny a permission request",
+      "id": "CAP:approve-permission"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "attach-file",
+      "description": "Attach files / images / paste",
+      "id": "CAP:attach-file"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "browse-files",
+      "description": "Browse workspace / file tree",
+      "id": "CAP:browse-files"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "connect-status",
+      "description": "See connection / runtime status",
+      "id": "CAP:connect-status"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "edit-message",
+      "description": "Edit / copy / retry a message",
+      "id": "CAP:edit-message"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "list-sessions",
+      "description": "Browse and switch between sessions",
+      "id": "CAP:list-sessions"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "manage-mcp",
+      "description": "Manage MCP servers / toolsets",
+      "id": "CAP:manage-mcp"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "manage-skills",
+      "description": "Manage skills",
+      "id": "CAP:manage-skills"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "manage-subagents",
+      "description": "See / navigate subagents",
+      "id": "CAP:manage-subagents"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "manage-todos",
+      "description": "See task / todo list",
+      "id": "CAP:manage-todos"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "mention-ref",
+      "description": "@-mention files or references",
+      "id": "CAP:mention-ref"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "message-feedback",
+      "description": "Thumbs up/down feedback",
+      "id": "CAP:message-feedback"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "pick-model",
+      "description": "Choose the model",
+      "id": "CAP:pick-model"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "send-message",
+      "description": "Send a prompt / message to the agent",
+      "id": "CAP:send-message"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "set-mode-effort",
+      "description": "Set mode / reasoning effort",
+      "id": "CAP:set-mode-effort"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "slash-command",
+      "description": "Run slash commands",
+      "id": "CAP:slash-command"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "start-session",
+      "description": "Create / start a conversation session",
+      "id": "CAP:start-session"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "stop-generation",
+      "description": "Interrupt / cancel a running turn",
+      "id": "CAP:stop-generation"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "stream-response",
+      "description": "Receive streaming assistant output",
+      "id": "CAP:stream-response"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "view-diff",
+      "description": "View file diffs produced by tools",
+      "id": "CAP:view-diff"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "view-reasoning",
+      "description": "See the agent's thinking / reasoning",
+      "id": "CAP:view-reasoning"
+    },
+    {
+      "layer": "capability",
+      "ntype": "capability",
+      "label": "view-tool-call",
+      "description": "See tool calls, args and results",
+      "id": "CAP:view-tool-call"
     }
   ],
   "links": [
@@ -9798,6 +9952,104 @@
       "kind": "structured",
       "source": "ACHAT",
       "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "PermissionPrompt",
+      "source": "ACHAT",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useFileWorkspaceState",
+      "source": "ACHAT",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useChatRuntime",
+      "source": "ACHAT",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useAgentRegistry",
+      "source": "ACHAT",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useAgentRegistry",
+      "source": "ACHAT",
+      "target": "CAP:manage-subagents"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSchedules",
+      "source": "ACHAT",
+      "target": "CAP:manage-todos"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "AgentSelector",
+      "source": "ACHAT",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useComposerState",
+      "source": "ACHAT",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSlashCommands",
+      "source": "ACHAT",
+      "target": "CAP:slash-command"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useChatRuntime",
+      "source": "ACHAT",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useChatRuntime",
+      "source": "ACHAT",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useChatRuntime",
+      "source": "ACHAT",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useLiveEditorSelection",
+      "source": "ACHAT",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ToolCall",
+      "source": "ACHAT",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "uses",
@@ -9996,6 +10248,83 @@
       "target": "tool-use:tool-card"
     },
     {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "usePermission",
+      "source": "ACPC",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useFileTree",
+      "source": "ACPC",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useConnectionStatus",
+      "source": "ACPC",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useCopy",
+      "source": "ACPC",
+      "target": "CAP:edit-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSessions",
+      "source": "ACPC",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSkills",
+      "source": "ACPC",
+      "target": "CAP:manage-skills"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "usePrompt",
+      "source": "ACPC",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSession",
+      "source": "ACPC",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSession",
+      "source": "ACPC",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useToolCalls",
+      "source": "ACPC",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useToolCalls",
+      "source": "ACPC",
+      "target": "CAP:view-tool-call"
+    },
+    {
       "etype": "uses",
       "source": "ACPUI",
       "target": "ACP"
@@ -10120,6 +10449,83 @@
       "target": "tool-use:tool-card"
     },
     {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "PermissionDialog",
+      "source": "ACPUI",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "StartupProgress",
+      "source": "ACPUI",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SessionList",
+      "source": "ACPUI",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ModelPicker",
+      "source": "ACPUI",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ChatView",
+      "source": "ACPUI",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ModePicker",
+      "source": "ACPUI",
+      "target": "CAP:set-mode-effort"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "CommandPalette",
+      "source": "ACPUI",
+      "target": "CAP:slash-command"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SessionList",
+      "source": "ACPUI",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ChatView",
+      "source": "ACPUI",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ChatView",
+      "source": "ACPUI",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ToolCallCard",
+      "source": "ACPUI",
+      "target": "CAP:view-tool-call"
+    },
+    {
       "etype": "uses",
       "source": "ACPWG",
       "target": "ACP"
@@ -10183,6 +10589,62 @@
       "kind": "structured",
       "source": "ACPWG",
       "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.request_permission",
+      "source": "ACPWG",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "StatusBar",
+      "source": "ACPWG",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.list",
+      "source": "ACPWG",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.prompt",
+      "source": "ACPWG",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.new",
+      "source": "ACPWG",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.cancel",
+      "source": "ACPWG",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.update",
+      "source": "ACPWG",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "tool.call",
+      "source": "ACPWG",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "uses",
@@ -10292,6 +10754,90 @@
       "target": "tool-use:tool-card"
     },
     {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-attachments",
+      "source": "ASTUI",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useThreadRuntime",
+      "source": "ASTUI",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useActionBarEdit",
+      "source": "ASTUI",
+      "target": "CAP:edit-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useThreadListRuntime",
+      "source": "ASTUI",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useActionBarFeedback",
+      "source": "ASTUI",
+      "target": "CAP:message-feedback"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useModelConfig",
+      "source": "ASTUI",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useComposerRuntime",
+      "source": "ASTUI",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useThreadRuntime",
+      "source": "ASTUI",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useActionBarStop",
+      "source": "ASTUI",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useMessageRuntime",
+      "source": "ASTUI",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "Reasoning",
+      "source": "ASTUI",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ToolFallback",
+      "source": "ASTUI",
+      "target": "CAP:view-tool-call"
+    },
+    {
       "etype": "uses",
       "source": "CKIT",
       "target": "AG-UI"
@@ -10360,6 +10906,69 @@
       "kind": "structured",
       "source": "CKIT",
       "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-attachments",
+      "source": "CKIT",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-copilot-runtime",
+      "source": "CKIT",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-mcp",
+      "source": "CKIT",
+      "target": "CAP:manage-mcp"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-coagent",
+      "source": "CKIT",
+      "target": "CAP:manage-subagents"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-ask-copilot",
+      "source": "CKIT",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent",
+      "source": "CKIT",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent",
+      "source": "CKIT",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "protocol",
+      "surface_name": "AG-UI events",
+      "source": "CKIT",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-render-tool-call",
+      "source": "CKIT",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "uses",
@@ -10887,6 +11496,153 @@
       "target": "G:CP:xai-oauth"
     },
     {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/permission",
+      "source": "CP",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /assets/html-bundles",
+      "source": "CP",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "GET /files/browse",
+      "source": "CP",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ConnectionBanner",
+      "source": "CP",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageIconActions",
+      "source": "CP",
+      "target": "CAP:edit-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "GET /chat/sessions",
+      "source": "CP",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "GET /codex/mcp/[server]",
+      "source": "CP",
+      "target": "CAP:manage-mcp"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "GET /skills",
+      "source": "CP",
+      "target": "CAP:manage-skills"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SubagentCard",
+      "source": "CP",
+      "target": "CAP:manage-subagents"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "TaskRunMarker",
+      "source": "CP",
+      "target": "CAP:manage-todos"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageInputParts",
+      "source": "CP",
+      "target": "CAP:mention-ref"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/model",
+      "source": "CP",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/messages",
+      "source": "CP",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/mode",
+      "source": "CP",
+      "target": "CAP:set-mode-effort"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SlashCommandPopover",
+      "source": "CP",
+      "target": "CAP:slash-command"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/sessions",
+      "source": "CP",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/interrupt",
+      "source": "CP",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "endpoint",
+      "surface_name": "POST /chat/structured",
+      "source": "CP",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "DiffSummary",
+      "source": "CP",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "reasoning.tsx",
+      "source": "CP",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "tool.tsx",
+      "source": "CP",
+      "target": "CAP:view-tool-call"
+    },
+    {
       "etype": "uses",
       "source": "DH",
       "target": "SSE"
@@ -11376,6 +12132,153 @@
       "etype": "has_group",
       "source": "DH",
       "target": "G:DH:llm"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "approvals.respond",
+      "source": "DH",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.attachment",
+      "source": "DH",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "host.listDirectory",
+      "source": "DH",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ConnectionBanner",
+      "source": "DH",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageIconActions",
+      "source": "DH",
+      "target": "CAP:edit-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.list",
+      "source": "DH",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "skill.list",
+      "source": "DH",
+      "target": "CAP:manage-skills"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "subagent.list",
+      "source": "DH",
+      "target": "CAP:manage-subagents"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "TodoPanel",
+      "source": "DH",
+      "target": "CAP:manage-todos"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ReferenceIcon",
+      "source": "DH",
+      "target": "CAP:mention-ref"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ui-message-feedback",
+      "source": "DH",
+      "target": "CAP:message-feedback"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.selectModel",
+      "source": "DH",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.prompt",
+      "source": "DH",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "submission-settings",
+      "source": "DH",
+      "target": "CAP:set-mode-effort"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "commands.catalog",
+      "source": "DH",
+      "target": "CAP:slash-command"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.create",
+      "source": "DH",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.cancel",
+      "source": "DH",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "rpc",
+      "surface_name": "session.prompt(stream)",
+      "source": "DH",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "DiffBlock",
+      "source": "DH",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ReasoningRow",
+      "source": "DH",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ToolRow",
+      "source": "DH",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "uses",
@@ -12209,6 +13112,146 @@
       "target": "G:HM:window"
     },
     {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "approval.respond",
+      "source": "HM",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "clipboard.paste",
+      "source": "HM",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "files.list",
+      "source": "HM",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useSidebarStatus",
+      "source": "HM",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "clipboard",
+      "source": "HM",
+      "target": "CAP:edit-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "sessions.list",
+      "source": "HM",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "mcp.manage",
+      "source": "HM",
+      "target": "CAP:manage-mcp"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "skills.list",
+      "source": "HM",
+      "target": "CAP:manage-skills"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "agents.list",
+      "source": "HM",
+      "target": "CAP:manage-subagents"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "terminal",
+      "source": "HM",
+      "target": "CAP:manage-todos"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "model.select",
+      "source": "HM",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "prompt.submit",
+      "source": "HM",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "agent.reasoning_effort",
+      "source": "HM",
+      "target": "CAP:set-mode-effort"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SlashPopover",
+      "source": "HM",
+      "target": "CAP:slash-command"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.create",
+      "source": "HM",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "session.interrupt",
+      "source": "HM",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "ws-rpc",
+      "surface_name": "message.delta",
+      "source": "HM",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "terminal",
+      "source": "HM",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "terminal",
+      "source": "HM",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "terminal",
+      "source": "HM",
+      "target": "CAP:view-tool-call"
+    },
+    {
       "etype": "uses",
       "source": "OCUI",
       "target": "structured-render"
@@ -12308,6 +13351,90 @@
       "kind": "structured",
       "source": "OCUI",
       "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "PermissionModal",
+      "source": "OCUI",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "DirectoryTree",
+      "source": "OCUI",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ConnectionStatus",
+      "source": "OCUI",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SessionList",
+      "source": "OCUI",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "TodoList",
+      "source": "OCUI",
+      "target": "CAP:manage-todos"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ModelSelector",
+      "source": "OCUI",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageDisplay",
+      "source": "OCUI",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "SessionList",
+      "source": "OCUI",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageDisplay",
+      "source": "OCUI",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "DiffViewer",
+      "source": "OCUI",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageDisplay",
+      "source": "OCUI",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "ToolCall",
+      "source": "OCUI",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "uses",
@@ -12421,6 +13548,111 @@
       "kind": "structured",
       "source": "OGUI",
       "target": "tool-use:tool-card"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "permission",
+      "source": "OGUI",
+      "target": "CAP:approve-permission"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-prompt-files",
+      "source": "OGUI",
+      "target": "CAP:attach-file"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-file-mention",
+      "source": "OGUI",
+      "target": "CAP:browse-files"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent-backend",
+      "source": "OGUI",
+      "target": "CAP:connect-status"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useActiveSessionQueue",
+      "source": "OGUI",
+      "target": "CAP:list-sessions"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-file-mention",
+      "source": "OGUI",
+      "target": "CAP:mention-ref"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent-variant-core",
+      "source": "OGUI",
+      "target": "CAP:pick-model"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-prompt-draft",
+      "source": "OGUI",
+      "target": "CAP:send-message"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent-variant-core",
+      "source": "OGUI",
+      "target": "CAP:set-mode-effort"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "useChatSessionSurface",
+      "source": "OGUI",
+      "target": "CAP:start-session"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent-state",
+      "source": "OGUI",
+      "target": "CAP:stop-generation"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "sdk-hook",
+      "surface_name": "use-agent-state",
+      "source": "OGUI",
+      "target": "CAP:stream-response"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "diff-view",
+      "source": "OGUI",
+      "target": "CAP:view-diff"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "MessageList",
+      "source": "OGUI",
+      "target": "CAP:view-reasoning"
+    },
+    {
+      "etype": "provides",
+      "surface_kind": "component",
+      "surface_name": "tool-view",
+      "source": "OGUI",
+      "target": "CAP:view-tool-call"
     },
     {
       "etype": "contains",

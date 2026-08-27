@@ -1,0 +1,20 @@
+id: CAP:manage-subagents
+ntype: capability
+label: manage-subagents
+description: See / navigate subagents
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useAgentRegistry
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-coagent
+  CP:
+    surface_kind: component
+    surface_name: SubagentCard
+  DH:
+    surface_kind: rpc
+    surface_name: subagent.list
+  HM:
+    surface_kind: ws-rpc
+    surface_name: agents.list

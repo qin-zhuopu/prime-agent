@@ -1,0 +1,20 @@
+id: CAP:edit-message
+ntype: capability
+label: edit-message
+description: Edit / copy / retry a message
+implementations:
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useCopy
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useActionBarEdit
+  CP:
+    surface_kind: component
+    surface_name: MessageIconActions
+  DH:
+    surface_kind: component
+    surface_name: MessageIconActions
+  HM:
+    surface_kind: component
+    surface_name: clipboard

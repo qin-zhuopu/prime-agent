@@ -1,0 +1,38 @@
+id: CAP:view-tool-call
+ntype: capability
+label: view-tool-call
+description: See tool calls, args and results
+implementations:
+  ACHAT:
+    surface_kind: component
+    surface_name: ToolCall
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useToolCalls
+  ACPUI:
+    surface_kind: component
+    surface_name: ToolCallCard
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: tool.call
+  ASTUI:
+    surface_kind: component
+    surface_name: ToolFallback
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-render-tool-call
+  CP:
+    surface_kind: component
+    surface_name: tool.tsx
+  DH:
+    surface_kind: component
+    surface_name: ToolRow
+  HM:
+    surface_kind: component
+    surface_name: terminal
+  OCUI:
+    surface_kind: component
+    surface_name: ToolCall
+  OGUI:
+    surface_kind: component
+    surface_name: tool-view

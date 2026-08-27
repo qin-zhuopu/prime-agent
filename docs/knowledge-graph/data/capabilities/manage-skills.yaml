@@ -1,0 +1,17 @@
+id: CAP:manage-skills
+ntype: capability
+label: manage-skills
+description: Manage skills
+implementations:
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useSkills
+  CP:
+    surface_kind: endpoint
+    surface_name: GET /skills
+  DH:
+    surface_kind: rpc
+    surface_name: skill.list
+  HM:
+    surface_kind: ws-rpc
+    surface_name: skills.list

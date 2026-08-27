@@ -1,0 +1,11 @@
+id: CAP:message-feedback
+ntype: capability
+label: message-feedback
+description: Thumbs up/down feedback
+implementations:
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useActionBarFeedback
+  DH:
+    surface_kind: component
+    surface_name: ui-message-feedback

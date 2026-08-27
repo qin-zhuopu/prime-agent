@@ -1,0 +1,20 @@
+id: CAP:slash-command
+ntype: capability
+label: slash-command
+description: Run slash commands
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useSlashCommands
+  ACPUI:
+    surface_kind: component
+    surface_name: CommandPalette
+  CP:
+    surface_kind: component
+    surface_name: SlashCommandPopover
+  DH:
+    surface_kind: rpc
+    surface_name: commands.catalog
+  HM:
+    surface_kind: component
+    surface_name: SlashPopover

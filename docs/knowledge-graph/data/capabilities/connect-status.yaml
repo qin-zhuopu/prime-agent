@@ -1,0 +1,38 @@
+id: CAP:connect-status
+ntype: capability
+label: connect-status
+description: See connection / runtime status
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useChatRuntime
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useConnectionStatus
+  ACPUI:
+    surface_kind: component
+    surface_name: StartupProgress
+  ACPWG:
+    surface_kind: component
+    surface_name: StatusBar
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useThreadRuntime
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-copilot-runtime
+  CP:
+    surface_kind: component
+    surface_name: ConnectionBanner
+  DH:
+    surface_kind: component
+    surface_name: ConnectionBanner
+  HM:
+    surface_kind: sdk-hook
+    surface_name: useSidebarStatus
+  OCUI:
+    surface_kind: component
+    surface_name: ConnectionStatus
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-agent-backend

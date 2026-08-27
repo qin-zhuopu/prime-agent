@@ -1,0 +1,23 @@
+id: CAP:attach-file
+ntype: capability
+label: attach-file
+description: Attach files / images / paste
+implementations:
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: use-attachments
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-attachments
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /assets/html-bundles
+  DH:
+    surface_kind: rpc
+    surface_name: session.attachment
+  HM:
+    surface_kind: ws-rpc
+    surface_name: clipboard.paste
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-prompt-files

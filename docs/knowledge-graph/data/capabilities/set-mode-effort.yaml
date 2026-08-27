@@ -1,0 +1,20 @@
+id: CAP:set-mode-effort
+ntype: capability
+label: set-mode-effort
+description: Set mode / reasoning effort
+implementations:
+  ACPUI:
+    surface_kind: component
+    surface_name: ModePicker
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/mode
+  DH:
+    surface_kind: component
+    surface_name: submission-settings
+  HM:
+    surface_kind: ws-rpc
+    surface_name: agent.reasoning_effort
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-agent-variant-core

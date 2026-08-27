@@ -1,0 +1,29 @@
+id: CAP:pick-model
+ntype: capability
+label: pick-model
+description: Choose the model
+implementations:
+  ACHAT:
+    surface_kind: component
+    surface_name: AgentSelector
+  ACPUI:
+    surface_kind: component
+    surface_name: ModelPicker
+  ASTUI:
+    surface_kind: sdk-hook
+    surface_name: useModelConfig
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/model
+  DH:
+    surface_kind: rpc
+    surface_name: session.selectModel
+  HM:
+    surface_kind: ws-rpc
+    surface_name: model.select
+  OCUI:
+    surface_kind: component
+    surface_name: ModelSelector
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-agent-variant-core

@@ -1,0 +1,23 @@
+id: CAP:view-reasoning
+ntype: capability
+label: view-reasoning
+description: See the agent's thinking / reasoning
+implementations:
+  ASTUI:
+    surface_kind: component
+    surface_name: Reasoning
+  CP:
+    surface_kind: component
+    surface_name: reasoning.tsx
+  DH:
+    surface_kind: component
+    surface_name: ReasoningRow
+  HM:
+    surface_kind: component
+    surface_name: terminal
+  OCUI:
+    surface_kind: component
+    surface_name: MessageDisplay
+  OGUI:
+    surface_kind: component
+    surface_name: MessageList

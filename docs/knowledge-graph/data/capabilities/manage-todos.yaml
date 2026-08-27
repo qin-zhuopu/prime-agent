@@ -1,0 +1,20 @@
+id: CAP:manage-todos
+ntype: capability
+label: manage-todos
+description: See task / todo list
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useSchedules
+  CP:
+    surface_kind: component
+    surface_name: TaskRunMarker
+  DH:
+    surface_kind: component
+    surface_name: TodoPanel
+  HM:
+    surface_kind: component
+    surface_name: terminal
+  OCUI:
+    surface_kind: component
+    surface_name: TodoList

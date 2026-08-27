@@ -1,0 +1,32 @@
+id: CAP:approve-permission
+ntype: capability
+label: approve-permission
+description: Approve / deny a permission request
+implementations:
+  ACHAT:
+    surface_kind: component
+    surface_name: PermissionPrompt
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: usePermission
+  ACPUI:
+    surface_kind: component
+    surface_name: PermissionDialog
+  ACPWG:
+    surface_kind: ws-rpc
+    surface_name: session.request_permission
+  CP:
+    surface_kind: endpoint
+    surface_name: POST /chat/permission
+  DH:
+    surface_kind: rpc
+    surface_name: approvals.respond
+  HM:
+    surface_kind: ws-rpc
+    surface_name: approval.respond
+  OCUI:
+    surface_kind: component
+    surface_name: PermissionModal
+  OGUI:
+    surface_kind: component
+    surface_name: permission

@@ -1,0 +1,26 @@
+id: CAP:browse-files
+ntype: capability
+label: browse-files
+description: Browse workspace / file tree
+implementations:
+  ACHAT:
+    surface_kind: sdk-hook
+    surface_name: useFileWorkspaceState
+  ACPC:
+    surface_kind: sdk-hook
+    surface_name: useFileTree
+  CP:
+    surface_kind: endpoint
+    surface_name: GET /files/browse
+  DH:
+    surface_kind: rpc
+    surface_name: host.listDirectory
+  HM:
+    surface_kind: ws-rpc
+    surface_name: files.list
+  OCUI:
+    surface_kind: component
+    surface_name: DirectoryTree
+  OGUI:
+    surface_kind: sdk-hook
+    surface_name: use-file-mention

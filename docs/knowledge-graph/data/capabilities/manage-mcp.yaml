@@ -1,0 +1,14 @@
+id: CAP:manage-mcp
+ntype: capability
+label: manage-mcp
+description: Manage MCP servers / toolsets
+implementations:
+  CKIT:
+    surface_kind: sdk-hook
+    surface_name: use-mcp
+  CP:
+    surface_kind: endpoint
+    surface_name: GET /codex/mcp/[server]
+  HM:
+    surface_kind: ws-rpc
+    surface_name: mcp.manage
