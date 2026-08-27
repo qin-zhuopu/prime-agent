@@ -1,0 +1,1910 @@
+[
+  {
+    "caller_file": "CodePilot/src/app/api/assets/[id]/thumbnail/route.ts",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/api/assets/html-bundles/route.ts",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/api/codex/models/route.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/api/media/gallery/route.ts",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/api/tasks/runs/[runId]/route.ts",
+    "endpoint": "/tasks/[id]/run",
+    "endpoint_id": "/tasks/[id]/run",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/openai-oauth/status",
+    "endpoint_id": "/openai-oauth/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/files/browse",
+    "endpoint_id": "/files/browse",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/interrupt",
+    "endpoint_id": "/chat/interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/permission",
+    "endpoint_id": "/chat/permission",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/chat",
+    "endpoint_id": "/chat",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/page.tsx",
+    "endpoint": "/workspace/session",
+    "endpoint_id": "/workspace/session",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/[id]/page.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/[id]/page.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/chat/[id]/page.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/gallery/page.tsx",
+    "endpoint": "/media/gallery",
+    "endpoint_id": "/media/gallery",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/gallery/page.tsx",
+    "endpoint": "/assets/kinds",
+    "endpoint_id": "/assets/kinds",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/gallery/page.tsx",
+    "endpoint": "/media/[id]",
+    "endpoint_id": "/media/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/gallery/page.tsx",
+    "endpoint": "/media/[id]/favorite",
+    "endpoint_id": "/media/[id]/favorite",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/gallery/page.tsx",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/plugins/page.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/app/plugins/page.tsx",
+    "endpoint": "/skills",
+    "endpoint_id": "/skills",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/assistant/OnboardingWizard.tsx",
+    "endpoint": "/workspace/wizard",
+    "endpoint_id": "/workspace/wizard",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/assistant/OnboardingWizard.tsx",
+    "endpoint": "/workspace/hatch-buddy",
+    "endpoint_id": "/workspace/hatch-buddy",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/BridgeSection.tsx",
+    "endpoint": "/bridge/settings",
+    "endpoint_id": "/bridge/settings",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/BridgeSection.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/BridgeSection.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/DiscordBridgeSection.tsx",
+    "endpoint": "/settings/discord",
+    "endpoint_id": "/settings/discord",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/DiscordBridgeSection.tsx",
+    "endpoint": "/settings/discord/verify",
+    "endpoint_id": "/settings/discord/verify",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/FeishuBridgeSection.tsx",
+    "endpoint": "/settings/feishu",
+    "endpoint_id": "/settings/feishu",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/FeishuBridgeSection.tsx",
+    "endpoint": "/bridge/feishu/register/start",
+    "endpoint_id": "/bridge/feishu/register/start",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/FeishuBridgeSection.tsx",
+    "endpoint": "/bridge/feishu/register/poll",
+    "endpoint_id": "/bridge/feishu/register/poll",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/FeishuBridgeSection.tsx",
+    "endpoint": "/bridge/feishu/register/cancel",
+    "endpoint_id": "/bridge/feishu/register/cancel",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/FeishuBridgeSection.tsx",
+    "endpoint": "/settings/feishu/verify",
+    "endpoint_id": "/settings/feishu/verify",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/QqBridgeSection.tsx",
+    "endpoint": "/settings/qq",
+    "endpoint_id": "/settings/qq",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/QqBridgeSection.tsx",
+    "endpoint": "/settings/qq/verify",
+    "endpoint_id": "/settings/qq/verify",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/TelegramBridgeSection.tsx",
+    "endpoint": "/settings/telegram",
+    "endpoint_id": "/settings/telegram",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/TelegramBridgeSection.tsx",
+    "endpoint": "/settings/telegram/verify",
+    "endpoint_id": "/settings/telegram/verify",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/WeixinBridgeSection.tsx",
+    "endpoint": "/settings/weixin/accounts",
+    "endpoint_id": "/settings/weixin/accounts",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/WeixinBridgeSection.tsx",
+    "endpoint": "/settings/weixin/login/wait",
+    "endpoint_id": "/settings/weixin/login/wait",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/bridge/WeixinBridgeSection.tsx",
+    "endpoint": "/settings/weixin/login/start",
+    "endpoint_id": "/settings/weixin/login/start",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatPermissionSelector.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/mode",
+    "endpoint_id": "/chat/mode",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/chat/messages",
+    "endpoint_id": "/chat/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/workspace/inspect",
+    "endpoint_id": "/workspace/inspect",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ChatView.tsx",
+    "endpoint": "/workspace/session",
+    "endpoint_id": "/workspace/session",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/FileAttachmentDisplay.tsx",
+    "endpoint": "/uploads",
+    "endpoint_id": "/uploads",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/FolderPicker.tsx",
+    "endpoint": "/files/browse",
+    "endpoint_id": "/files/browse",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenCard.tsx",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+    "endpoint": "/media/generate",
+    "endpoint_id": "/media/generate",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+    "endpoint": "/providers/active-image",
+    "endpoint_id": "/providers/active-image",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+    "endpoint": "/chat/messages",
+    "endpoint_id": "/chat/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/ImageGenConfirmation.tsx",
+    "endpoint": "/uploads",
+    "endpoint_id": "/uploads",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MediaPreview.tsx",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInput.tsx",
+    "endpoint": "/files/serve",
+    "endpoint_id": "/files/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInput.tsx",
+    "endpoint": "/files/raw",
+    "endpoint_id": "/files/raw",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInput.tsx",
+    "endpoint": "/files",
+    "endpoint_id": "/files",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageInputParts.tsx",
+    "endpoint": "/files/raw",
+    "endpoint_id": "/files/raw",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageItem.tsx",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageList.tsx",
+    "endpoint": "/chat/rewind",
+    "endpoint_id": "/chat/rewind",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/MessageList.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/PermissionPrompt.tsx",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/QuickActions.tsx",
+    "endpoint": "/workspace/quick-actions",
+    "endpoint_id": "/workspace/quick-actions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/RuntimeSelector.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/SubagentCard.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskCheckpoint.tsx",
+    "endpoint": "/tasks",
+    "endpoint_id": "/tasks",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskCheckpoint.tsx",
+    "endpoint": "/tasks/[id]",
+    "endpoint_id": "/tasks/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskRunMarker.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskWaitingForPermissionPanel.tsx",
+    "endpoint": "/tasks/[id]/run",
+    "endpoint_id": "/tasks/[id]/run",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/TaskWaitingForPermissionPanel.tsx",
+    "endpoint": "/tasks/[id]",
+    "endpoint_id": "/tasks/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/chat/WidgetRenderer.tsx",
+    "endpoint": "/workspace/hatch-buddy",
+    "endpoint_id": "/workspace/hatch-buddy",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolAddDialog.tsx",
+    "endpoint": "/cli-tools/custom",
+    "endpoint_id": "/cli-tools/custom",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolBatchDescribeDialog.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolBatchDescribeDialog.tsx",
+    "endpoint": "/cli-tools/[id]/describe",
+    "endpoint_id": "/cli-tools/[id]/describe",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolInstallDialog.tsx",
+    "endpoint": "/cli-tools/[id]/install",
+    "endpoint_id": "/cli-tools/[id]/install",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolsManager.tsx",
+    "endpoint": "/cli-tools/catalog",
+    "endpoint_id": "/cli-tools/catalog",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolsManager.tsx",
+    "endpoint": "/cli-tools/installed",
+    "endpoint_id": "/cli-tools/installed",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolsManager.tsx",
+    "endpoint": "/cli-tools/descriptions",
+    "endpoint_id": "/cli-tools/descriptions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/cli-tools/CliToolsManager.tsx",
+    "endpoint": "/cli-tools/custom/[id]",
+    "endpoint_id": "/cli-tools/custom/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/editor/markdown-live-preview.ts",
+    "endpoint": "/files/serve",
+    "endpoint_id": "/files/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/editor/markdown-live-preview.ts",
+    "endpoint": "/files/raw",
+    "endpoint_id": "/files/raw",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/gallery/GalleryDetail.tsx",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/gallery/GalleryDetail.tsx",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/gallery/GalleryGrid.tsx",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/gallery/TagManager.tsx",
+    "endpoint": "/media/tags",
+    "endpoint_id": "/media/tags",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/gallery/TagManager.tsx",
+    "endpoint": "/media/tags/[id]",
+    "endpoint_id": "/media/tags/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/CommitDialog.tsx",
+    "endpoint": "/git/commit",
+    "endpoint_id": "/git/commit",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/CommitDialog.tsx",
+    "endpoint": "/git/push",
+    "endpoint_id": "/git/push",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/DeriveWorktreeDialog.tsx",
+    "endpoint": "/git/worktrees/derive",
+    "endpoint_id": "/git/worktrees/derive",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitBranchSelector.tsx",
+    "endpoint": "/git/branches",
+    "endpoint_id": "/git/branches",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitCommitSection.tsx",
+    "endpoint": "/git/commit",
+    "endpoint_id": "/git/commit",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitHistorySection.tsx",
+    "endpoint": "/git/log",
+    "endpoint_id": "/git/log",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitPanel.tsx",
+    "endpoint": "/git/checkout",
+    "endpoint_id": "/git/checkout",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitStatusSection.tsx",
+    "endpoint": "/git/push",
+    "endpoint_id": "/git/push",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+    "endpoint": "/git/worktrees",
+    "endpoint_id": "/git/worktrees",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+    "endpoint": "/chat/sessions/by-cwd",
+    "endpoint_id": "/chat/sessions/by-cwd",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/git/GitWorktreeSection.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/AppShell.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/AppShell.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/files/browse",
+    "endpoint_id": "/files/browse",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ChatListPanel.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ConnectionStatus.tsx",
+    "endpoint": "/claude-status",
+    "endpoint_id": "/claude-status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ConnectionStatus.tsx",
+    "endpoint": "/claude-status/invalidate",
+    "endpoint_id": "/claude-status/invalidate",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ConnectionStatus.tsx",
+    "endpoint": "/claude-upgrade",
+    "endpoint_id": "/claude-upgrade",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/FeatureAnnouncementDialog.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/FeatureAnnouncementDialog.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/GlobalSearchDialog.tsx",
+    "endpoint": "/search",
+    "endpoint_id": "/search",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/I18nProvider.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ImportSessionDialog.tsx",
+    "endpoint": "/claude-sessions",
+    "endpoint_id": "/claude-sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ImportSessionDialog.tsx",
+    "endpoint": "/claude-sessions/import",
+    "endpoint_id": "/claude-sessions/import",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/ProjectGroupHeader.tsx",
+    "endpoint": "/files/open",
+    "endpoint_id": "/files/open",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/SplitColumn.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/SplitColumn.tsx",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/UnifiedTopBar.tsx",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/UnifiedTopBar.tsx",
+    "endpoint": "/files/open",
+    "endpoint_id": "/files/open",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/AssistantPanel.tsx",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/DashboardPanel.tsx",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/DashboardPanel.tsx",
+    "endpoint": "/dashboard",
+    "endpoint_id": "/dashboard",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/DashboardPanel.tsx",
+    "endpoint": "/dashboard/refresh",
+    "endpoint_id": "/dashboard/refresh",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/DashboardPanel.tsx",
+    "endpoint": "/workspace/evolve-buddy",
+    "endpoint_id": "/workspace/evolve-buddy",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/DashboardPanel.tsx",
+    "endpoint": "/workspace/hatch-buddy",
+    "endpoint_id": "/workspace/hatch-buddy",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+    "endpoint": "/files/mkdir",
+    "endpoint_id": "/files/mkdir",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/FileTreePanel.tsx",
+    "endpoint": "/files/write",
+    "endpoint_id": "/files/write",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/write",
+    "endpoint_id": "/files/write",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/serve",
+    "endpoint_id": "/files/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/layout/panels/PreviewPanel.tsx",
+    "endpoint": "/files/raw",
+    "endpoint_id": "/files/raw",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/markdown/markdown-contract.tsx",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpJsonConfigDialog.tsx",
+    "endpoint": "/plugins/mcp",
+    "endpoint_id": "/plugins/mcp",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpManager.tsx",
+    "endpoint": "/plugins/mcp",
+    "endpoint_id": "/plugins/mcp",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpManager.tsx",
+    "endpoint": "/chat/sessions",
+    "endpoint_id": "/chat/sessions",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpManager.tsx",
+    "endpoint": "/plugins/mcp/status",
+    "endpoint_id": "/plugins/mcp/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpServerList.tsx",
+    "endpoint": "/plugins/mcp/reconnect",
+    "endpoint_id": "/plugins/mcp/reconnect",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/plugins/McpServerList.tsx",
+    "endpoint": "/plugins/mcp/toggle",
+    "endpoint_id": "/plugins/mcp/toggle",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/project/FilePreview.tsx",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/project/FileTree.tsx",
+    "endpoint": "/files",
+    "endpoint_id": "/files",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/project/TaskList.tsx",
+    "endpoint": "/tasks",
+    "endpoint_id": "/tasks",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/project/TaskList.tsx",
+    "endpoint": "/tasks/[id]",
+    "endpoint_id": "/tasks/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AboutSection.tsx",
+    "endpoint": "/doctor/export",
+    "endpoint_id": "/doctor/export",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AppearanceSection.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/tasks/notify/test",
+    "endpoint_id": "/tasks/notify/test",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/index",
+    "endpoint_id": "/workspace/index",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/session",
+    "endpoint_id": "/workspace/session",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/inspect",
+    "endpoint_id": "/workspace/inspect",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/docs",
+    "endpoint_id": "/workspace/docs",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/organize",
+    "endpoint_id": "/workspace/organize",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/workspace/hatch-buddy",
+    "endpoint_id": "/workspace/hatch-buddy",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/AssistantWorkspaceSection.tsx",
+    "endpoint": "/tasks/[id]",
+    "endpoint_id": "/tasks/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/CodexAccountModelsBlock.tsx",
+    "endpoint": "/codex/models",
+    "endpoint_id": "/codex/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/GeneralSection.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/GeneralSection.tsx",
+    "endpoint": "/settings/sentry",
+    "endpoint_id": "/settings/sentry",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers",
+    "endpoint_id": "/providers",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers/[id]/models",
+    "endpoint_id": "/providers/[id]/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers/[id]/validate-models",
+    "endpoint_id": "/providers/[id]/validate-models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/providers/[id]",
+    "endpoint_id": "/providers/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ModelsSection.tsx",
+    "endpoint": "/models/align-all-with-catalog",
+    "endpoint_id": "/models/align-all-with-catalog",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/OpenRouterCleanupDialog.tsx",
+    "endpoint": "/providers/[id]/openrouter-legacy-cleanup",
+    "endpoint_id": "/providers/[id]/openrouter-legacy-cleanup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/OpenRouterSearchDialog.tsx",
+    "endpoint": "/providers/[id]/search-models",
+    "endpoint_id": "/providers/[id]/search-models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/OpenRouterSearchDialog.tsx",
+    "endpoint": "/providers/[id]/models",
+    "endpoint_id": "/providers/[id]/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/OverviewHeatmap.tsx",
+    "endpoint": "/usage/stats",
+    "endpoint_id": "/usage/stats",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/OverviewSection.tsx",
+    "endpoint": "/usage/stats",
+    "endpoint_id": "/usage/stats",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/PresetConnectDialog.tsx",
+    "endpoint": "/providers/test",
+    "endpoint_id": "/providers/test",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderDoctorDialog.tsx",
+    "endpoint": "/doctor",
+    "endpoint_id": "/doctor",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderDoctorDialog.tsx",
+    "endpoint": "/doctor/repair",
+    "endpoint_id": "/doctor/repair",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderDoctorDialog.tsx",
+    "endpoint": "/doctor/export",
+    "endpoint_id": "/doctor/export",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers/[id]/discover-models",
+    "endpoint_id": "/providers/[id]/discover-models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers/[id]/discover-models/apply",
+    "endpoint_id": "/providers/[id]/discover-models/apply",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers",
+    "endpoint_id": "/providers",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers/active-image",
+    "endpoint_id": "/providers/active-image",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/openai-oauth/status",
+    "endpoint_id": "/openai-oauth/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/xai-oauth/status",
+    "endpoint_id": "/xai-oauth/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/codex/account",
+    "endpoint_id": "/codex/account",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/codex/rate-limits",
+    "endpoint_id": "/codex/rate-limits",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/providers/[id]",
+    "endpoint_id": "/providers/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/openai-oauth/start",
+    "endpoint_id": "/openai-oauth/start",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/xai-oauth/cancel",
+    "endpoint_id": "/xai-oauth/cancel",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/xai-oauth/start",
+    "endpoint_id": "/xai-oauth/start",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderManager.tsx",
+    "endpoint": "/codex/login",
+    "endpoint_id": "/codex/login",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/ProviderOptionsSection.tsx",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/codex/status",
+    "endpoint_id": "/codex/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/settings",
+    "endpoint_id": "/settings",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/claude-status",
+    "endpoint_id": "/claude-status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/RuntimePanel.tsx",
+    "endpoint": "/claude-upgrade",
+    "endpoint_id": "/claude-upgrade",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/schedule",
+    "endpoint_id": "/tasks/schedule",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/list",
+    "endpoint_id": "/tasks/list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/[id]/runs",
+    "endpoint_id": "/tasks/[id]/runs",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/[id]/run",
+    "endpoint_id": "/tasks/[id]/run",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/[id]/pause",
+    "endpoint_id": "/tasks/[id]/pause",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/TasksSection.tsx",
+    "endpoint": "/tasks/[id]",
+    "endpoint_id": "/tasks/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/UsageStatsSection.tsx",
+    "endpoint": "/usage/stats",
+    "endpoint_id": "/usage/stats",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/providers/[id]/models",
+    "endpoint_id": "/providers/[id]/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/settings/useOverviewData.ts",
+    "endpoint": "/workspace/summary",
+    "endpoint_id": "/workspace/summary",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ClaudeCodeCard.tsx",
+    "endpoint": "/claude-status",
+    "endpoint_id": "/claude-status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ClaudeCodeCard.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ProjectDirCard.tsx",
+    "endpoint": "/setup/recent-projects",
+    "endpoint_id": "/setup/recent-projects",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ProjectDirCard.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ProviderCard.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ProviderCard.tsx",
+    "endpoint": "/providers",
+    "endpoint_id": "/providers",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/ProviderCard.tsx",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/setup/SetupCenter.tsx",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/skills/InstallProgressDialog.tsx",
+    "endpoint": "/skills/marketplace/install",
+    "endpoint_id": "/skills/marketplace/install",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/skills/InstallProgressDialog.tsx",
+    "endpoint": "/skills/marketplace/remove",
+    "endpoint_id": "/skills/marketplace/remove",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/skills/MarketplaceBrowser.tsx",
+    "endpoint": "/skills/marketplace/search",
+    "endpoint_id": "/skills/marketplace/search",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/skills/MarketplaceSkillDetail.tsx",
+    "endpoint": "/skills/marketplace/readme",
+    "endpoint_id": "/skills/marketplace/readme",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/components/skills/SkillListItem.tsx",
+    "endpoint": "/skills",
+    "endpoint_id": "/skills",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useAccountInfo.ts",
+    "endpoint": "/sdk/account",
+    "endpoint_id": "/sdk/account",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useAssistantTrigger.ts",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useAssistantTrigger.ts",
+    "endpoint": "/workspace/hook-triggered",
+    "endpoint_id": "/workspace/hook-triggered",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useAssistantWorkspace.ts",
+    "endpoint": "/settings/workspace",
+    "endpoint_id": "/settings/workspace",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/plan",
+    "endpoint_id": "/media/jobs/plan",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs",
+    "endpoint_id": "/media/jobs",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/start",
+    "endpoint_id": "/media/jobs/[id]/start",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/progress",
+    "endpoint_id": "/media/jobs/[id]/progress",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]",
+    "endpoint_id": "/media/jobs/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/pause",
+    "endpoint_id": "/media/jobs/[id]/pause",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/resume",
+    "endpoint_id": "/media/jobs/[id]/resume",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/cancel",
+    "endpoint_id": "/media/jobs/[id]/cancel",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBatchImageGen.ts",
+    "endpoint": "/media/jobs/[id]/sync-context",
+    "endpoint_id": "/media/jobs/[id]/sync-context",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useBridgeStatus.ts",
+    "endpoint": "/bridge",
+    "endpoint_id": "/bridge",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useChatCommands.ts",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useClaudeStatus.ts",
+    "endpoint": "/claude-status",
+    "endpoint_id": "/claude-status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useClaudeStatus.ts",
+    "endpoint": "/claude-status/invalidate",
+    "endpoint_id": "/claude-status/invalidate",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useCliToolsFetch.ts",
+    "endpoint": "/cli-tools/installed",
+    "endpoint_id": "/cli-tools/installed",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useCliToolsFetch.ts",
+    "endpoint": "/cli-tools/catalog",
+    "endpoint_id": "/cli-tools/catalog",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useGitBranches.ts",
+    "endpoint": "/git/branches",
+    "endpoint_id": "/git/branches",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useGitLog.ts",
+    "endpoint": "/git/log",
+    "endpoint_id": "/git/log",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useGitStatus.ts",
+    "endpoint": "/git/status",
+    "endpoint_id": "/git/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useGitWorktrees.ts",
+    "endpoint": "/git/worktrees",
+    "endpoint_id": "/git/worktrees",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useGlobalAgentRuntime.ts",
+    "endpoint": "/settings/app",
+    "endpoint_id": "/settings/app",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useMentionTokenEstimate.ts",
+    "endpoint": "/files/serve",
+    "endpoint_id": "/files/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useMentionTokenEstimate.ts",
+    "endpoint": "/files/raw",
+    "endpoint_id": "/files/raw",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useMentionTokenEstimate.ts",
+    "endpoint": "/files",
+    "endpoint_id": "/files",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useNotificationPoll.ts",
+    "endpoint": "/tasks/notify/ack",
+    "endpoint_id": "/tasks/notify/ack",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useNotificationPoll.ts",
+    "endpoint": "/tasks/notify/claim",
+    "endpoint_id": "/tasks/notify/claim",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/usePopoverState.ts",
+    "endpoint": "/skills/search",
+    "endpoint_id": "/skills/search",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useProviderModels.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useProviderModels.ts",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useProviderModels.ts",
+    "endpoint": "/codex/models",
+    "endpoint_id": "/codex/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useSlashCommands.ts",
+    "endpoint": "/files/suggest",
+    "endpoint_id": "/files/suggest",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useStreamSubscription.ts",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/hooks/useUpdateChecker.ts",
+    "endpoint": "/app/updates",
+    "endpoint_id": "/app/updates",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/ai-provider.ts",
+    "endpoint": "/openai-oauth/status",
+    "endpoint_id": "/openai-oauth/status",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/archive-html-asset-client.ts",
+    "endpoint": "/assets/html-bundles",
+    "endpoint_id": "/assets/html-bundles",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/auto-discover-models.ts",
+    "endpoint": "/providers/[id]/discover-models",
+    "endpoint_id": "/providers/[id]/discover-models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/auto-discover-models.ts",
+    "endpoint": "/providers/[id]/discover-models/apply",
+    "endpoint_id": "/providers/[id]/discover-models/apply",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/chat-runtime.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/db.ts",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/file-mutation.ts",
+    "endpoint": "/files/rename",
+    "endpoint_id": "/files/rename",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/file-mutation.ts",
+    "endpoint": "/files/delete",
+    "endpoint_id": "/files/delete",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/html-asset-thumbnail-client.ts",
+    "endpoint": "/assets/[id]",
+    "endpoint_id": "/assets/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/local-path-navigation.ts",
+    "endpoint": "/files/inspect",
+    "endpoint_id": "/files/inspect",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/local-path-security.ts",
+    "endpoint": "/files/inspect",
+    "endpoint_id": "/files/inspect",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/managed-virtual-provider-models.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/media-saver.ts",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/model-discovery.ts",
+    "endpoint": "/providers/[id]/discover-models/apply",
+    "endpoint_id": "/providers/[id]/discover-models/apply",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/permission-approval-token.ts",
+    "endpoint": "/chat/permission",
+    "endpoint_id": "/chat/permission",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/preview-source.ts",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/provider-presence.ts",
+    "endpoint": "/chat",
+    "endpoint_id": "/chat",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/provider-presence.ts",
+    "endpoint": "/setup",
+    "endpoint_id": "/setup",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/provider-resolver.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/resolve-session-model.ts",
+    "endpoint": "/providers/options",
+    "endpoint_id": "/providers/options",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/resolve-session-model.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/runtime-compat.ts",
+    "endpoint": "/codex/proxy/v1/responses",
+    "endpoint_id": "/codex/proxy/v1/responses",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/session-title-events.ts",
+    "endpoint": "/chat",
+    "endpoint_id": "/chat",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/session-title-events.ts",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/skills-editability.ts",
+    "endpoint": "/skills",
+    "endpoint_id": "/skills",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat",
+    "endpoint_id": "/chat",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/sessions/[id]",
+    "endpoint_id": "/chat/sessions/[id]",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/interrupt",
+    "endpoint_id": "/chat/interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/stream-session-manager.ts",
+    "endpoint": "/chat/permission",
+    "endpoint_id": "/chat/permission",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/task-scheduler.ts",
+    "endpoint": "/tasks/[id]/run",
+    "endpoint_id": "/tasks/[id]/run",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/task-scheduler.ts",
+    "endpoint": "/tasks/[id]/runs",
+    "endpoint_id": "/tasks/[id]/runs",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/builtin-tools/notification.ts",
+    "endpoint": "/tasks/list",
+    "endpoint_id": "/tasks/list",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/builtin-tools/notification.ts",
+    "endpoint": "/tasks",
+    "endpoint_id": "/tasks",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/account-transition.ts",
+    "endpoint": "/codex/account",
+    "endpoint_id": "/codex/account",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/account-transition.ts",
+    "endpoint": "/codex/login",
+    "endpoint_id": "/codex/login",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/approval-bridge.ts",
+    "endpoint": "/chat/permission",
+    "endpoint_id": "/chat/permission",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/event-mapper.ts",
+    "endpoint": "/codex/account",
+    "endpoint_id": "/codex/account",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/media-import.ts",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/model-catalog-warmup.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/model-catalog-warmup.ts",
+    "endpoint": "/codex/models",
+    "endpoint_id": "/codex/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/models.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/provider-proxy.ts",
+    "endpoint": "/codex/proxy/v1/responses",
+    "endpoint_id": "/codex/proxy/v1/responses",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/runtime.ts",
+    "endpoint": "/chat/interrupt",
+    "endpoint_id": "/chat/interrupt",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/runtime.ts",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/proxy/adapter.ts",
+    "endpoint": "/codex/proxy/v1/responses",
+    "endpoint_id": "/codex/proxy/v1/responses",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/proxy/adapter.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/proxy/builtin-bridge.ts",
+    "endpoint": "/media/serve",
+    "endpoint_id": "/media/serve",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/codex/proxy/parse-request.ts",
+    "endpoint": "/codex/proxy/v1/responses",
+    "endpoint_id": "/codex/proxy/v1/responses",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/markdown/presentation-refresh.ts",
+    "endpoint": "/files/preview",
+    "endpoint_id": "/files/preview",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/lib/runtime/effective.ts",
+    "endpoint": "/providers/models",
+    "endpoint_id": "/providers/models",
+    "kind": "REST"
+  },
+  {
+    "caller_file": "CodePilot/src/types/index.ts",
+    "endpoint": "/chat/sessions/[id]/messages",
+    "endpoint_id": "/chat/sessions/[id]/messages",
+    "kind": "REST"
+  }
+]

@@ -144,6 +144,33 @@ def check_all() -> list[str]:
                 if isinstance(rec, dict) and rec.get("operation") not in op_ids:
                     problems.append(f"[ref] {fj.name}[{i}]: calls unknown operation '{rec.get('operation')}'")
 
+    # 5. full layer (data/full/*.json) — untrimmed endpoint + call inventory
+    full_dir = DATA / "full"
+    if full_dir.is_dir():
+        import json
+        ep_v = Draft7Validator(_load_yaml(SCHEMAS / "full_endpoint.schema.yaml"))
+        call_v = Draft7Validator(_load_yaml(SCHEMAS / "full_call.schema.yaml"))
+        ep_names: dict[str, set] = {}
+        for ej in sorted(full_dir.glob("endpoints_*.json")):
+            repo = ej.stem.replace("endpoints_", "")
+            recs = json.loads(ej.read_text())
+            names = set()
+            for i, rec in enumerate(recs):
+                for err in ep_v.iter_errors(rec):
+                    loc = "/".join(str(x) for x in err.path) or "(root)"
+                    problems.append(f"[schema] {ej.name}[{i}]: {loc}: {err.message}")
+                names.add(rec.get("name"))
+            ep_names[repo] = names
+        for cj in sorted(full_dir.glob("calls_*.json")):
+            repo = cj.stem.replace("calls_", "")
+            for i, rec in enumerate(json.loads(cj.read_text())):
+                for err in call_v.iter_errors(rec):
+                    loc = "/".join(str(x) for x in err.path) or "(root)"
+                    problems.append(f"[schema] {cj.name}[{i}]: {loc}: {err.message}")
+                if rec.get("endpoint") not in ep_names.get(repo, set()):
+                    problems.append(f"[ref] {cj.name}[{i}]: calls endpoint '{rec.get('endpoint')}' "
+                                    f"not in endpoints_{repo}.json")
+
     return problems
 
 

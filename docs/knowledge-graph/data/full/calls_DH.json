@@ -1,0 +1,110 @@
+[
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.read",
+    "endpoint_id": "agentPreset.read",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.copy",
+    "endpoint_id": "agentPreset.copy",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.openDocument",
+    "endpoint_id": "agentPreset.openDocument",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "agentPreset.remove",
+    "endpoint_id": "agentPreset.remove",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "host.pickDirectory",
+    "endpoint_id": "host.pickDirectory",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "host.openPath",
+    "endpoint_id": "host.openPath",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.describe",
+    "endpoint_id": "settings.describe",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.openDocument",
+    "endpoint_id": "settings.openDocument",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.update",
+    "endpoint_id": "settings.update",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.replace",
+    "endpoint_id": "settings.replace",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "settings.mutate",
+    "endpoint_id": "settings.mutate",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "credentials.describe",
+    "endpoint_id": "credentials.describe",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "credentials.set",
+    "endpoint_id": "credentials.set",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "credentials.unset",
+    "endpoint_id": "credentials.unset",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/index.ts",
+    "endpoint": "llm.discoverModels",
+    "endpoint_id": "llm.discoverModels",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/connection/src/client/api.ts",
+    "endpoint": "host.describe",
+    "endpoint_id": "host.describe",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/ui-workspace/src/client/WorkspaceBrowser.tsx",
+    "endpoint": "workspace.createFromPrompt",
+    "endpoint_id": "workspace.createFromPrompt",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "deepseek-harness/packages/client/ui-workspace/src/client/locales.ts",
+    "endpoint": "workspace.createFromPrompt",
+    "endpoint_id": "workspace.createFromPrompt",
+    "kind": "RPC"
+  }
+]

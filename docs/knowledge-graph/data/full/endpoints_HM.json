@@ -1,0 +1,2693 @@
+[
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "_index.jsonl",
+    "http": "",
+    "id": "_index.jsonl",
+    "group": "_index",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agent.reasoning_effort",
+    "http": "",
+    "id": "agent.reasoning_effort",
+    "group": "agent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agent.service_tier",
+    "http": "",
+    "id": "agent.service_tier",
+    "group": "agent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agent.terminal.output",
+    "http": "",
+    "id": "agent.terminal.output",
+    "group": "agent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agent.thinking",
+    "http": "",
+    "id": "agent.thinking",
+    "group": "agent",
+    "src": "hermes-agent/tui_gateway/ws.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agent.token",
+    "http": "",
+    "id": "agent.token",
+    "group": "agent",
+    "src": "hermes-agent/tui_gateway/ws.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "agents.list",
+    "http": "",
+    "id": "agents.list",
+    "group": "agents",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approval.pending",
+    "http": "",
+    "id": "approval.pending",
+    "group": "approval",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approval.received",
+    "http": "",
+    "id": "approval.received",
+    "group": "approval",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approval.request",
+    "http": "",
+    "id": "approval.request",
+    "group": "approval",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approval.respond",
+    "http": "",
+    "id": "approval.respond",
+    "group": "approval",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approvals.mcp_reload_confirm",
+    "http": "",
+    "id": "approvals.mcp_reload_confirm",
+    "group": "approvals",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "approvals.mode",
+    "http": "",
+    "id": "approvals.mode",
+    "group": "approvals",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "auth.json",
+    "http": "",
+    "id": "auth.json",
+    "group": "auth",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "background.complete",
+    "http": "",
+    "id": "background.complete",
+    "group": "background",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.auto_reload",
+    "http": "",
+    "id": "billing.auto_reload",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.charge",
+    "http": "",
+    "id": "billing.charge",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.charge_status",
+    "http": "",
+    "id": "billing.charge_status",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.state",
+    "http": "",
+    "id": "billing.state",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.step_up",
+    "http": "",
+    "id": "billing.step_up",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "billing.step_up.verification",
+    "http": "",
+    "id": "billing.step_up.verification",
+    "group": "billing",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "bot_relay.deliver",
+    "http": "",
+    "id": "bot_relay.deliver",
+    "group": "bot_relay",
+    "src": "hermes-agent/tui_gateway/methods_bot_relay.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "bot_relay.outbox.drain",
+    "http": "",
+    "id": "bot_relay.outbox.drain",
+    "group": "bot_relay",
+    "src": "hermes-agent/tui_gateway/methods_bot_relay.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "bot_relay.outbox.pending",
+    "http": "",
+    "id": "bot_relay.outbox.pending",
+    "group": "bot_relay",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "bot_relay.reply",
+    "http": "",
+    "id": "bot_relay.reply",
+    "group": "bot_relay",
+    "src": "hermes-agent/tui_gateway/methods_bot_relay.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "bot_relay.roster.sync",
+    "http": "",
+    "id": "bot_relay.roster.sync",
+    "group": "bot_relay",
+    "src": "hermes-agent/tui_gateway/methods_bot_relay.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.controller.command",
+    "http": "",
+    "id": "browser.controller.command",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_browser_control.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.controller.detach",
+    "http": "",
+    "id": "browser.controller.detach",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_browser_control.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.controller.heartbeat",
+    "http": "",
+    "id": "browser.controller.heartbeat",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_browser_control.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.controller.register",
+    "http": "",
+    "id": "browser.controller.register",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_browser_control.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.controller.result",
+    "http": "",
+    "id": "browser.controller.result",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_browser_control.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.manage",
+    "http": "",
+    "id": "browser.manage",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "browser.progress",
+    "http": "",
+    "id": "browser.progress",
+    "group": "browser",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "clarify.request",
+    "http": "",
+    "id": "clarify.request",
+    "group": "clarify",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "clarify.respond",
+    "http": "",
+    "id": "clarify.respond",
+    "group": "clarify",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "cli.exec",
+    "http": "",
+    "id": "cli.exec",
+    "group": "cli",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "clipboard.paste",
+    "http": "",
+    "id": "clipboard.paste",
+    "group": "clipboard",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "command.dispatch",
+    "http": "",
+    "id": "command.dispatch",
+    "group": "command",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "command.resolve",
+    "http": "",
+    "id": "command.resolve",
+    "group": "command",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "commands.catalog",
+    "http": "",
+    "id": "commands.catalog",
+    "group": "commands",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "complete.path",
+    "http": "",
+    "id": "complete.path",
+    "group": "complete",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "complete.slash",
+    "http": "",
+    "id": "complete.slash",
+    "group": "complete",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "config.get",
+    "http": "",
+    "id": "config.get",
+    "group": "config",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "config.set",
+    "http": "",
+    "id": "config.set",
+    "group": "config",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "config.show",
+    "http": "",
+    "id": "config.show",
+    "group": "config",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "config.yaml",
+    "http": "",
+    "id": "config.yaml",
+    "group": "config",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "control.ack",
+    "http": "",
+    "id": "control.ack",
+    "group": "control",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "control.error",
+    "http": "",
+    "id": "control.error",
+    "group": "control",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "cron.changed",
+    "http": "",
+    "id": "cron.changed",
+    "group": "cron",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "cron.manage",
+    "http": "",
+    "id": "cron.manage",
+    "group": "cron",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "delegation.pause",
+    "http": "",
+    "id": "delegation.pause",
+    "group": "delegation",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "delegation.status",
+    "http": "",
+    "id": "delegation.status",
+    "group": "delegation",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "diagnostics.share_nous",
+    "http": "",
+    "id": "diagnostics.share_nous",
+    "group": "diagnostics",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.battery",
+    "http": "",
+    "id": "display.battery",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.busy_input_mode",
+    "http": "",
+    "id": "display.busy_input_mode",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.details_mode",
+    "http": "",
+    "id": "display.details_mode",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.focus_saved_tool_progress",
+    "http": "",
+    "id": "display.focus_saved_tool_progress",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.focus_view",
+    "http": "",
+    "id": "display.focus_view",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.mouse_tracking",
+    "http": "",
+    "id": "display.mouse_tracking",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.thinking_mode",
+    "http": "",
+    "id": "display.thinking_mode",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.tool_progress",
+    "http": "",
+    "id": "display.tool_progress",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.tui_compact",
+    "http": "",
+    "id": "display.tui_compact",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.tui_status_indicator",
+    "http": "",
+    "id": "display.tui_status_indicator",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.tui_statusbar",
+    "http": "",
+    "id": "display.tui_statusbar",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "display.tui_theme",
+    "http": "",
+    "id": "display.tui_theme",
+    "group": "display",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "file.attach",
+    "http": "",
+    "id": "file.attach",
+    "group": "file",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "gateway.ping",
+    "http": "",
+    "id": "gateway.ping",
+    "group": "gateway",
+    "src": "hermes-agent/tui_gateway/ws.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "gateway.ready",
+    "http": "",
+    "id": "gateway.ready",
+    "group": "gateway",
+    "src": "hermes-agent/tui_gateway/entry.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "gateway_state.json",
+    "http": "",
+    "id": "gateway_state.json",
+    "group": "gateway_state",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "handoff.fail",
+    "http": "",
+    "id": "handoff.fail",
+    "group": "handoff",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "handoff.request",
+    "http": "",
+    "id": "handoff.request",
+    "group": "handoff",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "handoff.state",
+    "http": "",
+    "id": "handoff.state",
+    "group": "handoff",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "hermes_cli.main",
+    "http": "",
+    "id": "hermes_cli.main",
+    "group": "hermes_cli",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "image.attach",
+    "http": "",
+    "id": "image.attach",
+    "group": "image",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "image.attach_bytes",
+    "http": "",
+    "id": "image.attach_bytes",
+    "group": "image",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "image.detach",
+    "http": "",
+    "id": "image.detach",
+    "group": "image",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "image.generate",
+    "http": "",
+    "id": "image.generate",
+    "group": "image",
+    "src": "hermes-agent/tui_gateway/methods_images.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "input.detect_drop",
+    "http": "",
+    "id": "input.detect_drop",
+    "group": "input",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "input.pdf",
+    "http": "",
+    "id": "input.pdf",
+    "group": "input",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "input.request",
+    "http": "",
+    "id": "input.request",
+    "group": "input",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "insights.get",
+    "http": "",
+    "id": "insights.get",
+    "group": "insights",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "interrupt.ack",
+    "http": "",
+    "id": "interrupt.ack",
+    "group": "interrupt",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "interrupted_turns.json",
+    "http": "",
+    "id": "interrupted_turns.json",
+    "group": "interrupted_turns",
+    "src": "hermes-agent/tui_gateway/turn_marker.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "jobs.json",
+    "http": "",
+    "id": "jobs.json",
+    "group": "jobs",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "learning.delete",
+    "http": "",
+    "id": "learning.delete",
+    "group": "learning",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "learning.detail",
+    "http": "",
+    "id": "learning.detail",
+    "group": "learning",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "learning.edit",
+    "http": "",
+    "id": "learning.edit",
+    "group": "learning",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "learning.frames",
+    "http": "",
+    "id": "learning.frames",
+    "group": "learning",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "llm.oneshot",
+    "http": "",
+    "id": "llm.oneshot",
+    "group": "llm",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.catalog",
+    "http": "",
+    "id": "mcp.catalog",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.add",
+    "http": "",
+    "id": "mcp.servers.add",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.list",
+    "http": "",
+    "id": "mcp.servers.list",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.oauth.poll",
+    "http": "",
+    "id": "mcp.servers.oauth.poll",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.oauth.start",
+    "http": "",
+    "id": "mcp.servers.oauth.start",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.remove",
+    "http": "",
+    "id": "mcp.servers.remove",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.set_api_key",
+    "http": "",
+    "id": "mcp.servers.set_api_key",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.servers.test",
+    "http": "",
+    "id": "mcp.servers.test",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.setup.request",
+    "http": "",
+    "id": "mcp.setup.request",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "mcp.setup.respond",
+    "http": "",
+    "id": "mcp.setup.respond",
+    "group": "mcp",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "message.complete",
+    "http": "",
+    "id": "message.complete",
+    "group": "message",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "message.delta",
+    "http": "",
+    "id": "message.delta",
+    "group": "message",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "message.interim",
+    "http": "",
+    "id": "message.interim",
+    "group": "message",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "message.react",
+    "http": "",
+    "id": "message.react",
+    "group": "message",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "message.start",
+    "http": "",
+    "id": "message.start",
+    "group": "message",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "moa.aggregating",
+    "http": "",
+    "id": "moa.aggregating",
+    "group": "moa",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "moa.phase",
+    "http": "",
+    "id": "moa.phase",
+    "group": "moa",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "moa.progress",
+    "http": "",
+    "id": "moa.progress",
+    "group": "moa",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "moa.reference",
+    "http": "",
+    "id": "moa.reference",
+    "group": "moa",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.base_url",
+    "http": "",
+    "id": "model.base_url",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.default",
+    "http": "",
+    "id": "model.default",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.disconnect",
+    "http": "",
+    "id": "model.disconnect",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.options",
+    "http": "",
+    "id": "model.options",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.provider",
+    "http": "",
+    "id": "model.provider",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "model.save_key",
+    "http": "",
+    "id": "model.save_key",
+    "group": "model",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "notification.clear",
+    "http": "",
+    "id": "notification.clear",
+    "group": "notification",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "notification.show",
+    "http": "",
+    "id": "notification.show",
+    "group": "notification",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pairing.changed",
+    "http": "",
+    "id": "pairing.changed",
+    "group": "pairing",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "paste.collapse",
+    "http": "",
+    "id": "paste.collapse",
+    "group": "paste",
+    "src": "hermes-agent/tui_gateway/methods_complete.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pdf.attach",
+    "http": "",
+    "id": "pdf.attach",
+    "group": "pdf",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.cancel",
+    "http": "",
+    "id": "pet.cancel",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.cells",
+    "http": "",
+    "id": "pet.cells",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.changed",
+    "http": "",
+    "id": "pet.changed",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.disable",
+    "http": "",
+    "id": "pet.disable",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.export",
+    "http": "",
+    "id": "pet.export",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.gallery",
+    "http": "",
+    "id": "pet.gallery",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.generate",
+    "http": "",
+    "id": "pet.generate",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.generate.progress",
+    "http": "",
+    "id": "pet.generate.progress",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.generate.status",
+    "http": "",
+    "id": "pet.generate.status",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.hatch",
+    "http": "",
+    "id": "pet.hatch",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.hatch.progress",
+    "http": "",
+    "id": "pet.hatch.progress",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.info",
+    "http": "",
+    "id": "pet.info",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.info.meta",
+    "http": "",
+    "id": "pet.info.meta",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.remove",
+    "http": "",
+    "id": "pet.remove",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.rename",
+    "http": "",
+    "id": "pet.rename",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.scale",
+    "http": "",
+    "id": "pet.scale",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.select",
+    "http": "",
+    "id": "pet.select",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "pet.thumb",
+    "http": "",
+    "id": "pet.thumb",
+    "group": "pet",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "platforms.changed",
+    "http": "",
+    "id": "platforms.changed",
+    "group": "platforms",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "plugins.list",
+    "http": "",
+    "id": "plugins.list",
+    "group": "plugins",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "plugins.manage",
+    "http": "",
+    "id": "plugins.manage",
+    "group": "plugins",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.act.request",
+    "http": "",
+    "id": "preview.act.request",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.act.respond",
+    "http": "",
+    "id": "preview.act.respond",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.read.request",
+    "http": "",
+    "id": "preview.read.request",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.read.respond",
+    "http": "",
+    "id": "preview.read.respond",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.restart",
+    "http": "",
+    "id": "preview.restart",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.restart.complete",
+    "http": "",
+    "id": "preview.restart.complete",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "preview.restart.progress",
+    "http": "",
+    "id": "preview.restart.progress",
+    "group": "preview",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "process.kill",
+    "http": "",
+    "id": "process.kill",
+    "group": "process",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "process.list",
+    "http": "",
+    "id": "process.list",
+    "group": "process",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "process.stop",
+    "http": "",
+    "id": "process.stop",
+    "group": "process",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profile.yaml",
+    "http": "",
+    "id": "profile.yaml",
+    "group": "profile",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.configure",
+    "http": "",
+    "id": "profiles.configure",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.create",
+    "http": "",
+    "id": "profiles.create",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.describe",
+    "http": "",
+    "id": "profiles.describe",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.get_asset",
+    "http": "",
+    "id": "profiles.get_asset",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.list",
+    "http": "",
+    "id": "profiles.list",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "profiles.set_asset",
+    "http": "",
+    "id": "profiles.set_asset",
+    "group": "profiles",
+    "src": "hermes-agent/tui_gateway/methods_profiles.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "project.facts",
+    "http": "",
+    "id": "project.facts",
+    "group": "project",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.add_folder",
+    "http": "",
+    "id": "projects.add_folder",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.archive",
+    "http": "",
+    "id": "projects.archive",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.create",
+    "http": "",
+    "id": "projects.create",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.delete",
+    "http": "",
+    "id": "projects.delete",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.discover_repos",
+    "http": "",
+    "id": "projects.discover_repos",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.for_cwd",
+    "http": "",
+    "id": "projects.for_cwd",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.get",
+    "http": "",
+    "id": "projects.get",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.list",
+    "http": "",
+    "id": "projects.list",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.project_sessions",
+    "http": "",
+    "id": "projects.project_sessions",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.record_repos",
+    "http": "",
+    "id": "projects.record_repos",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.remove_folder",
+    "http": "",
+    "id": "projects.remove_folder",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.set_active",
+    "http": "",
+    "id": "projects.set_active",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.set_primary",
+    "http": "",
+    "id": "projects.set_primary",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.tree",
+    "http": "",
+    "id": "projects.tree",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "projects.update",
+    "http": "",
+    "id": "projects.update",
+    "group": "projects",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "prompt.background",
+    "http": "",
+    "id": "prompt.background",
+    "group": "prompt",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "prompt.submit",
+    "http": "",
+    "id": "prompt.submit",
+    "group": "prompt",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "prompt.submit.truncate",
+    "http": "",
+    "id": "prompt.submit.truncate",
+    "group": "prompt",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "reasoning.available",
+    "http": "",
+    "id": "reasoning.available",
+    "group": "reasoning",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "reasoning.delta",
+    "http": "",
+    "id": "reasoning.delta",
+    "group": "reasoning",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "reload.env",
+    "http": "",
+    "id": "reload.env",
+    "group": "reload",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "reload.mcp",
+    "http": "",
+    "id": "reload.mcp",
+    "group": "reload",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "reload_mcp.ack",
+    "http": "",
+    "id": "reload_mcp.ack",
+    "group": "reload_mcp",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "review.summary",
+    "http": "",
+    "id": "review.summary",
+    "group": "review",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "rollback.diff",
+    "http": "",
+    "id": "rollback.diff",
+    "group": "rollback",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "rollback.list",
+    "http": "",
+    "id": "rollback.list",
+    "group": "rollback",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "rollback.restore",
+    "http": "",
+    "id": "rollback.restore",
+    "group": "rollback",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "secret.request",
+    "http": "",
+    "id": "secret.request",
+    "group": "secret",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "secret.respond",
+    "http": "",
+    "id": "secret.respond",
+    "group": "secret",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.activate",
+    "http": "",
+    "id": "session.activate",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.active_list",
+    "http": "",
+    "id": "session.active_list",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.branch",
+    "http": "",
+    "id": "session.branch",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.close",
+    "http": "",
+    "id": "session.close",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.compress",
+    "http": "",
+    "id": "session.compress",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.context_breakdown",
+    "http": "",
+    "id": "session.context_breakdown",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.create",
+    "http": "",
+    "id": "session.create",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.cwd.set",
+    "http": "",
+    "id": "session.cwd.set",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.delete",
+    "http": "",
+    "id": "session.delete",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.events.since",
+    "http": "",
+    "id": "session.events.since",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.events.stats",
+    "http": "",
+    "id": "session.events.stats",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.history",
+    "http": "",
+    "id": "session.history",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.history.reload",
+    "http": "",
+    "id": "session.history.reload",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.info",
+    "http": "",
+    "id": "session.info",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.interrupt",
+    "http": "",
+    "id": "session.interrupt",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.list",
+    "http": "",
+    "id": "session.list",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.most_recent",
+    "http": "",
+    "id": "session.most_recent",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.reclaimed",
+    "http": "",
+    "id": "session.reclaimed",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.redirect",
+    "http": "",
+    "id": "session.redirect",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.reset",
+    "http": "",
+    "id": "session.reset",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.resume",
+    "http": "",
+    "id": "session.resume",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.resume_progress",
+    "http": "",
+    "id": "session.resume_progress",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.save",
+    "http": "",
+    "id": "session.save",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.seed",
+    "http": "",
+    "id": "session.seed",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.seeded",
+    "http": "",
+    "id": "session.seeded",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.set_hidden",
+    "http": "",
+    "id": "session.set_hidden",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.status",
+    "http": "",
+    "id": "session.status",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.steer",
+    "http": "",
+    "id": "session.steer",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.title",
+    "http": "",
+    "id": "session.title",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.undo",
+    "http": "",
+    "id": "session.undo",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.usage",
+    "http": "",
+    "id": "session.usage",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "session.workspace.move",
+    "http": "",
+    "id": "session.workspace.move",
+    "group": "session",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "sessions.changed",
+    "http": "",
+    "id": "sessions.changed",
+    "group": "sessions",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "setup.runtime_check",
+    "http": "",
+    "id": "setup.runtime_check",
+    "group": "setup",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "setup.status",
+    "http": "",
+    "id": "setup.status",
+    "group": "setup",
+    "src": "hermes-agent/tui_gateway/methods_config.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "shell.exec",
+    "http": "",
+    "id": "shell.exec",
+    "group": "shell",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "shutdown.ack",
+    "http": "",
+    "id": "shutdown.ack",
+    "group": "shutdown",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "skills.manage",
+    "http": "",
+    "id": "skills.manage",
+    "group": "skills",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "skills.reload",
+    "http": "",
+    "id": "skills.reload",
+    "group": "skills",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "skin.changed",
+    "http": "",
+    "id": "skin.changed",
+    "group": "skin",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.compress",
+    "http": "",
+    "id": "slash.compress",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.exec",
+    "http": "",
+    "id": "slash.exec",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.model",
+    "http": "",
+    "id": "slash.model",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.personality",
+    "http": "",
+    "id": "slash.personality",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.prompt",
+    "http": "",
+    "id": "slash.prompt",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "slash.retry",
+    "http": "",
+    "id": "slash.retry",
+    "group": "slash",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "spawn_tree.list",
+    "http": "",
+    "id": "spawn_tree.list",
+    "group": "spawn_tree",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "spawn_tree.load",
+    "http": "",
+    "id": "spawn_tree.load",
+    "group": "spawn_tree",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "spawn_tree.save",
+    "http": "",
+    "id": "spawn_tree.save",
+    "group": "spawn_tree",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "state.db",
+    "http": "",
+    "id": "state.db",
+    "group": "state",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "status.update",
+    "http": "",
+    "id": "status.update",
+    "group": "status",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "stt.faster_whisper",
+    "http": "",
+    "id": "stt.faster_whisper",
+    "group": "stt",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.complete",
+    "http": "",
+    "id": "subagent.complete",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.interrupt",
+    "http": "",
+    "id": "subagent.interrupt",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.start",
+    "http": "",
+    "id": "subagent.start",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.steer",
+    "http": "",
+    "id": "subagent.steer",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.text",
+    "http": "",
+    "id": "subagent.text",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.thinking",
+    "http": "",
+    "id": "subagent.thinking",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subagent.tool",
+    "http": "",
+    "id": "subagent.tool",
+    "group": "subagent",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subscription.change",
+    "http": "",
+    "id": "subscription.change",
+    "group": "subscription",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subscription.preview",
+    "http": "",
+    "id": "subscription.preview",
+    "group": "subscription",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subscription.resume",
+    "http": "",
+    "id": "subscription.resume",
+    "group": "subscription",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subscription.state",
+    "http": "",
+    "id": "subscription.state",
+    "group": "subscription",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "subscription.upgrade",
+    "http": "",
+    "id": "subscription.upgrade",
+    "group": "subscription",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "sudo.request",
+    "http": "",
+    "id": "sudo.request",
+    "group": "sudo",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "sudo.respond",
+    "http": "",
+    "id": "sudo.respond",
+    "group": "sudo",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "system.battery",
+    "http": "",
+    "id": "system.battery",
+    "group": "system",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "terminal.close",
+    "http": "",
+    "id": "terminal.close",
+    "group": "terminal",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "terminal.cwd",
+    "http": "",
+    "id": "terminal.cwd",
+    "group": "terminal",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "terminal.read.request",
+    "http": "",
+    "id": "terminal.read.request",
+    "group": "terminal",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "terminal.read.respond",
+    "http": "",
+    "id": "terminal.read.respond",
+    "group": "terminal",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "terminal.resize",
+    "http": "",
+    "id": "terminal.resize",
+    "group": "terminal",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "thinking.delta",
+    "http": "",
+    "id": "thinking.delta",
+    "group": "thinking",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tool.complete",
+    "http": "",
+    "id": "tool.complete",
+    "group": "tool",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tool.generating",
+    "http": "",
+    "id": "tool.generating",
+    "group": "tool",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tool.output_risk",
+    "http": "",
+    "id": "tool.output_risk",
+    "group": "tool",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tool.start",
+    "http": "",
+    "id": "tool.start",
+    "group": "tool",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tool.started",
+    "http": "",
+    "id": "tool.started",
+    "group": "tool",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tools.configure",
+    "http": "",
+    "id": "tools.configure",
+    "group": "tools",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tools.list",
+    "http": "",
+    "id": "tools.list",
+    "group": "tools",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tools.show",
+    "http": "",
+    "id": "tools.show",
+    "group": "tools",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "toolsets.list",
+    "http": "",
+    "id": "toolsets.list",
+    "group": "toolsets",
+    "src": "hermes-agent/tui_gateway/methods_tools.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tour.request",
+    "http": "",
+    "id": "tour.request",
+    "group": "tour",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tour.respond",
+    "http": "",
+    "id": "tour.respond",
+    "group": "tour",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tui_gateway.compute_host",
+    "http": "",
+    "id": "tui_gateway.compute_host",
+    "group": "tui_gateway",
+    "src": "hermes-agent/tui_gateway/host_supervisor.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tui_gateway.slash_worker",
+    "http": "",
+    "id": "tui_gateway.slash_worker",
+    "group": "tui_gateway",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "tui_gateway_crash.log",
+    "http": "",
+    "id": "tui_gateway_crash.log",
+    "group": "tui_gateway_crash",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "turn.end",
+    "http": "",
+    "id": "turn.end",
+    "group": "turn",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "turn.error",
+    "http": "",
+    "id": "turn.error",
+    "group": "turn",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "turn.start",
+    "http": "",
+    "id": "turn.start",
+    "group": "turn",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "turn.started",
+    "http": "",
+    "id": "turn.started",
+    "group": "turn",
+    "src": "hermes-agent/tui_gateway/compute_host.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "uploaded.pdf",
+    "http": "",
+    "id": "uploaded.pdf",
+    "group": "uploaded",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "usage.bars",
+    "http": "",
+    "id": "usage.bars",
+    "group": "usage",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "verification.status",
+    "http": "",
+    "id": "verification.status",
+    "group": "verification",
+    "src": "hermes-agent/tui_gateway/methods_session.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.interrupted",
+    "http": "",
+    "id": "voice.interrupted",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.record",
+    "http": "",
+    "id": "voice.record",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.status",
+    "http": "",
+    "id": "voice.status",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.toggle",
+    "http": "",
+    "id": "voice.toggle",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.transcript",
+    "http": "",
+    "id": "voice.transcript",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "voice.tts",
+    "http": "",
+    "id": "voice.tts",
+    "group": "voice",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.detected",
+    "http": "",
+    "id": "wake.detected",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.feed",
+    "http": "",
+    "id": "wake.feed",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.openwakeword",
+    "http": "",
+    "id": "wake.openwakeword",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.pause",
+    "http": "",
+    "id": "wake.pause",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.resume",
+    "http": "",
+    "id": "wake.resume",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.sherpa",
+    "http": "",
+    "id": "wake.sherpa",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.start",
+    "http": "",
+    "id": "wake.start",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.status",
+    "http": "",
+    "id": "wake.status",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake.stop",
+    "http": "",
+    "id": "wake.stop",
+    "group": "wake",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "wake_word.enabled",
+    "http": "",
+    "id": "wake_word.enabled",
+    "group": "wake_word",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "window.read.request",
+    "http": "",
+    "id": "window.read.request",
+    "group": "window",
+    "src": "hermes-agent/tui_gateway/server.py"
+  },
+  {
+    "repo": "HM",
+    "kind": "WS-RPC",
+    "name": "window.read.respond",
+    "http": "",
+    "id": "window.read.respond",
+    "group": "window",
+    "src": "hermes-agent/tui_gateway/methods_prompt.py"
+  }
+]

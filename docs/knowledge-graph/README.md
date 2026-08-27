@@ -153,3 +153,54 @@ python3 build_from_yaml.py   # 校验通过后重建全部图与度量
 - 二者刻意解耦：同一协议在不同 repo 可走不同传输（如 ACP 原生 stdio，但 acp-web-gateway 用 WebSocket 承载），所以 `validate.py` 不强制 repo.transport 等于其 protocol 的 transport，只校验 transport 合法且非空。
 
 **对自研的意义**：我们已定 SSE（对齐 CP/DH）。若未来要支持 WebSocket（如 HM 式全双工、或双向 steering），传输是可替换的一层——operation 节点不变，只换 `endpoints[*].transport` 与承载协议。
+
+
+---
+
+## 全量层 + 统一图（不裁剪，覆盖三个源码核对的 repo）
+
+前面的 API 图是"聊天核心"精选子集（14 实体/57 操作）。全量层则**不重不漏抓取三个源码核对 repo（CP/DH/HM，即 deep 簇）的所有后端接口和所有调用接口的前端页面**，再归一成一张总图。
+
+> 范围说明：全量抓取只覆盖 CP/DH/HM——因为只有它们在本地克隆且被完整读过源码。其余 8 个 broad 簇 repo 多数只看了 README，且不少是 SDK 型（无网络端点），做不了全量接口抓取。（已无人工 primary/survey 标签，deep/broad 由 `derive_tier.py` 涌现。）
+
+### 脚本（全量层）
+
+| 脚本 | 作用 |
+|---|---|
+| `scan_full.py` | 全量抓后端接口（无裁剪）→ `data/full/endpoints_<repo>.json`。CP 250(187路由×动词)/DH 53/HM 299，按命名空间/路径首段自动分组 |
+| `scan_full_calls.py` | 全量抓前端文件对所有接口的调用 → `data/full/calls_<repo>.json`，含 server-internal 统计 |
+| `build_full_graph.py` | 全量 API 图：`repo / endpoint_group / endpoint / page` + `has_group/has_endpoint/calls/in_repo`。902 节点/1387 边 |
+| `build_unified_graph.py` | **归一化**：在共享 repo 节点上合并 UI 功能图 + 全量 API 图 → **统一图 1000 节点/1806 边**。含 validate 闸门 |
+
+### 统一图节点/边
+
+节点(7 类)：`repo`(11) / `endpoint`(602) / `page`(165) / `endpoint_group`(132) / `feature`(73) / `category`(10) / `protocol`(7)。
+UI 层节点带 `layer=ui`，后端/页面节点带 `layer=api`，repo 节点共享(带 `has_api_layer`)。
+
+边(7 类)：`has_endpoint`(602) / `calls`(488) / `implements`(327) / `in_repo`(165) / `has_group`(132) / `contains`(73) / `uses`(19)。
+
+**归一化的价值**：一张图里可跨层遍历 `feature → repo → endpoint_group → endpoint ← page`，把"某 repo 实现哪些功能""这些功能对应哪些后端接口""哪些前端页面调用它们"打通。
+
+### 每 repo 全景（unified_metrics.md）
+
+| repo | features | endpoints | groups | pages calling API | server-internal |
+|---|---|---|---|---|---|
+| CodePilot | 60 | 250 | 31 | 155 | 39 |
+| deepseek-harness | 71 | 53 | 10 | 4 | 36 |
+| hermes-agent | 61 | 299 | 91 | 6 | 289 |
+
+三行数字直接揭示架构差异：CP 组件直接 fetch(155 页面散调 REST)；DH 把 RPC 方法名收敛在 connection 层(仅 4 文件，Cordis 契约驱动，业务组件走 typed service)；HM 端点最多(299)但绝大多数无前端 RPC 调用(289 server-internal)，因为交互走 PTY 终端。
+
+### 完整 pipeline
+
+```
+# 聊天核心层
+scan_api → map_api → scan_frontend_calls → validate → build_from_yaml
+# 全量层
+scan_full → scan_full_calls → build_full_graph
+# 归一
+build_unified_graph   (validate 闸门 → unified_graph.* + unified_metrics.md)
+# 质量
+validate.py / quality_check.py (含 full 层 schema 与覆盖统计)
+```
+全程纯脚本，无 LLM。

@@ -1,0 +1,2252 @@
+[
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/app/updates",
+    "http": "GET",
+    "id": "GET /app/updates",
+    "group": "app",
+    "src": "CodePilot/src/app/api/app/updates/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]/restore",
+    "http": "POST",
+    "id": "POST /assets/[id]/restore",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/restore/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]",
+    "http": "GET",
+    "id": "GET /assets/[id]",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]/tags",
+    "http": "GET",
+    "id": "GET /assets/[id]/tags",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/tags/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]/tags",
+    "http": "PUT",
+    "id": "PUT /assets/[id]/tags",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/tags/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]/thumbnail",
+    "http": "GET",
+    "id": "GET /assets/[id]/thumbnail",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/thumbnail/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/[id]/thumbnail",
+    "http": "POST",
+    "id": "POST /assets/[id]/thumbnail",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/[id]/thumbnail/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/html-bundles",
+    "http": "POST",
+    "id": "POST /assets/html-bundles",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/html-bundles/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/assets/kinds",
+    "http": "GET",
+    "id": "GET /assets/kinds",
+    "group": "assets",
+    "src": "CodePilot/src/app/api/assets/kinds/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/channels",
+    "http": "GET",
+    "id": "GET /bridge/channels",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/channels/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/feishu/register/cancel",
+    "http": "POST",
+    "id": "POST /bridge/feishu/register/cancel",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/feishu/register/cancel/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/feishu/register/poll",
+    "http": "POST",
+    "id": "POST /bridge/feishu/register/poll",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/feishu/register/poll/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/feishu/register/start",
+    "http": "POST",
+    "id": "POST /bridge/feishu/register/start",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/feishu/register/start/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge",
+    "http": "GET",
+    "id": "GET /bridge",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge",
+    "http": "POST",
+    "id": "POST /bridge",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/settings",
+    "http": "GET",
+    "id": "GET /bridge/settings",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/settings/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/bridge/settings",
+    "http": "PUT",
+    "id": "PUT /bridge/settings",
+    "group": "bridge",
+    "src": "CodePilot/src/app/api/bridge/settings/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/interrupt",
+    "http": "POST",
+    "id": "POST /chat/interrupt",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/interrupt/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/messages",
+    "http": "POST",
+    "id": "POST /chat/messages",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/messages/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/messages",
+    "http": "PUT",
+    "id": "PUT /chat/messages",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/messages/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/mode",
+    "http": "POST",
+    "id": "POST /chat/mode",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/mode/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/model",
+    "http": "POST",
+    "id": "POST /chat/model",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/model/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/permission",
+    "http": "POST",
+    "id": "POST /chat/permission",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/permission/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/permission-capability",
+    "http": "GET",
+    "id": "GET /chat/permission-capability",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/permission-capability/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/rewind",
+    "http": "POST",
+    "id": "POST /chat/rewind",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/rewind/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat",
+    "http": "POST",
+    "id": "POST /chat",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/[id]/messages",
+    "http": "GET",
+    "id": "GET /chat/sessions/[id]/messages",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/[id]/messages/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/[id]",
+    "http": "DELETE",
+    "id": "DELETE /chat/sessions/[id]",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/[id]",
+    "http": "GET",
+    "id": "GET /chat/sessions/[id]",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/[id]",
+    "http": "PATCH",
+    "id": "PATCH /chat/sessions/[id]",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/[id]/subagent-runs",
+    "http": "GET",
+    "id": "GET /chat/sessions/[id]/subagent-runs",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/[id]/subagent-runs/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions/by-cwd",
+    "http": "GET",
+    "id": "GET /chat/sessions/by-cwd",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/by-cwd/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions",
+    "http": "GET",
+    "id": "GET /chat/sessions",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/sessions",
+    "http": "POST",
+    "id": "POST /chat/sessions",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/sessions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/chat/structured",
+    "http": "POST",
+    "id": "POST /chat/structured",
+    "group": "chat",
+    "src": "CodePilot/src/app/api/chat/structured/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-auth",
+    "http": "GET",
+    "id": "GET /claude-auth",
+    "group": "claude-auth",
+    "src": "CodePilot/src/app/api/claude-auth/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-sessions/import",
+    "http": "POST",
+    "id": "POST /claude-sessions/import",
+    "group": "claude-sessions",
+    "src": "CodePilot/src/app/api/claude-sessions/import/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-sessions",
+    "http": "GET",
+    "id": "GET /claude-sessions",
+    "group": "claude-sessions",
+    "src": "CodePilot/src/app/api/claude-sessions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-status/invalidate",
+    "http": "POST",
+    "id": "POST /claude-status/invalidate",
+    "group": "claude-status",
+    "src": "CodePilot/src/app/api/claude-status/invalidate/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-status",
+    "http": "GET",
+    "id": "GET /claude-status",
+    "group": "claude-status",
+    "src": "CodePilot/src/app/api/claude-status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/claude-upgrade",
+    "http": "POST",
+    "id": "POST /claude-upgrade",
+    "group": "claude-upgrade",
+    "src": "CodePilot/src/app/api/claude-upgrade/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/[id]/describe",
+    "http": "POST",
+    "id": "POST /cli-tools/[id]/describe",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/[id]/describe/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/[id]/detail",
+    "http": "GET",
+    "id": "GET /cli-tools/[id]/detail",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/[id]/detail/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/[id]/install",
+    "http": "POST",
+    "id": "POST /cli-tools/[id]/install",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/[id]/install/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/[id]/status",
+    "http": "GET",
+    "id": "GET /cli-tools/[id]/status",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/[id]/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/catalog",
+    "http": "GET",
+    "id": "GET /cli-tools/catalog",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/catalog/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/custom/[id]",
+    "http": "DELETE",
+    "id": "DELETE /cli-tools/custom/[id]",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/custom/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/custom",
+    "http": "GET",
+    "id": "GET /cli-tools/custom",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/custom/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/custom",
+    "http": "POST",
+    "id": "POST /cli-tools/custom",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/custom/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/descriptions",
+    "http": "POST",
+    "id": "POST /cli-tools/descriptions",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/descriptions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/cli-tools/installed",
+    "http": "GET",
+    "id": "GET /cli-tools/installed",
+    "group": "cli-tools",
+    "src": "CodePilot/src/app/api/cli-tools/installed/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/account",
+    "http": "DELETE",
+    "id": "DELETE /codex/account",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/account/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/account",
+    "http": "GET",
+    "id": "GET /codex/account",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/account/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/dispose",
+    "http": "POST",
+    "id": "POST /codex/dispose",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/dispose/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/login",
+    "http": "DELETE",
+    "id": "DELETE /codex/login",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/login/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/login",
+    "http": "POST",
+    "id": "POST /codex/login",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/login/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/mcp/[server]",
+    "http": "POST",
+    "id": "POST /codex/mcp/[server]",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/mcp/[server]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/models",
+    "http": "GET",
+    "id": "GET /codex/models",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/proxy/v1/responses",
+    "http": "POST",
+    "id": "POST /codex/proxy/v1/responses",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/proxy/v1/responses/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/rate-limits",
+    "http": "GET",
+    "id": "GET /codex/rate-limits",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/rate-limits/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/status",
+    "http": "GET",
+    "id": "GET /codex/status",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/codex/status",
+    "http": "POST",
+    "id": "POST /codex/status",
+    "group": "codex",
+    "src": "CodePilot/src/app/api/codex/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/dashboard/refresh",
+    "http": "POST",
+    "id": "POST /dashboard/refresh",
+    "group": "dashboard",
+    "src": "CodePilot/src/app/api/dashboard/refresh/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/dashboard",
+    "http": "DELETE",
+    "id": "DELETE /dashboard",
+    "group": "dashboard",
+    "src": "CodePilot/src/app/api/dashboard/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/dashboard",
+    "http": "GET",
+    "id": "GET /dashboard",
+    "group": "dashboard",
+    "src": "CodePilot/src/app/api/dashboard/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/dashboard",
+    "http": "PUT",
+    "id": "PUT /dashboard",
+    "group": "dashboard",
+    "src": "CodePilot/src/app/api/dashboard/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/doctor/export",
+    "http": "GET",
+    "id": "GET /doctor/export",
+    "group": "doctor",
+    "src": "CodePilot/src/app/api/doctor/export/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/doctor/repair",
+    "http": "POST",
+    "id": "POST /doctor/repair",
+    "group": "doctor",
+    "src": "CodePilot/src/app/api/doctor/repair/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/doctor",
+    "http": "GET",
+    "id": "GET /doctor",
+    "group": "doctor",
+    "src": "CodePilot/src/app/api/doctor/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/browse",
+    "http": "GET",
+    "id": "GET /files/browse",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/browse/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/delete",
+    "http": "POST",
+    "id": "POST /files/delete",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/delete/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/html-preview/[...segments]",
+    "http": "GET",
+    "id": "GET /files/html-preview/[...segments]",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/html-preview/[...segments]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/inspect",
+    "http": "GET",
+    "id": "GET /files/inspect",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/inspect/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/mkdir",
+    "http": "POST",
+    "id": "POST /files/mkdir",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/mkdir/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/open",
+    "http": "POST",
+    "id": "POST /files/open",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/open/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/preview",
+    "http": "GET",
+    "id": "GET /files/preview",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/preview/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/raw",
+    "http": "GET",
+    "id": "GET /files/raw",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/raw/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/rename",
+    "http": "POST",
+    "id": "POST /files/rename",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/rename/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files",
+    "http": "GET",
+    "id": "GET /files",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/serve",
+    "http": "GET",
+    "id": "GET /files/serve",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/serve/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/suggest",
+    "http": "GET",
+    "id": "GET /files/suggest",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/suggest/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/files/write",
+    "http": "POST",
+    "id": "POST /files/write",
+    "group": "files",
+    "src": "CodePilot/src/app/api/files/write/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/branches",
+    "http": "GET",
+    "id": "GET /git/branches",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/branches/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/checkout",
+    "http": "POST",
+    "id": "POST /git/checkout",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/checkout/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/commit",
+    "http": "POST",
+    "id": "POST /git/commit",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/commit/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/commit-detail/[sha]",
+    "http": "GET",
+    "id": "GET /git/commit-detail/[sha]",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/commit-detail/[sha]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/log",
+    "http": "GET",
+    "id": "GET /git/log",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/log/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/push",
+    "http": "POST",
+    "id": "POST /git/push",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/push/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/status",
+    "http": "GET",
+    "id": "GET /git/status",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/worktrees/derive",
+    "http": "POST",
+    "id": "POST /git/worktrees/derive",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/worktrees/derive/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/git/worktrees",
+    "http": "GET",
+    "id": "GET /git/worktrees",
+    "group": "git",
+    "src": "CodePilot/src/app/api/git/worktrees/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/creative-projects",
+    "http": "GET",
+    "id": "GET /harness-home/creative-projects",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/creative-projects/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/creative-projects",
+    "http": "POST",
+    "id": "POST /harness-home/creative-projects",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/creative-projects/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/definitions",
+    "http": "GET",
+    "id": "GET /harness-home/definitions",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/definitions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/definitions",
+    "http": "POST",
+    "id": "POST /harness-home/definitions",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/definitions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/design-methods",
+    "http": "GET",
+    "id": "GET /harness-home/design-methods",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/design-methods/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/design-methods",
+    "http": "POST",
+    "id": "POST /harness-home/design-methods",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/design-methods/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home",
+    "http": "DELETE",
+    "id": "DELETE /harness-home",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home",
+    "http": "GET",
+    "id": "GET /harness-home",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home",
+    "http": "PUT",
+    "id": "PUT /harness-home",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/taste-memory",
+    "http": "DELETE",
+    "id": "DELETE /harness-home/taste-memory",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/taste-memory/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/taste-memory",
+    "http": "GET",
+    "id": "GET /harness-home/taste-memory",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/taste-memory/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/harness-home/taste-memory",
+    "http": "POST",
+    "id": "POST /harness-home/taste-memory",
+    "group": "harness-home",
+    "src": "CodePilot/src/app/api/harness-home/taste-memory/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/health",
+    "http": "GET",
+    "id": "GET /health",
+    "group": "health",
+    "src": "CodePilot/src/app/api/health/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/[id]/favorite",
+    "http": "PUT",
+    "id": "PUT /media/[id]/favorite",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/[id]/favorite/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/[id]",
+    "http": "DELETE",
+    "id": "DELETE /media/[id]",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/[id]",
+    "http": "GET",
+    "id": "GET /media/[id]",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/[id]/tags",
+    "http": "PUT",
+    "id": "PUT /media/[id]/tags",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/[id]/tags/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/gallery",
+    "http": "GET",
+    "id": "GET /media/gallery",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/gallery/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/generate",
+    "http": "POST",
+    "id": "POST /media/generate",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/generate/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/cancel",
+    "http": "POST",
+    "id": "POST /media/jobs/[id]/cancel",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/cancel/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/items",
+    "http": "PUT",
+    "id": "PUT /media/jobs/[id]/items",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/items/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/pause",
+    "http": "POST",
+    "id": "POST /media/jobs/[id]/pause",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/pause/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/progress",
+    "http": "GET",
+    "id": "GET /media/jobs/[id]/progress",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/progress/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/resume",
+    "http": "POST",
+    "id": "POST /media/jobs/[id]/resume",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/resume/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]",
+    "http": "DELETE",
+    "id": "DELETE /media/jobs/[id]",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]",
+    "http": "GET",
+    "id": "GET /media/jobs/[id]",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/start",
+    "http": "POST",
+    "id": "POST /media/jobs/[id]/start",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/start/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/[id]/sync-context",
+    "http": "POST",
+    "id": "POST /media/jobs/[id]/sync-context",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/[id]/sync-context/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs/plan",
+    "http": "POST",
+    "id": "POST /media/jobs/plan",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/plan/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs",
+    "http": "GET",
+    "id": "GET /media/jobs",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/jobs",
+    "http": "POST",
+    "id": "POST /media/jobs",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/jobs/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/serve",
+    "http": "GET",
+    "id": "GET /media/serve",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/serve/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/tags/[id]",
+    "http": "DELETE",
+    "id": "DELETE /media/tags/[id]",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/tags/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/tags",
+    "http": "GET",
+    "id": "GET /media/tags",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/tags/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/media/tags",
+    "http": "POST",
+    "id": "POST /media/tags",
+    "group": "media",
+    "src": "CodePilot/src/app/api/media/tags/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/models/align-all-with-catalog",
+    "http": "POST",
+    "id": "POST /models/align-all-with-catalog",
+    "group": "models",
+    "src": "CodePilot/src/app/api/models/align-all-with-catalog/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/openai-oauth/callback",
+    "http": "GET",
+    "id": "GET /openai-oauth/callback",
+    "group": "openai-oauth",
+    "src": "CodePilot/src/app/api/openai-oauth/callback/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/openai-oauth/start",
+    "http": "GET",
+    "id": "GET /openai-oauth/start",
+    "group": "openai-oauth",
+    "src": "CodePilot/src/app/api/openai-oauth/start/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/openai-oauth/status",
+    "http": "DELETE",
+    "id": "DELETE /openai-oauth/status",
+    "group": "openai-oauth",
+    "src": "CodePilot/src/app/api/openai-oauth/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/openai-oauth/status",
+    "http": "GET",
+    "id": "GET /openai-oauth/status",
+    "group": "openai-oauth",
+    "src": "CodePilot/src/app/api/openai-oauth/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/[id]",
+    "http": "GET",
+    "id": "GET /plugins/[id]",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/[id]",
+    "http": "PUT",
+    "id": "PUT /plugins/[id]",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp/[name]",
+    "http": "DELETE",
+    "id": "DELETE /plugins/mcp/[name]",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/[name]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp/reconnect",
+    "http": "POST",
+    "id": "POST /plugins/mcp/reconnect",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/reconnect/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp",
+    "http": "GET",
+    "id": "GET /plugins/mcp",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp",
+    "http": "POST",
+    "id": "POST /plugins/mcp",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp",
+    "http": "PUT",
+    "id": "PUT /plugins/mcp",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp/status",
+    "http": "GET",
+    "id": "GET /plugins/mcp/status",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins/mcp/toggle",
+    "http": "POST",
+    "id": "POST /plugins/mcp/toggle",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/mcp/toggle/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/plugins",
+    "http": "GET",
+    "id": "GET /plugins",
+    "group": "plugins",
+    "src": "CodePilot/src/app/api/plugins/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/activate",
+    "http": "POST",
+    "id": "POST /providers/[id]/activate",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/activate/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/discover-models/apply",
+    "http": "POST",
+    "id": "POST /providers/[id]/discover-models/apply",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/discover-models/apply/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/discover-models",
+    "http": "GET",
+    "id": "GET /providers/[id]/discover-models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/discover-models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/discover-models",
+    "http": "POST",
+    "id": "POST /providers/[id]/discover-models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/discover-models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/models/align-enabled",
+    "http": "POST",
+    "id": "POST /providers/[id]/models/align-enabled",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/models/align-enabled/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/models",
+    "http": "DELETE",
+    "id": "DELETE /providers/[id]/models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/models",
+    "http": "GET",
+    "id": "GET /providers/[id]/models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/models",
+    "http": "PATCH",
+    "id": "PATCH /providers/[id]/models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/models",
+    "http": "POST",
+    "id": "POST /providers/[id]/models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/openrouter-legacy-cleanup",
+    "http": "POST",
+    "id": "POST /providers/[id]/openrouter-legacy-cleanup",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/openrouter-legacy-cleanup/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]",
+    "http": "DELETE",
+    "id": "DELETE /providers/[id]",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]",
+    "http": "GET",
+    "id": "GET /providers/[id]",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]",
+    "http": "PUT",
+    "id": "PUT /providers/[id]",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/search-models",
+    "http": "POST",
+    "id": "POST /providers/[id]/search-models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/search-models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/[id]/validate-models",
+    "http": "POST",
+    "id": "POST /providers/[id]/validate-models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/[id]/validate-models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/active-image",
+    "http": "GET",
+    "id": "GET /providers/active-image",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/active-image/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/active-image",
+    "http": "PUT",
+    "id": "PUT /providers/active-image",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/active-image/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/models",
+    "http": "GET",
+    "id": "GET /providers/models",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/models/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/options",
+    "http": "GET",
+    "id": "GET /providers/options",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/options/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/options",
+    "http": "PUT",
+    "id": "PUT /providers/options",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/options/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers",
+    "http": "GET",
+    "id": "GET /providers",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers",
+    "http": "POST",
+    "id": "POST /providers",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/set-default",
+    "http": "POST",
+    "id": "POST /providers/set-default",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/set-default/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/providers/test",
+    "http": "POST",
+    "id": "POST /providers/test",
+    "group": "providers",
+    "src": "CodePilot/src/app/api/providers/test/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/sdk/account",
+    "http": "GET",
+    "id": "GET /sdk/account",
+    "group": "sdk",
+    "src": "CodePilot/src/app/api/sdk/account/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/search",
+    "http": "GET",
+    "id": "GET /search",
+    "group": "search",
+    "src": "CodePilot/src/app/api/search/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/app",
+    "http": "GET",
+    "id": "GET /settings/app",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/app/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/app",
+    "http": "PUT",
+    "id": "PUT /settings/app",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/app/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/discord",
+    "http": "GET",
+    "id": "GET /settings/discord",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/discord/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/discord",
+    "http": "PUT",
+    "id": "PUT /settings/discord",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/discord/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/discord/verify",
+    "http": "POST",
+    "id": "POST /settings/discord/verify",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/discord/verify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/feishu",
+    "http": "GET",
+    "id": "GET /settings/feishu",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/feishu/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/feishu",
+    "http": "PUT",
+    "id": "PUT /settings/feishu",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/feishu/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/feishu/verify",
+    "http": "POST",
+    "id": "POST /settings/feishu/verify",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/feishu/verify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/qq",
+    "http": "GET",
+    "id": "GET /settings/qq",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/qq/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/qq",
+    "http": "PUT",
+    "id": "PUT /settings/qq",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/qq/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/qq/verify",
+    "http": "POST",
+    "id": "POST /settings/qq/verify",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/qq/verify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings",
+    "http": "GET",
+    "id": "GET /settings",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings",
+    "http": "PUT",
+    "id": "PUT /settings",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/sentry",
+    "http": "GET",
+    "id": "GET /settings/sentry",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/sentry/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/sentry",
+    "http": "POST",
+    "id": "POST /settings/sentry",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/sentry/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/telegram",
+    "http": "GET",
+    "id": "GET /settings/telegram",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/telegram/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/telegram",
+    "http": "PUT",
+    "id": "PUT /settings/telegram",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/telegram/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/telegram/verify",
+    "http": "POST",
+    "id": "POST /settings/telegram/verify",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/telegram/verify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin/accounts/[accountId]",
+    "http": "DELETE",
+    "id": "DELETE /settings/weixin/accounts/[accountId]",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/accounts/[accountId]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin/accounts/[accountId]",
+    "http": "PATCH",
+    "id": "PATCH /settings/weixin/accounts/[accountId]",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/accounts/[accountId]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin/accounts",
+    "http": "GET",
+    "id": "GET /settings/weixin/accounts",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/accounts/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin/login/start",
+    "http": "POST",
+    "id": "POST /settings/weixin/login/start",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/login/start/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin/login/wait",
+    "http": "POST",
+    "id": "POST /settings/weixin/login/wait",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/login/wait/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin",
+    "http": "GET",
+    "id": "GET /settings/weixin",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/weixin",
+    "http": "PUT",
+    "id": "PUT /settings/weixin",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/weixin/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/workspace",
+    "http": "GET",
+    "id": "GET /settings/workspace",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/workspace/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/workspace",
+    "http": "PATCH",
+    "id": "PATCH /settings/workspace",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/workspace/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/settings/workspace",
+    "http": "PUT",
+    "id": "PUT /settings/workspace",
+    "group": "settings",
+    "src": "CodePilot/src/app/api/settings/workspace/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/setup/recent-projects",
+    "http": "GET",
+    "id": "GET /setup/recent-projects",
+    "group": "setup",
+    "src": "CodePilot/src/app/api/setup/recent-projects/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/setup",
+    "http": "GET",
+    "id": "GET /setup",
+    "group": "setup",
+    "src": "CodePilot/src/app/api/setup/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/setup",
+    "http": "PUT",
+    "id": "PUT /setup",
+    "group": "setup",
+    "src": "CodePilot/src/app/api/setup/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/[name]",
+    "http": "DELETE",
+    "id": "DELETE /skills/[name]",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/[name]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/[name]",
+    "http": "GET",
+    "id": "GET /skills/[name]",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/[name]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/[name]",
+    "http": "PUT",
+    "id": "PUT /skills/[name]",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/[name]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/marketplace/install",
+    "http": "POST",
+    "id": "POST /skills/marketplace/install",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/marketplace/install/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/marketplace/readme",
+    "http": "GET",
+    "id": "GET /skills/marketplace/readme",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/marketplace/readme/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/marketplace/remove",
+    "http": "POST",
+    "id": "POST /skills/marketplace/remove",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/marketplace/remove/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/marketplace/search",
+    "http": "GET",
+    "id": "GET /skills/marketplace/search",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/marketplace/search/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills",
+    "http": "GET",
+    "id": "GET /skills",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills",
+    "http": "POST",
+    "id": "POST /skills",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/skills/search",
+    "http": "POST",
+    "id": "POST /skills/search",
+    "group": "skills",
+    "src": "CodePilot/src/app/api/skills/search/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]/pause",
+    "http": "POST",
+    "id": "POST /tasks/[id]/pause",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/pause/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]",
+    "http": "DELETE",
+    "id": "DELETE /tasks/[id]",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]",
+    "http": "GET",
+    "id": "GET /tasks/[id]",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]",
+    "http": "PATCH",
+    "id": "PATCH /tasks/[id]",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]/run",
+    "http": "POST",
+    "id": "POST /tasks/[id]/run",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/run/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/[id]/runs",
+    "http": "GET",
+    "id": "GET /tasks/[id]/runs",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/[id]/runs/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/list",
+    "http": "GET",
+    "id": "GET /tasks/list",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/list/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify/ack",
+    "http": "POST",
+    "id": "POST /tasks/notify/ack",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/ack/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify/claim",
+    "http": "POST",
+    "id": "POST /tasks/notify/claim",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/claim/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify",
+    "http": "GET",
+    "id": "GET /tasks/notify",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify",
+    "http": "POST",
+    "id": "POST /tasks/notify",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify/test",
+    "http": "GET",
+    "id": "GET /tasks/notify/test",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/test/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/notify/test",
+    "http": "POST",
+    "id": "POST /tasks/notify/test",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/notify/test/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks",
+    "http": "GET",
+    "id": "GET /tasks",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks",
+    "http": "POST",
+    "id": "POST /tasks",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks",
+    "http": "PUT",
+    "id": "PUT /tasks",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/runs/[runId]",
+    "http": "PATCH",
+    "id": "PATCH /tasks/runs/[runId]",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/runs/[runId]/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/tasks/schedule",
+    "http": "POST",
+    "id": "POST /tasks/schedule",
+    "group": "tasks",
+    "src": "CodePilot/src/app/api/tasks/schedule/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/uploads",
+    "http": "GET",
+    "id": "GET /uploads",
+    "group": "uploads",
+    "src": "CodePilot/src/app/api/uploads/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/usage/stats",
+    "http": "GET",
+    "id": "GET /usage/stats",
+    "group": "usage",
+    "src": "CodePilot/src/app/api/usage/stats/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/checkin",
+    "http": "GET",
+    "id": "GET /workspace/checkin",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/checkin/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/checkin",
+    "http": "POST",
+    "id": "POST /workspace/checkin",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/checkin/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/docs",
+    "http": "POST",
+    "id": "POST /workspace/docs",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/docs/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/evolve-buddy",
+    "http": "POST",
+    "id": "POST /workspace/evolve-buddy",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/evolve-buddy/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/hatch-buddy",
+    "http": "POST",
+    "id": "POST /workspace/hatch-buddy",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/hatch-buddy/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/hook-triggered",
+    "http": "POST",
+    "id": "POST /workspace/hook-triggered",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/hook-triggered/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/index",
+    "http": "GET",
+    "id": "GET /workspace/index",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/index/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/index",
+    "http": "POST",
+    "id": "POST /workspace/index",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/index/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/inspect",
+    "http": "GET",
+    "id": "GET /workspace/inspect",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/inspect/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/latest-session",
+    "http": "GET",
+    "id": "GET /workspace/latest-session",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/latest-session/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/onboarding",
+    "http": "GET",
+    "id": "GET /workspace/onboarding",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/onboarding/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/onboarding",
+    "http": "POST",
+    "id": "POST /workspace/onboarding",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/onboarding/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/organize",
+    "http": "POST",
+    "id": "POST /workspace/organize",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/organize/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/quick-actions",
+    "http": "GET",
+    "id": "GET /workspace/quick-actions",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/quick-actions/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/search",
+    "http": "GET",
+    "id": "GET /workspace/search",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/search/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/session",
+    "http": "POST",
+    "id": "POST /workspace/session",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/session/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/summary",
+    "http": "GET",
+    "id": "GET /workspace/summary",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/summary/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/workspace/wizard",
+    "http": "POST",
+    "id": "POST /workspace/wizard",
+    "group": "workspace",
+    "src": "CodePilot/src/app/api/workspace/wizard/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/xai-oauth/cancel",
+    "http": "POST",
+    "id": "POST /xai-oauth/cancel",
+    "group": "xai-oauth",
+    "src": "CodePilot/src/app/api/xai-oauth/cancel/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/xai-oauth/start",
+    "http": "GET",
+    "id": "GET /xai-oauth/start",
+    "group": "xai-oauth",
+    "src": "CodePilot/src/app/api/xai-oauth/start/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/xai-oauth/status",
+    "http": "DELETE",
+    "id": "DELETE /xai-oauth/status",
+    "group": "xai-oauth",
+    "src": "CodePilot/src/app/api/xai-oauth/status/route.ts"
+  },
+  {
+    "repo": "CP",
+    "kind": "REST",
+    "name": "/xai-oauth/status",
+    "http": "GET",
+    "id": "GET /xai-oauth/status",
+    "group": "xai-oauth",
+    "src": "CodePilot/src/app/api/xai-oauth/status/route.ts"
+  }
+]

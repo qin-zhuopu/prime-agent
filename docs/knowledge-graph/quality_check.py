@@ -137,6 +137,22 @@ def main() -> int:
             if fld not in r or r.get(fld) in (None, "", []):
                 warns.append(f"field: repo {r['id']} missing/empty recommended field '{fld}'")
 
+    # --- full layer (untrimmed endpoints + calls) coverage ---
+    full_dir = DATA / "full"
+    if full_dir.is_dir():
+        for rid in ("CP", "DH", "HM"):
+            ej = full_dir / f"endpoints_{rid}.json"
+            cj = full_dir / f"calls_{rid}.json"
+            if not ej.is_file():
+                errors.append(f"full: missing endpoints_{rid}.json")
+                continue
+            eps = json.loads(ej.read_text())
+            ep_names = {e["name"] for e in eps}
+            hit = {c["endpoint"] for c in json.loads(cj.read_text())} if cj.is_file() else set()
+            uncalled = len(ep_names - hit)
+            infos.append(f"full: {rid} has {len(eps)} endpoints ({len(ep_names)} distinct), "
+                         f"{len(hit)} called by frontend, {uncalled} server-internal (no frontend caller)")
+
     # --- report ---
     def show(title, items):
         print(f"\n## {title} ({len(items)})")

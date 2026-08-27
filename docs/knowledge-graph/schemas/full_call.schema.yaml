@@ -1,0 +1,21 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: full frontend-call record
+description: >-
+  One record in data/full/calls_<repo>.json (a list). A frontend file calling a
+  backend endpoint, scanned by scan_full_calls.py. Validates the page/calls layer.
+type: object
+required: [caller_file, endpoint, endpoint_id, kind]
+additionalProperties: false
+properties:
+  caller_file:
+    type: string
+    minLength: 1
+  endpoint:
+    description: the concrete endpoint called (URL for REST, method for RPC)
+    type: string
+    minLength: 1
+  endpoint_id:
+    type: string
+    minLength: 1
+  kind:
+    enum: [REST, RPC]

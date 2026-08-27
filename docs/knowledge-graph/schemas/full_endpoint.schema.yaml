@@ -1,0 +1,29 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+title: full backend endpoint record
+description: >-
+  One record in data/full/endpoints_<repo>.json (a list). Full, untrimmed backend
+  endpoint inventory scanned by scan_full.py. Validates the endpoint/endpoint_group
+  layer of the full + unified graphs.
+type: object
+required: [repo, id, kind, name, group]
+additionalProperties: false
+properties:
+  repo:
+    enum: [CP, DH, HM]
+  id:
+    type: string
+    minLength: 1
+  kind:
+    enum: [REST, RPC, WS-RPC]
+  name:
+    description: URL path (REST) or method name (RPC/WS-RPC)
+    type: string
+    minLength: 1
+  http:
+    enum: ["GET", "POST", "PUT", "DELETE", "PATCH", "<none>", ""]
+  group:
+    description: namespace / first path segment
+    type: string
+    minLength: 1
+  src:
+    type: string

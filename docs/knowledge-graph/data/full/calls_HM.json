@@ -1,0 +1,68 @@
+[
+  {
+    "caller_file": "hermes-agent/web/src/components/ChatSidebar.tsx",
+    "endpoint": "session.info",
+    "endpoint_id": "session.info",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/components/ChatSidebar.tsx",
+    "endpoint": "session.create",
+    "endpoint_id": "session.create",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/components/ModelPickerDialog.tsx",
+    "endpoint": "model.options",
+    "endpoint_id": "model.options",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/components/ModelPickerDialog.tsx",
+    "endpoint": "config.set",
+    "endpoint_id": "config.set",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/components/SlashPopover.tsx",
+    "endpoint": "complete.slash",
+    "endpoint_id": "complete.slash",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/i18n/tr.ts",
+    "endpoint": "config.yaml",
+    "endpoint_id": "config.yaml",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "session.create",
+    "endpoint_id": "session.create",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "message.delta",
+    "endpoint_id": "message.delta",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/gatewayClient.ts",
+    "endpoint": "prompt.submit",
+    "endpoint_id": "prompt.submit",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/slashExec.ts",
+    "endpoint": "slash.exec",
+    "endpoint_id": "slash.exec",
+    "kind": "RPC"
+  },
+  {
+    "caller_file": "hermes-agent/web/src/lib/slashExec.ts",
+    "endpoint": "command.dispatch",
+    "endpoint_id": "command.dispatch",
+    "kind": "RPC"
+  }
+]
