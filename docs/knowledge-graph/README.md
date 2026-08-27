@@ -73,6 +73,7 @@ python3 build_graph.py
 | `api_graph.{graphml,json,dot}` | 后端 API 实体-操作图 |
 | `api_metrics.md` | 实体命名对照表 + 每实体操作的三 repo 端点映射 |
 | `EXTRACTION-METHOD.md` | **数据是怎么提取的**（人工语义 vs 脚本）+ 自动化建议 |
+| `DATA-PROVENANCE.md` | **每类节点/属性/边由谁维护**：🔧 代码机械抓取 vs 🧠 大模型语义维护 vs ⚙️ 派生 |
 
 ## 关键结论（见 metrics.md）
 
