@@ -57,3 +57,48 @@ ACP 是一套 JSON-RPC 2.0 over stdio 的开放协议，已有 33+ 编码 agent 
 2. **组件库定位标杆**：[acp-components](https://github.com/zvzuola/acp-components) 和 [assistant-ui](https://github.com/assistant-ui/assistant-ui) 的功能边界几乎覆盖我们的功能矩阵，可作为组件粒度和 API 设计参考。
 3. **浏览器边界已被验证**：acp-ui 明确指出 Web 版无法跑本地 stdio agent / 访问宿主 FS——印证我们"后端代理 + 前端组件"的必要性。
 4. **富渲染对标**：opencode-chatui 的工具调用/diff/搜索渲染，是我们 P1「工具调用展示」的现成对标物。
+
+---
+
+## 四、DeepSeek Harness (dsh) Web UI 生态（与本项目最相关）
+
+本项目的架构就是对齐 deepseek-harness 的 UI。围绕 **[deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)**（200k★，"Everything is a Plugin"）已形成庞大的 Web UI 插件生态（`deepseek-harness` topic 下 9000+ repo）。这是**同一套 UI 契约下的第三方扩展**，比其它 repo 更直接可参考——它们都基于 dsh 官方 Web UI 的 slot/插件机制。
+
+> 数据来自 GitHub 搜索（star 数为抓取时点）。内容依据各 repo 公开描述转述。
+
+### 官方 / 目录
+
+| 项目 | ★ | 说明 |
+|---|---|---|
+| [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 200k | 官方 agent harness，一切皆插件 |
+| [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 13.2k | 插件精选目录（awesome-dsh-plugin.com），14 类 280+ 插件 |
+| [zhu1090093659/dsh-web](https://github.com/zhu1090093659/dsh-web) | 6.3k | DSH Web 插件聚合生态包 |
+
+### 结构化 UI 参考（最值得看）
+
+| 项目 | ★ | 说明 | 参考价值 |
+|---|---|---|---|
+| [MichengAI/dsh-codex-ui](https://github.com/MichengAI/dsh-codex-ui) | 38 | Codex 风格侧栏 + 工作区会话树 + 全局搜索 + 轮次导航 | 会话树/侧栏/轮次导航，直接对标布局 |
+| [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 358 | Generative UI：助手回复里内联渲染交互组件 | 生成式 UI，AG-UI/GenUI 方向参考 |
+| [huiliyi37/dsh-tianshu-tui](https://github.com/huiliyi37/dsh-tianshu-tui) | 241 | 交互式终端 UI：自研 ANSI 渲染 + 流式 Markdown/工具卡 + 16 主题 + slash 命令 | 流式渲染 + 工具卡 + slash 完整实现 |
+| [shengsheng90/DSH-taskboard](https://github.com/shengsheng90/DSH-taskboard) | 163 | 原生 Web UI 任务板（SQLite + Agent claim/review，非 iframe） | 任务/多 agent 面板参考 |
+| [Fishquito7/dsh-skill-mcp-panel](https://github.com/Fishquito7/dsh-skill-mcp-panel) | 107 | Web UI 内的 skill / MCP 管理面板 | skill/MCP 管理 UI 参考 |
+| [LX2000WASD/dsh-web-plugin-manager](https://github.com/LX2000WASD/dsh-web-plugin-manager) | 67 | Web UI 内插件管理（启停/装卸/健康检查/市场） | 插件管理 UI 参考 |
+| [Laplace-bit/dsh-smooth-stream](https://github.com/Laplace-bit/dsh-smooth-stream) | 59 | 流式渲染 + 丝滑滚动插件 | 流式渲染性能对标 |
+
+### 桌面壳 / 多端
+
+| 项目 | ★ | 说明 |
+|---|---|---|
+| [zouyuxuan122/Deepseek-Harness-EAC](https://github.com/zouyuxuan122/Deepseek-Harness-EAC) | 1.4k | DSH 桌面端（内嵌 Node.js 运行时） |
+| [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | 21k | DSH 插件生态的现代化桌面端（桌面本身也是插件） |
+| [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 141 | Electron 桌面壳，主题/背景图 |
+| [liguobao/dsh-desktop](https://github.com/liguobao/dsh-desktop) | 26 | 独立 Electron 壳，本地起 dsh Web UI |
+| [thness/dsh-mobile](https://github.com/thness/dsh-mobile) | 17 | Android：内嵌 Node 运行时 + 官方 Web UI |
+| [runzhliu/deepseek-harness-docker](https://github.com/runzhliu/deepseek-harness-docker) | 42 | Docker/K8s 打包 + Web UI + headless CLI |
+
+### 对我们自研的直接启示
+
+1. **dsh 的 slot/插件机制被大量第三方复用** —— 印证了我们"契约驱动 slot 注册 + 手动 ctx.plugin()"路线的可扩展性：主题、面板、渲染增强、管理器都是独立插件挂到同一套 slot 上。
+2. **可直接对标的结构化 UI**：`dsh-codex-ui`（会话树/侧栏/轮次导航）、`dsh-genui`（内联生成式组件）、`dsh-smooth-stream`（流式渲染性能）、`dsh-tianshu-tui`（工具卡+slash）。这些和我们功能矩阵/capability 层的条目一一对应，是现成的实现参考。
+3. **多端壳都复用同一 Web UI**（Electron/Tauri/Android/Docker 只是把官方 Web UI 装进不同容器）——说明只要 Web UI 组件契约稳定，多端分发是薄壳问题。
