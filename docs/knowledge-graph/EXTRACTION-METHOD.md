@@ -11,6 +11,18 @@
 - **`build_graph.py` 不做提取**：它只是把人工结论（`FEATURES`、`SURVEY_IMPLEMENTS` 字典）组装成 NetworkX 图。
 - **没有固定的提取 prompt 写进项目**——当前不存在 LLM 提取管线。
 
+## 1.5 repo / webui / api 三类节点是怎么产生的（拆分后）
+
+原来的单一 `repo` 节点已拆成三类核心节点，各自的产生方式不同：
+
+- **`repo`（纯 git 身份）**：只保留 `id`（大写缩写）/`label`/可选 `license`。人工选定纳入哪些 repo，机械保留身份字段。
+- **`webui`（前端节点，`W:<repoId>/<path>`）**：每个 repo 一个。app 层属性（`stack`/`transport`/`integration`/`browser_native`/`protocols`）从旧 `repo` 迁来（仍是人工语义判断）。`path` **按源码路径派生**：从 `data/frontend_calls/<repo>.json` 与 `data/full/calls_<repo>.json` 的 `caller_file` 取前端源文件路径（去掉源码目录前缀，变成 repo 相对）。
+- **`api`（网络后端节点，`A:<repoId>/<path>`）**：只为网络可达的表面而建（rest/rpc/ws-rpc/stdio-rpc-over-gateway）；纯进程内 SDK（sdk-hook/component/protocol）不建 api 节点。当前 4 个：CP(rest)/DH(rpc)/HM(ws-rpc)/ACPWG(ws-rpc)。`path` 从 `data/full/endpoints_<repo>.json` 的 `src` 派生（同样去前缀）。
+
+### 按 path 命名的 id 与 `.` 兜底
+
+`webui`/`api` 的 id **按源码路径命名**（`W:<repoId>/<path>`、`A:<repoId>/<path>`），使 id 在重扫时稳定唯一。本沙箱里 11 个源码仓库都不在场：只有 CP/DH/HM 的扫描路径已物化在 `data/**`，能给出具体 `<path>`；其余 8 个 repo 源码缺席，一律用 `path = "."`（repo 根），得到 `W:<repoId>/.` / `A:<repoId>/.`。将来源码到位后可收紧 path，repo id 不变。判定哪些 repo 有网络 api 的逐仓审计见 `MIGRATION-DESIGN.md` 第 6 节。
+
 ## 2. 后端 API 实体/操作：已改为纯脚本抓取 + 规则映射（无 LLM）
 
 API 表面是结构化的，两步纯脚本流程，无任何 LLM：
